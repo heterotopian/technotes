@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+PAGES_BRANCH=~/technotes-build/
+
+make clean html
+cp -R build/html/* "${PAGES_BRANCH}"
+cd "${PAGES_BRANCH}"
+git commit -am "New build"
+git push origin gh-pages
