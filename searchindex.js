@@ -1,0 +1,1 @@
+Search.setIndex({envversion:42,terms:{index:0,search:0,sysdig:0,filter:1,cheatsheet:1,content:0,page:0},objtypes:{},objnames:{},filenames:["index","sysdig","atom"],titles:["Technical Notes","Sysdig","&lt;no title&gt;"],objects:{},titleterms:{note:0,sysdig:1,technic:0,indic:0,tabl:0}})
