@@ -18,3 +18,18 @@ Shortcuts
 
     * - Open command palette
       - ``Ctrl-Shift-p``
+
+Commands
+========
+
+- Export installed packages: ``apm list --installed --bare > installed_packages.txt``
+- Install packages from file: ``apm install --packages-file installed_packages.txt``
+
+
+Discussion
+==========
+
+Ctrl-Tab Order
+--------------
+
+https://github.com/atom/atom/issues/11650
