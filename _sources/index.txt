@@ -2,8 +2,6 @@
 Technical Notes
 ===============
 
-Contents:
-
 .. toctree::
    :maxdepth: 1
 
