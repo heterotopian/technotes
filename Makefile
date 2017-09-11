@@ -4,6 +4,8 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
+AUTOOPTS    = --host 0.0.0.0 --poll --ignore "*.sw?" --watch static
+AUTOBUILD   = sphinx-autobuild
 PAPER         =
 BUILDDIR      = build
 
@@ -19,7 +21,7 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) sou
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 
-.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
+.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext watch
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -48,6 +50,11 @@ help:
 
 clean:
 	rm -rf $(BUILDDIR)/*
+
+watch:
+	$(AUTOBUILD) $(AUTOOPTS) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	@echo
+	@echo "Initial build finished. Watching for file changes."
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
