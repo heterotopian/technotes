@@ -19,6 +19,9 @@ Shortcuts
     * - Open command palette
       - ``Ctrl-Shift-p``
 
+    * - Close current tab
+      - ``Ctrl-w Esc``
+
 Commands
 ========
 
