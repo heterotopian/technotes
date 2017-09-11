@@ -18,3 +18,12 @@ Shortcuts
 
     * - Open command palette
       - ``Ctrl-Shift-p``
+
+
+Discussion
+==========
+
+Ctrl-Tab Order
+--------------
+
+https://github.com/atom/atom/issues/11650
