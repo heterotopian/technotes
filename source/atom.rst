@@ -33,3 +33,11 @@ Ctrl-Tab Order
 --------------
 
 https://github.com/atom/atom/issues/11650
+
+Resources
+=========
+
+- `AtomThemes.io <http://atomthemes.io/>`_
+
+
+
