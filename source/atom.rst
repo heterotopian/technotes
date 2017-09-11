@@ -22,12 +22,14 @@ Shortcuts
     * - Close current tab
       - ``Ctrl-w Esc``
 
+    * - Focus tree view
+      - ``Alt-\``
+
 Commands
 ========
 
 - Export installed packages: ``apm list --installed --bare > installed_packages.txt``
 - Install packages from file: ``apm install --packages-file installed_packages.txt``
-
 
 Discussion
 ==========
@@ -41,6 +43,3 @@ Resources
 =========
 
 - `AtomThemes.io <http://atomthemes.io/>`_
-
-
-
