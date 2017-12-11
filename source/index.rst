@@ -3,11 +3,29 @@ Technical Notes
 ===============
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
+    :caption: Command Line
 
-   sysdig
-   atom
+    bash
+    tmux
 
+.. toctree::
+    :maxdepth: 1
+    :caption: Diagnostic Tools
+
+    sysdig
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Version control
+
+    git
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Applications
+
+    atom
 
 
 Indices and tables
