@@ -272,4 +272,12 @@ texinfo_documents = [
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'http://docs.python.org/2/': None}
+intersphinx_mapping = {
+    'python':     ('http://docs.python.org/2/', None),
+    'nose':       ('http://nose.readthedocs.org/en/latest/', None),
+    'pandas':     ('http://pandas.pydata.org/pandas-docs/version/0.12.0/', None),
+    'numpy':      ('http://docs.scipy.org/doc/numpy-1.7.0/', None),
+    'sqlalchemy': ('https://docs.sqlalchemy.org/en/latest/', None),
+    'wrapt':      ('http://wrapt.readthedocs.io/en/latest/', None),
+    'toolz':      ('http://toolz.readthedocs.io/en/latest/', None),
+}
