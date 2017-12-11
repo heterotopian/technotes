@@ -6,6 +6,7 @@ Atom Editor
 
 .. highlight:: console
 
+
 Shortcuts
 =========
 
@@ -15,24 +16,33 @@ Shortcuts
     * - Action
       - Keys
 
-    * - Open fuzzy finder
-      - ``Ctrl-P`` or ``Ctrl-T``
-
     * - Open command palette
       - ``Ctrl-Shift-P``
+
+    * - Open settings
+      - ``Ctrl-,``
+
+    * - Toggle tree view visibility
+      - ``Ctrl-\``
+
+    * - Toggle tree view focus
+      - ``Alt-\``
 
     * - Close current tab
       - ``Ctrl-W Esc``
 
-    * - Focus tree view
-      - ``Alt-\``
+    * - Open fuzzy finder
+      - ``Ctrl-P``
+
+    * - Toggle keybinding resolver panel
+      - ``Ctrl-.``
 
     * - Toggle Developer Tools
       - ``Ctrl-Shift-I``
 
 
-Commands
-========
+Command Line
+============
 
 Export/Import
 -------------
@@ -44,6 +54,12 @@ Export/Import
 - Install packages & themes from ``~/.atom_installed``::
 
     $ apm install --packages-file ~/.atom_installed
+
+
+Commands
+========
+
+See `command palette <http://flight-manual.atom.io/getting-started/sections/atom-basics/#command-palette>`_ in the Atom Flight Manual
 
 
 Discussion
@@ -58,4 +74,5 @@ https://github.com/atom/atom/issues/11650
 Resources
 =========
 
+- `Atom Flight Manual <http://flight-manual.atom.io/>`_
 - `AtomThemes.io <http://atomthemes.io/>`_
