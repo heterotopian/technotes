@@ -60,10 +60,10 @@ Expansion
       - ``$ diff <(date) <(sleep 1; date)``
 
     * - Word splitting
-      - `Wordsplitting <http://wiki.bash-hackers.org/syntax/expansion/wordsplit>`_ in Bash Hackers Wiki
+      - See `wordsplitting <http://wiki.bash-hackers.org/syntax/expansion/wordsplit>`_ in Bash Hackers Wiki
 
     * - File name expansion
-      - `Globs <http://wiki.bash-hackers.org/syntax/expansion/globs>`_ in Bash Hackers Wiki
+      - See `globs <http://wiki.bash-hackers.org/syntax/expansion/globs>`_ in Bash Hackers Wiki
 
 
 File Descriptors
