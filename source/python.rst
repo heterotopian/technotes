@@ -4,6 +4,11 @@
 Python
 ======
 
+General
+=======
+
+`Data Model <https://docs.python.org/2.7/reference/datamodel.html>`_
+
 
 Standard Library
 ================
