@@ -11,6 +11,12 @@ Technical Notes
 
 .. toctree::
     :maxdepth: 1
+    :caption: Languages
+
+    python
+
+.. toctree::
+    :maxdepth: 1
     :caption: Diagnostic Tools
 
     sysdig
