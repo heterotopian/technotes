@@ -1,0 +1,56 @@
+.. _bash:
+
+.. highlight:: console
+
+====
+Bash
+====
+
+
+Redirection
+===========
+
+- stdout to ``command.stdout``::
+
+    $ command > command.stdout
+
+- stderr to ``command.stderr``::
+
+    $ command 2> command.stderr
+
+- stdout to stderr::
+
+    $ command 1>&2
+
+- stderr to stdout::
+
+    $ command 2>&1
+
+- stderr and stdout to ``command.out``::
+
+    $ command &> command.out
+
+
+File Descriptors
+================
+
+.. list-table::
+    :header-rows: 1
+
+    * - Number
+      - Stream
+
+    * - 0
+      - stdin
+
+    * - 1
+      - stdout
+
+    * - 2
+      - stderr
+
+
+Resources
+=========
+
+- `Standard streams on Wikipedia <https://en.wikipedia.org/wiki/Standard_streams>`_

@@ -1,0 +1,10 @@
+.. _tmux:
+
+.. highlight:: console
+
+====
+Tmux
+====
+
+General
+=======
