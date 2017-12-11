@@ -1,10 +1,10 @@
 .. _tmux:
 
-.. highlight:: console
+====
+tmux
+====
 
-====
-Tmux
-====
+.. highlight:: console
 
 General
 =======

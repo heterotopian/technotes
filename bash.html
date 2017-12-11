@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="_static/css/theme-custom.css" type="text/css" />
     
     <link rel="top" title="technotes" href="index.html"/>
-        <link rel="next" title="Git" href="git.html"/>
+        <link rel="next" title="tmux" href="tmux.html"/>
         <link rel="prev" title="Technical Notes" href="index.html"/>
  
 
@@ -81,16 +81,20 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Bash</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#redirection">Redirection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#expansion">Expansion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#file-descriptors">File Descriptors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="git.html">Git</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tmux.html">Tmux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tmux.html">tmux</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Diagnostic Tools</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="sysdig.html">Sysdig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sysdig.html">sysdig</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Version control</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="git.html">Git</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Applications</span></p>
 <ul>
@@ -139,8 +143,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>Bash<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="bash">
+<span id="id1"></span><h1>Bash<a class="headerlink" href="#bash" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="redirection">
 <h2>Redirection<a class="headerlink" href="#redirection" title="Permalink to this headline">¶</a></h2>
 <ul>
@@ -170,6 +174,48 @@
 </div>
 </li>
 </ul>
+</div>
+<div class="section" id="expansion">
+<h2>Expansion<a class="headerlink" href="#expansion" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html">Shell expansion</a> in Bash Guide for Beginners</p>
+<table border="1" class="docutils" id="id2">
+<caption><span class="caption-text">Expansion evaluation types by order</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Brace expansion</td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">foo{A,B,C}bar</span></code></td>
+</tr>
+<tr class="row-odd"><td>Tilde expansion</td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">ls</span> <span class="pre">~/.vimrc</span></code></td>
+</tr>
+<tr class="row-even"><td>Shell parameter &amp; variable subsitution</td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">$PATH</span></code></td>
+</tr>
+<tr class="row-odd"><td>Command substitution</td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">readlink</span> <span class="pre">-f</span> <span class="pre">$(which</span> <span class="pre">python)</span></code></td>
+</tr>
+<tr class="row-even"><td>Arithmetic expansion</td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">$[</span> <span class="pre">365*24</span> <span class="pre">]</span></code></td>
+</tr>
+<tr class="row-odd"><td>Process substitution</td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">diff</span> <span class="pre">&lt;(date)</span> <span class="pre">&lt;(sleep</span> <span class="pre">1;</span> <span class="pre">date)</span></code></td>
+</tr>
+<tr class="row-even"><td>Word splitting</td>
+<td><a class="reference external" href="http://wiki.bash-hackers.org/syntax/expansion/wordsplit">Wordsplitting</a> in Bash Hackers Wiki</td>
+</tr>
+<tr class="row-odd"><td>File name expansion</td>
+<td><a class="reference external" href="http://wiki.bash-hackers.org/syntax/expansion/globs">Globs</a> in Bash Hackers Wiki</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="file-descriptors">
 <h2>File Descriptors<a class="headerlink" href="#file-descriptors" title="Permalink to this headline">¶</a></h2>
@@ -211,7 +257,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="git.html" class="btn btn-neutral float-right" title="Git" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tmux.html" class="btn btn-neutral float-right" title="tmux" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="Technical Notes" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

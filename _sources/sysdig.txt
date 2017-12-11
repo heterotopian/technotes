@@ -1,7 +1,7 @@
 .. _sysdig:
 
 ======
-Sysdig
+sysdig
 ======
 
 General

@@ -1,10 +1,10 @@
 .. _atom:
 
-.. highlight:: console
-
 ===========
 Atom Editor
 ===========
+
+.. highlight:: console
 
 Shortcuts
 =========

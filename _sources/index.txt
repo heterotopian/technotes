@@ -7,7 +7,6 @@ Technical Notes
     :caption: Command Line
 
     bash
-    git
     tmux
 
 .. toctree::
@@ -17,10 +16,16 @@ Technical Notes
     sysdig
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Applications
+    :maxdepth: 1
+    :caption: Version control
 
-   atom
+    git
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Applications
+
+    atom
 
 
 Indices and tables
