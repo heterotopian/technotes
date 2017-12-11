@@ -4,6 +4,8 @@
 Atom Editor
 ===========
 
+.. highlight:: console
+
 Shortcuts
 =========
 
@@ -14,30 +16,34 @@ Shortcuts
       - Keys
 
     * - Open fuzzy finder
-      - ``Ctrl-p`` or ``Ctrl-t``
+      - ``Ctrl-P`` or ``Ctrl-T``
 
     * - Open command palette
-      - ``Ctrl-Shift-p``
+      - ``Ctrl-Shift-P``
 
     * - Close current tab
-      - ``Ctrl-w Esc``
+      - ``Ctrl-W Esc``
 
     * - Focus tree view
       - ``Alt-\``
 
-      
+    * - Toggle Developer Tools
+      - ``Ctrl-Shift-I``
+
+
 Commands
 ========
 
-.. highlight:: console
+Export/Import
+-------------
 
-- Export installed packages::
+- Export installed packages & themes to ``~/.atom_installed``::
 
-    $ apm list --installed --bare > installed_packages.txt
+    $ apm list --installed --bare > ~/.atom_installed
 
-- Install packages from file::
+- Install packages & themes from ``~/.atom_installed``::
 
-    $ apm install --packages-file installed_packages.txt
+    $ apm install --packages-file ~/.atom_installed
 
 
 Discussion
