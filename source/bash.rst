@@ -6,6 +6,10 @@ Bash
 
 .. highlight:: console
 
+.. contents::
+    :local:
+    :depth: 1
+
 Redirection
 ===========
 
