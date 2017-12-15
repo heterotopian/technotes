@@ -6,6 +6,9 @@ Atom Editor
 
 .. highlight:: console
 
+.. contents::
+    :local:
+    :depth: 1
 
 Shortcuts
 =========
@@ -17,28 +20,31 @@ Shortcuts
       - Keys
 
     * - Open command palette
-      - ``Ctrl-Shift-P``
+      - :kbd:`Ctrl-Shift-P`
 
     * - Open settings
-      - ``Ctrl-,``
+      - :kbd:`Ctrl-,`
 
     * - Toggle tree view visibility
-      - ``Ctrl-\``
+      - :kbd:`Ctrl-\\`
 
-    * - Toggle tree view focus
-      - ``Alt-\``
+    * - Toggle focus on tree view
+      - :kbd:`Alt-\\`
+
+    * - Reveal active file in tree view
+      - :kbd:`Alt-Shift-\\`
 
     * - Close current tab
-      - ``Ctrl-W Esc``
+      - :kbd:`Ctrl-W Esc`
 
     * - Open fuzzy finder
-      - ``Ctrl-P``
+      - :kbd:`Ctrl-P`
 
     * - Toggle keybinding resolver panel
-      - ``Ctrl-.``
+      - :kbd:`Ctrl-.`
 
     * - Toggle Developer Tools
-      - ``Ctrl-Shift-I``
+      - :kbd:`Ctrl-Shift-I`
 
 
 Command Line
