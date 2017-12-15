@@ -1,10 +1,13 @@
-#!/bin/bash -e
+#!/bin/bash -eu
 
-PAGES_BRANCH=~/technotes-build/
+WORKBRANCH=$(dirname $(dirname $(readlink -f "${BASH_SOURCE[0]}")))
+PAGESBRANCH=${PAGESBRANCH:-${WORKBRANCH}-build}
 
+cd "${WORKBRANCH}"
 make clean html
-cp -R build/html/* "${PAGES_BRANCH}"
-cd "${PAGES_BRANCH}"
+(cd "${PAGESBRANCH}" && git pull --rebase)
+cp -R build/html/* "${PAGESBRANCH}"
+cd "${PAGESBRANCH}"
 git add --all .
 git commit -am "New build"
 git push origin gh-pages
