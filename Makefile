@@ -2,12 +2,12 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build
+SPHINXOPTS  =
+SPHINXBUILD = sphinx-build
 AUTOOPTS    = --host 0.0.0.0 --poll --ignore "*.sw?" --watch static $(if $(AUTOPORT),--port=$(AUTOPORT))
 AUTOBUILD   = sphinx-autobuild
-PAPER         =
-BUILDDIR      = build
+PAPER       =
+BUILDDIR    = build
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
