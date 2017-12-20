@@ -70,6 +70,13 @@ Expansion
       - See `globs <http://wiki.bash-hackers.org/syntax/expansion/globs>`_ in Bash Hackers Wiki
 
 
+Tests
+=====
+
+`Test primitives <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#sect_07_01_01_01>`_
+
+
+
 File Descriptors
 ================
 
