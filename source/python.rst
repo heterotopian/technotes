@@ -14,6 +14,12 @@ General
 `Data Model <https://docs.python.org/2.7/reference/datamodel.html>`_
 
 
+PEPs
+====
+
+- :pep:`302` - New Import Hooks
+
+
 Standard Library
 ================
 
