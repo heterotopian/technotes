@@ -4,9 +4,10 @@ Technical Notes
 
 .. toctree::
     :maxdepth: 1
-    :caption: Command Line
+    :caption: Essentials
 
     bash
+    systemd
     tmux
 
 .. toctree::
