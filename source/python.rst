@@ -26,9 +26,13 @@ Standard Library
 :py:mod:`operator`
 ------------------
 
-- :py:func:`~operator.attrgetter`
-- :py:func:`~operator.itemgetter`
-- :py:func:`~operator.methodcaller`
+.. currentmodule:: operator
+
+.. autosummary::
+
+    attrgetter
+    itemgetter
+    methodcaller
 
 :py:mod:`collections`
 ---------------------
@@ -54,5 +58,21 @@ Third Party Libraries
 :py:mod:`toolz`
 ---------------
 
+.. currentmodule:: toolz
+
+.. autosummary::
+
+    keyfilter
+    keymap
+    valfilter
+    valmap
+
+`PyToolz API Documentation`_
+
 :py:mod:`wrapt`
 ---------------
+
+
+
+
+.. _PyToolz API Documentation: http://toolz.readthedocs.io/en/latest/index.html
