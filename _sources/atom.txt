@@ -50,9 +50,6 @@ Shortcuts
 Command Line
 ============
 
-Export/Import
--------------
-
 - Export installed packages & themes to ``~/.atom_installed``::
 
     $ apm list --installed --bare > ~/.atom_installed
@@ -60,6 +57,12 @@ Export/Import
 - Install packages & themes from ``~/.atom_installed``::
 
     $ apm install --packages-file ~/.atom_installed
+
+
+Packages
+========
+
+`toggler <https://atom.io/packages/toggler>`_ - Toggle words and symbols
 
 
 Commands
