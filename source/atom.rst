@@ -82,3 +82,4 @@ Resources
 
 - `Atom Flight Manual <http://flight-manual.atom.io/>`_
 - `AtomThemes.io <http://atomthemes.io/>`_
+- `Atom Packages Directory <http://atom-packages.directory/>`_
