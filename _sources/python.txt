@@ -14,12 +14,6 @@ General
 `Data Model <https://docs.python.org/2.7/reference/datamodel.html>`_
 
 
-PEPs
-====
-
-- :pep:`302` - New Import Hooks
-
-
 Standard Library
 ================
 
@@ -72,6 +66,11 @@ Third Party Libraries
 :py:mod:`wrapt`
 ---------------
 
+
+PEPs
+====
+
+- :pep:`302` - New Import Hooks
 
 
 
