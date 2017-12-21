@@ -66,6 +66,17 @@ Third Party Libraries
 :py:mod:`wrapt`
 ---------------
 
+.. currentmodule:: wrapt
+
+.. autosummary::
+
+    decorator
+
+How you implemented your Python decorator is wrong -
+`GitHub <https://github.com/openstack/deb-python-wrapt/tree/master/blog>`_,
+`blog <http://blog.dscpl.com.au/2014/01/how-you-implemented-your-python.html>`_
+
+
 
 PEPs
 ====
