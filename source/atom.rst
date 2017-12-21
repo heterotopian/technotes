@@ -50,9 +50,9 @@ Shortcuts
 Command Line
 ============
 
-- Export installed packages & themes to ``~/.atom_installed``::
+- Export installed packages & themes to ``~/dotfiles/home/.atom_installed``::
 
-    $ apm list --installed --bare > ~/.atom_installed
+    $ apm list --installed --bare > ~/dotfiles/home/.atom_installed
 
 - Install packages & themes from ``~/.atom_installed``::
 
