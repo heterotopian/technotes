@@ -62,7 +62,16 @@ Command Line
 Packages
 ========
 
-`toggler <https://atom.io/packages/toggler>`_ - Toggle words and symbols
+`toggler <https://atom.io/packages/toggler>`_
+---------------------------------------------
+
+Toggle words and symbols
+
+`vim-mode-plus <https://atom.io/packages/vim-mode-plus>`_
+-------------------------------------------------------------
+
+`Macros <https://github.com/JunSuzukiJapan/atom-keyboard-macros-vim/issues/5#issuecomment-212849566>`_
+
 
 
 Commands
