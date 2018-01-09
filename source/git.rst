@@ -37,6 +37,10 @@ Diffing
 
     $ git log master..HEAD -p
 
+- Diff ``file.rst`` from |HEAD| and commit before |HEAD| ::
+
+    $ git diff @:file.rst @^1:file.rst
+
 
 Terms
 =====
