@@ -75,7 +75,6 @@ Neovim bindings
 - `Macros <https://github.com/JunSuzukiJapan/atom-keyboard-macros-vim/issues/5#issuecomment-212849566>`_
 
 
-
 Commands
 ========
 
