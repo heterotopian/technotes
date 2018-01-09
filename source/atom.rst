@@ -62,22 +62,24 @@ Command Line
 Packages
 ========
 
-`toggler <https://atom.io/packages/toggler>`_
----------------------------------------------
+toggler
+-------
 
 Toggle words and symbols
 
-`vim-mode-plus <https://atom.io/packages/vim-mode-plus>`_
--------------------------------------------------------------
+vim-mode-plus
+-------------
 
-`Macros <https://github.com/JunSuzukiJapan/atom-keyboard-macros-vim/issues/5#issuecomment-212849566>`_
+Neovim bindings
+
+- `Macros <https://github.com/JunSuzukiJapan/atom-keyboard-macros-vim/issues/5#issuecomment-212849566>`_
 
 
 
 Commands
 ========
 
-See `command palette <http://flight-manual.atom.io/getting-started/sections/atom-basics/#command-palette>`_ in the Atom Flight Manual
+`Command palette <http://flight-manual.atom.io/getting-started/sections/atom-basics/#command-palette>`_ in the Atom Flight Manual
 
 
 Discussion
