@@ -39,51 +39,51 @@ Expansion
 
 `Shell expansion <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html>`_ in Bash Guide for Beginners
 
-.. list-table:: Expansion order by type
+.. list-table:: Expansion types
+    :widths: 50 10 50
     :header-rows: 1
 
-    * - Order
-      - Type
+    * - Type
+      - Order
       - Example
 
-    * - 1
-      - Brace expansion
+    * - Brace expansion
+      - 1
       - ``$ echo foo{A,B,C}bar``
 
-    * - 2
-      - Tilde expansion
+    * - Tilde expansion
+      - 2
       - ``$ ls ~/.vimrc``
 
-    * - 3
-      - Shell parameter & variable subsitution
+    * - Shell parameter & variable subsitution
+      - 3
       - ``$ echo $PATH``
 
-    * - 4
-      - Command substitution
+    * - Command substitution
+      - 4
       - ``$ readlink -f $(which python)``
 
-    * - 5
-      - Arithmetic expansion
+    * - Arithmetic expansion
+      - 5
       - ``$ echo $[ 365*24 ]``
 
-    * - 6
-      - Process substitution
+    * - Process substitution
+      - 6
       - ``$ diff <(date) <(sleep 1; date)``
 
-    * - 7
-      - Word splitting
+    * - Word splitting
+      - 7
       - See `wordsplitting <http://wiki.bash-hackers.org/syntax/expansion/wordsplit>`_ in Bash Hackers Wiki
 
-    * - 8
-      - File name expansion
+    * - File name expansion
+      - 8
       - See `globs <http://wiki.bash-hackers.org/syntax/expansion/globs>`_ in Bash Hackers Wiki
 
 
 Tests
 =====
 
-`Test primitives <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#sect_07_01_01_01>`_
-
+`Test primitives <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#sect_07_01_01_01>`_ in Bash Guide for Beginners
 
 
 File Descriptors
@@ -108,4 +108,4 @@ File Descriptors
 Resources
 =========
 
-- `Standard streams on Wikipedia <https://en.wikipedia.org/wiki/Standard_streams>`_
+`Standard streams <https://en.wikipedia.org/wiki/Standard_streams>`_ on Wikipedia
