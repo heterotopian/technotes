@@ -17,4 +17,4 @@ General
 Resources
 =========
 
-- `Daniel Miessler's tmux primer <https://danielmiessler.com/study/tmux/>`_
+- `tmux primer <https://danielmiessler.com/study/tmux/>`_ from Daniel Miessler
