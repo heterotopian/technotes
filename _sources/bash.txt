@@ -108,4 +108,5 @@ File Descriptors
 Resources
 =========
 
-`Standard streams <https://en.wikipedia.org/wiki/Standard_streams>`_ on Wikipedia
+- `Bash Guide for Beginners <http://tldp.org/LDP/Bash-Beginners-Guide/html/>`_
+- `Standard streams <https://en.wikipedia.org/wiki/Standard_streams>`_ on Wikipedia

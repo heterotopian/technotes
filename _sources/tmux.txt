@@ -12,3 +12,9 @@ tmux
 
 General
 =======
+
+
+Resources
+=========
+
+- `Daniel Miessler's tmux primer <https://danielmiessler.com/study/tmux/>`_
