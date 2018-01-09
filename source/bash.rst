@@ -39,34 +39,43 @@ Expansion
 
 `Shell expansion <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html>`_ in Bash Guide for Beginners
 
-.. list-table:: Expansion evaluation types by order
+.. list-table:: Expansion order by type
     :header-rows: 1
 
-    * - Type
+    * - Order
+      - Type
       - Example
 
-    * - Brace expansion
+    * - 1
+      - Brace expansion
       - ``$ echo foo{A,B,C}bar``
 
-    * - Tilde expansion
+    * - 2
+      - Tilde expansion
       - ``$ ls ~/.vimrc``
 
-    * - Shell parameter & variable subsitution
+    * - 3
+      - Shell parameter & variable subsitution
       - ``$ echo $PATH``
 
-    * - Command substitution
+    * - 4
+      - Command substitution
       - ``$ readlink -f $(which python)``
 
-    * - Arithmetic expansion
+    * - 5
+      - Arithmetic expansion
       - ``$ echo $[ 365*24 ]``
 
-    * - Process substitution
+    * - 6
+      - Process substitution
       - ``$ diff <(date) <(sleep 1; date)``
 
-    * - Word splitting
+    * - 7
+      - Word splitting
       - See `wordsplitting <http://wiki.bash-hackers.org/syntax/expansion/wordsplit>`_ in Bash Hackers Wiki
 
-    * - File name expansion
+    * - 8
+      - File name expansion
       - See `globs <http://wiki.bash-hackers.org/syntax/expansion/globs>`_ in Bash Hackers Wiki
 
 
