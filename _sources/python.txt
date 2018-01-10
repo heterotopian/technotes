@@ -54,14 +54,14 @@ Third Party Libraries
 
 .. currentmodule:: toolz
 
+`PyToolz API Documentation <http://toolz.readthedocs.io/en/latest/index.html>`_
+
 .. autosummary::
 
     keyfilter
     keymap
     valfilter
     valmap
-
-`PyToolz API Documentation`_
 
 :py:mod:`wrapt`
 ---------------
@@ -85,7 +85,3 @@ PEPs
 ====
 
 - :pep:`302` - New Import Hooks
-
-
-
-.. _PyToolz API Documentation: http://toolz.readthedocs.io/en/latest/index.html
