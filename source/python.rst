@@ -72,10 +72,13 @@ Third Party Libraries
 
     decorator
 
-How you implemented your Python decorator is wrong -
-`GitHub <https://github.com/openstack/deb-python-wrapt/tree/master/blog>`_,
-`blog <http://blog.dscpl.com.au/2014/01/how-you-implemented-your-python.html>`_
+How you implemented your Python decorator is wrong
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Comprehensive series of essays covering every facet of decorators in detail. The authoritative treatment of decorator internals.
+
+- `Blog <http://blog.dscpl.com.au/2014/01/how-you-implemented-your-python.html>`_
+- `GitHub <https://github.com/openstack/deb-python-wrapt/tree/master/blog>`_
 
 
 PEPs
