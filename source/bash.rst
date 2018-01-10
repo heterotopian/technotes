@@ -89,6 +89,8 @@ Tests
 File Descriptors
 ================
 
+`Standard streams <https://en.wikipedia.org/wiki/Standard_streams>`_ on Wikipedia
+
 .. list-table::
     :header-rows: 1
 
@@ -109,4 +111,3 @@ Resources
 =========
 
 - `Bash Guide for Beginners <http://tldp.org/LDP/Bash-Beginners-Guide/html/>`_
-- `Standard streams <https://en.wikipedia.org/wiki/Standard_streams>`_ on Wikipedia
