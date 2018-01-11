@@ -34,6 +34,12 @@ Technical Notes
 
     atom
 
+.. toctree::
+    :maxdepth: 1
+    :caption: Authoring Tools
+
+    sphinx
+
 
 Indices and tables
 ==================
