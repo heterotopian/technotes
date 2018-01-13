@@ -1,14 +1,11 @@
 .. _atom:
 
-===========
-Atom Editor
-===========
+====
+Atom
+====
 
 .. highlight:: console
 
-.. contents::
-    :local:
-    :depth: 1
 
 Shortcuts
 =========
@@ -72,7 +69,7 @@ vim-mode-plus
 
 Neovim bindings
 
-- `Macros <https://github.com/JunSuzukiJapan/atom-keyboard-macros-vim/issues/5#issuecomment-212849566>`_
+- `Commands <https://github.com/t9md/atom-vim-mode-plus/wiki/Commands>`_
 
 
 Commands
@@ -96,3 +93,4 @@ Resources
 - `Atom Flight Manual <http://flight-manual.atom.io/>`_
 - `AtomThemes.io <http://atomthemes.io/>`_
 - `Atom Packages Directory <http://atom-packages.directory/>`_
+- `API documentation <https://atom.io/docs/api/>`_

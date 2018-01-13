@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Python &mdash; technotes</title>
+  <title>Python &mdash; Technotes Documentation</title>
   
 
   
@@ -32,7 +32,7 @@
   
     <link rel="stylesheet" href="_static/css/theme-custom.css" type="text/css" />
     
-    <link rel="top" title="technotes" href="index.html"/>
+    <link rel="top" title="Technotes Documentation" href="index.html"/>
         <link rel="next" title="sysdig" href="sysdig.html"/>
         <link rel="prev" title="tmux" href="tmux.html"/>
  
@@ -53,7 +53,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> technotes
+            <a href="index.html" class="icon icon-home"> Technotes
           
 
           
@@ -90,6 +90,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#standard-library">Standard Library</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#operator"><code class="docutils literal"><span class="pre">operator</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#collections"><code class="docutils literal"><span class="pre">collections</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#concurrent-futures"><code class="docutils literal"><span class="pre">concurrent.futures</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#third-party-libraries">Third Party Libraries</a><ul>
@@ -115,7 +116,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Applications</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="atom.html">Atom Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="atom.html">Atom</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Authoring Tools</span></p>
 <ul>
@@ -133,7 +134,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">technotes</a>
+        <a href="index.html">Technotes</a>
       </nav>
 
 
@@ -166,20 +167,12 @@
             
   <div class="section" id="python">
 <span id="id1"></span><h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="contents">
-<ul class="simple">
-<li><a class="reference internal" href="#general" id="id2">General</a></li>
-<li><a class="reference internal" href="#standard-library" id="id3">Standard Library</a></li>
-<li><a class="reference internal" href="#third-party-libraries" id="id4">Third Party Libraries</a></li>
-<li><a class="reference internal" href="#peps" id="id5">PEPs</a></li>
-</ul>
-</div>
 <div class="section" id="general">
-<h2><a class="toc-backref" href="#id2">General</a><a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://docs.python.org/2.7/reference/datamodel.html">Data Model</a></p>
 </div>
 <div class="section" id="standard-library">
-<h2><a class="toc-backref" href="#id3">Standard Library</a><a class="headerlink" href="#standard-library" title="Permalink to this headline">¶</a></h2>
+<h2>Standard Library<a class="headerlink" href="#standard-library" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="operator">
 <h3><a class="reference external" href="http://docs.python.org/2/library/operator.html#module-operator" title="(in Python v2.7)"><code class="xref py py-mod docutils literal"><span class="pre">operator</span></code></a><a class="headerlink" href="#operator" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="longtable docutils">
@@ -204,9 +197,26 @@
 <h3><a class="reference external" href="http://docs.python.org/2/library/collections.html#module-collections" title="(in Python v2.7)"><code class="xref py py-mod docutils literal"><span class="pre">collections</span></code></a><a class="headerlink" href="#collections" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://docs.python.org/2/library/collections.html#collections-abstract-base-classes">Collections Abstract Base Classes</a></p>
 </div>
+<div class="section" id="concurrent-futures">
+<h3><code class="xref py py-mod docutils literal"><span class="pre">concurrent.futures</span></code><a class="headerlink" href="#concurrent-futures" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ThreadPoolExecutor</span></code>(max_workers)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ProcessPoolExecutor</span></code>([max_workers])</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="section" id="third-party-libraries">
-<h2><a class="toc-backref" href="#id4">Third Party Libraries</a><a class="headerlink" href="#third-party-libraries" title="Permalink to this headline">¶</a></h2>
+<h2>Third Party Libraries<a class="headerlink" href="#third-party-libraries" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="nose">
 <h3><code class="xref py py-mod docutils literal"><span class="pre">nose</span></code><a class="headerlink" href="#nose" title="Permalink to this headline">¶</a></h3>
 </div>
@@ -262,7 +272,7 @@ The authoritative treatment of decorator internals.</p>
 </div>
 </div>
 <div class="section" id="peps">
-<h2><a class="toc-backref" href="#id5">PEPs</a><a class="headerlink" href="#peps" title="Permalink to this headline">¶</a></h2>
+<h2>PEPs<a class="headerlink" href="#peps" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0302"><strong>PEP 302</strong></a> - New Import Hooks</li>
 </ul>

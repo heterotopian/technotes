@@ -5,11 +5,6 @@ systemd
 =======
 
 
-.. contents::
-    :local:
-    :depth: 1
-
-
 General
 =======
 
