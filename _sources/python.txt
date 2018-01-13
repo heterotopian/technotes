@@ -19,30 +19,26 @@ Standard Library
 :py:mod:`operator`
 ------------------
 
-.. currentmodule:: operator
-
 .. autosummary::
 
-    attrgetter
-    itemgetter
-    methodcaller
+    ~operator.attrgetter
+    ~operator.itemgetter
+    ~operator.methodcaller
 
 
 :py:mod:`collections`
 ---------------------
 
-`Collections Abstract Base Classes <https://docs.python.org/2/library/collections.html#collections-abstract-base-classes>`_
+:ref:`python:collections-abstract-base-classes`
 
 
 :py:mod:`concurrent.futures`
 ----------------------------
 
-.. currentmodule:: concurrent.futures
-
 .. autosummary::
 
-    ThreadPoolExecutor
-    ProcessPoolExecutor
+    ~concurrent.futures.ThreadPoolExecutor
+    ~concurrent.futures.ProcessPoolExecutor
 
 
 
@@ -71,24 +67,20 @@ Third Party Libraries
 
 `PyToolz API Documentation <http://toolz.readthedocs.io/en/latest/index.html>`_
 
-.. currentmodule:: toolz
-
 .. autosummary::
 
-    keyfilter
-    keymap
-    valfilter
-    valmap
+    ~toolz.keyfilter
+    ~toolz.keymap
+    ~toolz.valfilter
+    ~toolz.valmap
 
 
 :py:mod:`wrapt`
 ---------------
 
-.. currentmodule:: wrapt
-
 .. autosummary::
 
-    decorator
+    ~wrapt.decorator
 
 **How you implemented your Python decorator is wrong** (`blog <http://blog.dscpl.com.au/2014/01/how-you-implemented-your-python.html>`_, `GitHub <https://github.com/openstack/deb-python-wrapt/tree/master/blog>`_) -
 Comprehensive series of essays covering every facet of decorators.
