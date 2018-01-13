@@ -7,7 +7,8 @@ Python
 General
 =======
 
-`Data Model <https://docs.python.org/2.7/reference/datamodel.html>`_
+- :ref:`python:datamodel`
+- :ref:`python:execmodel`
 
 
 
