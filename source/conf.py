@@ -52,7 +52,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'technotes'
+project = u'Technotes'
 copyright = u'2017, Chris'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -124,7 +124,7 @@ html_theme_path = [
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'technotes'
+html_title = project + ' Documentation'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -161,13 +161,15 @@ html_static_path = ['../static']
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
-#html_additional_pages = {}
+html_additional_pages = {
+    'index': 'pages/index.html'
+}
 
 # If false, no module index is generated.
 html_domain_indices = False
 
 # If false, no index is generated.
-#html_use_index = True
+html_use_index = False
 
 # If true, the index is split into individual pages for each letter.
 #html_split_index = False
