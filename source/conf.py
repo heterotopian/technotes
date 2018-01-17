@@ -19,7 +19,7 @@ import sphinx_rtd_theme
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('.'))
 
 # -- General configuration ------------------------------------------------
 
@@ -275,14 +275,6 @@ texinfo_documents = [
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {
-    'python':     ('http://docs.python.org/2/', None),
-    'nose':       ('http://nose.readthedocs.org/en/latest/', None),
-    'pandas':     ('http://pandas.pydata.org/pandas-docs/version/0.12.0/', None),
-    'numpy':      ('http://docs.scipy.org/doc/numpy-1.7.0/', None),
-    'sqlalchemy': ('https://docs.sqlalchemy.org/en/latest/', None),
-    'wrapt':      ('http://wrapt.readthedocs.io/en/latest/', None),
-    'toolz':      ('http://toolz.readthedocs.io/en/latest/', None),
-    'trio':       ('https://trio.readthedocs.io/en/latest/', None),
-    'sphinx':     ('http://www.sphinx-doc.org/en/stable/', None),
-}
+import intersphinx
+
+intersphinx_mapping = intersphinx.get_mapping()
