@@ -284,4 +284,5 @@ intersphinx_mapping = {
     'wrapt':      ('http://wrapt.readthedocs.io/en/latest/', None),
     'toolz':      ('http://toolz.readthedocs.io/en/latest/', None),
     'trio':       ('https://trio.readthedocs.io/en/latest/', None),
+    'sphinx':     ('http://www.sphinx-doc.org/en/stable/', None),
 }
