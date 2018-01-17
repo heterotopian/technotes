@@ -1,0 +1,27 @@
+nose: !!python/tuple
+  - "http://nose.readthedocs.org/en/latest/"
+  - null
+numpy: !!python/tuple
+  - "http://docs.scipy.org/doc/numpy-1.7.0/"
+  - null
+pandas: !!python/tuple
+  - "http://pandas.pydata.org/pandas-docs/version/0.12.0/"
+  - null
+python: !!python/tuple
+  - "http://docs.python.org/2/"
+  - null
+sphinx: !!python/tuple
+  - "http://www.sphinx-doc.org/en/stable/"
+  - null
+sqlalchemy: !!python/tuple
+  - "https://docs.sqlalchemy.org/en/latest/"
+  - null
+toolz: !!python/tuple
+  - "http://toolz.readthedocs.io/en/latest/"
+  - null
+trio: !!python/tuple
+  - "https://trio.readthedocs.io/en/latest/"
+  - null
+wrapt: !!python/tuple
+  - "http://wrapt.readthedocs.io/en/latest/"
+  - null
