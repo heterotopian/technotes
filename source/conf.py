@@ -283,4 +283,5 @@ intersphinx_mapping = {
     'sqlalchemy': ('https://docs.sqlalchemy.org/en/latest/', None),
     'wrapt':      ('http://wrapt.readthedocs.io/en/latest/', None),
     'toolz':      ('http://toolz.readthedocs.io/en/latest/', None),
+    'trio':       ('https://trio.readthedocs.io/en/latest/', None),
 }
