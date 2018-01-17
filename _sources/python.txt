@@ -4,15 +4,15 @@
 Python
 ======
 
-General
-=======
+Documentation
+=============
 
 - :ref:`python:datamodel`
 - :ref:`python:execmodel`
 
 
 PEPs
-====
+----
 
 - :pep:`302` - New Import Hooks
 

@@ -87,10 +87,15 @@ Ctrl-Tab Order
 https://github.com/atom/atom/issues/11650
 
 
+Documentation
+=============
+
+- `Atom Flight Manual <http://flight-manual.atom.io/>`_
+- `API docs <https://atom.io/docs/api/>`_
+
+
 Resources
 =========
 
-- `Atom Flight Manual <http://flight-manual.atom.io/>`_
 - `AtomThemes.io <http://atomthemes.io/>`_
 - `Atom Packages Directory <http://atom-packages.directory/>`_
-- `API documentation <https://atom.io/docs/api/>`_
