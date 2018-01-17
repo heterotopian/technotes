@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS  =
 SPHINXBUILD = sphinx-build
-AUTOOPTS    = --host 0.0.0.0 --poll --ignore "*.sw?" --watch static --watch templates $(if $(AUTOPORT),--port=$(AUTOPORT))
+AUTOOPTS    = --host 0.0.0.0 --poll --ignore "*.sw?" --watch static --watch template $(if $(AUTOPORT),--port=$(AUTOPORT))
 AUTOBUILD   = sphinx-autobuild
 PAPER       =
 BUILDDIR    = build
