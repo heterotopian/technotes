@@ -1,5 +1,5 @@
 '''
-Standalone module for dealing with intersphinx configuration.  
+Standalone module for dealing with intersphinx configuration.
 '''
 import pkg_resources
 import yaml
