@@ -9,6 +9,8 @@ tmux
 General
 =======
 
+- `Project homepage <https://tmux.github.io/>`_
+
 
 Resources
 =========
