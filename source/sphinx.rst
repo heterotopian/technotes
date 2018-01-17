@@ -6,14 +6,11 @@ Sphinx
 
 .. highlight:: console
 
-General
-=======
-
-
 Documentation
 =============
 
-- `Templating <http://www.sphinx-doc.org/en/stable/templating.html>`_
+- `Project homepage <http://www.sphinx-doc.org>`_
+- :ref:`sphinx:templating`
 
 
 Resources

@@ -6,8 +6,8 @@ tmux
 
 .. highlight:: console
 
-General
-=======
+Documentation
+=============
 
 - `Project homepage <https://tmux.github.io/>`_
 
@@ -15,4 +15,4 @@ General
 Resources
 =========
 
-- `tmux primer <https://danielmiessler.com/study/tmux/>`_ from Daniel Miessler
+- `Daniel Miessler's primer <https://danielmiessler.com/study/tmux/>`_
