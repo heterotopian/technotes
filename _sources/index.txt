@@ -12,7 +12,7 @@ Technical Notes
 
 .. toctree::
     :maxdepth: 1
-    :caption: Languages
+    :caption: Programming
 
     python
     frontend
