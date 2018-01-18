@@ -9,6 +9,9 @@ Documentation
 
 - :ref:`python:datamodel`
 - :ref:`python:execmodel`
+- Packaging
+
+  - `Python Packaging User Guide <https://packaging.python.org/>`_
 
 
 PEPs
@@ -102,3 +105,10 @@ Third Party Libraries
 
 `How you implemented your Python decorator is wrong <http://blog.dscpl.com.au/2014/01/how-you-implemented-your-python.html>`_
 (`GitHub <https://github.com/openstack/deb-python-wrapt/tree/master/blog>`_)
+
+
+
+Resources
+=========
+
+- `Python Packaging Authority <https://www.pypa.io/en/latest/>`_
