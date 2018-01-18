@@ -86,10 +86,7 @@
 <p class="caption"><span class="caption-text">Languages</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#peps">PEPs</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#fundamentals">Fundamentals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#standard-library">Standard Library</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#collections"><code class="docutils literal"><span class="pre">collections</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#concurrent-futures"><code class="docutils literal"><span class="pre">concurrent.futures</span></code></a></li>
@@ -97,6 +94,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#third-party-libraries">Third Party Libraries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#distlib"><code class="docutils literal"><span class="pre">distlib</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#marshmallow"><code class="docutils literal"><span class="pre">marshmallow</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#nose"><code class="docutils literal"><span class="pre">nose</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#numpy"><code class="docutils literal"><span class="pre">numpy</span></code></a></li>
@@ -110,6 +108,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#wrapt"><code class="docutils literal"><span class="pre">wrapt</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#peps">PEPs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#distributions">Distributions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
 </ul>
@@ -176,18 +175,15 @@
             
   <div class="section" id="python">
 <span id="id1"></span><h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fundamentals">
+<h2>Fundamentals<a class="headerlink" href="#fundamentals" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="http://docs.python.org/2/reference/datamodel.html#datamodel" title="(in Python v2.7)"><span>Data model</span></a></li>
+<li><a class="reference external" href="http://docs.python.org/2/reference/datamodel.html#datamodel" title="(in Python v2.7)"><span>Data model</span></a><ul>
+<li><a class="reference external" href="https://eev.ee/blog/2012/05/23/python-faq-descriptors/">Descriptors FAQ</a></li>
+</ul>
+</li>
 <li><a class="reference external" href="http://docs.python.org/2/reference/executionmodel.html#execmodel" title="(in Python v2.7)"><span>Execution model</span></a></li>
 </ul>
-<div class="section" id="peps">
-<h3>PEPs<a class="headerlink" href="#peps" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0302"><strong>PEP 302</strong></a> - New Import Hooks</li>
-</ul>
-</div>
 </div>
 <div class="section" id="standard-library">
 <h2>Standard Library<a class="headerlink" href="#standard-library" title="Permalink to this headline">¶</a></h2>
@@ -237,6 +233,12 @@
 </div>
 <div class="section" id="third-party-libraries">
 <h2>Third Party Libraries<a class="headerlink" href="#third-party-libraries" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="distlib">
+<h3><code class="xref py py-mod docutils literal"><span class="pre">distlib</span></code><a class="headerlink" href="#distlib" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://distlib.readthedocs.io/en/latest/">Documentation</a></li>
+</ul>
+</div>
 <div class="section" id="marshmallow">
 <h3><a class="reference external" href="http://marshmallow.readthedocs.io/en/latest/quickstart.html#module-marshmallow" title="(in marshmallow v3.0.0b6)"><code class="xref py py-mod docutils literal"><span class="pre">marshmallow</span></code></a><a class="headerlink" href="#marshmallow" title="Permalink to this headline">¶</a></h3>
 </div>
@@ -355,6 +357,12 @@
 </ul>
 </div>
 </div>
+<div class="section" id="peps">
+<h2>PEPs<a class="headerlink" href="#peps" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0302"><strong>PEP 302</strong></a> - New Import Hooks</li>
+</ul>
+</div>
 <div class="section" id="distributions">
 <h2>Distributions<a class="headerlink" href="#distributions" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -364,13 +372,59 @@
 </div>
 <div class="section" id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Packaging</p>
 <ul class="simple">
-<li>Packaging<ul>
+<li>Official<ul>
 <li><a class="reference external" href="https://packaging.python.org/">Python Packaging User Guide</a></li>
 <li><a class="reference external" href="https://www.pypa.io/en/latest/">Python Packaging Authority</a></li>
+<li><a class="reference external" href="http://docs.python.org/2/install/index.html#install-index" title="(in Python v2.7)"><span>Installing Python Modules (Legacy version)</span></a></li>
+<li><a class="reference external" href="http://docs.python.org/2/distutils/index.html#distutils-index" title="(in Python v2.7)"><span>Distributing Python Modules (Legacy version)</span></a></li>
 </ul>
 </li>
-<li>Generating code<ul>
+<li>Community<ul>
+<li><a class="reference external" href="http://dh-virtualenv.readthedocs.io/en/latest/">dh-virtualenv</a></li>
+<li><a class="reference external" href="https://deb-pkg-tools.readthedocs.io">deb-pkg-tools</a></li>
+<li><a class="reference external" href="https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/">PyPI Quick and Dirty</a></li>
+<li><a class="reference external" href="http://sedimental.org/the_packaging_gradient.html">The Many Layers of Packaging</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first">Docker</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="https://glyph.twistedmatrix.com/2015/03/docker-deploy-double-dutch.html">Deploying Python Applications with Docker</a></li>
+<li><a class="reference external" href="http://blog.dscpl.com.au/p/using-python-with-docker.html">Using Python with Docker</a><ul>
+<li><a class="reference external" href="http://blog.dscpl.com.au/2015/06/installing-custom-python-version-into.html">Installing a custom Python version into a Docker image</a></li>
+<li><a class="reference external" href="http://blog.dscpl.com.au/2016/01/python-virtual-environments-and-docker.html">Python virtual environments and Docker</a></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Python 3</p>
+<ul class="simple">
+<li><a class="reference external" href="http://py3readiness.org/">Python 3 Readiness</a></li>
+<li><a class="reference external" href="http://python-notes.curiousefficiency.org/en/latest/python3/questions_and_answers.html">Python 3 Q&amp;A</a></li>
+<li><a class="reference external" href="https://eev.ee/blog/2016/07/31/python-faq-why-should-i-use-python-3/">Why should I use Python 3?</a></li>
+</ul>
+</li>
+<li><p class="first">IO</p>
+<ul class="simple">
+<li><a class="reference external" href="http://sans-io.readthedocs.io/">Sans I/O</a> -
+Network protocol implementations that perform no I/O</li>
+</ul>
+</li>
+<li><p class="first">Build systems</p>
+<ul class="simple">
+<li><a class="reference external" href="https://waf.io/">Waf</a></li>
+<li><a class="reference external" href="https://www.pantsbuild.org/">Pants</a></li>
+<li><a class="reference external" href="https://pex.readthedocs.io/en/stable/">pex</a></li>
+</ul>
+</li>
+<li><p class="first">Reflection</p>
+<ul class="simple">
 <li><a class="reference external" href="http://greentreesnakes.readthedocs.io/en/latest/">Green Tree Snakes</a> -
 A field guide to Abstract Syntax Trees in Python</li>
 </ul>
