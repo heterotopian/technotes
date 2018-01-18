@@ -25,3 +25,6 @@ trio: !!python/tuple
 wrapt: !!python/tuple
   - "http://wrapt.readthedocs.io/en/latest/"
   - null
+marshmallow: !!python/tuple
+  - "http://marshmallow.readthedocs.io/en/latest/"
+  - null
