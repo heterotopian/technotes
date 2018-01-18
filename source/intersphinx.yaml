@@ -40,3 +40,9 @@ pweave: !!python/tuple
 concurrentfutures: !!python/tuple
   - "http://pythonhosted.org/futures/"
   - null
+distlib: !!python/tuple
+  - "http://distlib.readthedocs.io/en/latest/"
+  - null
+pex: !!python/tuple
+  - "https://pex.readthedocs.io/en/stable/"
+  - null
