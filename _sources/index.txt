@@ -8,7 +8,6 @@ Technical Notes
 
     bash
     systemd
-    tmux
 
 .. toctree::
     :maxdepth: 1
@@ -25,16 +24,17 @@ Technical Notes
 
 .. toctree::
     :maxdepth: 1
-    :caption: Version control
-
-    git
-
-.. toctree::
-    :maxdepth: 1
     :caption: Applications
 
     atom
     vim
+    tmux
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Version control
+
+    git
 
 .. toctree::
     :maxdepth: 1
