@@ -79,6 +79,11 @@ vim-mode-plus
 - `Package homepage <https://atom.io/packages/vim-mode-plus>`_
 - `Commands <https://github.com/t9md/atom-vim-mode-plus/wiki/Commands>`_
 
+sync-settings
+-------------
+
+- `Package homepage <https://atom.io/packages/sync-settings>`_
+
 
 
 Documentation
