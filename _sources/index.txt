@@ -15,6 +15,7 @@ Technical Notes
     :caption: Languages
 
     python
+    frontend
 
 .. toctree::
     :maxdepth: 1
@@ -33,10 +34,11 @@ Technical Notes
     :caption: Applications
 
     atom
+    vim
 
 .. toctree::
     :maxdepth: 1
-    :caption: Authoring Tools
+    :caption: Authoring
 
     sphinx
 
