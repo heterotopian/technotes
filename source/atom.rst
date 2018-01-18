@@ -6,6 +6,12 @@ Atom
 
 .. highlight:: console
 
+General
+=======
+
+- `Command palette <http://flight-manual.atom.io/getting-started/sections/atom-basics/#command-palette>`_
+
+
 
 Shortcuts
 =========
@@ -44,6 +50,7 @@ Shortcuts
       - :kbd:`Ctrl-Shift-I`
 
 
+
 Command Line
 ============
 
@@ -56,35 +63,22 @@ Command Line
     $ apm install --packages-file ~/.atom_installed
 
 
+
 Packages
 ========
 
 toggler
 -------
 
-Toggle words and symbols
+- `Package homepage <https://atom.io/packages/toggler>`_
+
 
 vim-mode-plus
 -------------
 
-Neovim bindings
-
+- `Package homepage <https://atom.io/packages/vim-mode-plus>`_
 - `Commands <https://github.com/t9md/atom-vim-mode-plus/wiki/Commands>`_
 
-
-Commands
-========
-
-`Command palette <http://flight-manual.atom.io/getting-started/sections/atom-basics/#command-palette>`_ in the Atom Flight Manual
-
-
-Discussion
-==========
-
-Ctrl-Tab Order
---------------
-
-https://github.com/atom/atom/issues/11650
 
 
 Documentation
@@ -94,8 +88,12 @@ Documentation
 - `API docs <https://atom.io/docs/api/>`_
 
 
+
 Resources
 =========
 
 - `AtomThemes.io <http://atomthemes.io/>`_
 - `Atom Packages Directory <http://atom-packages.directory/>`_
+- Discussion
+
+  - `Ctrl-Tab order <https://github.com/atom/atom/issues/11650>`_
