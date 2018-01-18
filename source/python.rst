@@ -18,6 +18,14 @@ PEPs
 
 
 
+Distributions
+=============
+
+- `Anaconda <https://www.anaconda.com/>`_
+- `Enthought Canopy <https://www.enthought.com/product/canopy/>`_
+
+
+
 Standard Library
 ================
 
