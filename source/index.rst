@@ -8,6 +8,7 @@ Technical Notes
 
     bash
     systemd
+    docker
 
 .. toctree::
     :maxdepth: 1
@@ -29,18 +30,13 @@ Technical Notes
     atom
     vim
     tmux
+    sphinx
 
 .. toctree::
     :maxdepth: 1
     :caption: Version control
 
     git
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Authoring
-
-    sphinx
 
 
 Indices and tables
