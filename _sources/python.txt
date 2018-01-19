@@ -148,6 +148,7 @@ PEPs
 ====
 
 - :pep:`302` - New Import Hooks
+- :pep:`492` - Coroutines with async and await syntax
 
 
 
