@@ -144,59 +144,62 @@ PEPs
 
 
 
-Distributions
-=============
-
-- `Anaconda <https://www.anaconda.com/>`_
-- `Enthought Canopy <https://www.enthought.com/product/canopy/>`_
-
-
-
 Resources
 =========
 
-- Packaging
+Packaging
+---------
 
-  - Official
+- Official
 
-    - `Python Packaging User Guide <https://packaging.python.org/>`_
-    - `Python Packaging Authority <https://www.pypa.io/en/latest/>`_
-    - :ref:`python:install-index`
-    - :ref:`python:distutils-index`
+  - `Python Packaging User Guide <https://packaging.python.org/>`_
+  - `Python Packaging Authority <https://www.pypa.io/en/latest/>`_
+  - :ref:`python:install-index`
+  - :ref:`python:distutils-index`
 
-  - Community
+- Community
 
-    - `dh-virtualenv <http://dh-virtualenv.readthedocs.io/en/latest/>`_
-    - `deb-pkg-tools <https://deb-pkg-tools.readthedocs.io>`_
-    - `PyPI Quick and Dirty <https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/>`_
-    - `The Many Layers of Packaging <http://sedimental.org/the_packaging_gradient.html>`_
+  - `dh-virtualenv <http://dh-virtualenv.readthedocs.io/en/latest/>`_
+  - `deb-pkg-tools <https://deb-pkg-tools.readthedocs.io>`_
+  - `PyPI Quick and Dirty <https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/>`_
+  - `The Many Layers of Packaging <http://sedimental.org/the_packaging_gradient.html>`_
 
-- Docker
 
-    - `Deploying Python Applications with Docker <https://glyph.twistedmatrix.com/2015/03/docker-deploy-double-dutch.html>`_
-    - `Using Python with Docker <http://blog.dscpl.com.au/p/using-python-with-docker.html>`_
+Py3k
+----
 
-      - `Installing a custom Python version into a Docker image <http://blog.dscpl.com.au/2015/06/installing-custom-python-version-into.html>`_
-      - `Python virtual environments and Docker <http://blog.dscpl.com.au/2016/01/python-virtual-environments-and-docker.html>`_
+- `Python 3 Readiness <http://py3readiness.org/>`_
+- `Python 3 Q&A <http://python-notes.curiousefficiency.org/en/latest/python3/questions_and_answers.html>`_
+- `Why should I use Python 3? <https://eev.ee/blog/2016/07/31/python-faq-why-should-i-use-python-3/>`_
 
-- Python 3
 
-  - `Python 3 Readiness <http://py3readiness.org/>`_
-  - `Python 3 Q&A <http://python-notes.curiousefficiency.org/en/latest/python3/questions_and_answers.html>`_
-  - `Why should I use Python 3? <https://eev.ee/blog/2016/07/31/python-faq-why-should-i-use-python-3/>`_
+Docker
+------
 
-- IO
+- `Deploying Python Applications with Docker <https://glyph.twistedmatrix.com/2015/03/docker-deploy-double-dutch.html>`_
+- `Using Python with Docker <http://blog.dscpl.com.au/p/using-python-with-docker.html>`_
 
-  - `Sans I/O <http://sans-io.readthedocs.io/>`_ -
-    Network protocol implementations that perform no I/O
+  - `Installing a custom Python version into a Docker image <http://blog.dscpl.com.au/2015/06/installing-custom-python-version-into.html>`_
+  - `Python virtual environments and Docker <http://blog.dscpl.com.au/2016/01/python-virtual-environments-and-docker.html>`_
 
-- Build systems
 
-  - `Waf <https://waf.io/>`_
-  - `Pants <https://www.pantsbuild.org/>`_
-  - `pex <https://pex.readthedocs.io/en/stable/>`_
+I/O
+---
 
-- Reflection
+- `Sans I/O <http://sans-io.readthedocs.io/>`_ -
+  Network protocol implementations that perform no I/O
 
-  - `Green Tree Snakes <http://greentreesnakes.readthedocs.io/en/latest/>`_ -
-    A field guide to Abstract Syntax Trees in Python
+
+Build systems
+-------------
+
+- `Waf <https://waf.io/>`_
+- `Pants <https://www.pantsbuild.org/>`_
+- `pex <https://pex.readthedocs.io/en/stable/>`_
+
+
+Reflection
+----------
+
+- `Green Tree Snakes <http://greentreesnakes.readthedocs.io/en/latest/>`_ -
+  A field guide to Abstract Syntax Trees in Python
