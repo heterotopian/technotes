@@ -32,6 +32,13 @@ Standard Library
     ~concurrent.futures.ThreadPoolExecutor
     ~concurrent.futures.ProcessPoolExecutor
 
+:py:mod:`functools`
+-------------------
+
+.. autosummary::
+
+    ~functools.total_ordering
+
 
 :py:mod:`operator`
 ------------------
@@ -146,6 +153,9 @@ PEPs
 
 Resources
 =========
+
+- `Pyformat.info <https://pyformat.info/>`_
+
 
 Packaging
 ---------
