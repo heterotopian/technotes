@@ -29,6 +29,16 @@ Standard Library
     ~concurrent.futures.ThreadPoolExecutor
     ~concurrent.futures.ProcessPoolExecutor
 
+
+:py:mod:`contextlib`
+--------------------
+
+.. autosummary::
+
+    ~contextlib.contextmanager
+    ~contextlib.closing
+
+
 :py:mod:`functools`
 -------------------
 
