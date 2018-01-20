@@ -90,9 +90,16 @@
 </ul>
 <p class="caption"><span class="caption-text">Diagnostic Tools</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">sysdig</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">sysdig</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#general">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#chisels">Chisels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chisels">Chisels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ps">ps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lsof">lsof</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#netstat">netstat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#echo-fds">echo_fds</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -159,12 +166,51 @@
 <li><a class="reference external" href="https://github.com/draios/sysdig/wiki/Sysdig-User-Guide#filtering">Filtering</a></li>
 </ul>
 </div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-c <var>chiselname</var></span></kbd></td>
+<td>Run the specified chisel</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-c<var>l</var></span></kbd></td>
+<td>List chisels</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-i <var>chiselname</var></span></kbd></td>
+<td>Get description for specified chisel</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-l</span></kbd></td>
+<td>List filter fields</td></tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="chisels">
 <h2>Chisels<a class="headerlink" href="#chisels" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt>echo_fds</dt>
-<dd><a class="reference external" href="https://sysdig.com/blog/decode-your-http-traffic-with-sysdig/">https://sysdig.com/blog/decode-your-http-traffic-with-sysdig/</a></dd>
-</dl>
+<div class="section" id="ps">
+<h3>ps<a class="headerlink" href="#ps" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sysdig -c ps proc.apid<span class="o">=</span>120954
+</pre></div>
+</div>
+</div>
+<div class="section" id="lsof">
+<h3>lsof<a class="headerlink" href="#lsof" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sysdig -c lsof <span class="s2">&quot;fd.directory=/var/log&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="netstat">
+<h3>netstat<a class="headerlink" href="#netstat" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sysdig -c netstat fd.port<span class="o">=</span>80
+</pre></div>
+</div>
+</div>
+<div class="section" id="echo-fds">
+<h3>echo_fds<a class="headerlink" href="#echo-fds" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://sysdig.com/blog/decode-your-http-traffic-with-sysdig/">https://sysdig.com/blog/decode-your-http-traffic-with-sysdig/</a></p>
+</div>
 </div>
 </div>
 

@@ -8,9 +8,6 @@ Fundamentals
 ============
 
 - :ref:`python:datamodel`
-
-  - `Descriptors FAQ <https://eev.ee/blog/2012/05/23/python-faq-descriptors/>`_
-
 - :ref:`python:execmodel`
 
 
@@ -31,6 +28,16 @@ Standard Library
 
     ~concurrent.futures.ThreadPoolExecutor
     ~concurrent.futures.ProcessPoolExecutor
+
+
+:py:mod:`contextlib`
+--------------------
+
+.. autosummary::
+
+    ~contextlib.contextmanager
+    ~contextlib.closing
+
 
 :py:mod:`functools`
 -------------------
@@ -170,8 +177,6 @@ Packaging
 
 - Community
 
-  - `dh-virtualenv <http://dh-virtualenv.readthedocs.io/en/latest/>`_
-  - `deb-pkg-tools <https://deb-pkg-tools.readthedocs.io>`_
   - `PyPI Quick and Dirty <https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/>`_
   - `The Many Layers of Packaging <http://sedimental.org/the_packaging_gradient.html>`_
 
@@ -184,6 +189,18 @@ Py3k
 - `Why should I use Python 3? <https://eev.ee/blog/2016/07/31/python-faq-why-should-i-use-python-3/>`_
 
 
+async/await
+-----------
+
+- `Unyielding <https://glyph.twistedmatrix.com/2014/02/unyielding.html>`_ -
+  There are no shortcuts to making single-tasking code concurrent
+- `What color is your function? <http://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/>`_ and
+  `The function color myth <https://lukasa.co.uk/2016/07/The_Function_Colour_Myth/>`_
+- `Asynchronous API design in a post-async/await world <https://vorpus.org/blog/some-thoughts-on-asynchronous-api-design-in-a-post-asyncawait-world/>`_
+- `Sans I/O <http://sans-io.readthedocs.io/>`_ -
+  Network protocol implementations that operate directly on text
+
+
 Docker
 ------
 
@@ -194,18 +211,9 @@ Docker
   - `Python virtual environments and Docker <http://blog.dscpl.com.au/2016/01/python-virtual-environments-and-docker.html>`_
 
 
-I/O
----
-
-- `Sans I/O <http://sans-io.readthedocs.io/>`_ -
-  Network protocol implementations that perform no I/O
-
-
 Build systems
 -------------
 
-- `Waf <https://waf.io/>`_
-- `Pants <https://www.pantsbuild.org/>`_
 - `pex <https://pex.readthedocs.io/en/stable/>`_
 
 
