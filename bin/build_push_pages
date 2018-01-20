@@ -2,18 +2,18 @@
 
 WORKBRANCH=$(dirname $(dirname $(readlink -f "${BASH_SOURCE[0]}")))
 PAGESBRANCH=${PAGESBRANCH:-${WORKBRANCH}-build}
-OUTTMP=$(mktemp -d)
+BUILDTMP=$(mktemp -d)
 
 # Build site
 
 cd "${WORKBRANCH}"
-make clean html OUTDIR="${OUTTMP}"
+make html BUILDDIR="${BUILDTMP}"
 
 # Commit pages
 
 (cd "${PAGESBRANCH}" && git pull --rebase)
-cp -R "${OUTTMP}"/html/* "${PAGESBRANCH}"
-cd "${PAGESBRANCH}"
-git add --all .
-git commit -am "New build"
-git push origin gh-pages
+cp -R "${BUILDTMP}"/html/* "${PAGESBRANCH}"
+#cd "${PAGESBRANCH}"
+#git add --all .
+#git commit -am "New build"
+#git push origin gh-pages
