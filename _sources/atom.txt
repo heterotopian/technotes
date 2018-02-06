@@ -6,10 +6,14 @@ Atom
 
 .. highlight:: console
 
-General
-=======
+Documentation
+=============
 
-- `Command palette <http://flight-manual.atom.io/getting-started/sections/atom-basics/#command-palette>`_
+- `Atom Flight Manual <http://flight-manual.atom.io/>`_
+
+  - `Command palette <http://flight-manual.atom.io/getting-started/sections/atom-basics/#command-palette>`_
+
+- `API docs <https://atom.io/docs/api/>`_
 
 
 
@@ -83,14 +87,6 @@ sync-settings
 -------------
 
 - `Package homepage <https://atom.io/packages/sync-settings>`_
-
-
-
-Documentation
-=============
-
-- `Atom Flight Manual <http://flight-manual.atom.io/>`_
-- `API docs <https://atom.io/docs/api/>`_
 
 
 
