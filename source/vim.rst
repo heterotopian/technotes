@@ -7,8 +7,8 @@ Vim
 Text Objects
 ============
 
-- **normal form**: includes delimiting characters
-- **inner form**: excludes delimiting characters
+:normal form: includes delimiting characters
+:inner form: excludes delimiting characters
 
 .. list-table::
     :header-rows: 1
