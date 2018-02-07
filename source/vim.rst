@@ -11,8 +11,8 @@ Text Objects
     :header-rows: 1
 
     * - Object
-      - Normal
-      - Inner
+      - Normal form
+      - Inner form
 
     * - word
       - :kbd:`aw`
