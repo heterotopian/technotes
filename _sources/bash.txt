@@ -29,6 +29,10 @@ Redirection
 
     $ command &> command.out
 
+- stdout to ``/dev/null`` and stderr to stdout::
+
+    $ command 2>&1 >/dev/null
+
 
 Expansion
 =========
