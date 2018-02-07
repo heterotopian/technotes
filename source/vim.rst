@@ -7,9 +7,6 @@ Vim
 Text Objects
 ============
 
-:normal form: includes delimiting characters
-:inner form: excludes delimiting characters
-
 .. list-table::
     :header-rows: 1
 
@@ -109,6 +106,12 @@ operators
 
 text objects
     Logical groupings of text characters
+
+normal form
+    Includes delimiting characters
+
+inner form
+    Excludes delimiting characters
 
 
 Resources
