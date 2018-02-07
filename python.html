@@ -85,7 +85,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Programming</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Python</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#fundamentals">Fundamentals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#standard-library">Standard Library</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#collections"><code class="docutils literal"><span class="pre">collections</span></code></a></li>
@@ -207,10 +207,10 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference external" href="http://pythonhosted.org/futures/index.html#concurrent.futures.ThreadPoolExecutor" title="(in futures v2.1.3)"><code class="xref py py-obj docutils literal"><span class="pre">concurrent.futures.ThreadPoolExecutor</span></code></a></td>
+<tr class="row-odd"><td><a class="reference external" href="http://pythonhosted.org/futures/index.html#concurrent.futures.ThreadPoolExecutor" title="(in futures v2.1.3)"><code class="xref py py-obj docutils literal"><span class="pre">ThreadPoolExecutor</span></code></a>(max_workers)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference external" href="http://pythonhosted.org/futures/index.html#concurrent.futures.ProcessPoolExecutor" title="(in futures v2.1.3)"><code class="xref py py-obj docutils literal"><span class="pre">concurrent.futures.ProcessPoolExecutor</span></code></a></td>
+<tr class="row-even"><td><a class="reference external" href="http://pythonhosted.org/futures/index.html#concurrent.futures.ProcessPoolExecutor" title="(in futures v2.1.3)"><code class="xref py py-obj docutils literal"><span class="pre">ProcessPoolExecutor</span></code></a>([max_workers])</td>
 <td></td>
 </tr>
 </tbody>
@@ -317,35 +317,35 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.itertoolz.get" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.itertoolz.get</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.itertoolz.get" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.itertoolz.get</span></code></a>(ind,&nbsp;seq[,&nbsp;default])</td>
+<td>Get element in a sequence or dict</td>
 </tr>
-<tr class="row-even"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.itertoolz.groupby" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.itertoolz.groupby</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.itertoolz.groupby" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.itertoolz.groupby</span></code></a>(key,&nbsp;seq)</td>
+<td>Group a collection by a key function</td>
 </tr>
-<tr class="row-odd"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.itertoolz.join" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.itertoolz.join</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.itertoolz.join" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.itertoolz.join</span></code></a>(leftkey,&nbsp;leftseq,&nbsp;...)</td>
+<td>Join two sequences on common attributes</td>
 </tr>
-<tr class="row-even"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.itertoolz.mapcat" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.itertoolz.mapcat</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.itertoolz.mapcat" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.itertoolz.mapcat</span></code></a>(func,&nbsp;seqs)</td>
+<td>Apply func to each sequence in seqs, concatenating results.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.itertoolz.pluck" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.itertoolz.pluck</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.itertoolz.pluck" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.itertoolz.pluck</span></code></a>(ind,&nbsp;seqs[,&nbsp;default])</td>
+<td>plucks an element or several elements from each item in a sequence.</td>
 </tr>
-<tr class="row-even"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.functoolz.complement" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.functoolz.complement</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.functoolz.complement" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.functoolz.complement</span></code></a>(func)</td>
+<td>Convert a predicate function to its logical complement.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.dicttoolz.keyfilter" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.dicttoolz.keyfilter</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.dicttoolz.keyfilter" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.dicttoolz.keyfilter</span></code></a>(predicate,&nbsp;d[,&nbsp;...])</td>
+<td>Filter items in dictionary by key</td>
 </tr>
-<tr class="row-even"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.dicttoolz.keymap" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.dicttoolz.keymap</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.dicttoolz.keymap" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.dicttoolz.keymap</span></code></a>(func,&nbsp;d[,&nbsp;factory])</td>
+<td>Apply function to keys of dictionary</td>
 </tr>
-<tr class="row-odd"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.dicttoolz.valfilter" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.dicttoolz.valfilter</span></code></a></td>
-<td></td>
+<tr class="row-odd"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.dicttoolz.valfilter" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.dicttoolz.valfilter</span></code></a>(predicate,&nbsp;d[,&nbsp;...])</td>
+<td>Filter items in dictionary by value</td>
 </tr>
-<tr class="row-even"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.dicttoolz.valmap" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.dicttoolz.valmap</span></code></a></td>
-<td></td>
+<tr class="row-even"><td><a class="reference external" href="http://toolz.readthedocs.io/en/latest/api.html#toolz.dicttoolz.valmap" title="(in Toolz v0.9.0)"><code class="xref py py-obj docutils literal"><span class="pre">toolz.dicttoolz.valmap</span></code></a>(func,&nbsp;d[,&nbsp;factory])</td>
+<td>Apply function to values of dictionary</td>
 </tr>
 </tbody>
 </table>
