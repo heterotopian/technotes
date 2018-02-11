@@ -30,8 +30,8 @@
   
 
   
-    <link rel="stylesheet" href="_static/css/theme-custom.css" type="text/css" />
-    
+<link rel="stylesheet" href="_static/css/theme-custom.css" type="text/css" />
+
     <link rel="top" title="Technotes Documentation" href="index.html"/>
         <link rel="prev" title="Sphinx" href="sphinx.html"/>
  
@@ -74,11 +74,13 @@
 
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+
             
             
                 <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="bash.html">Bash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux.html">Linux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="systemd.html">systemd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker.html">Docker</a></li>
 </ul>
@@ -101,6 +103,7 @@
 <p class="caption"><span class="caption-text">Version control</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#diffing">Diffing</a></li>
 </ul>
@@ -112,6 +115,15 @@
 
             
           
+<p class="caption">
+  <span class="caption-text">Reference</span>
+</p>
+<ul>
+  <li class="toctree-l1">
+    <a class="reference internal" href="genindex.html">Index</a>
+  </li>
+</ul>
+
         </div>
       </div>
     </nav>
@@ -154,6 +166,16 @@
             
   <div class="section" id="git">
 <span id="id1"></span><h1>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://guides.github.com/introduction/flow/">GitHub Flow</a></li>
+<li><a class="reference external" href="https://git-scm.com/book/en/v2">Pro Git</a><ul>
+<li><a class="reference external" href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">Rebasing</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="commands">
 <h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
 <ul>
@@ -171,7 +193,7 @@
 <div class="section" id="diffing">
 <h3>Diffing<a class="headerlink" href="#diffing" title="Permalink to this headline">¶</a></h3>
 <ul>
-<li><p class="first">Diff <code class="docutils literal"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal"><span class="pre">HEAD</span></code></p>
+<li><p class="first"><code class="docutils literal"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal"><span class="pre">HEAD</span></code></p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git diff HEAD^ HEAD
 <span class="gp">$</span> git diff HEAD^..HEAD
 <span class="gp">$</span> git diff @^ @
@@ -180,12 +202,12 @@
 </pre></div>
 </div>
 </li>
-<li><p class="first">Diff <code class="docutils literal"><span class="pre">master</span></code> and current branch:</p>
+<li><p class="first"><code class="docutils literal"><span class="pre">master</span></code> and current branch:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git log master..HEAD -p
 </pre></div>
 </div>
 </li>
-<li><p class="first">Diff <code class="docutils literal"><span class="pre">file.rst</span></code> from <code class="docutils literal"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal"><span class="pre">HEAD</span></code></p>
+<li><p class="first"><code class="docutils literal"><span class="pre">file.rst</span></code> from <code class="docutils literal"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal"><span class="pre">HEAD</span></code></p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git diff @:file.rst @^1:file.rst
 </pre></div>
 </div>

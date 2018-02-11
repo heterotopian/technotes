@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; Technotes Documentation</title>
+  <title>Linux &mdash; Technotes Documentation</title>
   
 
   
@@ -33,6 +33,8 @@
 <link rel="stylesheet" href="_static/css/theme-custom.css" type="text/css" />
 
     <link rel="top" title="Technotes Documentation" href="index.html"/>
+        <link rel="next" title="systemd" href="systemd.html"/>
+        <link rel="prev" title="Bash" href="bash.html"/>
  
 
   
@@ -61,7 +63,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -77,9 +79,15 @@
             
             
                 <p class="caption"><span class="caption-text">Essentials</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="bash.html">Bash</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linux.html">Linux</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#packages">Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#util-linux">util-linux</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="systemd.html">systemd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker.html">Docker</a></li>
 </ul>
@@ -133,7 +141,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -141,8 +149,12 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li></li>
+    <li>Linux</li>
       <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/linux.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
@@ -151,23 +163,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="linux">
+<span id="id1"></span><h1>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="packages">
+<h2>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="util-linux">
+<h3>util-linux<a class="headerlink" href="#util-linux" title="Permalink to this headline">¶</a></h3>
+<p><strong class="command">findmnt</strong></p>
+</div>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="systemd.html" class="btn btn-neutral float-right" title="systemd" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bash.html" class="btn btn-neutral" title="Bash" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -206,7 +225,6 @@
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-      <script type="text/javascript" src="_static/searchtools.js"></script>
 
   
 
@@ -222,14 +240,7 @@
           SphinxRtdTheme.StickyNav.enable();
       });
   </script>
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>
