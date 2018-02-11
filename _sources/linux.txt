@@ -12,4 +12,6 @@ Packages
 util-linux
 ----------
 
-:command:`findmnt`
+:command:`findmnt` ::
+
+    $ findmnt -t nfs
