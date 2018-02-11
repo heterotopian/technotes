@@ -7,6 +7,7 @@ Technical Notes
     :caption: Essentials
 
     bash
+    linux
     systemd
     docker
 
@@ -37,10 +38,3 @@ Technical Notes
     :caption: Version control
 
     git
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
