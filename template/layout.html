@@ -1,6 +1,18 @@
 {% extends "!layout.html" %}
 
 {%block linktags %}
-    <link rel="stylesheet" href="{{ pathto('_static/css/theme-custom.css', 1) }}" type="text/css" />
-    {{ super() }}
+<link rel="stylesheet" href="{{ pathto('_static/css/theme-custom.css', 1) }}" type="text/css" />
+{{ super() }}
+{% endblock %}
+
+{% block menu %}
+{{ super() }}
+<p class="caption">
+  <span class="caption-text">Reference</span>
+</p>
+<ul>
+  <li class="toctree-l1">
+    <a class="reference internal" href="{{ pathto('genindex') }}">{{ _('Index') }}</a>
+  </li>
+</ul>
 {% endblock %}
