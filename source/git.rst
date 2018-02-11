@@ -6,6 +6,16 @@ Git
 
 .. highlight:: console
 
+Resources
+=========
+
+- `GitHub Flow <https://guides.github.com/introduction/flow/>`_
+- `Pro Git <https://git-scm.com/book/en/v2>`_
+
+  - `Rebasing <https://git-scm.com/book/en/v2/Git-Branching-Rebasing>`_
+
+
+
 Commands
 ========
 
@@ -21,7 +31,7 @@ Commands
 Diffing
 -------
 
-- Diff |HEAD| and commit before |HEAD| ::
+- |HEAD| and commit before |HEAD| ::
 
     $ git diff HEAD^ HEAD
     $ git diff HEAD^..HEAD
@@ -29,13 +39,14 @@ Diffing
     $ git diff @^..@
     $ git show
 
-- Diff |master| and current branch::
+- |master| and current branch::
 
     $ git log master..HEAD -p
 
-- Diff ``file.rst`` from |HEAD| and commit before |HEAD| ::
+- ``file.rst`` from |HEAD| and commit before |HEAD| ::
 
     $ git diff @:file.rst @^1:file.rst
+
 
 
 Terms
@@ -48,6 +59,7 @@ Terms
 tree-ish
     Any identifier that leads to a (sub)directory tree
     (`specifying revisions <https://www.kernel.org/pub/software/scm/git/docs/gitrevisions.html#_specifying_revisions>`_)
+
 
 
 .. |HEAD| replace:: ``HEAD``
