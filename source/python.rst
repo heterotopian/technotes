@@ -158,6 +158,10 @@ PEPs
 ====
 
 - :pep:`302` - New Import Hooks
+- :pep:`333` - WSGI
+
+  - `Optional Platform-Specific File Handling <https://www.python.org/dev/peps/pep-0333/#optional-platform-specific-file-handling>`_
+
 - :pep:`492` - Coroutines with async and await syntax
 
 
