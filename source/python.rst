@@ -68,6 +68,10 @@ Third Party Libraries
 - `Documentation <http://distlib.readthedocs.io/en/latest/>`_
 
 
+:py:mod:`hypothesis`
+--------------------
+
+
 :py:mod:`marshmallow`
 ---------------------
 

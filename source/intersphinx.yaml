@@ -46,3 +46,6 @@ distlib: !!python/tuple
 pex: !!python/tuple
   - "https://pex.readthedocs.io/en/stable/"
   - null
+hypothesis: !!python/tuple
+  - "https://hypothesis.readthedocs.io/en/master/"
+  - null
