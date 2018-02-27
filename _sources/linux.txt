@@ -6,11 +6,8 @@ Linux
 
 .. highlight:: bash
 
-Packages
-========
-
-util-linux
-----------
+Utilities
+=========
 
 :command:`findmnt` ::
 
