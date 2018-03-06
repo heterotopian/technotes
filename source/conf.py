@@ -274,7 +274,5 @@ texinfo_documents = [
 #texinfo_no_detailmenu = False
 
 # Inter-project configuration
-
 import intersphinx
-
 intersphinx_mapping = intersphinx.get_mapping()
