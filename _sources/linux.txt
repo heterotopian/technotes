@@ -6,8 +6,8 @@ Linux
 
 .. highlight:: bash
 
-Utilities
-=========
+Filesystem
+==========
 
 :command:`findmnt` ::
 
@@ -18,6 +18,18 @@ Utilities
     /run/lock             tmpfs  rw,nosuid,nodev,noexec,relatime,size=5120k
     /run/shm              tmpfs  rw,nosuid,nodev,relatime
     /run/user             tmpfs  rw,nosuid,nodev,noexec,relatime,size=102400k,mode=755
+
+:command:`tree` ::
+
+    $ tree foo
+    foo
+    ├── bar
+    └── baz
+        └── zzz.txt
+
+
+Cgroups
+=======
 
 :command:`lsns` ::
 
@@ -31,6 +43,10 @@ Utilities
     4026532669 pid         2   1 root bash
     4026532671 net         2   1 root bash
 
+
+Devices
+=======
+
 :command:`lsblk` ::
 
     $ lsblk
@@ -41,11 +57,3 @@ Utilities
     └─sda3           8:3    0 277.5G  0 part
       ├─VG1-System 252:0    0 270.1G  0 lvm  /
       └─VG1-Swap   252:1    0   7.5G  0 lvm  [SWAP]
-
-:command:`tree` ::
-
-    $ tree foo
-    foo
-    ├── bar
-    └── baz
-        └── zzz.txt
