@@ -9,7 +9,10 @@ Linux
 Filesystem
 ==========
 
-:command:`findmnt` ::
+:command:`findmnt`
+------------------
+
+::
 
     $ findmnt -t tmpfs
     TARGET         SOURCE FSTYPE OPTIONS
@@ -19,7 +22,11 @@ Filesystem
     /run/shm              tmpfs  rw,nosuid,nodev,relatime
     /run/user             tmpfs  rw,nosuid,nodev,noexec,relatime,size=102400k,mode=755
 
-:command:`tree` ::
+
+:command:`tree`
+---------------
+
+::
 
     $ tree foo
     foo
@@ -28,10 +35,14 @@ Filesystem
         └── zzz.txt
 
 
+
 Cgroups
 =======
 
-:command:`lsns` ::
+:command:`lsns`
+---------------
+
+::
 
     $ lsns
             NS TYPE   NPROCS PID USER COMMAND
@@ -44,10 +55,14 @@ Cgroups
     4026532671 net         2   1 root bash
 
 
+
 Devices
 =======
 
-:command:`lsblk` ::
+:command:`lsblk`
+----------------
+
+::
 
     $ lsblk
     NAME           MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT

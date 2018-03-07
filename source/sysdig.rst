@@ -47,7 +47,8 @@ lsof
 
 ::
 
-    $ sysdig -c lsof "fd.directory=/var/log"
+    $ sysdig -c lsof fd.directory=/var/log
+    $ sysdig -c lsof fd.type=inotify
 
 
 netstat
