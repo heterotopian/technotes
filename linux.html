@@ -82,9 +82,19 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="bash.html">Bash</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Linux</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#filesystem">Filesystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cgroups">Cgroups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#devices">Devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filesystem">Filesystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#findmnt"><strong class="command">findmnt</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tree"><strong class="command">tree</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cgroups">Cgroups</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lsns"><strong class="command">lsns</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#devices">Devices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lsblk"><strong class="command">lsblk</strong></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="systemd.html">systemd</a></li>
@@ -166,7 +176,8 @@
 <span id="id1"></span><h1>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="filesystem">
 <h2>Filesystem<a class="headerlink" href="#filesystem" title="Permalink to this headline">¶</a></h2>
-<p><strong class="command">findmnt</strong></p>
+<div class="section" id="findmnt">
+<h3><strong class="command">findmnt</strong><a class="headerlink" href="#findmnt" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>$ findmnt -t tmpfs
 TARGET         SOURCE FSTYPE OPTIONS
 /run           tmpfs  tmpfs  rw,nosuid,noexec,relatime,size<span class="o">=</span>806096k,mode<span class="o">=</span>755
@@ -176,7 +187,9 @@ TARGET         SOURCE FSTYPE OPTIONS
 /run/user             tmpfs  rw,nosuid,nodev,noexec,relatime,size<span class="o">=</span>102400k,mode<span class="o">=</span>755
 </pre></div>
 </div>
-<p><strong class="command">tree</strong></p>
+</div>
+<div class="section" id="tree">
+<h3><strong class="command">tree</strong><a class="headerlink" href="#tree" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>$ tree foo
 foo
 ├── bar
@@ -185,9 +198,11 @@ foo
 </pre></div>
 </div>
 </div>
+</div>
 <div class="section" id="cgroups">
 <h2>Cgroups<a class="headerlink" href="#cgroups" title="Permalink to this headline">¶</a></h2>
-<p><strong class="command">lsns</strong></p>
+<div class="section" id="lsns">
+<h3><strong class="command">lsns</strong><a class="headerlink" href="#lsns" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>$ lsns
         NS TYPE   NPROCS PID USER COMMAND
 <span class="m">4026531835</span> cgroup      <span class="m">2</span>   <span class="m">1</span> root bash
@@ -200,9 +215,11 @@ foo
 </pre></div>
 </div>
 </div>
+</div>
 <div class="section" id="devices">
 <h2>Devices<a class="headerlink" href="#devices" title="Permalink to this headline">¶</a></h2>
-<p><strong class="command">lsblk</strong></p>
+<div class="section" id="lsblk">
+<h3><strong class="command">lsblk</strong><a class="headerlink" href="#lsblk" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>$ lsblk
 NAME           MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 sda              8:0    <span class="m">0</span> 278.5G  <span class="m">0</span> disk
@@ -212,6 +229,7 @@ sda              8:0    <span class="m">0</span> 278.5G  <span class="m">0</span
   ├─VG1-System 252:0    <span class="m">0</span> 270.1G  <span class="m">0</span> lvm  /
   └─VG1-Swap   252:1    <span class="m">0</span>   7.5G  <span class="m">0</span> lvm  <span class="o">[</span>SWAP<span class="o">]</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>

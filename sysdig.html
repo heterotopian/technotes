@@ -102,6 +102,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#echo-fds">echo_fds</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
 </ul>
 </li>
 </ul>
@@ -208,7 +209,8 @@
 </div>
 <div class="section" id="lsof">
 <h3>lsof<a class="headerlink" href="#lsof" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sysdig -c lsof <span class="s2">&quot;fd.directory=/var/log&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sysdig -c lsof fd.directory<span class="o">=</span>/var/log
+$ sysdig -c lsof fd.type<span class="o">=</span>inotify
 </pre></div>
 </div>
 </div>
@@ -222,6 +224,16 @@
 <h3>echo_fds<a class="headerlink" href="#echo-fds" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://sysdig.com/blog/decode-your-http-traffic-with-sysdig/">https://sysdig.com/blog/decode-your-http-traffic-with-sysdig/</a></p>
 </div>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first"><a class="reference external" href="https://github.com/draios/sysdig/issues/562">Multiple command line filters</a></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sysdig -c lsof <span class="s2">&quot;&#39;proc.name=python and fd.type=ipv4&#39;&quot;</span>
+</pre></div>
+</div>
+</li>
+</ul>
 </div>
 </div>
 

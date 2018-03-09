@@ -8,6 +8,9 @@ Fundamentals
 ============
 
 - :ref:`python:datamodel`
+
+  - :ref:`python:specialnames`
+
 - :ref:`python:execmodel`
 
 
