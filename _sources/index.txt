@@ -17,6 +17,7 @@ Technical Notes
 
     python
     frontend
+    conda
 
 .. toctree::
     :maxdepth: 1
