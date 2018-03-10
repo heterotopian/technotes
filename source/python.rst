@@ -8,6 +8,9 @@ Fundamentals
 ============
 
 - :ref:`python:datamodel`
+
+  - :ref:`python:specialnames`
+
 - :ref:`python:execmodel`
 
 
@@ -61,6 +64,12 @@ Standard Library
 
 Third Party Libraries
 =====================
+
+:py:mod:`codetransformer`
+-------------------------
+
+- `Documentation <http://codetransformer.readthedocs.io/en/stable/>`_
+
 
 :py:mod:`distlib`
 -----------------

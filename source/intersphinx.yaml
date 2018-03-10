@@ -49,3 +49,9 @@ pex: !!python/tuple
 hypothesis: !!python/tuple
   - "https://hypothesis.readthedocs.io/en/master/"
   - null
+jupyter: !!python/tuple
+  - "https://jupyter.readthedocs.io/en/latest/"
+  - null
+codetransformer: !!python/tuple
+  - "http://codetransformer.readthedocs.io/en/stable/"
+  - null
