@@ -97,6 +97,17 @@ Third Party Libraries
 ----------------
 
 
+:py:mod:`pip`
+-------------
+
+- :ref:`pip:Requirements File Format`
+
+- `Pip needs a dependency resolver <https://github.com/pypa/pip/issues/988>`_
+
+- `pip install guide <https://pip.readthedocs.io/en/stable/reference/pip_install/#installation-order>`_ :
+  "While it may be coincidentally true that pip will install things in the order of the install arguments or in the order of the items in a requirements file, this is not a promise."
+
+
 :py:mod:`pexpect`
 -----------------
 
