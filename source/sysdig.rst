@@ -63,3 +63,12 @@ echo_fds
 --------
 
 https://sysdig.com/blog/decode-your-http-traffic-with-sysdig/
+
+
+
+Troubleshooting
+===============
+
+- `Multiple command line filters <https://github.com/draios/sysdig/issues/562>`_ ::
+
+    $ sysdig -c lsof "'proc.name=python and fd.type=ipv4'"
