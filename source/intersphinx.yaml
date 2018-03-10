@@ -55,3 +55,6 @@ jupyter: !!python/tuple
 codetransformer: !!python/tuple
   - "http://codetransformer.readthedocs.io/en/stable/"
   - null
+pip: !!python/tuple
+  - "https://pip.readthedocs.io/en/stable/"
+  - null
