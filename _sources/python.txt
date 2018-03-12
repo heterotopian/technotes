@@ -104,8 +104,13 @@ Third Party Libraries
 
 - `Pip needs a dependency resolver <https://github.com/pypa/pip/issues/988>`_
 
-- `pip install guide <https://pip.readthedocs.io/en/stable/reference/pip_install/#installation-order>`_ :
-  "While it may be coincidentally true that pip will install things in the order of the install arguments or in the order of the items in a requirements file, this is not a promise."
+- Installation order:
+
+  .. epigraph::
+
+      While it may be coincidentally true that pip will install things in the order of the install arguments or in the order of the items in a requirements file, this is not a promise.
+
+      -- Reference guide for `pip install <https://pip.readthedocs.io/en/stable/reference/pip_install/#installation-order>`_
 
 
 :py:mod:`pexpect`
@@ -177,11 +182,19 @@ Third Party Libraries
 PEPs
 ====
 
+- :pep:`248` - Python Database API Specification v1.0
+- :pep:`249` - Python Database API Specification v2.0
 - :pep:`302` - New Import Hooks
-- :pep:`333` - WSGI
+- :pep:`333` - Python Web Server Gateway Interface v1.0
 
   - `Optional Platform-Specific File Handling <https://www.python.org/dev/peps/pep-0333/#optional-platform-specific-file-handling>`_
 
+- :pep:`440` - Version Identification and Dependency Specification
+
+  - `Version scheme <https://www.python.org/dev/peps/pep-0440/#version-scheme>`_
+  - `Version specifiers <https://www.python.org/dev/peps/pep-0440/#version-specifiers>`_
+
+- :pep:`443` - Single-dispatch generic functions
 - :pep:`492` - Coroutines with async and await syntax
 
 
