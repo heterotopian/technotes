@@ -182,6 +182,8 @@ Third Party Libraries
 PEPs
 ====
 
+- :pep:`248` - Python Database API Specification v1.0
+- :pep:`249` - Python Database API Specification v2.0
 - :pep:`302` - New Import Hooks
 - :pep:`333` - Python Web Server Gateway Interface v1.0
 
