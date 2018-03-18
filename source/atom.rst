@@ -39,7 +39,7 @@ Shortcuts
       - :kbd:`Alt-\\`
 
     * - Reveal active file in tree view
-      - :kbd:`Alt-Shift-\\`
+      - :kbd:`Ctrl-Shift-\\`
 
     * - Close current tab
       - :kbd:`Ctrl-W Esc`
