@@ -81,7 +81,7 @@
                 <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="bash.html">Bash</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Linux</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Linux</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#filesystem">Filesystem</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#findmnt"><strong class="command">findmnt</strong></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tree"><strong class="command">tree</strong></a></li>
@@ -179,7 +179,7 @@
 <h2>Filesystem<a class="headerlink" href="#filesystem" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="findmnt">
 <h3><strong class="command">findmnt</strong><a class="headerlink" href="#findmnt" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ findmnt -t tmpfs
+<div class="highlight-bash"><div class="highlight"><pre>$ findmnt -t tmpfs
 TARGET         SOURCE FSTYPE OPTIONS
 /run           tmpfs  tmpfs  rw,nosuid,noexec,relatime,size<span class="o">=</span>806096k,mode<span class="o">=</span>755
 /sys/fs/cgroup        tmpfs  rw,relatime,size<span class="o">=</span>4k,mode<span class="o">=</span>755
@@ -191,7 +191,7 @@ TARGET         SOURCE FSTYPE OPTIONS
 </div>
 <div class="section" id="tree">
 <h3><strong class="command">tree</strong><a class="headerlink" href="#tree" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ tree foo
+<div class="highlight-bash"><div class="highlight"><pre>$ tree foo
 foo
 ├── bar
 └── baz
@@ -204,7 +204,7 @@ foo
 <h2>Cgroups<a class="headerlink" href="#cgroups" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="lsns">
 <h3><strong class="command">lsns</strong><a class="headerlink" href="#lsns" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ lsns
+<div class="highlight-bash"><div class="highlight"><pre>$ lsns
         NS TYPE   NPROCS PID USER COMMAND
 <span class="m">4026531835</span> cgroup      <span class="m">2</span>   <span class="m">1</span> root bash
 <span class="m">4026531837</span> user        <span class="m">2</span>   <span class="m">1</span> root bash
@@ -221,7 +221,7 @@ foo
 <h2>Devices<a class="headerlink" href="#devices" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="lsblk">
 <h3><strong class="command">lsblk</strong><a class="headerlink" href="#lsblk" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ lsblk
+<div class="highlight-bash"><div class="highlight"><pre>$ lsblk
 NAME           MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 sda              8:0    <span class="m">0</span> 278.5G  <span class="m">0</span> disk
 ├─sda1           8:1    <span class="m">0</span>   487M  <span class="m">0</span> part /boot/efi
