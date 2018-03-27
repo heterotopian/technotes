@@ -225,6 +225,7 @@ Py3k
 ----
 
 - `Python 3 Readiness <http://py3readiness.org/>`_
+- `Python 3 Statement <http://python3statement.org/>`_ - Sunsetting Python 2 support in scientific Python projects
 - `Python 3 Q&A <http://python-notes.curiousefficiency.org/en/latest/python3/questions_and_answers.html>`_
 - `Why should I use Python 3? <https://eev.ee/blog/2016/07/31/python-faq-why-should-i-use-python-3/>`_
 
