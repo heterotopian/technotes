@@ -80,7 +80,7 @@
             
                 <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Bash</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Bash</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#redirection">Redirection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#expansion">Expansion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tests">Tests</a></li>
@@ -171,32 +171,32 @@
 <h2>Redirection<a class="headerlink" href="#redirection" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">stdout to <code class="docutils literal"><span class="pre">command.stdout</span></code>:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">command</span> &gt; command.stdout
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> &gt; command.stdout
 </pre></div>
 </div>
 </li>
 <li><p class="first">stderr to <code class="docutils literal"><span class="pre">command.stderr</span></code>:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">command</span> 2&gt; command.stderr
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> 2&gt; command.stderr
 </pre></div>
 </div>
 </li>
 <li><p class="first">stdout to stderr:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">command</span> 1&gt;<span class="p">&amp;</span>2
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> 1&gt;<span class="p">&amp;</span>2
 </pre></div>
 </div>
 </li>
 <li><p class="first">stderr to stdout:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">command</span> 2&gt;<span class="p">&amp;</span>1
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> 2&gt;<span class="p">&amp;</span>1
 </pre></div>
 </div>
 </li>
 <li><p class="first">stderr and stdout to <code class="docutils literal"><span class="pre">command.out</span></code>:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">command</span> <span class="p">&amp;</span>&gt; command.out
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="p">&amp;</span>&gt; command.out
 </pre></div>
 </div>
 </li>
 <li><p class="first">stdout to <code class="docutils literal"><span class="pre">/dev/null</span></code> and stderr to stdout:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">command</span> 2&gt;<span class="p">&amp;</span><span class="m">1</span> &gt;/dev/null
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> 2&gt;<span class="p">&amp;</span><span class="m">1</span> &gt;/dev/null
 </pre></div>
 </div>
 </li>
