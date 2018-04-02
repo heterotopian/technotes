@@ -205,6 +205,12 @@ Resources
 - `Pyformat.info <https://pyformat.info/>`_
 
 
+Community
+---------
+
+- `Python Developers Survey 2017 <https://www.jetbrains.com/research/python-developers-survey-2017/>`_
+
+
 Packaging
 ---------
 
