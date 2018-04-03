@@ -6,13 +6,9 @@ Git
 
 .. highlight:: console
 
-Resources
-=========
 
-- `GitHub Flow <https://guides.github.com/introduction/flow/>`_
-- `Pro Git <https://git-scm.com/book/en/v2>`_
-
-  - `Rebasing <https://git-scm.com/book/en/v2/Git-Branching-Rebasing>`_
+General
+=======
 
 
 
@@ -59,6 +55,19 @@ Terms
 tree-ish
     Any identifier that leads to a (sub)directory tree
     (`specifying revisions <https://www.kernel.org/pub/software/scm/git/docs/gitrevisions.html#_specifying_revisions>`_)
+
+
+
+Resources
+=========
+
+- `GitHub Flow <https://guides.github.com/introduction/flow/>`_ -
+  A lightweight, branch-based workflow that supports teams and projects where deployments are made regularly
+- `Pro Git <https://git-scm.com/book/en/v2>`_ -
+  eBook by Scott Chacon.
+  Content maintained in `progit/progit2 <https://github.com/progit/progit2>`_.
+
+  - `Rebasing <https://git-scm.com/book/en/v2/Git-Branching-Rebasing>`_
 
 
 

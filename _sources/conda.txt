@@ -9,6 +9,7 @@ Conda
 General
 =======
 
+- `Documentation <https://conda.io/docs/>`_
 - "Build strings have no semantic content" -
   `Source <https://github.com/conda/conda/issues/4956#issuecomment-291847858>`_
 
