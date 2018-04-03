@@ -88,7 +88,12 @@
 <p class="caption"><span class="caption-text">Programming</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#fundamentals">Fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general">General</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">The Python Language Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">The Python Standard Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">PEPs</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#standard-library">Standard Library</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#collections"><code class="docutils literal"><span class="pre">collections</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#concurrent-futures"><code class="docutils literal"><span class="pre">concurrent.futures</span></code></a></li>
@@ -115,15 +120,14 @@
 <li class="toctree-l3"><a class="reference internal" href="#wrapt"><code class="docutils literal"><span class="pre">wrapt</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#peps">PEPs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#community">Community</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#packaging">Packaging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#py3k">Py3k</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#async-await">async/await</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reflection">Reflection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#docker">Docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#build-systems">Build systems</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#reflection">Reflection</a></li>
 </ul>
 </li>
 </ul>
@@ -200,15 +204,49 @@
             
   <div class="section" id="python">
 <span id="id1"></span><h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="fundamentals">
-<h2>Fundamentals<a class="headerlink" href="#fundamentals" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3><a class="reference external" href="https://docs.python.org/2/reference/index.html">The Python Language Reference</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Describes the syntax and core semantics of the language.</p>
 <ul class="simple">
+<li><a class="reference external" href="http://docs.python.org/2/reference/lexical_analysis.html#keywords" title="(in Python v2.7)"><span>Keywords</span></a></li>
 <li><a class="reference external" href="http://docs.python.org/2/reference/datamodel.html#datamodel" title="(in Python v2.7)"><span>Data model</span></a><ul>
+<li><a class="reference external" href="http://docs.python.org/2/reference/datamodel.html#types" title="(in Python v2.7)"><span>The standard type hierarchy</span></a></li>
+<li><a class="reference external" href="http://docs.python.org/2/reference/datamodel.html#newstyle" title="(in Python v2.7)"><span>New-style and classic classes</span></a></li>
 <li><a class="reference external" href="http://docs.python.org/2/reference/datamodel.html#specialnames" title="(in Python v2.7)"><span>Special method names</span></a></li>
 </ul>
 </li>
 <li><a class="reference external" href="http://docs.python.org/2/reference/executionmodel.html#execmodel" title="(in Python v2.7)"><span>Execution model</span></a></li>
 </ul>
+</div>
+<div class="section" id="id3">
+<h3><a class="reference external" href="https://docs.python.org/2/library/index.html">The Python Standard Library</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Describes the standard library that is distributed with Python.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://docs.python.org/2/library/functions.html#built-in-funcs" title="(in Python v2.7)"><span>Built-in Functions</span></a></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3><a class="reference external" href="https://www.python.org/dev/peps/">PEPs</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Python Enhancement Proposals.</p>
+<ul class="simple">
+<li><span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0248"><strong>PEP 248</strong></a> - Python Database API Specification v1.0</li>
+<li><span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0249"><strong>PEP 249</strong></a> - Python Database API Specification v2.0</li>
+<li><span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0302"><strong>PEP 302</strong></a> - New Import Hooks</li>
+<li><span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0333"><strong>PEP 333</strong></a> - Python Web Server Gateway Interface v1.0<ul>
+<li><a class="reference external" href="https://www.python.org/dev/peps/pep-0333/#optional-platform-specific-file-handling">Optional Platform-Specific File Handling</a></li>
+</ul>
+</li>
+<li><span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0440"><strong>PEP 440</strong></a> - Version Identification and Dependency Specification<ul>
+<li><a class="reference external" href="https://www.python.org/dev/peps/pep-0440/#version-scheme">Version scheme</a></li>
+<li><a class="reference external" href="https://www.python.org/dev/peps/pep-0440/#version-specifiers">Version specifiers</a></li>
+</ul>
+</li>
+<li><span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0443"><strong>PEP 443</strong></a> - Single-dispatch generic functions</li>
+<li><span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0492"><strong>PEP 492</strong></a> - Coroutines with async and await syntax</li>
+</ul>
+</div>
 </div>
 <div class="section" id="standard-library">
 <h2>Standard Library<a class="headerlink" href="#standard-library" title="Permalink to this headline">¶</a></h2>
@@ -321,16 +359,16 @@
 </div>
 <div class="section" id="pip">
 <h3><code class="xref py py-mod docutils literal"><span class="pre">pip</span></code><a class="headerlink" href="#pip" title="Permalink to this headline">¶</a></h3>
-<ul>
-<li><p class="first"><a class="reference external" href="https://pip.readthedocs.io/en/stable/reference/pip_install/#requirements-file-format" title="(in pip v9.0)"><span>Requirements File Format</span></a></p>
+<ul class="simple">
+<li><a class="reference external" href="https://pip.readthedocs.io/en/stable/">Documentation</a><ul>
+<li><a class="reference external" href="https://pip.readthedocs.io/en/stable/reference/pip_install/#requirements-file-format" title="(in pip v9.0)"><span>Requirements File Format</span></a></li>
+<li><a class="reference external" href="https://pip.readthedocs.io/en/stable/reference/pip_install/#pip-install" title="(in pip v9.0)"><span>pip install</span></a><ul>
+<li>Installation order: &#8220;While it may be coincidentally true that pip will install things in the order of the install arguments or in the order of the items in a requirements file, this is not a promise.&#8221;
+(<a class="reference external" href="https://pip.readthedocs.io/en/stable/reference/pip_install/#installation-order">Source</a>)</li>
+<li><a class="reference external" href="https://github.com/pypa/pip/issues/988">Pip needs a dependency resolver</a></li>
+</ul>
 </li>
-<li><p class="first"><a class="reference external" href="https://github.com/pypa/pip/issues/988">Pip needs a dependency resolver</a></p>
-</li>
-<li><p class="first">Installation order:</p>
-<blockquote class="epigraph">
-<div><p>While it may be coincidentally true that pip will install things in the order of the install arguments or in the order of the items in a requirements file, this is not a promise.</p>
-<p class="attribution">&mdash;Reference guide for <a class="reference external" href="https://pip.readthedocs.io/en/stable/reference/pip_install/#installation-order">pip install</a></p>
-</div></blockquote>
+</ul>
 </li>
 </ul>
 </div>
@@ -435,45 +473,31 @@
 <div class="section" id="wrapt">
 <h3><code class="xref py py-mod docutils literal"><span class="pre">wrapt</span></code><a class="headerlink" href="#wrapt" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
+<li><a class="reference external" href="https://wrapt.readthedocs.io/en/latest/">Documentation</a></li>
 <li><a class="reference external" href="http://blog.dscpl.com.au/2014/01/how-you-implemented-your-python.html">How you implemented your Python decorator is wrong</a>
 (<a class="reference external" href="https://github.com/openstack/deb-python-wrapt/tree/master/blog">GitHub</a>)</li>
 </ul>
 </div>
 </div>
-<div class="section" id="peps">
-<h2>PEPs<a class="headerlink" href="#peps" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0248"><strong>PEP 248</strong></a> - Python Database API Specification v1.0</li>
-<li><span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0249"><strong>PEP 249</strong></a> - Python Database API Specification v2.0</li>
-<li><span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0302"><strong>PEP 302</strong></a> - New Import Hooks</li>
-<li><span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0333"><strong>PEP 333</strong></a> - Python Web Server Gateway Interface v1.0<ul>
-<li><a class="reference external" href="https://www.python.org/dev/peps/pep-0333/#optional-platform-specific-file-handling">Optional Platform-Specific File Handling</a></li>
-</ul>
-</li>
-<li><span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0440"><strong>PEP 440</strong></a> - Version Identification and Dependency Specification<ul>
-<li><a class="reference external" href="https://www.python.org/dev/peps/pep-0440/#version-scheme">Version scheme</a></li>
-<li><a class="reference external" href="https://www.python.org/dev/peps/pep-0440/#version-specifiers">Version specifiers</a></li>
-</ul>
-</li>
-<li><span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0443"><strong>PEP 443</strong></a> - Single-dispatch generic functions</li>
-<li><span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0492"><strong>PEP 492</strong></a> - Coroutines with async and await syntax</li>
-</ul>
-</div>
 <div class="section" id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="https://pyformat.info/">Pyformat.info</a></li>
+<li><a class="reference external" href="https://pyformat.info/">Pyformat.info</a> - String formatting cheat sheet</li>
 </ul>
 <div class="section" id="community">
 <h3>Community<a class="headerlink" href="#community" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="https://www.jetbrains.com/research/python-developers-survey-2017/">Python Developers Survey 2017</a></li>
+<li>StackOverflow:
+<a class="reference external" href="https://stackoverflow.blog/2017/09/06/incredible-growth-python/">The Incredible Growth of Python</a> and
+<a class="reference external" href="https://stackoverflow.blog/2017/09/14/python-growing-quickly/">Why is Python Growing So Quickly?</a></li>
 </ul>
 </div>
 <div class="section" id="packaging">
 <h3>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Official<ul>
+<li><a class="reference external" href="https://pypi.python.org/pypi">PyPI</a> - The Python Package Index</li>
 <li><a class="reference external" href="https://packaging.python.org/">Python Packaging User Guide</a></li>
 <li><a class="reference external" href="https://www.pypa.io/en/latest/">Python Packaging Authority</a></li>
 <li><a class="reference external" href="http://docs.python.org/2/install/index.html#install-index" title="(in Python v2.7)"><span>Installing Python Modules (Legacy version)</span></a></li>
@@ -490,8 +514,10 @@
 <div class="section" id="py3k">
 <h3>Py3k<a class="headerlink" href="#py3k" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><a class="reference external" href="http://py3readiness.org/">Python 3 Readiness</a></li>
-<li><a class="reference external" href="http://python3statement.org/">Python 3 Statement</a> - Sunsetting Python 2 support in scientific Python projects</li>
+<li><a class="reference external" href="http://py3readiness.org/">Python 3 Readiness</a> -
+Shows Python 3 support for the most popular packages on PyPI</li>
+<li><a class="reference external" href="http://python3statement.org/">Python 3 Statement</a> -
+Pledge by scientific projects to drop Python 2 support by 2020</li>
 <li><a class="reference external" href="http://python-notes.curiousefficiency.org/en/latest/python3/questions_and_answers.html">Python 3 Q&amp;A</a></li>
 <li><a class="reference external" href="https://eev.ee/blog/2016/07/31/python-faq-why-should-i-use-python-3/">Why should I use Python 3?</a></li>
 </ul>
@@ -506,6 +532,13 @@ There are no shortcuts to making single-tasking code concurrent</li>
 <li><a class="reference external" href="https://vorpus.org/blog/some-thoughts-on-asynchronous-api-design-in-a-post-asyncawait-world/">Asynchronous API design in a post-async/await world</a></li>
 <li><a class="reference external" href="http://sans-io.readthedocs.io/">Sans I/O</a> -
 Network protocol implementations that operate directly on text</li>
+</ul>
+</div>
+<div class="section" id="reflection">
+<h3>Reflection<a class="headerlink" href="#reflection" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://greentreesnakes.readthedocs.io/en/latest/">Green Tree Snakes</a> -
+A field guide to Abstract Syntax Trees in Python</li>
 </ul>
 </div>
 <div class="section" id="docker">
@@ -523,13 +556,6 @@ Network protocol implementations that operate directly on text</li>
 <h3>Build systems<a class="headerlink" href="#build-systems" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="https://pex.readthedocs.io/en/stable/">pex</a></li>
-</ul>
-</div>
-<div class="section" id="reflection">
-<h3>Reflection<a class="headerlink" href="#reflection" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><a class="reference external" href="http://greentreesnakes.readthedocs.io/en/latest/">Green Tree Snakes</a> -
-A field guide to Abstract Syntax Trees in Python</li>
 </ul>
 </div>
 </div>
