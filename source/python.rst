@@ -4,14 +4,51 @@
 Python
 ======
 
-Fundamentals
-============
+General
+=======
 
+`The Python Language Reference <https://docs.python.org/2/reference/index.html>`_
+---------------------------------------------------------------------------------
+
+Describes the syntax and core semantics of the language.
+
+- :ref:`python:keywords`
 - :ref:`python:datamodel`
 
+  - :ref:`python:types`
+  - :ref:`python:newstyle`
   - :ref:`python:specialnames`
 
 - :ref:`python:execmodel`
+
+
+`The Python Standard Library <https://docs.python.org/2/library/index.html>`_
+-----------------------------------------------------------------------------
+
+Describes the standard library that is distributed with Python.
+
+- :ref:`python:built-in-funcs`
+
+
+`PEPs <https://www.python.org/dev/peps/>`_
+------------------------------------------
+
+Python Enhancement Proposals.
+
+- :pep:`248` - Python Database API Specification v1.0
+- :pep:`249` - Python Database API Specification v2.0
+- :pep:`302` - New Import Hooks
+- :pep:`333` - Python Web Server Gateway Interface v1.0
+
+  - `Optional Platform-Specific File Handling <https://www.python.org/dev/peps/pep-0333/#optional-platform-specific-file-handling>`_
+
+- :pep:`440` - Version Identification and Dependency Specification
+
+  - `Version scheme <https://www.python.org/dev/peps/pep-0440/#version-scheme>`_
+  - `Version specifiers <https://www.python.org/dev/peps/pep-0440/#version-specifiers>`_
+
+- :pep:`443` - Single-dispatch generic functions
+- :pep:`492` - Coroutines with async and await syntax
 
 
 
@@ -100,17 +137,14 @@ Third Party Libraries
 :py:mod:`pip`
 -------------
 
-- :ref:`pip:Requirements File Format`
+- `Documentation <https://pip.readthedocs.io/en/stable/>`_
 
-- `Pip needs a dependency resolver <https://github.com/pypa/pip/issues/988>`_
+  - :ref:`pip:Requirements File Format`
+  - :ref:`pip:pip install`
 
-- Installation order:
-
-  .. epigraph::
-
-      While it may be coincidentally true that pip will install things in the order of the install arguments or in the order of the items in a requirements file, this is not a promise.
-
-      -- Reference guide for `pip install <https://pip.readthedocs.io/en/stable/reference/pip_install/#installation-order>`_
+    - Installation order: "While it may be coincidentally true that pip will install things in the order of the install arguments or in the order of the items in a requirements file, this is not a promise."
+      (`Source <https://pip.readthedocs.io/en/stable/reference/pip_install/#installation-order>`_)
+    - `Pip needs a dependency resolver <https://github.com/pypa/pip/issues/988>`_
 
 
 :py:mod:`pexpect`
@@ -174,41 +208,25 @@ Third Party Libraries
 :py:mod:`wrapt`
 ---------------
 
+- `Documentation <https://wrapt.readthedocs.io/en/latest/>`_
 - `How you implemented your Python decorator is wrong <http://blog.dscpl.com.au/2014/01/how-you-implemented-your-python.html>`_
   (`GitHub <https://github.com/openstack/deb-python-wrapt/tree/master/blog>`_)
-
-
-
-PEPs
-====
-
-- :pep:`248` - Python Database API Specification v1.0
-- :pep:`249` - Python Database API Specification v2.0
-- :pep:`302` - New Import Hooks
-- :pep:`333` - Python Web Server Gateway Interface v1.0
-
-  - `Optional Platform-Specific File Handling <https://www.python.org/dev/peps/pep-0333/#optional-platform-specific-file-handling>`_
-
-- :pep:`440` - Version Identification and Dependency Specification
-
-  - `Version scheme <https://www.python.org/dev/peps/pep-0440/#version-scheme>`_
-  - `Version specifiers <https://www.python.org/dev/peps/pep-0440/#version-specifiers>`_
-
-- :pep:`443` - Single-dispatch generic functions
-- :pep:`492` - Coroutines with async and await syntax
 
 
 
 Resources
 =========
 
-- `Pyformat.info <https://pyformat.info/>`_
+- `Pyformat.info <https://pyformat.info/>`_ - String formatting cheat sheet
 
 
 Community
 ---------
 
 - `Python Developers Survey 2017 <https://www.jetbrains.com/research/python-developers-survey-2017/>`_
+- StackOverflow:
+  `The Incredible Growth of Python <https://stackoverflow.blog/2017/09/06/incredible-growth-python/>`_ and
+  `Why is Python Growing So Quickly? <https://stackoverflow.blog/2017/09/14/python-growing-quickly/>`_
 
 
 Packaging
@@ -216,6 +234,7 @@ Packaging
 
 - Official
 
+  - `PyPI <https://pypi.python.org/pypi>`_ - The Python Package Index
   - `Python Packaging User Guide <https://packaging.python.org/>`_
   - `Python Packaging Authority <https://www.pypa.io/en/latest/>`_
   - :ref:`python:install-index`
@@ -230,8 +249,10 @@ Packaging
 Py3k
 ----
 
-- `Python 3 Readiness <http://py3readiness.org/>`_
-- `Python 3 Statement <http://python3statement.org/>`_ - Sunsetting Python 2 support in scientific Python projects
+- `Python 3 Readiness <http://py3readiness.org/>`_ -
+  Shows Python 3 support for the most popular packages on PyPI
+- `Python 3 Statement <http://python3statement.org/>`_ -
+  Pledge by scientific projects to drop Python 2 support by 2020
 - `Python 3 Q&A <http://python-notes.curiousefficiency.org/en/latest/python3/questions_and_answers.html>`_
 - `Why should I use Python 3? <https://eev.ee/blog/2016/07/31/python-faq-why-should-i-use-python-3/>`_
 
@@ -248,6 +269,13 @@ async/await
   Network protocol implementations that operate directly on text
 
 
+Reflection
+----------
+
+- `Green Tree Snakes <http://greentreesnakes.readthedocs.io/en/latest/>`_ -
+  A field guide to Abstract Syntax Trees in Python
+
+
 Docker
 ------
 
@@ -262,10 +290,3 @@ Build systems
 -------------
 
 - `pex <https://pex.readthedocs.io/en/stable/>`_
-
-
-Reflection
-----------
-
-- `Green Tree Snakes <http://greentreesnakes.readthedocs.io/en/latest/>`_ -
-  A field guide to Abstract Syntax Trees in Python
