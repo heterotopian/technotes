@@ -133,6 +133,10 @@ Third Party Libraries
 :py:mod:`pandas`
 ----------------
 
+- `Reshaping in Pandas <http://nikgrozev.com/2015/07/01/reshaping-in-pandas-pivot-pivot-table-stack-and-unstack-explained-with-pictures/>`_ -
+  Pivot, pivot-table, stack and unstack explained with pictures
+
+
 
 :py:mod:`pip`
 -------------
