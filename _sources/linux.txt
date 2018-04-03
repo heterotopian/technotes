@@ -6,11 +6,50 @@ Linux
 
 .. highlight:: bash
 
+Cgroups
+=======
+
+lsns
+----
+
+::
+
+    $ lsns
+            NS TYPE   NPROCS PID USER COMMAND
+    4026531835 cgroup      2   1 root bash
+    4026531837 user        2   1 root bash
+    4026532666 mnt         2   1 root bash
+    4026532667 uts         2   1 root bash
+    4026532668 ipc         2   1 root bash
+    4026532669 pid         2   1 root bash
+    4026532671 net         2   1 root bash
+
+
+
+Devices
+=======
+
+lsblk
+-----
+
+::
+
+    $ lsblk
+    NAME           MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+    sda              8:0    0 278.5G  0 disk
+    ├─sda1           8:1    0   487M  0 part /boot/efi
+    ├─sda2           8:2    0   488M  0 part
+    └─sda3           8:3    0 277.5G  0 part
+      ├─VG1-System 252:0    0 270.1G  0 lvm  /
+      └─VG1-Swap   252:1    0   7.5G  0 lvm  [SWAP]
+
+
+
 Filesystem
 ==========
 
-``findmnt``
------------
+findmnt
+-------
 
 ::
 
@@ -23,38 +62,24 @@ Filesystem
     /run/user             tmpfs  rw,nosuid,nodev,noexec,relatime,size=102400k,mode=755
 
 
-``nfsiostat``
--------------
+tree
+----
 
 ::
 
-    $ nfsiostat
-
-    netapp01-nfs.domain.com:/foo mounted on /foo:
-
-       op/s         rpc bklog
-     262.16
-               0.00
-    read:
-      ops/s            kB/s           kB/op         retrans         avg RTT (ms)    avg exe (ms)
-                     11.557
-            356.081
-             30.812
-           0 (0.0%)
-              5.167
-              5.239
-    write:
-      ops/s            kB/s           kB/op         retrans         avg RTT (ms)    avg exe (ms)
-                      3.620
-            105.680
-             29.190
-           0 (0.0%)
-             16.032
-            331.458
+    $ tree foo
+    foo
+    ├── bar
+    └── baz
+        └── zzz.txt
 
 
-``nfsstat``
------------
+
+NFS
+===
+
+nfsstat
+-------
 
 ::
 
@@ -76,52 +101,31 @@ Filesystem
     15071064  3% 22        0% 11        0% 0         0%
 
 
-``tree``
---------
-
-::
-
-    $ tree foo
-    foo
-    ├── bar
-    └── baz
-        └── zzz.txt
-
-
-
-Cgroups
-=======
-
-``lsns``
---------
-
-::
-
-    $ lsns
-            NS TYPE   NPROCS PID USER COMMAND
-    4026531835 cgroup      2   1 root bash
-    4026531837 user        2   1 root bash
-    4026532666 mnt         2   1 root bash
-    4026532667 uts         2   1 root bash
-    4026532668 ipc         2   1 root bash
-    4026532669 pid         2   1 root bash
-    4026532671 net         2   1 root bash
-
-
-
-Devices
-=======
-
-``lsblk``
+nfsiostat
 ---------
 
-::
+.. code-block:: shell
 
-    $ lsblk
-    NAME           MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
-    sda              8:0    0 278.5G  0 disk
-    ├─sda1           8:1    0   487M  0 part /boot/efi
-    ├─sda2           8:2    0   488M  0 part
-    └─sda3           8:3    0 277.5G  0 part
-      ├─VG1-System 252:0    0 270.1G  0 lvm  /
-      └─VG1-Swap   252:1    0   7.5G  0 lvm  [SWAP]
+    $ nfsiostat
+
+    nfs.domain.com:/foo mounted on /foo:
+
+       op/s         rpc bklog
+     262.16
+               0.00
+    read:
+      ops/s            kB/s           kB/op         retrans         avg RTT (ms)    avg exe (ms)
+                     11.557
+            356.081
+             30.812
+           0 (0.0%)
+              5.167
+              5.239
+    write:
+      ops/s            kB/s           kB/op         retrans         avg RTT (ms)    avg exe (ms)
+                      3.620
+            105.680
+             29.190
+           0 (0.0%)
+             16.032
+            331.458
