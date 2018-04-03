@@ -129,7 +129,7 @@ Build systems
 
 - `pex <https://pex.readthedocs.io/en/stable/>`_ -
   Build system based on self-contained, zipped virtualenvs.
-  Defines the .pex (Python EXecutable) file format.
+  Based on the .pex (Python EXecutable) file format.
 
 
 
