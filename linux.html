@@ -83,16 +83,18 @@
 <li class="toctree-l1"><a class="reference internal" href="bash.html">Bash</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Linux</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#filesystem">Filesystem</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#findmnt"><strong class="command">findmnt</strong></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tree"><strong class="command">tree</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#findmnt"><code class="docutils literal"><span class="pre">findmnt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nfsiostat"><code class="docutils literal"><span class="pre">nfsiostat</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nfsstat"><code class="docutils literal"><span class="pre">nfsstat</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tree"><code class="docutils literal"><span class="pre">tree</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#cgroups">Cgroups</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#lsns"><strong class="command">lsns</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lsns"><code class="docutils literal"><span class="pre">lsns</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#devices">Devices</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#lsblk"><strong class="command">lsblk</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lsblk"><code class="docutils literal"><span class="pre">lsblk</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -178,7 +180,7 @@
 <div class="section" id="filesystem">
 <h2>Filesystem<a class="headerlink" href="#filesystem" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="findmnt">
-<h3><strong class="command">findmnt</strong><a class="headerlink" href="#findmnt" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal"><span class="pre">findmnt</span></code><a class="headerlink" href="#findmnt" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash"><div class="highlight"><pre>$ findmnt -t tmpfs
 TARGET         SOURCE FSTYPE OPTIONS
 /run           tmpfs  tmpfs  rw,nosuid,noexec,relatime,size<span class="o">=</span>806096k,mode<span class="o">=</span>755
@@ -189,8 +191,57 @@ TARGET         SOURCE FSTYPE OPTIONS
 </pre></div>
 </div>
 </div>
+<div class="section" id="nfsiostat">
+<h3><code class="docutils literal"><span class="pre">nfsiostat</span></code><a class="headerlink" href="#nfsiostat" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>$ nfsiostat
+
+netapp01-nfs.domain.com:/foo mounted on /foo:
+
+   op/s         rpc bklog
+ 262.16
+           0.00
+read:
+  ops/s            kB/s           kB/op         retrans         avg RTT <span class="o">(</span>ms<span class="o">)</span>    avg exe <span class="o">(</span>ms<span class="o">)</span>
+                 11.557
+        356.081
+         30.812
+       <span class="m">0</span> <span class="o">(</span>0.0%<span class="o">)</span>
+          5.167
+          5.239
+write:
+  ops/s            kB/s           kB/op         retrans         avg RTT <span class="o">(</span>ms<span class="o">)</span>    avg exe <span class="o">(</span>ms<span class="o">)</span>
+                  3.620
+        105.680
+         29.190
+       <span class="m">0</span> <span class="o">(</span>0.0%<span class="o">)</span>
+         16.032
+        331.458
+</pre></div>
+</div>
+</div>
+<div class="section" id="nfsstat">
+<h3><code class="docutils literal"><span class="pre">nfsstat</span></code><a class="headerlink" href="#nfsstat" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>$ nfsstat
+
+
+Client rpc stats:
+calls      retrans    authrefrsh
+<span class="m">386800393</span>   <span class="m">0</span>          387762712
+
+Client nfs v3:
+null         getattr      setattr      lookup       access       readlink
+<span class="m">0</span>         0% <span class="m">259158128</span> 66% <span class="m">450431</span>    0% <span class="m">20827600</span>  5% <span class="m">61029281</span> 15% <span class="m">21567</span>     0%
+<span class="nb">read</span>         write        create       mkdir        symlink      mknod
+<span class="m">17020877</span>  4% <span class="m">5331960</span>   1% <span class="m">403351</span>    0% <span class="m">24746</span>     0% <span class="m">1862</span>      0% <span class="m">1</span>         0%
+remove       rmdir        rename       link         readdir      readdirplus
+<span class="m">612324</span>    0% <span class="m">21399</span>     0% <span class="m">112009</span>    0% <span class="m">1039</span>      0% <span class="m">241247</span>    0% <span class="m">6522117</span>   1%
+fsstat       fsinfo       pathconf     commit
+<span class="m">15071064</span>  3% <span class="m">22</span>        0% <span class="m">11</span>        0% <span class="m">0</span>         0%
+</pre></div>
+</div>
+</div>
 <div class="section" id="tree">
-<h3><strong class="command">tree</strong><a class="headerlink" href="#tree" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal"><span class="pre">tree</span></code><a class="headerlink" href="#tree" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash"><div class="highlight"><pre>$ tree foo
 foo
 ├── bar
@@ -203,7 +254,7 @@ foo
 <div class="section" id="cgroups">
 <h2>Cgroups<a class="headerlink" href="#cgroups" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="lsns">
-<h3><strong class="command">lsns</strong><a class="headerlink" href="#lsns" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal"><span class="pre">lsns</span></code><a class="headerlink" href="#lsns" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash"><div class="highlight"><pre>$ lsns
         NS TYPE   NPROCS PID USER COMMAND
 <span class="m">4026531835</span> cgroup      <span class="m">2</span>   <span class="m">1</span> root bash
@@ -220,7 +271,7 @@ foo
 <div class="section" id="devices">
 <h2>Devices<a class="headerlink" href="#devices" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="lsblk">
-<h3><strong class="command">lsblk</strong><a class="headerlink" href="#lsblk" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal"><span class="pre">lsblk</span></code><a class="headerlink" href="#lsblk" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash"><div class="highlight"><pre>$ lsblk
 NAME           MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 sda              8:0    <span class="m">0</span> 278.5G  <span class="m">0</span> disk
