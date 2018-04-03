@@ -46,8 +46,90 @@ PEPs
   - `Version scheme <https://www.python.org/dev/peps/pep-0440/#version-scheme>`_
   - `Version specifiers <https://www.python.org/dev/peps/pep-0440/#version-specifiers>`_
 
+- :pep:`441` - Improving Python ZIP Application Support
 - :pep:`443` - Single-dispatch generic functions
 - :pep:`492` - Coroutines with async and await syntax
+
+
+
+Resources
+=========
+
+- `Pyformat.info <https://pyformat.info/>`_ - String formatting cheat sheet
+
+
+Community
+---------
+
+- `Python Developers Survey 2017 <https://www.jetbrains.com/research/python-developers-survey-2017/>`_
+- StackOverflow:
+  `The Incredible Growth of Python <https://stackoverflow.blog/2017/09/06/incredible-growth-python/>`_ and
+  `Why is Python Growing So Quickly? <https://stackoverflow.blog/2017/09/14/python-growing-quickly/>`_
+
+
+Packaging
+---------
+
+- Official
+
+  - `PyPI <https://pypi.python.org/pypi>`_ - The Python Package Index
+  - `Python Packaging User Guide <https://packaging.python.org/>`_
+  - `Python Packaging Authority <https://www.pypa.io/en/latest/>`_
+  - :ref:`python:install-index`
+  - :ref:`python:distutils-index`
+
+- Community
+
+  - `PyPI Quick and Dirty <https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/>`_
+  - `The Many Layers of Packaging <http://sedimental.org/the_packaging_gradient.html>`_
+
+
+Py3k
+----
+
+- `Python 3 Readiness <http://py3readiness.org/>`_ -
+  Shows Python 3 support for the most popular packages on PyPI
+- `Python 3 Statement <http://python3statement.org/>`_ -
+  Pledge by scientific projects to drop Python 2 support by 2020
+- `Python 3 Q&A <http://python-notes.curiousefficiency.org/en/latest/python3/questions_and_answers.html>`_
+- `Why should I use Python 3? <https://eev.ee/blog/2016/07/31/python-faq-why-should-i-use-python-3/>`_
+
+
+async/await
+-----------
+
+- `Unyielding <https://glyph.twistedmatrix.com/2014/02/unyielding.html>`_ -
+  There are no shortcuts to making single-tasking code concurrent
+- `What color is your function? <http://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/>`_ and
+  `The function color myth <https://lukasa.co.uk/2016/07/The_Function_Colour_Myth/>`_
+- `Asynchronous API design in a post-async/await world <https://vorpus.org/blog/some-thoughts-on-asynchronous-api-design-in-a-post-asyncawait-world/>`_
+- `Sans I/O <http://sans-io.readthedocs.io/>`_ -
+  Network protocol implementations that operate directly on text
+
+
+Reflection
+----------
+
+- `Green Tree Snakes <http://greentreesnakes.readthedocs.io/en/latest/>`_ -
+  A field guide to Abstract Syntax Trees in Python
+
+
+Docker
+------
+
+- `Deploying Python Applications with Docker <https://glyph.twistedmatrix.com/2015/03/docker-deploy-double-dutch.html>`_
+- `Using Python with Docker <http://blog.dscpl.com.au/p/using-python-with-docker.html>`_
+
+  - `Installing a custom Python version into a Docker image <http://blog.dscpl.com.au/2015/06/installing-custom-python-version-into.html>`_
+  - `Python virtual environments and Docker <http://blog.dscpl.com.au/2016/01/python-virtual-environments-and-docker.html>`_
+
+
+Build systems
+-------------
+
+- `pex <https://pex.readthedocs.io/en/stable/>`_ -
+  Build system based on self-contained, zipped virtualenvs.
+  Defines the .pex (Python EXecutable) file format.
 
 
 
@@ -214,82 +296,3 @@ Third Party Libraries
 - `Documentation <https://wrapt.readthedocs.io/en/latest/>`_
 - `How you implemented your Python decorator is wrong <http://blog.dscpl.com.au/2014/01/how-you-implemented-your-python.html>`_
   (`GitHub <https://github.com/openstack/deb-python-wrapt/tree/master/blog>`_)
-
-
-
-Resources
-=========
-
-- `Pyformat.info <https://pyformat.info/>`_ - String formatting cheat sheet
-
-
-Community
----------
-
-- `Python Developers Survey 2017 <https://www.jetbrains.com/research/python-developers-survey-2017/>`_
-- StackOverflow:
-  `The Incredible Growth of Python <https://stackoverflow.blog/2017/09/06/incredible-growth-python/>`_ and
-  `Why is Python Growing So Quickly? <https://stackoverflow.blog/2017/09/14/python-growing-quickly/>`_
-
-
-Packaging
----------
-
-- Official
-
-  - `PyPI <https://pypi.python.org/pypi>`_ - The Python Package Index
-  - `Python Packaging User Guide <https://packaging.python.org/>`_
-  - `Python Packaging Authority <https://www.pypa.io/en/latest/>`_
-  - :ref:`python:install-index`
-  - :ref:`python:distutils-index`
-
-- Community
-
-  - `PyPI Quick and Dirty <https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/>`_
-  - `The Many Layers of Packaging <http://sedimental.org/the_packaging_gradient.html>`_
-
-
-Py3k
-----
-
-- `Python 3 Readiness <http://py3readiness.org/>`_ -
-  Shows Python 3 support for the most popular packages on PyPI
-- `Python 3 Statement <http://python3statement.org/>`_ -
-  Pledge by scientific projects to drop Python 2 support by 2020
-- `Python 3 Q&A <http://python-notes.curiousefficiency.org/en/latest/python3/questions_and_answers.html>`_
-- `Why should I use Python 3? <https://eev.ee/blog/2016/07/31/python-faq-why-should-i-use-python-3/>`_
-
-
-async/await
------------
-
-- `Unyielding <https://glyph.twistedmatrix.com/2014/02/unyielding.html>`_ -
-  There are no shortcuts to making single-tasking code concurrent
-- `What color is your function? <http://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/>`_ and
-  `The function color myth <https://lukasa.co.uk/2016/07/The_Function_Colour_Myth/>`_
-- `Asynchronous API design in a post-async/await world <https://vorpus.org/blog/some-thoughts-on-asynchronous-api-design-in-a-post-asyncawait-world/>`_
-- `Sans I/O <http://sans-io.readthedocs.io/>`_ -
-  Network protocol implementations that operate directly on text
-
-
-Reflection
-----------
-
-- `Green Tree Snakes <http://greentreesnakes.readthedocs.io/en/latest/>`_ -
-  A field guide to Abstract Syntax Trees in Python
-
-
-Docker
-------
-
-- `Deploying Python Applications with Docker <https://glyph.twistedmatrix.com/2015/03/docker-deploy-double-dutch.html>`_
-- `Using Python with Docker <http://blog.dscpl.com.au/p/using-python-with-docker.html>`_
-
-  - `Installing a custom Python version into a Docker image <http://blog.dscpl.com.au/2015/06/installing-custom-python-version-into.html>`_
-  - `Python virtual environments and Docker <http://blog.dscpl.com.au/2016/01/python-virtual-environments-and-docker.html>`_
-
-
-Build systems
--------------
-
-- `pex <https://pex.readthedocs.io/en/stable/>`_
