@@ -16,8 +16,8 @@ Technical Notes
     :caption: Programming
 
     python
-    frontend
     conda
+    frontend
 
 .. toctree::
     :maxdepth: 1
