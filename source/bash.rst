@@ -34,10 +34,11 @@ Redirection
     $ command 2>&1 >/dev/null
 
 
+
 Expansion
 =========
 
-`Shell expansion <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html>`_ in Bash Guide for Beginners
+Bash Guide for Beginners: `Shell expansion <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html>`_
 
 .. list-table:: Expansion types
     :widths: 50 10 50
@@ -80,16 +81,19 @@ Expansion
       - See `globs <http://wiki.bash-hackers.org/syntax/expansion/globs>`_ in Bash Hackers Wiki
 
 
+
 Tests
 =====
 
-`Test primitives <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#sect_07_01_01_01>`_ in Bash Guide for Beginners
+Bash Guide for Beginners: `Test primitives <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#sect_07_01_01_01>`_
+
+
 
 
 File Descriptors
 ================
 
-`Standard streams <https://en.wikipedia.org/wiki/Standard_streams>`_ on Wikipedia
+Wikipedia: `Standard streams <https://en.wikipedia.org/wiki/Standard_streams>`_
 
 .. list-table::
     :header-rows: 1
@@ -105,6 +109,7 @@ File Descriptors
 
     * - 2
       - stderr
+
 
 
 Resources
