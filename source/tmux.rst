@@ -6,8 +6,8 @@ tmux
 
 .. highlight:: console
 
-Documentation
-=============
+General
+=======
 
 - `Project homepage <https://tmux.github.io/>`_
 

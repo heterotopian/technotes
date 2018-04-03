@@ -4,8 +4,8 @@
 systemd
 =======
 
-Resources
-=========
+General
+=======
 
 - `Project homepage <https://www.freedesktop.org/wiki/Software/systemd/>`_
 
