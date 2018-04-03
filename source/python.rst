@@ -30,10 +30,9 @@ Describes the standard library that is distributed with Python.
 - :ref:`python:built-in-funcs`
 
 
-`PEPs <https://www.python.org/dev/peps/>`_
-------------------------------------------
 
-Python Enhancement Proposals.
+PEPs
+====
 
 - :pep:`248` - Python Database API Specification v1.0
 - :pep:`249` - Python Database API Specification v2.0
