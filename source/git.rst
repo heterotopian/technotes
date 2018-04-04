@@ -10,18 +10,64 @@ Git
 General
 =======
 
+- `Project homepage <https://git-scm.com>`_
+
+  - `Reference manual <https://git-scm.com/docs>`_ -
+    Git man pages
+
+    - `ls-files <https://git-scm.com/docs/git-ls-files>`_
+    - `ls-tree <https://git-scm.com/docs/git-ls-tree>`_
+
+  - `Pro Git <https://git-scm.com/book/en/v2>`_ -
+    eBook by Scott Chacon (Source: `progit/progit2 <https://github.com/progit/progit2>`_)
+
+    - `Rebasing <https://git-scm.com/book/en/v2/Git-Branching-Rebasing>`_
+
+- Cheetsheats
+
+  - `PDF cheatsheet <https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf>`_ by GitHub
+  - `Interactive HTML cheatsheet <http://ndpsoftware.com/git-cheatsheet.html>`_
+
+
 
 
 Commands
 ========
 
-- List all files under source control on |master| ::
+Listing files
+-------------
 
-    $ git ls-tree -r --name-only master
+Working tree
+~~~~~~~~~~~~
 
-- Create local branch tracking ``origin/branch`` ::
+- List cached files under cwd ::
 
-    $ git checkout --track origin/branch
+    $ git ls-files -c
+
+- List untracked files under cwd ::
+
+    $ git ls-files -o
+
+- List cached files under ``foo/bar`` ::
+
+    $ git ls-files -c foo/bar
+
+
+Indexed trees
+~~~~~~~~~~~~~
+
+- List files in tree identified by |v1.0| tag at the top level ::
+
+    $ git ls-tree --name-only tags/v1.0
+
+- List files in tree identified by |v1.0| tag at all levels ::
+
+    $ git ls-tree --name-only tags/v1.0 -r
+
+- List files in tree identified by |v1.0| tag in path ``foo/bar`` at all levels ::
+
+    $ git ls-tree --name-only tags/v1.0 foo/bar -r
+
 
 
 Diffing
@@ -45,6 +91,7 @@ Diffing
 
 
 
+
 Terms
 =====
 
@@ -52,9 +99,16 @@ Terms
     Shorthand for |HEAD|
     (`release notes <https://github.com/git/git/blob/v1.8.5/Documentation/RelNotes/1.8.5.txt#L100-101>`_)
 
+commit-ish
+    Any object that leads to a commit, e.g.:
+    a commit, a tag pointing to a commit, a tag pointing to a tag ... pointing to a commit. 
+    (`Source <https://git-scm.com/docs/gitglossary#gitglossary-aiddefcommit-ishacommit-ishalsocommittish>`_)
+
 tree-ish
-    Any identifier that leads to a (sub)directory tree
-    (`specifying revisions <https://www.kernel.org/pub/software/scm/git/docs/gitrevisions.html#_specifying_revisions>`_)
+    Any object that contains a list of file names and modes along with refs to the associated blob and/or tree objects.
+    Equivalent to a directory.
+    (`Source <https://git-scm.com/docs/gitglossary#gitglossary-aiddeftree-ishatree-ishalsotreeish>`_)
+
 
 
 
@@ -63,13 +117,10 @@ Resources
 
 - `GitHub Flow <https://guides.github.com/introduction/flow/>`_ -
   A lightweight, branch-based workflow that supports teams and projects where deployments are made regularly
-- `Pro Git <https://git-scm.com/book/en/v2>`_ -
-  eBook by Scott Chacon.
-  Content maintained in `progit/progit2 <https://github.com/progit/progit2>`_.
 
-  - `Rebasing <https://git-scm.com/book/en/v2/Git-Branching-Rebasing>`_
 
 
 
 .. |HEAD| replace:: ``HEAD``
 .. |master| replace:: ``master``
+.. |v1.0| replace:: ``v1.0``
