@@ -58,3 +58,6 @@ codetransformer: !!python/tuple
 pip: !!python/tuple
   - "https://pip.readthedocs.io/en/stable/"
   - null
+packaging: !!python/tuple
+  - "https://packaging.python.org/"
+  - null
