@@ -101,7 +101,7 @@ Terms
 
 commit-ish
     Any object that leads to a commit, e.g.:
-    a commit, a tag pointing to a commit, a tag pointing to a tag ... pointing to a commit. 
+    a commit, a tag pointing to a commit, a tag pointing to a tag ... pointing to a commit.
     (`Source <https://git-scm.com/docs/gitglossary#gitglossary-aiddefcommit-ishacommit-ishalsocommittish>`_)
 
 tree-ish
@@ -117,6 +117,8 @@ Resources
 
 - `GitHub Flow <https://guides.github.com/introduction/flow/>`_ -
   A lightweight, branch-based workflow that supports teams and projects where deployments are made regularly
+- `Changing author info <https://help.github.com/articles/changing-author-info/>`_ -
+  Script for updating any commits with matching user/email fields
 
 
 

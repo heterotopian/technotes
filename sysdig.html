@@ -93,7 +93,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Diagnostic Tools</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">sysdig</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">sysdig</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#general">General</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#options">Options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#chisels">Chisels</a><ul>
@@ -204,20 +204,20 @@
 <h2>Chisels<a class="headerlink" href="#chisels" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="ps">
 <h3>ps<a class="headerlink" href="#ps" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sysdig -c ps proc.apid<span class="o">=</span>120954
+<div class="highlight-bash"><div class="highlight"><pre>$ sysdig -c ps proc.apid<span class="o">=</span>120954
 </pre></div>
 </div>
 </div>
 <div class="section" id="lsof">
 <h3>lsof<a class="headerlink" href="#lsof" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sysdig -c lsof fd.directory<span class="o">=</span>/var/log
+<div class="highlight-bash"><div class="highlight"><pre>$ sysdig -c lsof fd.directory<span class="o">=</span>/var/log
 $ sysdig -c lsof fd.type<span class="o">=</span>inotify
 </pre></div>
 </div>
 </div>
 <div class="section" id="netstat">
 <h3>netstat<a class="headerlink" href="#netstat" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sysdig -c netstat fd.port<span class="o">=</span>80
+<div class="highlight-bash"><div class="highlight"><pre>$ sysdig -c netstat fd.port<span class="o">=</span>80
 </pre></div>
 </div>
 </div>
@@ -230,7 +230,7 @@ $ sysdig -c lsof fd.type<span class="o">=</span>inotify
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first"><a class="reference external" href="https://github.com/draios/sysdig/issues/562">Multiple command line filters</a></p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sysdig -c lsof <span class="s2">&quot;&#39;proc.name=python and fd.type=ipv4&#39;&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>$ sysdig -c lsof <span class="s2">&quot;&#39;proc.name=python and fd.type=ipv4&#39;&quot;</span>
 </pre></div>
 </div>
 </li>
