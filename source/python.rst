@@ -73,10 +73,14 @@ Packaging
 - Official
 
   - `PyPI <https://pypi.python.org/pypi>`_ - The Python Package Index
+  - `Python Packaging Authority <https://www.pypa.io/en/latest/>`_ -
+    Working group that maintains packaging-related projects
   - `Python Packaging User Guide <https://packaging.python.org/>`_
-  - `Python Packaging Authority <https://www.pypa.io/en/latest/>`_
-  - :ref:`python:install-index`
-  - :ref:`python:distutils-index`
+
+    - :ref:`packaging:Tool Recommendations`
+
+  - :ref:`python:installing-index` and :ref:`python:install-index`
+  - :ref:`python:distutils-index` and :ref:`python:distutils-index`
 
 - Community
 
