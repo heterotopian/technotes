@@ -7,6 +7,10 @@ Python
 General
 =======
 
+- :ref:`python:glossary` -
+  Official definitions of important jargon terms
+
+
 `The Python Language Reference <https://docs.python.org/2/reference/index.html>`_
 ---------------------------------------------------------------------------------
 
