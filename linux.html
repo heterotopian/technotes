@@ -81,7 +81,7 @@
                 <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="bash.html">Bash</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Linux</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Linux</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#cgroups">Cgroups</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#lsns">lsns</a></li>
 </ul>
@@ -184,7 +184,7 @@
 <h2>Cgroups<a class="headerlink" href="#cgroups" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="lsns">
 <h3>lsns<a class="headerlink" href="#lsns" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre>$ lsns
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ lsns
         NS TYPE   NPROCS PID USER COMMAND
 <span class="m">4026531835</span> cgroup      <span class="m">2</span>   <span class="m">1</span> root bash
 <span class="m">4026531837</span> user        <span class="m">2</span>   <span class="m">1</span> root bash
@@ -201,7 +201,7 @@
 <h2>Devices<a class="headerlink" href="#devices" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="lsblk">
 <h3>lsblk<a class="headerlink" href="#lsblk" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre>$ lsblk
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ lsblk
 NAME           MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 sda              8:0    <span class="m">0</span> 278.5G  <span class="m">0</span> disk
 ├─sda1           8:1    <span class="m">0</span>   487M  <span class="m">0</span> part /boot/efi
@@ -217,7 +217,7 @@ sda              8:0    <span class="m">0</span> 278.5G  <span class="m">0</span
 <h2>Filesystem<a class="headerlink" href="#filesystem" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="findmnt">
 <h3>findmnt<a class="headerlink" href="#findmnt" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre>$ findmnt -t tmpfs
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ findmnt -t tmpfs
 TARGET         SOURCE FSTYPE OPTIONS
 /run           tmpfs  tmpfs  rw,nosuid,noexec,relatime,size<span class="o">=</span>806096k,mode<span class="o">=</span>755
 /sys/fs/cgroup        tmpfs  rw,relatime,size<span class="o">=</span>4k,mode<span class="o">=</span>755
@@ -229,7 +229,7 @@ TARGET         SOURCE FSTYPE OPTIONS
 </div>
 <div class="section" id="tree">
 <h3>tree<a class="headerlink" href="#tree" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre>$ tree foo
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ tree foo
 foo
 ├── bar
 └── baz
@@ -242,7 +242,7 @@ foo
 <h2>NFS<a class="headerlink" href="#nfs" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="nfsstat">
 <h3>nfsstat<a class="headerlink" href="#nfsstat" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre>$ nfsstat
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ nfsstat
 
 
 Client rpc stats:
@@ -263,7 +263,7 @@ fsstat       fsinfo       pathconf     commit
 </div>
 <div class="section" id="nfsiostat">
 <h3>nfsiostat<a class="headerlink" href="#nfsiostat" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-shell"><div class="highlight"><pre>$ nfsiostat
+<div class="highlight-shell"><div class="highlight"><pre><span></span>$ nfsiostat
 
 nfs.domain.com:/foo mounted on /foo:
 
