@@ -84,7 +84,9 @@ Packaging
     - :ref:`packaging:Tool Recommendations`
 
   - :ref:`python:installing-index` and :ref:`python:install-index`
-  - :ref:`python:distutils-index` and :ref:`python:distutils-index`
+  - :ref:`python:distributing-index` and :ref:`python:distutils-index`
+
+    - `Relationships between Distributions and Packages <https://docs.python.org/2/distutils/setupscript.html#relationships-between-distributions-and-packages>`_
 
 - Community
 
