@@ -258,7 +258,7 @@ Third Party Libraries
 --------------------
 
 - `Documentation <https://docs.sqlalchemy.org/en/latest/>`_
-
+- `Engine sharding <http://docs.sqlalchemy.org/en/latest/core/connections.html#sqlalchemy.engine.Engine.execution_options>`_
 
 :py:mod:`toolz`
 ---------------
