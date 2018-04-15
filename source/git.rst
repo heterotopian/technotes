@@ -34,21 +34,21 @@ General
 Commands
 ========
 
-Listing files
--------------
+Files
+-----
 
 Working tree
 ~~~~~~~~~~~~
 
-- List cached files under cwd ::
+- Cached files under cwd ::
 
     $ git ls-files -c
 
-- List untracked files under cwd ::
+- Untracked files under cwd ::
 
     $ git ls-files -o
 
-- List cached files under ``foo/bar`` ::
+- Cached files under ``foo/bar`` ::
 
     $ git ls-files -c foo/bar
 
@@ -56,24 +56,37 @@ Working tree
 Indexed trees
 ~~~~~~~~~~~~~
 
-- List files in tree identified by |v1.0| tag at the top level ::
+- Files in tree identified by |v1.0| tag at the top level ::
 
     $ git ls-tree --name-only tags/v1.0
 
-- List files in tree identified by |v1.0| tag at all levels ::
+- Files in tree identified by |v1.0| tag at all levels ::
 
     $ git ls-tree --name-only tags/v1.0 -r
 
-- List files in tree identified by |v1.0| tag in path ``foo/bar`` at all levels ::
+- Files in tree identified by |v1.0| tag in path ``foo/bar`` at all levels ::
 
     $ git ls-tree --name-only tags/v1.0 foo/bar -r
+
+
+
+Commits
+-------
+
+- Commits between |HEAD| and commit before |HEAD| ::
+
+    $ git log @^..@
+
+- Commits between |HEAD| and |v1.0| tag ::
+
+    $ git log v1.0..@
 
 
 
 Diffing
 -------
 
-- |HEAD| and commit before |HEAD| ::
+- Diff |HEAD| and commit before |HEAD| ::
 
     $ git diff HEAD^ HEAD
     $ git diff HEAD^..HEAD
@@ -81,11 +94,11 @@ Diffing
     $ git diff @^..@
     $ git show
 
-- |master| and current branch::
+- Diff |master| and current branch::
 
     $ git log master..HEAD -p
 
-- ``file.rst`` from |HEAD| and commit before |HEAD| ::
+- Diff ``file.rst`` from |HEAD| and commit before |HEAD| ::
 
     $ git diff @:file.rst @^1:file.rst
 
