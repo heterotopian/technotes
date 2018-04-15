@@ -98,6 +98,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#community">Community</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#packaging">Packaging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#py3k">Py3k</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#web">Web</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#async-await">async/await</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#reflection">Reflection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#docker">Docker</a></li>
@@ -208,7 +209,7 @@
 <h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="http://docs.python.org/2/glossary.html#glossary" title="(in Python v2.7)"><span>Glossary</span></a> -
-Official definitions of important jargon terms</li>
+Official definitions for common jargon terms</li>
 </ul>
 <div class="section" id="id2">
 <h3><a class="reference external" href="https://docs.python.org/2/reference/index.html">The Python Language Reference</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
@@ -250,6 +251,7 @@ Official definitions of important jargon terms</li>
 <li><span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0441"><strong>PEP 441</strong></a> - Improving Python ZIP Application Support</li>
 <li><span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0443"><strong>PEP 443</strong></a> - Single-dispatch generic functions</li>
 <li><span class="target" id="index-7"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0492"><strong>PEP 492</strong></a> - Coroutines with async and await syntax</li>
+<li><span class="target" id="index-8"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3000"><strong>PEP 3000</strong></a> - Python 3000</li>
 </ul>
 </div>
 <div class="section" id="resources">
@@ -260,21 +262,35 @@ Official definitions of important jargon terms</li>
 <div class="section" id="community">
 <h3>Community<a class="headerlink" href="#community" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><a class="reference external" href="https://www.jetbrains.com/research/python-developers-survey-2017/">Python Developers Survey 2017</a></li>
+<li><a class="reference external" href="https://www.jetbrains.com/research/python-developers-survey-2017/">Python Developers Survey 2017</a> -
+Joint effort of the Python Software Foundation and JetBrains</li>
 <li>StackOverflow:
 <a class="reference external" href="https://stackoverflow.blog/2017/09/06/incredible-growth-python/">The Incredible Growth of Python</a> and
 <a class="reference external" href="https://stackoverflow.blog/2017/09/14/python-growing-quickly/">Why is Python Growing So Quickly?</a></li>
+<li><a class="reference external" href="https://cewing.github.io/training.codefellows/index.html">Python bootcamp lecture notes</a> -
+Course offered by <a class="reference external" href="http://www.codefellows.org/courses/code-401/advanced-software-development-in-python/">Code Fellows</a><ul>
+<li><a class="reference external" href="https://cewing.github.io/training.codefellows/lectures/day21/intro_to_dbapi2.html">A 20-minute introduction to DB-API2</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="packaging">
 <h3>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Official<ul>
-<li><a class="reference external" href="https://pypi.python.org/pypi">PyPI</a> - The Python Package Index</li>
-<li><a class="reference external" href="https://www.pypa.io/en/latest/">Python Packaging Authority</a> -
-Working group that maintains packaging-related projects</li>
-<li><a class="reference external" href="https://packaging.python.org/">Python Packaging User Guide</a><ul>
-<li><a class="reference external" href="https://packaging.python.org/guides/tool-recommendations/#tool-recommendations" title="(in Python Packaging User Guide v)"><span>Tool recommendations</span></a></li>
+<li>Python Package Index (PyPI) - The main software repository for the Python community<ul>
+<li><a class="reference external" href="https://pypi.python.org/pypi">CheeseShop</a> -
+Legacy system for pypi.python.org, retirement in progress</li>
+<li><a class="reference external" href="https://pypi.org/">Warehouse</a> -
+Next-generation platform for pypi.org</li>
+</ul>
+</li>
+<li><a class="reference external" href="https://www.pypa.io/en/latest/">Python Packaging Authority</a> (PyPA) -
+Working group that maintains packaging projects</li>
+<li><a class="reference external" href="https://packaging.python.org/">Python Packaging User Guide</a> -
+Tutorials and references from PyPA<ul>
+<li><a class="reference external" href="https://packaging.python.org/guides/tool-recommendations/#tool-recommendations" title="(in Python Packaging User Guide v)"><span>Tool recommendations</span></a> -
+Current best practices</li>
 </ul>
 </li>
 <li><a class="reference external" href="http://docs.python.org/2/installing/index.html#installing-index" title="(in Python v2.7)"><span>Installing Python Modules</span></a> and <a class="reference external" href="http://docs.python.org/2/install/index.html#install-index" title="(in Python v2.7)"><span>Installing Python Modules (Legacy version)</span></a></li>
@@ -285,8 +301,13 @@ Working group that maintains packaging-related projects</li>
 </ul>
 </li>
 <li>Community<ul>
-<li><a class="reference external" href="https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/">PyPI Quick and Dirty</a></li>
-<li><a class="reference external" href="http://sedimental.org/the_packaging_gradient.html">The Many Layers of Packaging</a></li>
+<li><a class="reference external" href="http://sedimental.org/the_packaging_gradient.html">The Many Layers of Packaging</a> -
+Navigating the rich terrain (e.g. &#8220;pip is for libraries&#8221;)</li>
+<li>Hynek Schlawack:
+<a class="reference external" href="https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/">PyPI Quick and Dirty</a></li>
+<li>Donald Stufft:
+<a class="reference external" href="https://caremad.io/posts/2013/07/setup-vs-requirement/">setup.py vs requirements.txt</a> -
+Clarifying the roles of these features</li>
 </ul>
 </li>
 </ul>
@@ -298,8 +319,18 @@ Working group that maintains packaging-related projects</li>
 Shows Python 3 support for the most popular packages on PyPI</li>
 <li><a class="reference external" href="http://python3statement.org/">Python 3 Statement</a> -
 Pledge by scientific projects to drop Python 2 support by 2020</li>
-<li><a class="reference external" href="http://python-notes.curiousefficiency.org/en/latest/python3/questions_and_answers.html">Python 3 Q&amp;A</a></li>
-<li><a class="reference external" href="https://eev.ee/blog/2016/07/31/python-faq-why-should-i-use-python-3/">Why should I use Python 3?</a></li>
+<li><a class="reference external" href="http://python-notes.curiousefficiency.org/en/latest/python3/questions_and_answers.html">Python 3 Q&amp;A</a> -
+Compehensive FAQ by Nick Coghlan (Python core developer)</li>
+<li>Eevee:
+<a class="reference external" href="https://eev.ee/blog/2016/07/31/python-faq-why-should-i-use-python-3/">Why should I use Python 3?</a> and
+<a class="reference external" href="https://eev.ee/blog/2016/07/31/python-faq-how-do-i-port-to-python-3/">How do I port to Python 3?</a></li>
+</ul>
+</div>
+<div class="section" id="web">
+<h3>Web<a class="headerlink" href="#web" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://cewing.github.io/training.python_web/html/index.html">Internet Programming with Python</a> -
+Certificate course offered by University of Washington</li>
 </ul>
 </div>
 <div class="section" id="async-await">
@@ -336,8 +367,8 @@ A field guide to Abstract Syntax Trees in Python</li>
 <h3>Build systems<a class="headerlink" href="#build-systems" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="https://pex.readthedocs.io/en/stable/">pex</a> -
-Build system based on self-contained, zipped virtualenvs.
-Based on the .pex (Python EXecutable) file format.</li>
+Build system based on <span class="target" id="index-9"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0441"><strong>PEP 441</strong></a> and archived virtualenvs.
+Defines the .pex (Python EXecutable) file format.</li>
 </ul>
 </div>
 </div>
@@ -436,7 +467,7 @@ Based on the .pex (Python EXecutable) file format.</li>
 </ul>
 </div>
 <div class="section" id="hypothesis">
-<h3><a class="reference external" href="https://hypothesis.readthedocs.io/en/master/settings.html#module-hypothesis" title="(in Hypothesis v3.55.1)"><code class="xref py py-mod docutils literal"><span class="pre">hypothesis</span></code></a><a class="headerlink" href="#hypothesis" title="Permalink to this headline">¶</a></h3>
+<h3><a class="reference external" href="https://hypothesis.readthedocs.io/en/master/settings.html#module-hypothesis" title="(in Hypothesis v3.55.6)"><code class="xref py py-mod docutils literal"><span class="pre">hypothesis</span></code></a><a class="headerlink" href="#hypothesis" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="marshmallow">
 <h3><a class="reference external" href="http://marshmallow.readthedocs.io/en/latest/quickstart.html#module-marshmallow" title="(in marshmallow v3.0.0b8)"><code class="xref py py-mod docutils literal"><span class="pre">marshmallow</span></code></a><a class="headerlink" href="#marshmallow" title="Permalink to this headline">¶</a></h3>
@@ -458,8 +489,8 @@ Pivot, pivot-table, stack and unstack explained with pictures</li>
 <h3><code class="xref py py-mod docutils literal"><span class="pre">pip</span></code><a class="headerlink" href="#pip" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="https://pip.readthedocs.io/en/stable/">Documentation</a><ul>
-<li><a class="reference external" href="https://pip.readthedocs.io/en/stable/reference/pip_install/#requirements-file-format" title="(in pip v9.0)"><span>Requirements File Format</span></a></li>
-<li><a class="reference external" href="https://pip.readthedocs.io/en/stable/reference/pip_install/#pip-install" title="(in pip v9.0)"><span>pip install</span></a><ul>
+<li><a class="reference external" href="https://pip.readthedocs.io/en/stable/reference/pip_install/#requirements-file-format" title="(in pip v10.0)"><span>Requirements File Format</span></a></li>
+<li><a class="reference external" href="https://pip.readthedocs.io/en/stable/reference/pip_install/#pip-install" title="(in pip v10.0)"><span>pip install</span></a><ul>
 <li>Installation order:
 &#8220;While it may be coincidentally true that pip will install things in the order of the install arguments or in the order of the items in a requirements file, this is not a promise.&#8221; -
 <a class="reference external" href="https://pip.readthedocs.io/en/stable/reference/pip_install/#installation-order">Source</a></li>
@@ -471,7 +502,7 @@ Pivot, pivot-table, stack and unstack explained with pictures</li>
 </ul>
 </div>
 <div class="section" id="pexpect">
-<h3><a class="reference external" href="http://pexpect.readthedocs.io/en/latest/api/pexpect.html#module-pexpect" title="(in Pexpect v4.4)"><code class="xref py py-mod docutils literal"><span class="pre">pexpect</span></code></a><a class="headerlink" href="#pexpect" title="Permalink to this headline">¶</a></h3>
+<h3><a class="reference external" href="http://pexpect.readthedocs.io/en/latest/api/pexpect.html#module-pexpect" title="(in Pexpect v4.5)"><code class="xref py py-mod docutils literal"><span class="pre">pexpect</span></code></a><a class="headerlink" href="#pexpect" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="pweave">
 <h3><code class="xref py py-mod docutils literal"><span class="pre">pweave</span></code><a class="headerlink" href="#pweave" title="Permalink to this headline">¶</a></h3>
@@ -564,7 +595,7 @@ Pivot, pivot-table, stack and unstack explained with pictures</li>
 </table>
 </div>
 <div class="section" id="trio">
-<h3><a class="reference external" href="https://trio.readthedocs.io/en/latest/reference-core.html#module-trio" title="(in Trio v0.3.0+dev)"><code class="xref py py-mod docutils literal"><span class="pre">trio</span></code></a><a class="headerlink" href="#trio" title="Permalink to this headline">¶</a></h3>
+<h3><a class="reference external" href="https://trio.readthedocs.io/en/latest/reference-core.html#module-trio" title="(in Trio v0.4.0+dev)"><code class="xref py py-mod docutils literal"><span class="pre">trio</span></code></a><a class="headerlink" href="#trio" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="https://vorpus.org/blog/timeouts-and-cancellation-for-humans/">Timeouts and cancelations for humans</a></li>
 </ul>
