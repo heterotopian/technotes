@@ -106,11 +106,12 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Git</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#general">General</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#listing-files">Listing files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#files">Files</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#working-tree">Working tree</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#indexed-trees">Indexed trees</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#commits">Commits</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#diffing">Diffing</a></li>
 </ul>
 </li>
@@ -199,22 +200,22 @@ eBook by Scott Chacon (Source: <a class="reference external" href="https://githu
 </div>
 <div class="section" id="commands">
 <h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="listing-files">
-<h3>Listing files<a class="headerlink" href="#listing-files" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="files">
+<h3>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="working-tree">
 <h4>Working tree<a class="headerlink" href="#working-tree" title="Permalink to this headline">¶</a></h4>
 <ul>
-<li><p class="first">List cached files under cwd</p>
+<li><p class="first">Cached files under cwd</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files -c
 </pre></div>
 </div>
 </li>
-<li><p class="first">List untracked files under cwd</p>
+<li><p class="first">Untracked files under cwd</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files -o
 </pre></div>
 </div>
 </li>
-<li><p class="first">List cached files under <code class="docutils literal"><span class="pre">foo/bar</span></code></p>
+<li><p class="first">Cached files under <code class="docutils literal"><span class="pre">foo/bar</span></code></p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files -c foo/bar
 </pre></div>
 </div>
@@ -224,17 +225,17 @@ eBook by Scott Chacon (Source: <a class="reference external" href="https://githu
 <div class="section" id="indexed-trees">
 <h4>Indexed trees<a class="headerlink" href="#indexed-trees" title="Permalink to this headline">¶</a></h4>
 <ul>
-<li><p class="first">List files in tree identified by <code class="docutils literal"><span class="pre">v1.0</span></code> tag at the top level</p>
+<li><p class="first">Files in tree identified by <code class="docutils literal"><span class="pre">v1.0</span></code> tag at the top level</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0
 </pre></div>
 </div>
 </li>
-<li><p class="first">List files in tree identified by <code class="docutils literal"><span class="pre">v1.0</span></code> tag at all levels</p>
+<li><p class="first">Files in tree identified by <code class="docutils literal"><span class="pre">v1.0</span></code> tag at all levels</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0 -r
 </pre></div>
 </div>
 </li>
-<li><p class="first">List files in tree identified by <code class="docutils literal"><span class="pre">v1.0</span></code> tag in path <code class="docutils literal"><span class="pre">foo/bar</span></code> at all levels</p>
+<li><p class="first">Files in tree identified by <code class="docutils literal"><span class="pre">v1.0</span></code> tag in path <code class="docutils literal"><span class="pre">foo/bar</span></code> at all levels</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0 foo/bar -r
 </pre></div>
 </div>
@@ -242,10 +243,25 @@ eBook by Scott Chacon (Source: <a class="reference external" href="https://githu
 </ul>
 </div>
 </div>
+<div class="section" id="commits">
+<h3>Commits<a class="headerlink" href="#commits" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Commits between <code class="docutils literal"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal"><span class="pre">HEAD</span></code></p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git log @^..@
+</pre></div>
+</div>
+</li>
+<li><p class="first">Commits between <code class="docutils literal"><span class="pre">HEAD</span></code> and <code class="docutils literal"><span class="pre">v1.0</span></code> tag</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git log v1.0..@
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
 <div class="section" id="diffing">
 <h3>Diffing<a class="headerlink" href="#diffing" title="Permalink to this headline">¶</a></h3>
 <ul>
-<li><p class="first"><code class="docutils literal"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal"><span class="pre">HEAD</span></code></p>
+<li><p class="first">Diff <code class="docutils literal"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal"><span class="pre">HEAD</span></code></p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git diff HEAD^ HEAD
 <span class="gp">$</span> git diff HEAD^..HEAD
 <span class="gp">$</span> git diff @^ @
@@ -254,12 +270,12 @@ eBook by Scott Chacon (Source: <a class="reference external" href="https://githu
 </pre></div>
 </div>
 </li>
-<li><p class="first"><code class="docutils literal"><span class="pre">master</span></code> and current branch:</p>
+<li><p class="first">Diff <code class="docutils literal"><span class="pre">master</span></code> and current branch:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git log master..HEAD -p
 </pre></div>
 </div>
 </li>
-<li><p class="first"><code class="docutils literal"><span class="pre">file.rst</span></code> from <code class="docutils literal"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal"><span class="pre">HEAD</span></code></p>
+<li><p class="first">Diff <code class="docutils literal"><span class="pre">file.rst</span></code> from <code class="docutils literal"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal"><span class="pre">HEAD</span></code></p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> git diff @:file.rst @^1:file.rst
 </pre></div>
 </div>
