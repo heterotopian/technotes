@@ -82,10 +82,10 @@ Packaging
 
 - Official
 
-  - Python Package Index (PyPI) - The main software repository for the Python community
+  - Python Package Index (PyPI) - Main package repository for the Python community
 
     - `CheeseShop <https://pypi.python.org/pypi>`_ -
-      Legacy system for pypi.python.org, retirement in progress
+      Legacy system for pypi.python.org
     - `Warehouse <https://pypi.org/>`_ -
       Next-generation platform for pypi.org
 
@@ -110,7 +110,13 @@ Packaging
     `PyPI Quick and Dirty <https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/>`_
   - Donald Stufft:
     `setup.py vs requirements.txt <https://caremad.io/posts/2013/07/setup-vs-requirement/>`_ -
-    Clarifying the roles of these features
+    Clarifying the roles of these essential tools
+  - Kenneth Reitz:
+    `A Better Pip Workflow <https://www.kennethreitz.org/essays/a-better-pip-workflow>`_ -
+    Multiple requirements files
+
+
+
 
 
 Py3k
