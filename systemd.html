@@ -83,9 +83,16 @@
 <li class="toctree-l1"><a class="reference internal" href="bash.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux.html">Linux</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">systemd</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#general">General</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">Manpages</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#controlers">Controlers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Manpages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#controlers">Controlers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">busctl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">systemctl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#journalctl">journalctl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loginctl">loginctl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#machinectl">machinectl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#timedatectl">timedatectl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#localectl">localectl</a></li>
 </ul>
 </li>
 </ul>
@@ -172,8 +179,9 @@
 <ul class="simple">
 <li><a class="reference external" href="https://www.freedesktop.org/wiki/Software/systemd/">Project homepage</a></li>
 </ul>
+</div>
 <div class="section" id="id2">
-<h3><a class="reference external" href="http://0pointer.de/public/systemd-man/">Manpages</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h2><a class="reference external" href="http://0pointer.de/public/systemd-man/">Manpages</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="http://0pointer.de/public/systemd-man/systemd.directives.html">systemd.directives</a> -
 Index of configuration directives</li>
@@ -182,16 +190,49 @@ Bidirectionally proxy local sockets to another (possibly remote) socket.</li>
 </ul>
 </div>
 <div class="section" id="controlers">
-<h3>Controlers<a class="headerlink" href="#controlers" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/busctl.html">busctl</a></li>
-<li>systemctl</li>
-<li>journalctl</li>
-<li>loginctl</li>
-<li>machinectl</li>
-<li>timedatectl</li>
-<li>localectl</li>
+<h2>Controlers<a class="headerlink" href="#controlers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/busctl.html">busctl</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id4">
+<h3><a class="reference external" href="http://0pointer.de/public/systemd-man/systemctl.html">systemctl</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">List active units:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ systemctl list-units
+</pre></div>
+</div>
+</li>
+<li><p class="first">List loaded units:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ systemctl list-units -a
+</pre></div>
+</div>
+</li>
+<li><p class="first">List active service units:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ systemctl list-units -t service
+</pre></div>
+</div>
+</li>
+<li><p class="first">List unit files:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ systemctl list-unit-files
+</pre></div>
+</div>
+</li>
 </ul>
+</div>
+<div class="section" id="journalctl">
+<h3>journalctl<a class="headerlink" href="#journalctl" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="loginctl">
+<h3>loginctl<a class="headerlink" href="#loginctl" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="machinectl">
+<h3>machinectl<a class="headerlink" href="#machinectl" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="timedatectl">
+<h3>timedatectl<a class="headerlink" href="#timedatectl" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="localectl">
+<h3>localectl<a class="headerlink" href="#localectl" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 </div>
