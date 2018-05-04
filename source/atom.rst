@@ -53,6 +53,9 @@ Shortcuts
     * - Toggle Developer Tools
       - :kbd:`Ctrl-Shift-I`
 
+    * - Open grammar selector
+      - :kbd:`Ctrl-Shift-L`
+
 
 
 Command Line
