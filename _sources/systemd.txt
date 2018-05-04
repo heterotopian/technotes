@@ -4,6 +4,8 @@
 systemd
 =======
 
+.. highlight:: bash
+
 General
 =======
 
