@@ -15,7 +15,7 @@ Technical Notes
     :maxdepth: 1
     :caption: Programming
 
-    python
+    python/index
     conda
     frontend
 

@@ -179,4 +179,4 @@ Build systems
 
 
 
-.. include:: python_libraries.rst
+.. include:: libs.rst
