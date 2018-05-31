@@ -59,9 +59,6 @@ Packaging
     Multiple requirements files
 
 
-
-
-
 Py3k
 ----
 
@@ -81,7 +78,6 @@ Web
 
 - `Internet Programming with Python <http://cewing.github.io/training.python_web/html/index.html>`_ -
   Certificate course offered by University of Washington
-
 
 
 async/await
