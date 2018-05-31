@@ -1,10 +1,12 @@
 .. _python_general:
 
-General
-=======
+Documentation
+=============
 
-- :ref:`python:glossary` -
-  Official definitions for common jargon terms
+`Glossary <https://docs.python.org/2/glossary.html>`_
+-----------------------------------------------------
+
+Definitions for common jargon terms
 
 
 `The Python Language Reference <https://docs.python.org/2/reference/index.html>`_
