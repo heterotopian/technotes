@@ -8,6 +8,6 @@ systemd
 
 .. include:: doc.rst
 
-.. include:: controller.rst
-
 .. include:: command.rst
+
+.. include:: controller.rst
