@@ -124,4 +124,5 @@ Wikipedia: `Standard streams <https://en.wikipedia.org/wiki/Standard_streams>`_
 Resources
 =========
 
-- `Bash Guide for Beginners <http://tldp.org/LDP/Bash-Beginners-Guide/html/>`_
+- `Bash Guide for Beginners <http://tldp.org/LDP/Bash-Beginners-Guide/html/>`_ -
+  A practical guide, which tries to give real-life (instead of theoretical) examples

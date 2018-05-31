@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>PEPs &mdash; Technotes Documentation</title>
+  <title>Controlers &mdash; Technotes Documentation</title>
   
 
   
@@ -80,12 +80,12 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../bash.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../linux.html">Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../systemd/index.html">systemd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">systemd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../docker.html">Docker</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Programming</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../conda.html">Conda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../frontend.html">Frontend</a></li>
 </ul>
@@ -142,11 +142,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>PEPs</li>
+    <li>Controlers</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/python/pep.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/systemd/controller.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -156,26 +156,51 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="peps">
-<span id="python-pep"></span><h1>PEPs<a class="headerlink" href="#peps" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0248"><strong>PEP 248</strong></a> - Python Database API Specification v1.0</li>
-<li><span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0249"><strong>PEP 249</strong></a> - Python Database API Specification v2.0</li>
-<li><span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0302"><strong>PEP 302</strong></a> - New Import Hooks</li>
-<li><span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0333"><strong>PEP 333</strong></a> - Python Web Server Gateway Interface v1.0<ul>
-<li><a class="reference external" href="https://www.python.org/dev/peps/pep-0333/#optional-platform-specific-file-handling">Optional Platform-Specific File Handling</a></li>
-</ul>
+  <div class="section" id="controlers">
+<span id="systemd-controller"></span><h1>Controlers<a class="headerlink" href="#controlers" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/busctl.html">busctl</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id2">
+<h2><a class="reference external" href="http://0pointer.de/public/systemd-man/systemctl.html">systemctl</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">List active units:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ systemctl list-units
+</pre></div>
+</div>
 </li>
-<li><span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0440"><strong>PEP 440</strong></a> - Version Identification and Dependency Specification<ul>
-<li><a class="reference external" href="https://www.python.org/dev/peps/pep-0440/#version-scheme">Version scheme</a></li>
-<li><a class="reference external" href="https://www.python.org/dev/peps/pep-0440/#version-specifiers">Version specifiers</a></li>
-</ul>
+<li><p class="first">List loaded units:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ systemctl list-units -a
+</pre></div>
+</div>
 </li>
-<li><span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0441"><strong>PEP 441</strong></a> - Improving Python ZIP Application Support</li>
-<li><span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0443"><strong>PEP 443</strong></a> - Single-dispatch generic functions</li>
-<li><span class="target" id="index-7"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0492"><strong>PEP 492</strong></a> - Coroutines with async and await syntax</li>
-<li><span class="target" id="index-8"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3000"><strong>PEP 3000</strong></a> - Python 3000</li>
+<li><p class="first">List active service units:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ systemctl list-units -t service
+</pre></div>
+</div>
+</li>
+<li><p class="first">List unit files:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ systemctl list-unit-files
+</pre></div>
+</div>
+</li>
 </ul>
+</div>
+<div class="section" id="journalctl">
+<h2>journalctl<a class="headerlink" href="#journalctl" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="loginctl">
+<h2>loginctl<a class="headerlink" href="#loginctl" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="machinectl">
+<h2>machinectl<a class="headerlink" href="#machinectl" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="timedatectl">
+<h2>timedatectl<a class="headerlink" href="#timedatectl" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="localectl">
+<h2>localectl<a class="headerlink" href="#localectl" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 

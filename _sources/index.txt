@@ -8,7 +8,7 @@ Technical Notes
 
     bash
     linux
-    systemd
+    systemd/index
     docker
 
 .. toctree::

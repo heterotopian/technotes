@@ -4,7 +4,7 @@
 Python
 ======
 
-.. include:: general.rst
+.. include:: doc.rst
 
 .. include:: pep.rst
 
