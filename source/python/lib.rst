@@ -1,3 +1,6 @@
+.. _python_lib:
+.. _python_lib_std:
+
 Standard Library
 ================
 
@@ -44,6 +47,8 @@ Standard Library
     ~operator.methodcaller
 
 
+
+.. _python_lib_third:
 
 Third Party Libraries
 =====================
