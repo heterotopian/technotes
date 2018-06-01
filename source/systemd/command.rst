@@ -8,7 +8,7 @@ Commands
 
 ::
 
-    $ systemd-cgls /system.slice
+    $ systemd-cgls
     Control group /:
     -.slice
     ├─init.scope
@@ -20,7 +20,7 @@ Commands
     │ │ └─2066 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidf...
     │ ├─rpc-statd.service
 
-    
+
 `systemd-run <https://www.freedesktop.org/software/systemd/man/systemd-run.html>`_
 ----------------------------------------------------------------------------------
 
