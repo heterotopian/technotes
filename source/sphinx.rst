@@ -36,3 +36,4 @@ Resources
 
 - `Sphinx/reST Memo <http://rest-sphinx-memo.readthedocs.io>`_ -
   Condensed guide to Sphinx & reST constructs, illustrated with examples
+- `Online reStructuredText editor <http://rst.ninjs.org/>`_
