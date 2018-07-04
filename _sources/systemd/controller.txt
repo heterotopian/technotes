@@ -10,6 +10,10 @@ Controlers
 `journalctl <https://www.freedesktop.org/software/systemd/man/journalctl.html>`_
 --------------------------------------------------------------------------------
 
+- Supports tab completion on field names::
+
+    $ journalctl _G<TAB>
+
 
 `localectl <https://www.freedesktop.org/software/systemd/man/localectl.html>`_
 ------------------------------------------------------------------------------
