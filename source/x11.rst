@@ -4,10 +4,49 @@
 X11
 ===
 
+.. highlight:: console
+
+
 Scripts
 =======
+
+xprofile
+--------
+
+
+xsession
+--------
+
+
+xinitrc
+-------
+
+
+Xresources
+----------
+
+
+Xdefaults
+---------
 
 
 
 Commands
 ========
+
+xprop
+-----
+
+
+xgetres
+-------
+
+
+xdotool
+-------
+
+
+wmctrl
+------
+
+https://askubuntu.com/a/740572
