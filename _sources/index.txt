@@ -10,6 +10,7 @@ Technical Notes
     linux
     systemd/index
     docker
+    x11
 
 .. toctree::
     :maxdepth: 1
