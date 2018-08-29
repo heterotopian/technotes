@@ -18,11 +18,10 @@ Repositories
 ============
 
 - `Anaconda.org <https://anaconda.org/>`_
-
 - `Anaconda repositories <https://repo.continuum.io/pkgs/>`_
 
   - `Issue tracker <https://github.com/ContinuumIO/anaconda-issues>`_
-  - Quote from the `repository landing page <https://repo.continuum.io/pkgs/>`_:
+  - Quoting the `repository landing page <https://repo.continuum.io/pkgs/>`_:
 
       **What about the 'anaconda' channel on anaconda.org at https://anaconda.org/anaconda?**
 
