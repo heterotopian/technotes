@@ -104,6 +104,19 @@ Diffing
 
 
 
+Tags
+----
+
+- Delete local tag::
+
+    $ git tag -d TAGNAME
+
+- Push deleted tag to |origin|::
+
+    $ git push origin :refs/tags/TAGNAME
+
+
+
 
 Terms
 =====
@@ -138,4 +151,5 @@ Resources
 
 .. |HEAD| replace:: ``HEAD``
 .. |master| replace:: ``master``
+.. |origin| replace:: ``origin``
 .. |v1.0| replace:: ``v1.0``

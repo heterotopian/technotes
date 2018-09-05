@@ -114,6 +114,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#commits">Commits</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#diffing">Diffing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tags">Tags</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#terms">Terms</a></li>
@@ -278,6 +279,21 @@ eBook by Scott Chacon (Source: <a class="reference external" href="https://githu
 </li>
 <li><p class="first">Diff <code class="docutils literal"><span class="pre">file.rst</span></code> from <code class="docutils literal"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal"><span class="pre">HEAD</span></code></p>
 <div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git diff @:file.rst @^1:file.rst
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="tags">
+<h3>Tags<a class="headerlink" href="#tags" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Delete local tag:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git tag -d TAGNAME
+</pre></div>
+</div>
+</li>
+<li><p class="first">Push deleted tag to <code class="docutils literal"><span class="pre">origin</span></code>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git push origin :refs/tags/TAGNAME
 </pre></div>
 </div>
 </li>
