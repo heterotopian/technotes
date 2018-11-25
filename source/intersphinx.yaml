@@ -64,3 +64,15 @@ pypa: !!python/tuple
 packaging: !!python/tuple
   - "https://packaging.python.org/"
   - null
+flask: !!python/tuple
+  - "http://flask.pocoo.org/docs/"
+  - null
+tox: !!python/tuple
+  - "https://tox.readthedocs.io/en/latest/"
+  - null
+nox: !!python/tuple
+  - "https://nox.thea.codes/en/stable/"
+  - null
+pipenv: !!python/tuple
+  - "https://pipenv.readthedocs.io/en/latest/"
+  - null

@@ -15,6 +15,12 @@ Third Party
 - `Documentation <http://distlib.readthedocs.io/en/latest/>`_
 
 
+:py:mod:`flask`
+---------------
+
+- `Building beautiful REST APIs using Flask, Swagger UI and Flask-RESTPlus <http://michal.karzynski.pl/blog/2016/06/19/building-beautiful-restful-apis-using-flask-swagger-ui-flask-restplus/>`_
+
+
 :py:mod:`hypothesis`
 --------------------
 
@@ -25,6 +31,12 @@ Third Party
 
 :py:mod:`nose`
 --------------
+
+
+:py:mod:`nox`
+-------------
+
+- `Documentation <https://nox.thea.codes/en/stable/>`_
 
 
 :py:mod:`numpy`
@@ -58,6 +70,12 @@ Defines the .pex (Python EXecutable) file format.
       `Source <https://pip.readthedocs.io/en/stable/reference/pip_install/#installation-order>`_
 
 - `Pip needs a dependency resolver <https://github.com/pypa/pip/issues/988>`_
+
+
+:py:mod:`pipenv`
+----------------
+
+- `Documentation <https://pipenv.readthedocs.io/en/latest/>`_
 
 
 :py:mod:`pexpect`
@@ -116,6 +134,12 @@ Defines the .pex (Python EXecutable) file format.
 --------------
 
 - `Timeouts and cancelations for humans <https://vorpus.org/blog/timeouts-and-cancellation-for-humans/>`_
+
+
+:py:mod:`tox`
+-------------
+
+- `Documentation <https://tox.readthedocs.io/en/latest/>`_
 
 
 :py:mod:`wrapt`
