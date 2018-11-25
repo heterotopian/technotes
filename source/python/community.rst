@@ -18,38 +18,23 @@ Packaging
 
 - Official
 
-  - Python Package Index (PyPI) - Main package repository for the Python community
-
-    - `CheeseShop <https://pypi.python.org/pypi>`_ -
-      Legacy system for pypi.python.org
-    - `Warehouse <https://pypi.org/>`_ -
-      Next-generation platform for pypi.org
-
+  - `Python Package Index <https://pypi.python.org/pypi>`_ (PyPI) - Community package repository
   - `Python Packaging Authority <https://www.pypa.io/en/latest/>`_ (PyPA) -
-    Working group that maintains packaging projects
+    Working group for packaging-related projects
+
   - `Python Packaging User Guide <https://packaging.python.org/>`_ -
-    Tutorials and references from PyPA
+    Guide to best practices
 
-    - :ref:`packaging:Tool Recommendations` -
-      Current best practices
+    - :ref:`packaging:Tool Recommendations`
 
-  - :ref:`python:installing-index` and :ref:`python:install-index`
-  - :ref:`python:distributing-index` and :ref:`python:distutils-index`
-
-    - `Relationships between Distributions and Packages <https://docs.python.org/2/distutils/setupscript.html#relationships-between-distributions-and-packages>`_
-
-- Community
-
-  - `The Many Layers of Packaging <http://sedimental.org/the_packaging_gradient.html>`_ -
-    Navigating the rich terrain (e.g. "pip is for libraries")
-  - Hynek Schlawack:
-    `PyPI Quick and Dirty <https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/>`_
-  - Donald Stufft:
-    `setup.py vs requirements.txt <https://caremad.io/posts/2013/07/setup-vs-requirement/>`_ -
-    Clarifying the roles of these essential tools
-  - Kenneth Reitz:
-    `A Better Pip Workflow <https://www.kennethreitz.org/essays/a-better-pip-workflow>`_ -
-    Multiple requirements files
+- Donald Stufft:
+  `setup.py vs requirements.txt <https://caremad.io/posts/2013/07/setup-vs-requirement/>`_ -
+  Explains the roles of each component
+- Kenneth Reitz:
+  `A Better Pip Workflow <https://www.kennethreitz.org/essays/a-better-pip-workflow>`_ -
+  Multiple requirements files
+- `The Many Layers of Packaging <http://sedimental.org/the_packaging_gradient.html>`_ -
+  Broad overview of packaging, "pip is for libraries"
 
 
 Py3k
