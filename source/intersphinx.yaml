@@ -94,3 +94,6 @@ docutils: !!python/tuple
 jupyter: !!python/tuple
   - "https://jupyter.readthedocs.io/en/latest/"
   - null
+devguide: !!python/tuple
+  - "https://devguide.python.org/"
+  - null
