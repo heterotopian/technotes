@@ -44,8 +44,8 @@ Packaging
   Broad overview of packaging, "pip is for libraries"
 
 
-Py3k
-----
+Python 3
+--------
 
 - `Python 3 Readiness <http://py3readiness.org/>`_ -
   Shows Python 3 support for the most popular packages on PyPI
@@ -53,6 +53,8 @@ Py3k
   Pledge by scientific projects to drop Python 2 support by 2020
 - `Python 3 Q&A <http://python-notes.curiousefficiency.org/en/latest/python3/questions_and_answers.html>`_ -
   Compehensive FAQ by Nick Coghlan (Python core developer)
+- Brett Cannon:
+  `Why Python 3 Exists <https://snarky.ca/why-python-3-exists/>`_
 - Eevee:
   `Why should I use Python 3? <https://eev.ee/blog/2016/07/31/python-faq-why-should-i-use-python-3/>`_ and
   `How do I port to Python 3? <https://eev.ee/blog/2016/07/31/python-faq-how-do-i-port-to-python-3/>`_
