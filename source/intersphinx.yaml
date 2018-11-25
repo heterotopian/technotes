@@ -91,3 +91,6 @@ great_expectations: !!python/tuple
 docutils: !!python/tuple
   - "https://docutils.readthedocs.io/en/sphinx-docs/"
   - null
+jupyter: !!python/tuple
+  - "https://jupyter.readthedocs.io/en/latest/"
+  - null
