@@ -288,6 +288,17 @@ Defines the .pex (Python EXecutable) file format.</p>
 <h2><code class="xref py py-mod docutils literal notranslate"><span class="pre">pipenv</span></code><a class="headerlink" href="#pipenv" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://pipenv.readthedocs.io/en/latest/">Documentation</a></li>
+<li><a class="reference external" href="https://github.com/pypa/pipfile/issues/27">The difference between setup.py (pyproject.toml) and requirements.txt (Pipfile)</a></li>
+<li><a class="reference external" href="https://github.com/pypa/pipenv/issues/209">How to integrate with setup.py?</a></li>
+<li><a class="reference external" href="https://github.com/pypa/pipfile/issues/98#issue-276881270">Taxonomy of dependencies</a>:
+“Across applications and libraries, we can taxonomize three different kinds of abstract dependencies.<ol class="arabic">
+<li>For applications, the abstract dependencies required to run the application</li>
+<li>For libraries, the abstract dependencies that consumers of the library must also add</li>
+<li>For both applications and libraries, the abstract dependencies required for a development environment – these also almost always include respectively (1) or (2), since you usually can’t run tests without the actual dependencies</li>
+<li>The concrete dependencies required to run an application, corresponding to (1)</li>
+<li>The concrete dependencies to develop an application or a library, corresponding to (3)”</li>
+</ol>
+</li>
 </ul>
 </div>
 <div class="section" id="placebo">
@@ -425,7 +436,7 @@ Defines the .pex (Python EXecutable) file format.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Nov 25, 2018, 6:29:59 AM.
+      Last updated on Nov 25, 2018, 6:53:02 AM.
 
     </p>
   </div>
