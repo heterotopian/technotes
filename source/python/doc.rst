@@ -1,4 +1,4 @@
-.. _python_general:
+.. _python_doc:
 
 Documentation
 =============
@@ -35,16 +35,24 @@ Describes the standard library that is distributed with Python.
 `Installing Python Modules <https://docs.python.org/2/installing/>`_
 --------------------------------------------------------------------
 
-
-`Installing Python Modules (Legacy version) <https://docs.python.org/2/install/>`_
-----------------------------------------------------------------------------------
+Basic introduction to installing modules.
 
 
 `Distributing Python Modules <https://docs.python.org/2/distributing/>`_
 ------------------------------------------------------------------------
 
+Basic introduction to distributing modules.
+
+
+`Installing Python Modules (Legacy version) <https://docs.python.org/2/install/>`_
+----------------------------------------------------------------------------------
+
+Guide to the Python Distribution Utilities (distutils) from an end-user point of view.
+
 
 `Distributing Python Modules (Legacy version) <https://docs.python.org/2/distutils/>`_
 --------------------------------------------------------------------------------------
+
+Guide to the Python Distribution Utilities (distutils) from a developer point of view.
 
 - `Relationships between Distributions and Packages <https://docs.python.org/2/distutils/setupscript.html#relationships-between-distributions-and-packages>`_
