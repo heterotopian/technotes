@@ -56,7 +56,7 @@ Third Party
 -----------------
 
 - `Project homepage <http://jupyter.org/>`_
-- Documentation: 
+- Documentation:
   `Index <http://jupyter.org/documentation>`_,
   `General <https://jupyter.readthedocs.io/en/latest/>`_,
   `Notebook <https://jupyter-notebook.readthedocs.io/en/stable/>`_
@@ -94,6 +94,10 @@ Third Party
 
 :py:mod:`pandas`
 ----------------
+
+- `Documentation <http://pandas.pydata.org/pandas-docs/stable/>`_
+
+  - :ref:`pandas:compare_with_sql`
 
 - `Reshaping in Pandas <http://nikgrozev.com/2015/07/01/reshaping-in-pandas-pivot-pivot-table-stack-and-unstack-explained-with-pictures/>`_ -
   Pivot, pivot-table, stack and unstack explained with pictures
