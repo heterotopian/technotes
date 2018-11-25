@@ -8,7 +8,7 @@ numpy: !!python/tuple
   - "http://docs.scipy.org/doc/numpy-1.7.0/"
   - null
 pandas: !!python/tuple
-  - "http://pandas.pydata.org/pandas-docs/version/0.12.0/"
+  - "http://pandas.pydata.org/pandas-docs/stable/"
   - null
 sphinx: !!python/tuple
   - "http://www.sphinx-doc.org/en/stable/"
