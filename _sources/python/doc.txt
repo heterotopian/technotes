@@ -30,3 +30,21 @@ Describes the syntax and core semantics of the language.
 Describes the standard library that is distributed with Python.
 
 - :ref:`python:built-in-funcs`
+
+
+`Installing Python Modules <https://docs.python.org/2/installing/>`_
+--------------------------------------------------------------------
+
+
+`Installing Python Modules (Legacy version) <https://docs.python.org/2/install/>`_
+----------------------------------------------------------------------------------
+
+
+`Distributing Python Modules <https://docs.python.org/2/distributing/>`_
+------------------------------------------------------------------------
+
+
+`Distributing Python Modules (Legacy version) <https://docs.python.org/2/distutils/>`_
+--------------------------------------------------------------------------------------
+
+- `Relationships between Distributions and Packages <https://docs.python.org/2/distutils/setupscript.html#relationships-between-distributions-and-packages>`_
