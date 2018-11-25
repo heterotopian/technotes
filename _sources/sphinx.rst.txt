@@ -6,12 +6,19 @@ Sphinx
 
 .. highlight:: console
 
-General
-=======
+`Documentation <http://www.sphinx-doc.org>`_
+============================================
 
-- `Documentation <http://www.sphinx-doc.org>`_
+- :ref:`sphinx:templating`
 
-  - :ref:`sphinx:templating`
+
+
+Resources
+=========
+
+- `Sphinx/reST Memo <http://rest-sphinx-memo.readthedocs.io>`_ -
+  Condensed guide to Sphinx & reST constructs, illustrated with examples
+- `Online reStructuredText editor <http://rst.ninjs.org/>`_
 
 
 
@@ -53,12 +60,3 @@ Klink
 - `Documentation <http://pmorissette.github.io/klink/index.html>`_
 - Example:
   `Klink theme <http://pmorissette.github.io/klink/examples.html>`_
-
-
-
-Resources
-=========
-
-- `Sphinx/reST Memo <http://rest-sphinx-memo.readthedocs.io>`_ -
-  Condensed guide to Sphinx & reST constructs, illustrated with examples
-- `Online reStructuredText editor <http://rst.ninjs.org/>`_
