@@ -17,5 +17,6 @@ PEPs
 
 - :pep:`441` - Improving Python ZIP Application Support
 - :pep:`443` - Single-dispatch generic functions
+- :pep:`465` - A dedicated infix operator for matrix multiplication
 - :pep:`492` - Coroutines with async and await syntax
 - :pep:`3000` - Python 3000
