@@ -5,4 +5,6 @@
 Modules
 =======
 
-.. include:: lib.rst
+.. include:: stdlib.rst
+
+.. include:: thirdpartylib.rst
