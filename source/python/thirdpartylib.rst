@@ -27,8 +27,16 @@ Third Party
 - `Building beautiful REST APIs using Flask, Swagger UI and Flask-RESTPlus <http://michal.karzynski.pl/blog/2016/06/19/building-beautiful-restful-apis-using-flask-swagger-ui-flask-restplus/>`_
 
 
+:py:mod:`great_expectations`
+----------------------------
+
+- `Documentation <https://great-expectations.readthedocs.io/en/stable/>`_
+
+
 :py:mod:`hypothesis`
 --------------------
+
+- `Documentation <https://hypothesis.readthedocs.io/en/latest/>`_
 
 
 :py:mod:`marshmallow`

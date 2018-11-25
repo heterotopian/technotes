@@ -85,3 +85,6 @@ factory_boy: !!python/tuple
 placebo: !!python/tuple
   - "https://placebo.readthedocs.io/en/latest/"
   - null
+great_expectations: !!python/tuple
+  - "https://great-expectations.readthedocs.io/en/stable/"
+  - null
