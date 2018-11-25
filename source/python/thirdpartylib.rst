@@ -15,6 +15,19 @@ Third Party
 - `Documentation <http://distlib.readthedocs.io/en/latest/>`_
 
 
+:py:mod:`docutils`
+------------------
+
+- `Project homepage <http://docutils.sourceforge.net/>`_
+- `Documentation <https://docutils.readthedocs.io/en/sphinx-docs/>`_ -
+  Community-supported, not maintained by the docutils developers
+- `reStructuredText Markup Specification <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html>`_
+- Frontends
+
+  - `rst2html.py <http://docutils.sourceforge.net/docs/user/tools.html#rst2html-py>`_
+  - `rst2pseudoxml.py <http://docutils.sourceforge.net/docs/user/tools.html#rst2pseudoxml-py>`_
+
+
 :py:mod:`factory_boy`
 ---------------------
 

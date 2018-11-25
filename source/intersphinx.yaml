@@ -88,3 +88,6 @@ placebo: !!python/tuple
 great_expectations: !!python/tuple
   - "https://great-expectations.readthedocs.io/en/stable/"
   - null
+docutils: !!python/tuple
+  - "https://docutils.readthedocs.io/en/sphinx-docs/"
+  - null
