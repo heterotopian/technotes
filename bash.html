@@ -86,12 +86,12 @@
                 <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Bash</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#redirection">Redirection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tests">Tests</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#expansion">Expansion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">Builtins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tests">Tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#file-descriptors">File Descriptors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-descriptors">File descriptors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#redirection">Redirection</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux</a></li>
@@ -174,53 +174,28 @@
             
   <div class="section" id="bash">
 <span id="id1"></span><h1>Bash<a class="headerlink" href="#bash" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="redirection">
-<h2>Redirection<a class="headerlink" href="#redirection" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p class="first">stdout to <code class="docutils literal notranslate"><span class="pre">command.stdout</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> &gt; command.stdout
-</pre></div>
-</div>
-</li>
-<li><p class="first">stderr to <code class="docutils literal notranslate"><span class="pre">command.stderr</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">2</span>&gt; command.stderr
-</pre></div>
-</div>
-</li>
-<li><p class="first">stdout to stderr:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">1</span>&gt;<span class="p">&amp;</span><span class="m">2</span>
-</pre></div>
-</div>
-</li>
-<li><p class="first">stderr to stdout:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
-</pre></div>
-</div>
-</li>
-<li><p class="first">stderr and stdout to <code class="docutils literal notranslate"><span class="pre">command.out</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="p">&amp;</span>&gt; command.out
-</pre></div>
-</div>
-</li>
-<li><p class="first">stdout to <code class="docutils literal notranslate"><span class="pre">/dev/null</span></code> and stderr to stdout:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> &gt;/dev/null
-</pre></div>
-</div>
-</li>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://tldp.org/LDP/Bash-Beginners-Guide/html/">Bash Guide for Beginners</a> -
+A practical guide, with real-life (instead of theoretical) examples</li>
 </ul>
+</div>
+<div class="section" id="tests">
+<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h2>
+<p>Bash Guide for Beginners: <a class="reference external" href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#sect_07_01_01_01">Test primitives</a></p>
 </div>
 <div class="section" id="expansion">
 <h2>Expansion<a class="headerlink" href="#expansion" title="Permalink to this headline">¶</a></h2>
 <p>Bash Guide for Beginners: <a class="reference external" href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html">Shell expansion</a></p>
-<table border="1" class="colwidths-given docutils" id="id3">
-<caption><span class="caption-text">Expansion types</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<table border="1" class="colwidths-given docutils">
 <colgroup>
 <col width="45%" />
 <col width="9%" />
 <col width="45%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Type</th>
+<tr class="row-odd"><th class="head">Expansion type</th>
 <th class="head">Order</th>
 <th class="head">Example</th>
 </tr>
@@ -268,12 +243,8 @@
 <li><a class="reference external" href="http://wiki.bash-hackers.org/commands/builtin/read">read</a></li>
 </ul>
 </div>
-<div class="section" id="tests">
-<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h2>
-<p>Bash Guide for Beginners: <a class="reference external" href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#sect_07_01_01_01">Test primitives</a></p>
-</div>
 <div class="section" id="file-descriptors">
-<h2>File Descriptors<a class="headerlink" href="#file-descriptors" title="Permalink to this headline">¶</a></h2>
+<h2>File descriptors<a class="headerlink" href="#file-descriptors" title="Permalink to this headline">¶</a></h2>
 <p>Wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Standard_streams">Standard streams</a></p>
 <table border="1" class="docutils">
 <colgroup>
@@ -298,11 +269,39 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="resources">
-<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference external" href="http://tldp.org/LDP/Bash-Beginners-Guide/html/">Bash Guide for Beginners</a> -
-A practical guide, which tries to give real-life (instead of theoretical) examples</li>
+<div class="section" id="redirection">
+<h2>Redirection<a class="headerlink" href="#redirection" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">stdout to <code class="docutils literal notranslate"><span class="pre">command.stdout</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> &gt; command.stdout
+</pre></div>
+</div>
+</li>
+<li><p class="first">stderr to <code class="docutils literal notranslate"><span class="pre">command.stderr</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">2</span>&gt; command.stderr
+</pre></div>
+</div>
+</li>
+<li><p class="first">stdout to stderr:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">1</span>&gt;<span class="p">&amp;</span><span class="m">2</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">stderr to stdout:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">stderr and stdout to <code class="docutils literal notranslate"><span class="pre">command.out</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="p">&amp;</span>&gt; command.out
+</pre></div>
+</div>
+</li>
+<li><p class="first">stdout to <code class="docutils literal notranslate"><span class="pre">/dev/null</span></code> and stderr to stdout:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> &gt;/dev/null
+</pre></div>
+</div>
+</li>
 </ul>
 </div>
 </div>
@@ -327,7 +326,7 @@ A practical guide, which tries to give real-life (instead of theoretical) exampl
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Nov 25, 2018, 7:20:09 AM.
+      Last updated on Nov 25, 2018, 11:36:37 AM.
 
     </p>
   </div>

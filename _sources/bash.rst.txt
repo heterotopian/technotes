@@ -6,32 +6,18 @@ Bash
 
 .. highlight:: console
 
-Redirection
-===========
+Resources
+=========
 
-- stdout to ``command.stdout``::
+- `Bash Guide for Beginners <http://tldp.org/LDP/Bash-Beginners-Guide/html/>`_ -
+  A practical guide, with real-life (instead of theoretical) examples
 
-    $ command > command.stdout
 
-- stderr to ``command.stderr``::
 
-    $ command 2> command.stderr
+Tests
+=====
 
-- stdout to stderr::
-
-    $ command 1>&2
-
-- stderr to stdout::
-
-    $ command 2>&1
-
-- stderr and stdout to ``command.out``::
-
-    $ command &> command.out
-
-- stdout to ``/dev/null`` and stderr to stdout::
-
-    $ command 2>&1 >/dev/null
+Bash Guide for Beginners: `Test primitives <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#sect_07_01_01_01>`_
 
 
 
@@ -40,11 +26,11 @@ Expansion
 
 Bash Guide for Beginners: `Shell expansion <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html>`_
 
-.. list-table:: Expansion types
+.. list-table::
     :widths: 50 10 50
     :header-rows: 1
 
-    * - Type
+    * - Expansion type
       - Order
       - Example
 
@@ -91,15 +77,7 @@ Bash Guide for Beginners: `Shell built-in commands <https://www.tldp.org/LDP/Bas
 
 
 
-Tests
-=====
-
-Bash Guide for Beginners: `Test primitives <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#sect_07_01_01_01>`_
-
-
-
-
-File Descriptors
+File descriptors
 ================
 
 Wikipedia: `Standard streams <https://en.wikipedia.org/wiki/Standard_streams>`_
@@ -121,8 +99,29 @@ Wikipedia: `Standard streams <https://en.wikipedia.org/wiki/Standard_streams>`_
 
 
 
-Resources
-=========
+Redirection
+===========
 
-- `Bash Guide for Beginners <http://tldp.org/LDP/Bash-Beginners-Guide/html/>`_ -
-  A practical guide, which tries to give real-life (instead of theoretical) examples
+- stdout to ``command.stdout``::
+
+    $ command > command.stdout
+
+- stderr to ``command.stderr``::
+
+    $ command 2> command.stderr
+
+- stdout to stderr::
+
+    $ command 1>&2
+
+- stderr to stdout::
+
+    $ command 2>&1
+
+- stderr and stdout to ``command.out``::
+
+    $ command &> command.out
+
+- stdout to ``/dev/null`` and stderr to stdout::
+
+    $ command 2>&1 >/dev/null
