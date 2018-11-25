@@ -47,8 +47,8 @@ Standard Library
 
 
 
-Third Party Libraries
-=====================
+Third Party
+===========
 
 :py:mod:`codetransformer`
 -------------------------
