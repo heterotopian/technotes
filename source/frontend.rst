@@ -1,13 +1,13 @@
 .. _frontend:
 
-========
-Frontend
-========
-
-General
-=======
+=========
+Resources
+=========
 
 
+- `Web.dev <https://web.dev/>`_ -
+  Guidance and tools to help web developers deliver high-performance results.
+  Maintained by Google's web platform team.
 
 
 Webpack
