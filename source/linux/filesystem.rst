@@ -28,3 +28,14 @@ tree
     ├── bar
     └── baz
         └── zzz.txt
+
+    2 directories, 1 file
+
+::
+
+    $ tree foo -L 1
+    foo
+    ├── bar
+    └── baz
+
+    2 directories, 0 files
