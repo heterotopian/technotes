@@ -38,6 +38,12 @@ Third Party
   Pivot, pivot-table, stack and unstack explained with pictures
 
 
+:py:mod:`pex`
+-------------
+
+Build system based on :pep:`441` and archived virtualenvs.
+Defines the .pex (Python EXecutable) file format.
+
 
 :py:mod:`pip`
 -------------
