@@ -7,7 +7,7 @@ Technical Notes
     :caption: Essentials
 
     bash
-    linux
+    linux/index
     systemd/index
     docker
     x11

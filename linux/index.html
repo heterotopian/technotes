@@ -1,0 +1,378 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Linux &mdash; Technotes Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+<link rel="stylesheet" href="../_static/css/theme-custom.css" type="text/css" />
+
+    <link rel="top" title="Technotes Documentation" href="../index.html"/>
+        <link rel="next" title="systemd" href="../systemd/index.html"/>
+        <link rel="prev" title="Bash" href="../bash.html"/>
+ 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Technotes
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+
+            
+            
+                <p class="caption"><span class="caption-text">Essentials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../bash.html">Bash</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cgroups">Cgroups</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lsns">lsns</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#devices">Devices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lsblk">lsblk</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#filesystem">Filesystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#findmnt">findmnt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tree">tree</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#nfs">NFS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nfsstat">nfsstat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nfsiostat">nfsiostat</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../systemd/index.html">systemd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../x11.html">X11</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Programming</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conda.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../frontend.html">Frontend</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Diagnostic Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sysdig.html">sysdig</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Applications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../atom.html">Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vim.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tmux.html">tmux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx.html">Sphinx</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Version control</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../git.html">Git</a></li>
+</ul>
+
+            
+          
+<p class="caption">
+  <span class="caption-text">Reference</span>
+</p>
+<ul>
+  <li class="toctree-l1">
+    <a class="reference internal" href="../genindex.html">Index</a>
+  </li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Technotes</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Linux</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/linux/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="linux">
+<span id="id1"></span><h1>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="cgroups">
+<h2>Cgroups<a class="headerlink" href="#cgroups" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="lsns">
+<h3>lsns<a class="headerlink" href="#lsns" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ lsns
+        NS TYPE   NPROCS PID USER COMMAND
+<span class="m">4026531835</span> cgroup      <span class="m">2</span>   <span class="m">1</span> root bash
+<span class="m">4026531837</span> user        <span class="m">2</span>   <span class="m">1</span> root bash
+<span class="m">4026532666</span> mnt         <span class="m">2</span>   <span class="m">1</span> root bash
+<span class="m">4026532667</span> uts         <span class="m">2</span>   <span class="m">1</span> root bash
+<span class="m">4026532668</span> ipc         <span class="m">2</span>   <span class="m">1</span> root bash
+<span class="m">4026532669</span> pid         <span class="m">2</span>   <span class="m">1</span> root bash
+<span class="m">4026532671</span> net         <span class="m">2</span>   <span class="m">1</span> root bash
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="devices">
+<h2>Devices<a class="headerlink" href="#devices" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="lsblk">
+<h3>lsblk<a class="headerlink" href="#lsblk" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ lsblk
+NAME           MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda              8:0    <span class="m">0</span> 278.5G  <span class="m">0</span> disk
+├─sda1           8:1    <span class="m">0</span>   487M  <span class="m">0</span> part /boot/efi
+├─sda2           8:2    <span class="m">0</span>   488M  <span class="m">0</span> part
+└─sda3           8:3    <span class="m">0</span> 277.5G  <span class="m">0</span> part
+  ├─VG1-System 252:0    <span class="m">0</span> 270.1G  <span class="m">0</span> lvm  /
+  └─VG1-Swap   252:1    <span class="m">0</span>   7.5G  <span class="m">0</span> lvm  <span class="o">[</span>SWAP<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="filesystem">
+<h2>Filesystem<a class="headerlink" href="#filesystem" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="findmnt">
+<h3>findmnt<a class="headerlink" href="#findmnt" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ findmnt -t tmpfs
+TARGET         SOURCE FSTYPE OPTIONS
+/run           tmpfs  tmpfs  rw,nosuid,noexec,relatime,size<span class="o">=</span>806096k,mode<span class="o">=</span>755
+/sys/fs/cgroup        tmpfs  rw,relatime,size<span class="o">=</span>4k,mode<span class="o">=</span>755
+/run/lock             tmpfs  rw,nosuid,nodev,noexec,relatime,size<span class="o">=</span>5120k
+/run/shm              tmpfs  rw,nosuid,nodev,relatime
+/run/user             tmpfs  rw,nosuid,nodev,noexec,relatime,size<span class="o">=</span>102400k,mode<span class="o">=</span>755
+</pre></div>
+</div>
+</div>
+<div class="section" id="tree">
+<h3>tree<a class="headerlink" href="#tree" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ tree foo
+foo
+├── bar
+└── baz
+    └── zzz.txt
+
+<span class="m">2</span> directories, <span class="m">1</span> file
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ tree foo -L 1
+foo
+├── bar
+└── baz
+
+<span class="m">2</span> directories, <span class="m">0</span> files
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="nfs">
+<h2>NFS<a class="headerlink" href="#nfs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="nfsstat">
+<h3>nfsstat<a class="headerlink" href="#nfsstat" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ nfsstat
+
+
+Client rpc stats:
+calls      retrans    authrefrsh
+<span class="m">386800393</span>   <span class="m">0</span>          387762712
+
+Client nfs v3:
+null         getattr      setattr      lookup       access       readlink
+<span class="m">0</span>         0% <span class="m">259158128</span> 66% <span class="m">450431</span>    0% <span class="m">20827600</span>  5% <span class="m">61029281</span> 15% <span class="m">21567</span>     0%
+<span class="nb">read</span>         write        create       mkdir        symlink      mknod
+<span class="m">17020877</span>  4% <span class="m">5331960</span>   1% <span class="m">403351</span>    0% <span class="m">24746</span>     0% <span class="m">1862</span>      0% <span class="m">1</span>         0%
+remove       rmdir        rename       link         readdir      readdirplus
+<span class="m">612324</span>    0% <span class="m">21399</span>     0% <span class="m">112009</span>    0% <span class="m">1039</span>      0% <span class="m">241247</span>    0% <span class="m">6522117</span>   1%
+fsstat       fsinfo       pathconf     commit
+<span class="m">15071064</span>  3% <span class="m">22</span>        0% <span class="m">11</span>        0% <span class="m">0</span>         0%
+</pre></div>
+</div>
+</div>
+<div class="section" id="nfsiostat">
+<h3>nfsiostat<a class="headerlink" href="#nfsiostat" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>$ nfsiostat
+
+nfs.domain.com:/foo mounted on /foo:
+
+   op/s         rpc bklog
+ 262.16
+           0.00
+read:
+  ops/s            kB/s           kB/op         retrans         avg RTT <span class="o">(</span>ms<span class="o">)</span>    avg exe <span class="o">(</span>ms<span class="o">)</span>
+                 11.557
+        356.081
+         30.812
+       <span class="m">0</span> <span class="o">(</span>0.0%<span class="o">)</span>
+          5.167
+          5.239
+write:
+  ops/s            kB/s           kB/op         retrans         avg RTT <span class="o">(</span>ms<span class="o">)</span>    avg exe <span class="o">(</span>ms<span class="o">)</span>
+                  3.620
+        105.680
+         29.190
+       <span class="m">0</span> <span class="o">(</span>0.0%<span class="o">)</span>
+         16.032
+        331.458
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../systemd/index.html" class="btn btn-neutral float-right" title="systemd" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../bash.html" class="btn btn-neutral" title="Bash" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Chris.
+      Last updated on Nov 25, 2018, 1:20:22 AM.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

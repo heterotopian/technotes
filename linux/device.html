@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Commands &mdash; Technotes Documentation</title>
+  <title>Devices &mdash; Technotes Documentation</title>
   
 
   
@@ -81,8 +81,8 @@
                 <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../bash.html">Bash</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">systemd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../systemd/index.html">systemd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../docker.html">Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../x11.html">X11</a></li>
 </ul>
@@ -145,11 +145,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>Commands</li>
+    <li>Devices</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/systemd/command.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/linux/device.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -159,49 +159,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="commands">
-<span id="systemd-command"></span><h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-cgls.html">systemd-cgls</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ systemd-cgls
-Control group /:
--.slice
-├─init.scope
-│ └─1 /sbin/init
-├─system.slice
-│ ├─mdadm.service
-│ │ └─2133 /sbin/mdadm --monitor --pid-file /run/mdadm/monitor.pid --daemonis...
-│ ├─dbus.service
-│ │ └─2066 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidf...
-│ ├─rpc-statd.service
-</pre></div>
-</div>
-</div>
-<div class="section" id="id2">
-<h2><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-run.html">systemd-run</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ systemd-run echo yes
-Running as unit run-rd639c9dc8b974744bc1b88ff8319cb47.service.
-</pre></div>
-</div>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ systemd-run --scope echo yes
-Running scope as unit run-r56133a46ffdf44a0b416864461fc7ee0.scope.
-yes
-</pre></div>
-</div>
-</div>
-<div class="section" id="id3">
-<h2><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-cgtop.html">systemd-cgtop</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ systemd-cgtop
-Control Group                                 Tasks   %CPU   Memory  Input/s Output/s
-/                                                 -  266.3   478.0G        -        -
-/user.slice                                    1874  252.8   471.0G        -        -
-/user.slice/user-641738498.slice                480  146.8     8.7G        -        -
-/user.slice/user-641740830.slice                205   96.3   373.5G        -        -
-/system.slice                                   241   12.6     6.8G        -        -
-/system.slice/netdata.service                    20   10.1   135.7M        -        -
-/user.slice/user-641754182.slice                122    7.4     1.0G        -        -
-/system.slice/newrelic-infra.service             14    2.3    70.4M        -        -
-/user.slice/user-641748370.slice                250    0.6     7.9G        -        -
+  <div class="section" id="devices">
+<h1>Devices<a class="headerlink" href="#devices" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lsblk">
+<h2>lsblk<a class="headerlink" href="#lsblk" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ lsblk
+NAME           MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda              8:0    <span class="m">0</span> 278.5G  <span class="m">0</span> disk
+├─sda1           8:1    <span class="m">0</span>   487M  <span class="m">0</span> part /boot/efi
+├─sda2           8:2    <span class="m">0</span>   488M  <span class="m">0</span> part
+└─sda3           8:3    <span class="m">0</span> 277.5G  <span class="m">0</span> part
+  ├─VG1-System 252:0    <span class="m">0</span> 270.1G  <span class="m">0</span> lvm  /
+  └─VG1-Swap   252:1    <span class="m">0</span>   7.5G  <span class="m">0</span> lvm  <span class="o">[</span>SWAP<span class="o">]</span>
 </pre></div>
 </div>
 </div>
