@@ -60,15 +60,16 @@ Python 3
   `How do I port to Python 3? <https://eev.ee/blog/2016/07/31/python-faq-how-do-i-port-to-python-3/>`_
 
 
-Web
----
+Scientific computing
+--------------------
 
-- `Internet Programming with Python <http://cewing.github.io/training.python_web/html/index.html>`_ -
-  Certificate course offered by University of Washington
+- `Scipy Lecture Notes <http://www.scipy-lectures.org/>`_ -
+  Tutorials on the scientific Python ecosystem.
+  A quick introduction to central tools and techniques.
 
 
-async/await
------------
+Asynchronous I/O
+----------------
 
 - `Unyielding <https://glyph.twistedmatrix.com/2014/02/unyielding.html>`_ -
   There are no shortcuts to making single-tasking code concurrent
@@ -77,6 +78,13 @@ async/await
 - `Asynchronous API design in a post-async/await world <https://vorpus.org/blog/some-thoughts-on-asynchronous-api-design-in-a-post-asyncawait-world/>`_
 - `Sans I/O <http://sans-io.readthedocs.io/>`_ -
   Network protocol implementations that operate directly on text
+
+
+Web
+---
+
+- `Internet Programming with Python <http://cewing.github.io/training.python_web/html/index.html>`_ -
+  Certificate course offered by University of Washington
 
 
 Reflection
