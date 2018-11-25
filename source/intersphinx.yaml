@@ -76,3 +76,12 @@ nox: !!python/tuple
 pipenv: !!python/tuple
   - "https://pipenv.readthedocs.io/en/latest/"
   - null
+vcrpy: !!python/tuple
+  - "https://vcrpy.readthedocs.io/en/latest/"
+  - null
+factory_boy: !!python/tuple
+  - "https://factoryboy.readthedocs.io/en/latest/"
+  - null
+placebo: !!python/tuple
+  - "https://placebo.readthedocs.io/en/latest/"
+  - null

@@ -15,6 +15,12 @@ Third Party
 - `Documentation <http://distlib.readthedocs.io/en/latest/>`_
 
 
+:py:mod:`factory_boy`
+---------------------
+
+- `Documentation <https://factoryboy.readthedocs.io/en/latest/>`_
+
+
 :py:mod:`flask`
 ---------------
 
@@ -57,6 +63,10 @@ Build system based on :pep:`441`.
 Defines the .pex (Python EXecutable) file format.
 
 
+:py:mod:`pexpect`
+-----------------
+
+
 :py:mod:`pip`
 -------------
 
@@ -78,8 +88,10 @@ Defines the .pex (Python EXecutable) file format.
 - `Documentation <https://pipenv.readthedocs.io/en/latest/>`_
 
 
-:py:mod:`pexpect`
+:py:mod:`placebo`
 -----------------
+
+- `Documentation <https://placebo.readthedocs.io/en/latest/>`_
 
 
 :py:mod:`pweave`
@@ -140,6 +152,12 @@ Defines the .pex (Python EXecutable) file format.
 -------------
 
 - `Documentation <https://tox.readthedocs.io/en/latest/>`_
+
+
+:py:mod:`vcrpy`
+---------------
+
+- `Documentation <https://vcrpy.readthedocs.io/en/latest/>`_
 
 
 :py:mod:`wrapt`
