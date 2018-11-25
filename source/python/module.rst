@@ -7,4 +7,4 @@ Modules
 
 .. include:: stdlib.rst
 
-.. include:: thirdpartylib.rst
+.. include:: thirdparty.rst
