@@ -34,6 +34,9 @@
   
 <link rel="stylesheet" href="_static/css/theme-custom.css" type="text/css" />
 
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Technotes Documentation" href="index.html"/>
         <link rel="next" title="Atom" href="atom.html"/>
         <link rel="prev" title="Frontend" href="frontend.html"/>
@@ -163,7 +166,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/sysdig.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/sysdig.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -207,20 +210,20 @@
 <h2>Chisels<a class="headerlink" href="#chisels" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="ps">
 <h3>ps<a class="headerlink" href="#ps" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sysdig -c ps proc.apid<span class="o">=</span>120954
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sysdig -c ps proc.apid<span class="o">=</span><span class="m">120954</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="lsof">
 <h3>lsof<a class="headerlink" href="#lsof" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sysdig -c lsof fd.directory<span class="o">=</span>/var/log
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sysdig -c lsof fd.directory<span class="o">=</span>/var/log
 $ sysdig -c lsof fd.type<span class="o">=</span>inotify
 </pre></div>
 </div>
 </div>
 <div class="section" id="netstat">
 <h3>netstat<a class="headerlink" href="#netstat" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sysdig -c netstat fd.port<span class="o">=</span>80
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sysdig -c netstat fd.port<span class="o">=</span><span class="m">80</span>
 </pre></div>
 </div>
 </div>
@@ -233,7 +236,7 @@ $ sysdig -c lsof fd.type<span class="o">=</span>inotify
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first"><a class="reference external" href="https://github.com/draios/sysdig/issues/562">Multiple command line filters</a></p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sysdig -c lsof <span class="s2">&quot;&#39;proc.name=python and fd.type=ipv4&#39;&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sysdig -c lsof <span class="s2">&quot;&#39;proc.name=python and fd.type=ipv4&#39;&quot;</span>
 </pre></div>
 </div>
 </li>
@@ -261,7 +264,7 @@ $ sysdig -c lsof fd.type<span class="o">=</span>inotify
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Nov 25, 2018, 2:55:32 AM.
+      Last updated on Nov 25, 2018, 3:49:17 AM.
 
     </p>
   </div>
@@ -292,7 +295,6 @@ $ sysdig -c lsof fd.type<span class="o">=</span>inotify
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
