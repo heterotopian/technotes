@@ -49,3 +49,7 @@ Controlers
 - List unit files::
 
     $ systemctl list-unit-files
+
+- Check if a unit is running::
+
+    $ systemctl is-active unit
