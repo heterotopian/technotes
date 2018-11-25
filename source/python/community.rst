@@ -3,6 +3,13 @@
 Community
 =========
 
+- `Pyformat.info <https://pyformat.info/>`_ - String formatting cheat sheet
+- `Python bootcamp lecture notes <https://cewing.github.io/training.codefellows/index.html>`_ -
+  Course offered by `Code Fellows <http://www.codefellows.org/courses/code-401/advanced-software-development-in-python/>`_
+
+  - `A 20-minute introduction to DB-API2 <https://cewing.github.io/training.codefellows/lectures/day21/intro_to_dbapi2.html>`_
+
+
 Trends
 ------
 
@@ -85,21 +92,3 @@ Docker
 
   - `Installing a custom Python version into a Docker image <http://blog.dscpl.com.au/2015/06/installing-custom-python-version-into.html>`_
   - `Python virtual environments and Docker <http://blog.dscpl.com.au/2016/01/python-virtual-environments-and-docker.html>`_
-
-
-Build systems
--------------
-
-- `pex <https://pex.readthedocs.io/en/stable/>`_ -
-  Build system based on :pep:`441` and archived virtualenvs.
-  Defines the .pex (Python EXecutable) file format.
-
-
-General
--------
-
-- `Pyformat.info <https://pyformat.info/>`_ - String formatting cheat sheet
-- `Python bootcamp lecture notes <https://cewing.github.io/training.codefellows/index.html>`_ -
-  Course offered by `Code Fellows <http://www.codefellows.org/courses/code-401/advanced-software-development-in-python/>`_
-
-  - `A 20-minute introduction to DB-API2 <https://cewing.github.io/training.codefellows/lectures/day21/intro_to_dbapi2.html>`_
