@@ -4,10 +4,8 @@
 Python
 ======
 
-.. include:: doc.rst
+.. toctree::
+    :maxdepth: 2
 
-.. include:: pep.rst
-
-.. include:: resource.rst
-
-.. include:: lib.rst
+    resource
+    module
