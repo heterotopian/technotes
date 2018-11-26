@@ -11,6 +11,11 @@ Sphinx
 
 - :ref:`sphinx:templating`
 
+Extensions
+----------
+
+- `Showing all links of an Intersphinx mapping file <https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#showing-all-links-of-an-intersphinx-mapping-file>`_
+
 
 
 Resources
@@ -29,6 +34,8 @@ Read The Docs
 -------------
 
 - `Documentation <http://sphinx-rtd-theme.readthedocs.io/en/latest/>`_
+- `Wyrm <http://wyrmsass.org/>`_ -
+  SASS framework that RTD theme extends
 - Examples: Read The Docs Sphinx Theme
 
   - `Structural elements <http://sphinx-rtd-theme.readthedocs.io/en/latest/demo/structure.html>`_
