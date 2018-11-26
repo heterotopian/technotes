@@ -1,5 +1,16 @@
 {% extends "layout.html" %}
 {% set title = _('Technotes') %}
+
+{% macro section(path, title, description) -%}
+<td>
+  <p>
+    <a href="{{ pathto(path) }}">{{ title }}</a>
+    <br/>
+    <span>{{ description }}</span>
+  </p>
+</td>
+{%- endmacro %}
+
 {% block extrahead %}
 <style type="text/css">
 
@@ -16,6 +27,7 @@
 }
 </style>
 {% endblock %}
+
 {% block body %}
 
 <h1>{{ docstitle|e }}</h1>
@@ -24,47 +36,15 @@
 <table>
   <tbody>
     <tr>
-      <td>
-        <p>
-          <a href="{{ pathto("bash") }}">Bash</a>
-          <br/>
-          <span>Ubiquitous command shell</span>
-        </p>
-      </td>
-      <td>
-        <p>
-          <a href="{{ pathto("linux/index") }}">Linux</a>
-          <br/>
-          <span>Commands & internals</span>
-        </p>
-      </td>
+      {{ section('bash', 'Bash', 'Ubiquitous command shell') }}
+      {{ section('linux/index', 'Linux', 'Commands & internals') }}
     </tr>
     <tr>
-      <td>
-        <p>
-          <a href="{{ pathto("systemd/index") }}">systemd</a>
-          <br/>
-          <span>Init system & userspace framework</span>
-        </p>
-      </td>
-      <td>
-        <p>
-          <a href="{{ pathto("docker") }}">Docker</a>
-          <br/>
-          <span>Universal process container & runtime</span>
-        </p>
-      </td>
-      <td></td>
+      {{ section('systemd/index', 'systemd', 'Init system & userspace framework') }}
+      {{ section('docker', 'Docker', 'Universal process container & runtime') }}
     </tr>
     <tr>
-      <td>
-        <p>
-          <a href="{{ pathto("x11") }}">X11</a>
-          <br/>
-          <span>GUI windowing system</span>
-        </p>
-      </td>
-      <td></td>
+      {{ section('x11', 'X11', 'GUI windowing system') }}
     </tr>
   </tbody>
 </table>
@@ -73,34 +53,11 @@
 <table>
   <tbody>
     <tr>
-      <td>
-        <p>
-          <a href="{{ pathto("python/index") }}">Python</a>
-          <br/>
-          <span>Language, libraries, & other topics in depth</span>
-        </p>
-      </td>
-      <td>
-        <p>
-          <a href="{{ pathto("frontend") }}">Frontend</a>
-          <br/>
-          <span>JavaScript, CSS, & general static development</span>
-        </p>
-      </td>
+      {{ section('python/index', 'Python', 'Language, libraries, & resources') }}
+      {{ section('frontend', 'Frontend', 'JavaScript, CSS, & general static development') }}
     </tr>
-  </tbody>
-</table>
-<table>
-  <tbody>
     <tr>
-      <td>
-        <p>
-          <a href="{{ pathto("conda") }}">Conda</a>
-          <br/>
-          <span>Universal build toolchain & package manager</span>
-        </p>
-      </td>
-      <td></td>
+      {{ section('conda', 'Conda', 'Universal build toolchain & package manager') }}
     </tr>
   </tbody>
 </table>
@@ -109,14 +66,7 @@
 <table>
   <tbody>
     <tr>
-      <td>
-        <p>
-          <a href="{{ pathto("sysdig") }}">sysdig</a>
-          <br/>
-          <span>System visibility tool for Linux</span>
-        </p>
-      </td>
-      <td></td>
+      {{ section('sysdig', 'Sysdig', 'System visibility tool for Linux') }}
     </tr>
   </tbody>
 </table>
@@ -125,36 +75,12 @@
 <table>
   <tbody>
     <tr>
-      <td>
-        <p>
-          <a href="{{ pathto("atom") }}">Atom</a>
-          <br/>
-          <span>Hackable text editor built on Chromium</span>
-        </p>
-      </td>
-      <td>
-        <p>
-          <a href="{{ pathto("vim") }}">Vim</a>
-          <br/>
-          <span>Terminal-friendly modal text editor</span>
-        </p>
-      </td>
+      {{ section('atom', 'Atom', 'Hackable text editor built on Chromium') }}
+      {{ section('vim', 'Vim', 'Terminal-friendly modal text editor') }}
     </tr>
     <tr>
-      <td>
-        <p>
-          <a href="{{ pathto("tmux") }}">tmux</a>
-          <br/>
-          <span>Terminal multiplexer</span>
-        </p>
-      </td>
-      <td>
-        <p>
-          <a href="{{ pathto("sphinx") }}">Sphinx</a>
-          <br/>
-          <span>Semantic documentation system</span>
-        </p>
-      </td>
+      {{ section('tmux', 'tmux', 'Teminal multiplexer') }}
+      {{ section('sphinx', 'Sphinx', 'Semantic documentation system') }}
     </tr>
   </tbody>
 </table>
@@ -163,14 +89,7 @@
 <table>
   <tbody>
     <tr>
-      <td>
-        <p>
-          <a href="{{ pathto("git") }}">Git</a>
-          <br/>
-          <span>Distributed version control tool</span>
-        </p>
-      </td>
-      <td></td>
+      {{ section('git', 'Git', 'Distributed version control tool') }}
     </tr>
   </tbody>
 </table>
