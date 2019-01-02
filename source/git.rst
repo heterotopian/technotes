@@ -20,21 +20,24 @@ Git
 
   - `Rebasing <https://git-scm.com/book/en/v2/Git-Branching-Rebasing>`_
 
-- Cheetsheats:
-
-  - `PDF cheatsheet <https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf>`_ by GitHub
-  - `Interactive HTML cheatsheet <http://ndpsoftware.com/git-cheatsheet.html>`_
+- `Specifying revisions <https://mirrors.edge.kernel.org/pub/software/scm/git/docs/gitrevisions.html#_specifying_revisions>`_
 
 
 
 Resources
 =========
 
-- `Git revisions <https://mirrors.edge.kernel.org/pub/software/scm/git/docs/gitrevisions.html#_specifying_revisions>`_ -
-  Specifying revisions and ranges
 - `What are commit-ish and tree-ish in Git? <https://stackoverflow.com/questions/23303549/what-are-commit-ish-and-tree-ish-in-git>`_
 - `Changing author info <https://help.github.com/articles/changing-author-info/>`_ -
   Script for updating any commits with matching user/email fields
+
+Cheat sheets
+------------
+
+- GitHub: `Git cheat sheet <https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf>`_
+- `Git command visualizer <http://ndpsoftware.com/git-cheatsheet.html>`_ -
+  Groups commands by subject
+
 
 Workflows
 ---------
