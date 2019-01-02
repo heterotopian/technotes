@@ -110,20 +110,19 @@
 <p class="caption"><span class="caption-text">Version control</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Git</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#general">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#files">Files</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#working-tree">Working tree</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#indexed-trees">Indexed trees</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#commits">Commits</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#diffing">Diffing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tags">Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#workflows">Workflows</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#terms">Terms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#commits">Commits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tags">Tags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#working-tree">Working tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#indexed-trees">Indexed trees</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -181,21 +180,19 @@
             
   <div class="section" id="git">
 <span id="id1"></span><h1>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="general">
-<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2><a class="reference external" href="https://git-scm.com/docs">Documentation</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="https://git-scm.com">Project homepage</a><ul>
-<li><a class="reference external" href="https://git-scm.com/docs">Reference manual</a> -
-Git man pages<ul>
+<li>Commands:<ul>
 <li><a class="reference external" href="https://git-scm.com/docs/git-ls-files">ls-files</a></li>
 <li><a class="reference external" href="https://git-scm.com/docs/git-ls-tree">ls-tree</a></li>
 </ul>
 </li>
 <li><a class="reference external" href="https://git-scm.com/book/en/v2">Pro Git</a> -
-eBook by Scott Chacon (Source: <a class="reference external" href="https://github.com/progit/progit2">progit/progit2</a>)<ul>
+second edition by Scott Chacon and Ben Straub
+(<a class="reference external" href="https://github.com/progit/progit2">source</a>,
+<a class="reference external" href="https://www.amazon.com/Pro-Git-Scott-Chacon/dp/1484200772">Amazon</a>)<ul>
 <li><a class="reference external" href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">Rebasing</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li>Cheetsheats<ul>
@@ -205,51 +202,41 @@ eBook by Scott Chacon (Source: <a class="reference external" href="https://githu
 </li>
 </ul>
 </div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://mirrors.edge.kernel.org/pub/software/scm/git/docs/gitrevisions.html#_specifying_revisions">gitrevisions</a> -
+Specifying revisions and ranges</li>
+<li><a class="reference external" href="https://stackoverflow.com/questions/23303549/what-are-commit-ish-and-tree-ish-in-git">What are commit-ish and tree-ish in Git?</a></li>
+<li><a class="reference external" href="https://help.github.com/articles/changing-author-info/">Changing author info</a> -
+Script for updating any commits with matching user/email fields</li>
+</ul>
+<div class="section" id="workflows">
+<h3>Workflows<a class="headerlink" href="#workflows" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://guides.github.com/introduction/flow/">GitHub Flow</a> -
+A lightweight, branch-based workflow that supports teams and projects where deployments are made regularly</li>
+</ul>
+</div>
+</div>
+<div class="section" id="terms">
+<h2>Terms<a class="headerlink" href="#terms" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>&#64;</dt>
+<dd>Shorthand for <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>
+(<a class="reference external" href="https://github.com/git/git/blob/v1.8.5/Documentation/RelNotes/1.8.5.txt#L100-101">Release notes</a>)</dd>
+<dt>commit-ish</dt>
+<dd>Any object that leads to a commit, e.g.:
+a commit, a tag pointing to a commit, a tag pointing to a tag … pointing to a commit.
+(<a class="reference external" href="https://git-scm.com/docs/gitglossary#gitglossary-aiddefcommit-ishacommit-ishalsocommittish">Source</a>)</dd>
+<dt>tree-ish</dt>
+<dd>Any object that contains a list of file names and modes along with refs to the associated blob and/or tree objects.
+Equivalent to a directory.
+(<a class="reference external" href="https://git-scm.com/docs/gitglossary#gitglossary-aiddeftree-ishatree-ishalsotreeish">Source</a>)</dd>
+</dl>
+</div>
 <div class="section" id="commands">
 <h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="files">
-<h3>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="working-tree">
-<h4>Working tree<a class="headerlink" href="#working-tree" title="Permalink to this headline">¶</a></h4>
-<ul>
-<li><p class="first">Cached files under cwd</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files -c
-</pre></div>
-</div>
-</li>
-<li><p class="first">Untracked files under cwd</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files -o
-</pre></div>
-</div>
-</li>
-<li><p class="first">Cached files under <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code></p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files -c foo/bar
-</pre></div>
-</div>
-</li>
-</ul>
-</div>
-<div class="section" id="indexed-trees">
-<h4>Indexed trees<a class="headerlink" href="#indexed-trees" title="Permalink to this headline">¶</a></h4>
-<ul>
-<li><p class="first">Files in tree identified by <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag at the top level</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0
-</pre></div>
-</div>
-</li>
-<li><p class="first">Files in tree identified by <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag at all levels</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0 -r
-</pre></div>
-</div>
-</li>
-<li><p class="first">Files in tree identified by <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag in path <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code> at all levels</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0 foo/bar -r
-</pre></div>
-</div>
-</li>
-</ul>
-</div>
-</div>
 <div class="section" id="commits">
 <h3>Commits<a class="headerlink" href="#commits" title="Permalink to this headline">¶</a></h3>
 <ul>
@@ -263,11 +250,6 @@ eBook by Scott Chacon (Source: <a class="reference external" href="https://githu
 </pre></div>
 </div>
 </li>
-</ul>
-</div>
-<div class="section" id="diffing">
-<h3>Diffing<a class="headerlink" href="#diffing" title="Permalink to this headline">¶</a></h3>
-<ul>
 <li><p class="first">Diff <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal notranslate"><span class="pre">HEAD</span></code></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git diff HEAD^ HEAD
 <span class="gp">$</span> git diff HEAD^..HEAD
@@ -304,31 +286,46 @@ eBook by Scott Chacon (Source: <a class="reference external" href="https://githu
 </li>
 </ul>
 </div>
+<div class="section" id="working-tree">
+<h3>Working tree<a class="headerlink" href="#working-tree" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Cached files</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files
+</pre></div>
 </div>
-<div class="section" id="terms">
-<h2>Terms<a class="headerlink" href="#terms" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt>&#64;</dt>
-<dd>Shorthand for <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>
-(<a class="reference external" href="https://github.com/git/git/blob/v1.8.5/Documentation/RelNotes/1.8.5.txt#L100-101">release notes</a>)</dd>
-<dt>commit-ish</dt>
-<dd>Any object that leads to a commit, e.g.:
-a commit, a tag pointing to a commit, a tag pointing to a tag … pointing to a commit.
-(<a class="reference external" href="https://git-scm.com/docs/gitglossary#gitglossary-aiddefcommit-ishacommit-ishalsocommittish">Source</a>)</dd>
-<dt>tree-ish</dt>
-<dd>Any object that contains a list of file names and modes along with refs to the associated blob and/or tree objects.
-Equivalent to a directory.
-(<a class="reference external" href="https://git-scm.com/docs/gitglossary#gitglossary-aiddeftree-ishatree-ishalsotreeish">Source</a>)</dd>
-</dl>
+</li>
+<li><p class="first">Cached files under <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files foo/bar
+</pre></div>
 </div>
-<div class="section" id="resources">
-<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference external" href="https://guides.github.com/introduction/flow/">GitHub Flow</a> -
-A lightweight, branch-based workflow that supports teams and projects where deployments are made regularly</li>
-<li><a class="reference external" href="https://help.github.com/articles/changing-author-info/">Changing author info</a> -
-Script for updating any commits with matching user/email fields</li>
+</li>
+<li><p class="first">Untracked files</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files -o
+</pre></div>
+</div>
+</li>
 </ul>
+</div>
+<div class="section" id="indexed-trees">
+<h3>Indexed trees<a class="headerlink" href="#indexed-trees" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Files in tree identified by <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag at the top level</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0
+</pre></div>
+</div>
+</li>
+<li><p class="first">Files in tree identified by <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag at all levels</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0 -r
+</pre></div>
+</div>
+</li>
+<li><p class="first">Files in tree identified by <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag in path <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code> at all levels</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0 foo/bar -r
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 
@@ -350,7 +347,7 @@ Script for updating any commits with matching user/email fields</li>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Nov 26, 2018, 12:10:59 AM.
+      Last updated on Jan 2, 2019, 4:12:42 PM.
 
     </p>
   </div>

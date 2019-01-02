@@ -10,20 +10,29 @@ Sphinx
 ============================================
 
 - :ref:`sphinx:templating`
+- `Substitutions <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#substitutions>`_
+  (See also: :ref:`python_module_docutils`)
+- `Extensions <https://www.sphinx-doc.org/en/master/usage/extensions/>`_
 
-Extensions
-----------
-
-- `Showing all links of an Intersphinx mapping file <https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#showing-all-links-of-an-intersphinx-mapping-file>`_
+  - `Showing all links of an Intersphinx mapping file <https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#showing-all-links-of-an-intersphinx-mapping-file>`_
 
 
 
 Resources
 =========
 
-- `Sphinx/reST Memo <http://rest-sphinx-memo.readthedocs.io>`_ -
-  Condensed guide to Sphinx & reST constructs, illustrated with examples
+- Discussion list: `sphinx-users <https://groups.google.com/forum/#!forum/sphinx-users>`_
 - `Online reStructuredText editor <http://rst.ninjs.org/>`_
+
+Guides
+------
+
+- `Sphinx/reST Memo <http://rest-sphinx-memo.readthedocs.io>`_ -
+  Condensed, example-based guide to Sphinx & reStructuredText
+- `Wiser > Sphinx & reStructuredText <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/index.html>`_ -
+  Broad tutorial
+
+  - `Escaping whitespace around interpreted text <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/OnReStructuredText.html#subscript-and-superscript>`_
 
 
 

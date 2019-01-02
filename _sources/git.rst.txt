@@ -6,22 +6,20 @@ Git
 
 .. highlight:: console
 
+`Documentation <https://git-scm.com/docs>`_
+===========================================
 
-General
-=======
+- Commands:
 
-- `Project homepage <https://git-scm.com>`_
+  - `ls-files <https://git-scm.com/docs/git-ls-files>`_
+  - `ls-tree <https://git-scm.com/docs/git-ls-tree>`_
 
-  - `Reference manual <https://git-scm.com/docs>`_ -
-    Git man pages
+- `Pro Git <https://git-scm.com/book/en/v2>`_ -
+  second edition by Scott Chacon and Ben Straub
+  (`source <https://github.com/progit/progit2>`_,
+  `Amazon <https://www.amazon.com/Pro-Git-Scott-Chacon/dp/1484200772>`_)
 
-    - `ls-files <https://git-scm.com/docs/git-ls-files>`_
-    - `ls-tree <https://git-scm.com/docs/git-ls-tree>`_
-
-  - `Pro Git <https://git-scm.com/book/en/v2>`_ -
-    eBook by Scott Chacon (Source: `progit/progit2 <https://github.com/progit/progit2>`_)
-
-    - `Rebasing <https://git-scm.com/book/en/v2/Git-Branching-Rebasing>`_
+  - `Rebasing <https://git-scm.com/book/en/v2/Git-Branching-Rebasing>`_
 
 - Cheetsheats
 
@@ -30,45 +28,44 @@ General
 
 
 
+Resources
+=========
+
+- `gitrevisions <https://mirrors.edge.kernel.org/pub/software/scm/git/docs/gitrevisions.html#_specifying_revisions>`_ -
+  Specifying revisions and ranges
+- `What are commit-ish and tree-ish in Git? <https://stackoverflow.com/questions/23303549/what-are-commit-ish-and-tree-ish-in-git>`_
+- `Changing author info <https://help.github.com/articles/changing-author-info/>`_ -
+  Script for updating any commits with matching user/email fields
+
+Workflows
+---------
+
+- `GitHub Flow <https://guides.github.com/introduction/flow/>`_ -
+  A lightweight, branch-based workflow that supports teams and projects where deployments are made regularly
+
+
+
+Terms
+=====
+
+@
+    Shorthand for |HEAD|
+    (`Release notes <https://github.com/git/git/blob/v1.8.5/Documentation/RelNotes/1.8.5.txt#L100-101>`_)
+
+commit-ish
+    Any object that leads to a commit, e.g.:
+    a commit, a tag pointing to a commit, a tag pointing to a tag ... pointing to a commit.
+    (`Source <https://git-scm.com/docs/gitglossary#gitglossary-aiddefcommit-ishacommit-ishalsocommittish>`_)
+
+tree-ish
+    Any object that contains a list of file names and modes along with refs to the associated blob and/or tree objects.
+    Equivalent to a directory.
+    (`Source <https://git-scm.com/docs/gitglossary#gitglossary-aiddeftree-ishatree-ishalsotreeish>`_)
+
+
 
 Commands
 ========
-
-Files
------
-
-Working tree
-~~~~~~~~~~~~
-
-- Cached files under cwd ::
-
-    $ git ls-files -c
-
-- Untracked files under cwd ::
-
-    $ git ls-files -o
-
-- Cached files under ``foo/bar`` ::
-
-    $ git ls-files -c foo/bar
-
-
-Indexed trees
-~~~~~~~~~~~~~
-
-- Files in tree identified by |v1.0| tag at the top level ::
-
-    $ git ls-tree --name-only tags/v1.0
-
-- Files in tree identified by |v1.0| tag at all levels ::
-
-    $ git ls-tree --name-only tags/v1.0 -r
-
-- Files in tree identified by |v1.0| tag in path ``foo/bar`` at all levels ::
-
-    $ git ls-tree --name-only tags/v1.0 foo/bar -r
-
-
 
 Commits
 -------
@@ -80,11 +77,6 @@ Commits
 - Commits between |HEAD| and |v1.0| tag ::
 
     $ git log v1.0..@
-
-
-
-Diffing
--------
 
 - Diff |HEAD| and commit before |HEAD| ::
 
@@ -103,7 +95,6 @@ Diffing
     $ git diff @:file.rst @^1:file.rst
 
 
-
 Tags
 ----
 
@@ -116,36 +107,36 @@ Tags
     $ git push origin :refs/tags/TAGNAME
 
 
+Working tree
+------------
+
+- Cached files ::
+
+    $ git ls-files
+
+- Cached files under ``foo/bar`` ::
+
+    $ git ls-files foo/bar
+
+- Untracked files ::
+
+    $ git ls-files -o
 
 
-Terms
-=====
+Indexed trees
+-------------
 
-@
-    Shorthand for |HEAD|
-    (`release notes <https://github.com/git/git/blob/v1.8.5/Documentation/RelNotes/1.8.5.txt#L100-101>`_)
+- Files in tree identified by |v1.0| tag at the top level ::
 
-commit-ish
-    Any object that leads to a commit, e.g.:
-    a commit, a tag pointing to a commit, a tag pointing to a tag ... pointing to a commit.
-    (`Source <https://git-scm.com/docs/gitglossary#gitglossary-aiddefcommit-ishacommit-ishalsocommittish>`_)
+    $ git ls-tree --name-only tags/v1.0
 
-tree-ish
-    Any object that contains a list of file names and modes along with refs to the associated blob and/or tree objects.
-    Equivalent to a directory.
-    (`Source <https://git-scm.com/docs/gitglossary#gitglossary-aiddeftree-ishatree-ishalsotreeish>`_)
+- Files in tree identified by |v1.0| tag at all levels ::
 
+    $ git ls-tree --name-only tags/v1.0 -r
 
+- Files in tree identified by |v1.0| tag in path ``foo/bar`` at all levels ::
 
-
-Resources
-=========
-
-- `GitHub Flow <https://guides.github.com/introduction/flow/>`_ -
-  A lightweight, branch-based workflow that supports teams and projects where deployments are made regularly
-- `Changing author info <https://help.github.com/articles/changing-author-info/>`_ -
-  Script for updating any commits with matching user/email fields
-
+    $ git ls-tree --name-only tags/v1.0 foo/bar -r
 
 
 
