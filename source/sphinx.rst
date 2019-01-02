@@ -10,7 +10,8 @@ Sphinx
 ============================================
 
 - :ref:`sphinx:templating`
-
+- `Substitutions <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#substitutions>`_
+  (See also: :ref:`python_module_docutils`)
 - `Extensions <https://www.sphinx-doc.org/en/master/usage/extensions/>`_
 
   - `Showing all links of an Intersphinx mapping file <https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#showing-all-links-of-an-intersphinx-mapping-file>`_

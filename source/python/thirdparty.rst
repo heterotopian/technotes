@@ -15,18 +15,30 @@ Third Party
 - `Documentation <http://distlib.readthedocs.io/en/latest/>`_
 
 
+.. _python_module_docutils:
+
 :py:mod:`docutils`
 ------------------
 
-- `Project homepage <http://docutils.sourceforge.net/>`_
-- `Documentation <https://docutils.readthedocs.io/en/sphinx-docs/>`_ -
-  Community-supported, not maintained by the docutils developers
-- `reStructuredText Markup Specification <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html>`_
-- Frontends
+- `Documentation <http://docutils.sourceforge.net/>`_
 
-  - `rst2html.py <http://docutils.sourceforge.net/docs/user/tools.html#rst2html-py>`_
-  - `rst2pseudoxml.py <http://docutils.sourceforge.net/docs/user/tools.html#rst2pseudoxml-py>`_
+  - reStructuredText:
 
+    - `Markup specification <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html>`_
+
+      - `Substitution definitions  <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#substitution-definitions>`_
+
+    - `Standard definition files <http://docutils.sourceforge.net/docs/ref/rst/definitions.html>`_
+
+      - "To use a substitution without intervening whitespace, you can use the disappearing-whitespace escape sequence, backslash-space"
+
+    - Frontends:
+
+      - `rst2html <http://docutils.sourceforge.net/docs/user/tools.html#rst2html-py>`_
+      - `rst2pseudoxml <http://docutils.sourceforge.net/docs/user/tools.html#rst2pseudoxml-py>`_
+
+- `Sphinx documentation <https://docutils.readthedocs.io/en/sphinx-docs/>`_ -
+  Unnoficial, community-supported mirror of the offficial documentation
 
 :py:mod:`factory_boy`
 ---------------------
