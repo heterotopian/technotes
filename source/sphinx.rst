@@ -11,19 +11,26 @@ Sphinx
 
 - :ref:`sphinx:templating`
 
-Extensions
-----------
+- `Extensions <https://www.sphinx-doc.org/en/master/usage/extensions/>`_
 
-- `Showing all links of an Intersphinx mapping file <https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#showing-all-links-of-an-intersphinx-mapping-file>`_
+  - `Showing all links of an Intersphinx mapping file <https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#showing-all-links-of-an-intersphinx-mapping-file>`_
 
 
 
 Resources
 =========
 
-- `Sphinx/reST Memo <http://rest-sphinx-memo.readthedocs.io>`_ -
-  Condensed guide to Sphinx & reST constructs, illustrated with examples
 - `Online reStructuredText editor <http://rst.ninjs.org/>`_
+
+Guides
+------
+
+- `Sphinx/reST Memo <http://rest-sphinx-memo.readthedocs.io>`_ -
+  Condensed, example-based guide to Sphinx & reStructuredText
+- `Wiser > Sphinx & reStructuredText <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/index.html>`_ -
+  Broad tutorial
+
+  - `Escaping whitespace around interpreted text <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/OnReStructuredText.html#subscript-and-superscript>`_
 
 
 
