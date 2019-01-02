@@ -20,6 +20,7 @@ Sphinx
 Resources
 =========
 
+- Discussion list: `sphinx-users <https://groups.google.com/forum/#!forum/sphinx-users>`_
 - `Online reStructuredText editor <http://rst.ninjs.org/>`_
 
 Guides
