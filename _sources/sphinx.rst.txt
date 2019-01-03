@@ -35,6 +35,12 @@ Guides
   - `Escaping whitespace around interpreted text <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/OnReStructuredText.html#subscript-and-superscript>`_
 
 
+Extensions
+----------
+
+- `sphinx-jinja <https://pypi.org/project/sphinx-jinja/>`_
+
+
 
 Themes
 ======
