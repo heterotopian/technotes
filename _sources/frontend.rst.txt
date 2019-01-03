@@ -1,6 +1,9 @@
 .. _frontend:
 
-=========
+========
+Frontend
+========
+
 Resources
 =========
 
