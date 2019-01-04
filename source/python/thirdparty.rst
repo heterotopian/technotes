@@ -25,9 +25,7 @@ Third Party
   - reStructuredText:
 
     - `Markup specification <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html>`_
-
-      - `Substitution definitions  <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#substitution-definitions>`_
-
+    - `Substitution definitions  <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#substitution-definitions>`_
     - `Standard definition files <http://docutils.sourceforge.net/docs/ref/rst/definitions.html>`_
 
       - "To use a substitution without intervening whitespace, you can use the disappearing-whitespace escape sequence, backslash-space"
