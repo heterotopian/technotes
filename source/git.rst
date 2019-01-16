@@ -46,6 +46,13 @@ Workflows
   A lightweight, branch-based workflow that supports teams and projects where deployments are made regularly
 
 
+Humor
+-----
+
+- `Git man page generator <https://git-man-page-generator.lokaltog.net/>`_ -
+  Generate fake documentation
+
+
 
 Terms
 =====
