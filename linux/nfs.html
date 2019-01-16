@@ -34,9 +34,6 @@
   
 <link rel="stylesheet" href="../_static/css/theme-custom.css" type="text/css" />
 
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Technotes Documentation" href="../index.html"/>
  
 
@@ -152,7 +149,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/linux/nfs.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/linux/nfs.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -166,50 +163,50 @@
 <h1>NFS<a class="headerlink" href="#nfs" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="nfsstat">
 <h2>nfsstat<a class="headerlink" href="#nfsstat" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ nfsstat
+<div class="highlight-bash"><div class="highlight"><pre>$ nfsstat
 
 
 Client rpc stats:
 calls      retrans    authrefrsh
-<span class="m">386800393</span>   <span class="m">0</span>          <span class="m">387762712</span>
+<span class="m">386800393</span>   <span class="m">0</span>          387762712
 
 Client nfs v3:
 null         getattr      setattr      lookup       access       readlink
-<span class="m">0</span>         <span class="m">0</span>% <span class="m">259158128</span> <span class="m">66</span>% <span class="m">450431</span>    <span class="m">0</span>% <span class="m">20827600</span>  <span class="m">5</span>% <span class="m">61029281</span> <span class="m">15</span>% <span class="m">21567</span>     <span class="m">0</span>%
+<span class="m">0</span>         0% <span class="m">259158128</span> 66% <span class="m">450431</span>    0% <span class="m">20827600</span>  5% <span class="m">61029281</span> 15% <span class="m">21567</span>     0%
 <span class="nb">read</span>         write        create       mkdir        symlink      mknod
-<span class="m">17020877</span>  <span class="m">4</span>% <span class="m">5331960</span>   <span class="m">1</span>% <span class="m">403351</span>    <span class="m">0</span>% <span class="m">24746</span>     <span class="m">0</span>% <span class="m">1862</span>      <span class="m">0</span>% <span class="m">1</span>         <span class="m">0</span>%
+<span class="m">17020877</span>  4% <span class="m">5331960</span>   1% <span class="m">403351</span>    0% <span class="m">24746</span>     0% <span class="m">1862</span>      0% <span class="m">1</span>         0%
 remove       rmdir        rename       link         readdir      readdirplus
-<span class="m">612324</span>    <span class="m">0</span>% <span class="m">21399</span>     <span class="m">0</span>% <span class="m">112009</span>    <span class="m">0</span>% <span class="m">1039</span>      <span class="m">0</span>% <span class="m">241247</span>    <span class="m">0</span>% <span class="m">6522117</span>   <span class="m">1</span>%
+<span class="m">612324</span>    0% <span class="m">21399</span>     0% <span class="m">112009</span>    0% <span class="m">1039</span>      0% <span class="m">241247</span>    0% <span class="m">6522117</span>   1%
 fsstat       fsinfo       pathconf     commit
-<span class="m">15071064</span>  <span class="m">3</span>% <span class="m">22</span>        <span class="m">0</span>% <span class="m">11</span>        <span class="m">0</span>% <span class="m">0</span>         <span class="m">0</span>%
+<span class="m">15071064</span>  3% <span class="m">22</span>        0% <span class="m">11</span>        0% <span class="m">0</span>         0%
 </pre></div>
 </div>
 </div>
 <div class="section" id="nfsiostat">
 <h2>nfsiostat<a class="headerlink" href="#nfsiostat" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ nfsiostat
+<div class="highlight-shell"><div class="highlight"><pre>$ nfsiostat
 
 nfs.domain.com:/foo mounted on /foo:
 
    op/s         rpc bklog
- <span class="m">262</span>.16
-           <span class="m">0</span>.00
+ 262.16
+           0.00
 read:
   ops/s            kB/s           kB/op         retrans         avg RTT <span class="o">(</span>ms<span class="o">)</span>    avg exe <span class="o">(</span>ms<span class="o">)</span>
-                 <span class="m">11</span>.557
-        <span class="m">356</span>.081
-         <span class="m">30</span>.812
-       <span class="m">0</span> <span class="o">(</span><span class="m">0</span>.0%<span class="o">)</span>
-          <span class="m">5</span>.167
-          <span class="m">5</span>.239
+                 11.557
+        356.081
+         30.812
+       <span class="m">0</span> <span class="o">(</span>0.0%<span class="o">)</span>
+          5.167
+          5.239
 write:
   ops/s            kB/s           kB/op         retrans         avg RTT <span class="o">(</span>ms<span class="o">)</span>    avg exe <span class="o">(</span>ms<span class="o">)</span>
-                  <span class="m">3</span>.620
-        <span class="m">105</span>.680
-         <span class="m">29</span>.190
-       <span class="m">0</span> <span class="o">(</span><span class="m">0</span>.0%<span class="o">)</span>
-         <span class="m">16</span>.032
-        <span class="m">331</span>.458
+                  3.620
+        105.680
+         29.190
+       <span class="m">0</span> <span class="o">(</span>0.0%<span class="o">)</span>
+         16.032
+        331.458
 </pre></div>
 </div>
 </div>
@@ -226,7 +223,7 @@ write:
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Jan 3, 2019, 11:08:59 PM.
+      Last updated on Wed Jan 16 18:00:32 2019.
 
     </p>
   </div>
@@ -257,6 +254,7 @@ write:
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 

@@ -34,9 +34,6 @@
   
 <link rel="stylesheet" href="../_static/css/theme-custom.css" type="text/css" />
 
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Technotes Documentation" href="../index.html"/>
  
 
@@ -152,7 +149,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/linux/filesystem.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/linux/filesystem.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -166,19 +163,19 @@
 <h1>Filesystem<a class="headerlink" href="#filesystem" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="findmnt">
 <h2>findmnt<a class="headerlink" href="#findmnt" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ findmnt -t tmpfs
+<div class="highlight-bash"><div class="highlight"><pre>$ findmnt -t tmpfs
 TARGET         SOURCE FSTYPE OPTIONS
-/run           tmpfs  tmpfs  rw,nosuid,noexec,relatime,size<span class="o">=</span>806096k,mode<span class="o">=</span><span class="m">755</span>
-/sys/fs/cgroup        tmpfs  rw,relatime,size<span class="o">=</span>4k,mode<span class="o">=</span><span class="m">755</span>
+/run           tmpfs  tmpfs  rw,nosuid,noexec,relatime,size<span class="o">=</span>806096k,mode<span class="o">=</span>755
+/sys/fs/cgroup        tmpfs  rw,relatime,size<span class="o">=</span>4k,mode<span class="o">=</span>755
 /run/lock             tmpfs  rw,nosuid,nodev,noexec,relatime,size<span class="o">=</span>5120k
 /run/shm              tmpfs  rw,nosuid,nodev,relatime
-/run/user             tmpfs  rw,nosuid,nodev,noexec,relatime,size<span class="o">=</span>102400k,mode<span class="o">=</span><span class="m">755</span>
+/run/user             tmpfs  rw,nosuid,nodev,noexec,relatime,size<span class="o">=</span>102400k,mode<span class="o">=</span>755
 </pre></div>
 </div>
 </div>
 <div class="section" id="tree">
 <h2>tree<a class="headerlink" href="#tree" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ tree foo
+<div class="highlight-bash"><div class="highlight"><pre>$ tree foo
 foo
 ├── bar
 └── baz
@@ -187,7 +184,7 @@ foo
 <span class="m">2</span> directories, <span class="m">1</span> file
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ tree foo -L <span class="m">1</span>
+<div class="highlight-bash"><div class="highlight"><pre>$ tree foo -L 1
 foo
 ├── bar
 └── baz
@@ -209,7 +206,7 @@ foo
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Jan 3, 2019, 11:08:59 PM.
+      Last updated on Wed Jan 16 18:00:32 2019.
 
     </p>
   </div>
@@ -240,6 +237,7 @@ foo
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 

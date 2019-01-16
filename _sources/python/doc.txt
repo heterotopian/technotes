@@ -56,3 +56,10 @@ Guide to the Python Distribution Utilities (distutils) from an end-user point of
 Guide to the Python Distribution Utilities (distutils) from a developer point of view.
 
 - `Relationships between Distributions and Packages <https://docs.python.org/2/distutils/setupscript.html#relationships-between-distributions-and-packages>`_
+
+
+`The CPython Developer's Guide <https://devguide.python.org/>`_
+---------------------------------------------------------------
+
+The comprehensive resource for contributing to CPython.
+Maintained by the CPython core developers.

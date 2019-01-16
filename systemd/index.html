@@ -34,9 +34,6 @@
   
 <link rel="stylesheet" href="../_static/css/theme-custom.css" type="text/css" />
 
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Technotes Documentation" href="../index.html"/>
         <link rel="next" title="Docker" href="../docker.html"/>
         <link rel="prev" title="Linux" href="../linux/index.html"/>
@@ -87,7 +84,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../bash.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">systemd</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">systemd</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id2">Manpages</a></li>
 </ul>
@@ -176,7 +173,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/systemd/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/systemd/index.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -211,7 +208,7 @@ Bidirectionally proxy local sockets to another (possibly remote) socket.</li>
 <span id="systemd-command"></span><h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id3">
 <h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-cgls.html">systemd-cgls</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemd-cgls
+<div class="highlight-bash"><div class="highlight"><pre>$ systemd-cgls
 Control group /:
 -.slice
 ├─init.scope
@@ -227,11 +224,11 @@ Control group /:
 </div>
 <div class="section" id="id4">
 <h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-run.html">systemd-run</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemd-run <span class="nb">echo</span> yes
+<div class="highlight-bash"><div class="highlight"><pre>$ systemd-run <span class="nb">echo</span> yes
 Running as unit run-rd639c9dc8b974744bc1b88ff8319cb47.service.
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemd-run --scope <span class="nb">echo</span> yes
+<div class="highlight-bash"><div class="highlight"><pre>$ systemd-run --scope <span class="nb">echo</span> yes
 Running scope as unit run-r56133a46ffdf44a0b416864461fc7ee0.scope.
 yes
 </pre></div>
@@ -239,17 +236,17 @@ yes
 </div>
 <div class="section" id="id5">
 <h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-cgtop.html">systemd-cgtop</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemd-cgtop
+<div class="highlight-bash"><div class="highlight"><pre>$ systemd-cgtop
 Control Group                                 Tasks   %CPU   Memory  Input/s Output/s
-/                                                 -  <span class="m">266</span>.3   <span class="m">478</span>.0G        -        -
-/user.slice                                    <span class="m">1874</span>  <span class="m">252</span>.8   <span class="m">471</span>.0G        -        -
-/user.slice/user-641738498.slice                <span class="m">480</span>  <span class="m">146</span>.8     <span class="m">8</span>.7G        -        -
-/user.slice/user-641740830.slice                <span class="m">205</span>   <span class="m">96</span>.3   <span class="m">373</span>.5G        -        -
-/system.slice                                   <span class="m">241</span>   <span class="m">12</span>.6     <span class="m">6</span>.8G        -        -
-/system.slice/netdata.service                    <span class="m">20</span>   <span class="m">10</span>.1   <span class="m">135</span>.7M        -        -
-/user.slice/user-641754182.slice                <span class="m">122</span>    <span class="m">7</span>.4     <span class="m">1</span>.0G        -        -
-/system.slice/newrelic-infra.service             <span class="m">14</span>    <span class="m">2</span>.3    <span class="m">70</span>.4M        -        -
-/user.slice/user-641748370.slice                <span class="m">250</span>    <span class="m">0</span>.6     <span class="m">7</span>.9G        -        -
+/                                                 -  266.3   478.0G        -        -
+/user.slice                                    <span class="m">1874</span>  252.8   471.0G        -        -
+/user.slice/user-641738498.slice                <span class="m">480</span>  146.8     8.7G        -        -
+/user.slice/user-641740830.slice                <span class="m">205</span>   96.3   373.5G        -        -
+/system.slice                                   <span class="m">241</span>   12.6     6.8G        -        -
+/system.slice/netdata.service                    <span class="m">20</span>   10.1   135.7M        -        -
+/user.slice/user-641754182.slice                <span class="m">122</span>    7.4     1.0G        -        -
+/system.slice/newrelic-infra.service             <span class="m">14</span>    2.3    70.4M        -        -
+/user.slice/user-641748370.slice                <span class="m">250</span>    0.6     7.9G        -        -
 </pre></div>
 </div>
 </div>
@@ -263,7 +260,7 @@ Control Group                                 Tasks   %CPU   Memory  Input/s Out
 <h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/journalctl.html">journalctl</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p class="first">Supports tab completion on field names:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ journalctl _G&lt;TAB&gt;
+<div class="highlight-bash"><div class="highlight"><pre>$ journalctl _G&lt;TAB&gt;
 </pre></div>
 </div>
 </li>
@@ -285,27 +282,27 @@ Control Group                                 Tasks   %CPU   Memory  Input/s Out
 <h3><a class="reference external" href="http://0pointer.de/public/systemd-man/systemctl.html">systemctl</a><a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p class="first">List active units:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemctl list-units
+<div class="highlight-bash"><div class="highlight"><pre>$ systemctl list-units
 </pre></div>
 </div>
 </li>
 <li><p class="first">List loaded units:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemctl list-units -a
+<div class="highlight-bash"><div class="highlight"><pre>$ systemctl list-units -a
 </pre></div>
 </div>
 </li>
 <li><p class="first">List active service units:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemctl list-units -t service
+<div class="highlight-bash"><div class="highlight"><pre>$ systemctl list-units -t service
 </pre></div>
 </div>
 </li>
 <li><p class="first">List unit files:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemctl list-unit-files
+<div class="highlight-bash"><div class="highlight"><pre>$ systemctl list-unit-files
 </pre></div>
 </div>
 </li>
 <li><p class="first">Check if a unit is running:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemctl is-active unit
+<div class="highlight-bash"><div class="highlight"><pre>$ systemctl is-active unit
 </pre></div>
 </div>
 </li>
@@ -334,7 +331,7 @@ Control Group                                 Tasks   %CPU   Memory  Input/s Out
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Jan 3, 2019, 11:08:59 PM.
+      Last updated on Wed Jan 16 18:00:32 2019.
 
     </p>
   </div>
@@ -365,6 +362,7 @@ Control Group                                 Tasks   %CPU   Memory  Input/s Out
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 

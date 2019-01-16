@@ -58,8 +58,8 @@ Shortcuts
 
 
 
-Command Line
-============
+Commands
+========
 
 - Export installed packages & themes to ``~/dotfiles/home/.atom_installed``::
 
