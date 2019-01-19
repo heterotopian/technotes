@@ -100,10 +100,14 @@
 </ul>
 <p class="caption"><span class="caption-text">Applications</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Atom</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Atom</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#shortcuts">Shortcuts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#editor">Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#command-line">Command line</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#packages">Packages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#toggler">toggler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#vim-mode-plus">vim-mode-plus</a></li>
@@ -233,14 +237,23 @@
 </div>
 <div class="section" id="commands">
 <h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="editor">
+<h3>Editor<a class="headerlink" href="#editor" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/atom/atom/pull/4973">Log Cursor Scope</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="command-line">
+<h2>Command line<a class="headerlink" href="#command-line" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Export installed packages &amp; themes to <code class="docutils literal"><span class="pre">~/dotfiles/home/.atom_installed</span></code>:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> apm list --installed --bare &gt; ~/dotfiles/home/.atom_installed
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> apm list --installed --bare &gt; ~/dotfiles/home/.atom_installed
 </pre></div>
 </div>
 </li>
 <li><p class="first">Install packages &amp; themes from <code class="docutils literal"><span class="pre">~/.atom_installed</span></code>:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> apm install --packages-file ~/.atom_installed
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> apm install --packages-file ~/.atom_installed
 </pre></div>
 </div>
 </li>
@@ -301,7 +314,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Wed Jan 16 18:00:32 2019.
+      Last updated on Jan 19, 2019, 1:52:28 AM.
 
     </p>
   </div>

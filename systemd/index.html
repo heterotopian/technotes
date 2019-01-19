@@ -84,7 +84,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../bash.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">systemd</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">systemd</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id2">Manpages</a></li>
 </ul>
@@ -208,7 +208,7 @@ Bidirectionally proxy local sockets to another (possibly remote) socket.</li>
 <span id="systemd-command"></span><h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id3">
 <h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-cgls.html">systemd-cgls</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre>$ systemd-cgls
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ systemd-cgls
 Control group /:
 -.slice
 ├─init.scope
@@ -224,11 +224,11 @@ Control group /:
 </div>
 <div class="section" id="id4">
 <h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-run.html">systemd-run</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre>$ systemd-run <span class="nb">echo</span> yes
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ systemd-run <span class="nb">echo</span> yes
 Running as unit run-rd639c9dc8b974744bc1b88ff8319cb47.service.
 </pre></div>
 </div>
-<div class="highlight-bash"><div class="highlight"><pre>$ systemd-run --scope <span class="nb">echo</span> yes
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ systemd-run --scope <span class="nb">echo</span> yes
 Running scope as unit run-r56133a46ffdf44a0b416864461fc7ee0.scope.
 yes
 </pre></div>
@@ -236,7 +236,7 @@ yes
 </div>
 <div class="section" id="id5">
 <h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-cgtop.html">systemd-cgtop</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre>$ systemd-cgtop
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ systemd-cgtop
 Control Group                                 Tasks   %CPU   Memory  Input/s Output/s
 /                                                 -  266.3   478.0G        -        -
 /user.slice                                    <span class="m">1874</span>  252.8   471.0G        -        -
@@ -260,7 +260,7 @@ Control Group                                 Tasks   %CPU   Memory  Input/s Out
 <h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/journalctl.html">journalctl</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p class="first">Supports tab completion on field names:</p>
-<div class="highlight-bash"><div class="highlight"><pre>$ journalctl _G&lt;TAB&gt;
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ journalctl _G&lt;TAB&gt;
 </pre></div>
 </div>
 </li>
@@ -282,27 +282,27 @@ Control Group                                 Tasks   %CPU   Memory  Input/s Out
 <h3><a class="reference external" href="http://0pointer.de/public/systemd-man/systemctl.html">systemctl</a><a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p class="first">List active units:</p>
-<div class="highlight-bash"><div class="highlight"><pre>$ systemctl list-units
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ systemctl list-units
 </pre></div>
 </div>
 </li>
 <li><p class="first">List loaded units:</p>
-<div class="highlight-bash"><div class="highlight"><pre>$ systemctl list-units -a
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ systemctl list-units -a
 </pre></div>
 </div>
 </li>
 <li><p class="first">List active service units:</p>
-<div class="highlight-bash"><div class="highlight"><pre>$ systemctl list-units -t service
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ systemctl list-units -t service
 </pre></div>
 </div>
 </li>
 <li><p class="first">List unit files:</p>
-<div class="highlight-bash"><div class="highlight"><pre>$ systemctl list-unit-files
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ systemctl list-unit-files
 </pre></div>
 </div>
 </li>
 <li><p class="first">Check if a unit is running:</p>
-<div class="highlight-bash"><div class="highlight"><pre>$ systemctl is-active unit
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ systemctl is-active unit
 </pre></div>
 </div>
 </li>
@@ -331,7 +331,7 @@ Control Group                                 Tasks   %CPU   Memory  Input/s Out
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Wed Jan 16 18:00:32 2019.
+      Last updated on Jan 19, 2019, 1:52:28 AM.
 
     </p>
   </div>
