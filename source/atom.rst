@@ -61,6 +61,16 @@ Shortcuts
 Commands
 ========
 
+Editor
+------
+
+- `Log Cursor Scope <https://github.com/atom/atom/pull/4973>`_
+
+
+
+Command line
+============
+
 - Export installed packages & themes to ``~/dotfiles/home/.atom_installed``::
 
     $ apm list --installed --bare > ~/dotfiles/home/.atom_installed
