@@ -34,6 +34,9 @@
   
 <link rel="stylesheet" href="_static/css/theme-custom.css" type="text/css" />
 
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Technotes Documentation" href="index.html"/>
         <link rel="next" title="Linux" href="linux/index.html"/>
         <link rel="prev" title="Technical Notes" href="index.html"/>
@@ -159,7 +162,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/bash.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/bash.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -185,7 +188,7 @@ A practical guide, with real-life (instead of theoretical) examples</li>
 <div class="section" id="expansion">
 <h2>Expansion<a class="headerlink" href="#expansion" title="Permalink to this headline">¶</a></h2>
 <p>Bash Guide for Beginners: <a class="reference external" href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html">Shell expansion</a></p>
-<table border="1" class="docutils">
+<table border="1" class="colwidths-given docutils">
 <colgroup>
 <col width="45%" />
 <col width="9%" />
@@ -200,27 +203,27 @@ A practical guide, with real-life (instead of theoretical) examples</li>
 <tbody valign="top">
 <tr class="row-even"><td>Brace expansion</td>
 <td>1</td>
-<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">foo{A,B,C}bar</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">foo{A,B,C}bar</span></code></td>
 </tr>
 <tr class="row-odd"><td>Tilde expansion</td>
 <td>2</td>
-<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">ls</span> <span class="pre">~/.vimrc</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ls</span> <span class="pre">~/.vimrc</span></code></td>
 </tr>
 <tr class="row-even"><td>Shell parameter &amp; variable subsitution</td>
 <td>3</td>
-<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">$PATH</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">$PATH</span></code></td>
 </tr>
 <tr class="row-odd"><td>Command substitution</td>
 <td>4</td>
-<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">readlink</span> <span class="pre">-f</span> <span class="pre">$(which</span> <span class="pre">python)</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">readlink</span> <span class="pre">-f</span> <span class="pre">$(which</span> <span class="pre">python)</span></code></td>
 </tr>
 <tr class="row-even"><td>Arithmetic expansion</td>
 <td>5</td>
-<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">$[</span> <span class="pre">365*24</span> <span class="pre">]</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">$[</span> <span class="pre">365*24</span> <span class="pre">]</span></code></td>
 </tr>
 <tr class="row-odd"><td>Process substitution</td>
 <td>6</td>
-<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">diff</span> <span class="pre">&lt;(date)</span> <span class="pre">&lt;(sleep</span> <span class="pre">1;</span> <span class="pre">date)</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">diff</span> <span class="pre">&lt;(date)</span> <span class="pre">&lt;(sleep</span> <span class="pre">1;</span> <span class="pre">date)</span></code></td>
 </tr>
 <tr class="row-even"><td>Word splitting</td>
 <td>7</td>
@@ -269,33 +272,33 @@ A practical guide, with real-life (instead of theoretical) examples</li>
 <div class="section" id="redirection">
 <h2>Redirection<a class="headerlink" href="#redirection" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">stdout to <code class="docutils literal"><span class="pre">command.stdout</span></code>:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> &gt; command.stdout
+<li><p class="first">stdout to <code class="docutils literal notranslate"><span class="pre">command.stdout</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> &gt; command.stdout
 </pre></div>
 </div>
 </li>
-<li><p class="first">stderr to <code class="docutils literal"><span class="pre">command.stderr</span></code>:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> 2&gt; command.stderr
+<li><p class="first">stderr to <code class="docutils literal notranslate"><span class="pre">command.stderr</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">2</span>&gt; command.stderr
 </pre></div>
 </div>
 </li>
 <li><p class="first">stdout to stderr:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> 1&gt;<span class="p">&amp;</span>2
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">1</span>&gt;<span class="p">&amp;</span><span class="m">2</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">stderr to stdout:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> 2&gt;<span class="p">&amp;</span>1
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">stderr and stdout to <code class="docutils literal"><span class="pre">command.out</span></code>:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="p">&amp;</span>&gt; command.out
+<li><p class="first">stderr and stdout to <code class="docutils literal notranslate"><span class="pre">command.out</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="p">&amp;</span>&gt; command.out
 </pre></div>
 </div>
 </li>
-<li><p class="first">stdout to <code class="docutils literal"><span class="pre">/dev/null</span></code> and stderr to stdout:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> 2&gt;<span class="p">&amp;</span><span class="m">1</span> &gt;/dev/null
+<li><p class="first">stdout to <code class="docutils literal notranslate"><span class="pre">/dev/null</span></code> and stderr to stdout:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> &gt;/dev/null
 </pre></div>
 </div>
 </li>
@@ -323,7 +326,7 @@ A practical guide, with real-life (instead of theoretical) examples</li>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Jan 19, 2019, 1:52:28 AM.
+      Last updated on Jan 20, 2019, 2:10:38 AM.
 
     </p>
   </div>
@@ -354,7 +357,6 @@ A practical guide, with real-life (instead of theoretical) examples</li>
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 

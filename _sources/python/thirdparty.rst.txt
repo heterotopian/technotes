@@ -38,6 +38,7 @@ Third Party
 - `Sphinx documentation <https://docutils.readthedocs.io/en/sphinx-docs/>`_ -
   Unnoficial, community-supported mirror of the offficial documentation
 
+
 :py:mod:`factory_boy`
 ---------------------
 
@@ -80,8 +81,6 @@ Third Party
     `Hacker News <https://news.ycombinator.com/item?id=17856700>`_
   - Responses:
     `The First Notebook War <https://yihui.name/en/2018/09/notebook-war/>`_
-
-
 
 
 :py:mod:`marshmallow`
@@ -172,6 +171,7 @@ Defines the .pex (Python EXecutable) file format.
 
 - `Documentation <https://docs.sqlalchemy.org/en/latest/>`_
 - `Engine sharding <http://docs.sqlalchemy.org/en/latest/core/connections.html#sqlalchemy.engine.Engine.execution_options>`_
+
 
 :py:mod:`toolz`
 ---------------

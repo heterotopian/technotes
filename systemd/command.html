@@ -34,6 +34,9 @@
   
 <link rel="stylesheet" href="../_static/css/theme-custom.css" type="text/css" />
 
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Technotes Documentation" href="../index.html"/>
  
 
@@ -149,7 +152,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/systemd/command.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/systemd/command.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -163,7 +166,7 @@
 <span id="systemd-command"></span><h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
 <h2><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-cgls.html">systemd-cgls</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ systemd-cgls
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ systemd-cgls
 Control group /:
 -.slice
 ├─init.scope
@@ -179,11 +182,11 @@ Control group /:
 </div>
 <div class="section" id="id2">
 <h2><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-run.html">systemd-run</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ systemd-run echo yes
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ systemd-run echo yes
 Running as unit run-rd639c9dc8b974744bc1b88ff8319cb47.service.
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ systemd-run --scope echo yes
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ systemd-run --scope echo yes
 Running scope as unit run-r56133a46ffdf44a0b416864461fc7ee0.scope.
 yes
 </pre></div>
@@ -191,7 +194,7 @@ yes
 </div>
 <div class="section" id="id3">
 <h2><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-cgtop.html">systemd-cgtop</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ systemd-cgtop
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ systemd-cgtop
 Control Group                                 Tasks   %CPU   Memory  Input/s Output/s
 /                                                 -  266.3   478.0G        -        -
 /user.slice                                    1874  252.8   471.0G        -        -
@@ -218,7 +221,7 @@ Control Group                                 Tasks   %CPU   Memory  Input/s Out
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Jan 19, 2019, 1:52:28 AM.
+      Last updated on Jan 20, 2019, 2:10:38 AM.
 
     </p>
   </div>
@@ -249,7 +252,6 @@ Control Group                                 Tasks   %CPU   Memory  Input/s Out
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
