@@ -255,6 +255,31 @@ TARGET         SOURCE FSTYPE OPTIONS
   Total: <span class="m">2</span> <span class="o">[</span><span class="m">1</span>.13 TiB<span class="o">]</span> / in use: <span class="m">2</span> <span class="o">[</span><span class="m">1</span>.13 TiB<span class="o">]</span> / in no VG: <span class="m">0</span> <span class="o">[</span><span class="m">0</span>   <span class="o">]</span>
 </pre></div>
 </div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ lvm pvdisplay
+  Couldn&#39;t find device with uuid ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q.
+  --- Physical volume ---
+  PV Name               /dev/mapper/sda3_crypt
+  VG Name               mint-vg
+  PV Size               222.83 GiB / not usable 0
+  Allocatable           yes (but full)
+  PE Size               4.00 MiB
+  Total PE              57044
+  Free PE               0
+  Allocated PE          57044
+  PV UUID               HVi9at-O5W2-fgZJ-R6QB-fZa5-30HN-12zOe9
+
+  --- Physical volume ---
+  PV Name               unknown device
+  VG Name               mint-vg
+  PV Size               931.51 GiB / not usable 1.71 MiB
+  Allocatable           yes (but full)
+  PE Size               4.00 MiB
+  Total PE              238467
+  Free PE               0
+  Allocated PE          238467
+  PV UUID               ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q
+</pre></div>
+</div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ lvm lvmdiskscan
   /dev/ram0              <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
   /dev/mapper/sda3_crypt <span class="o">[</span>     <span class="m">222</span>.83 GiB<span class="o">]</span> LVM physical volume
@@ -301,6 +326,56 @@ TARGET         SOURCE FSTYPE OPTIONS
   inactive          <span class="s1">&#39;/dev/mint-vg/data&#39;</span> <span class="o">[</span><span class="m">931</span>.51 GiB<span class="o">]</span> inherit
 </pre></div>
 </div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ lvm lvdisplay
+  --- Logical volume ---
+  LV Path                /dev/mint-vg/root
+  LV Name                root
+  VG Name                mint-vg
+  LV UUID                K1f3bU-81FN-hQPH-o3Bh-SXjl-lWbl-1II0vU
+  LV Write Access        read/write
+  LV Creation host, <span class="nb">time</span> mint, <span class="m">2015</span>-01-04 <span class="m">21</span>:11:08 -0500
+  LV Status              available
+  <span class="c1"># open                 1</span>
+  LV Size                <span class="m">206</span>.94 GiB
+  Current LE             <span class="m">52977</span>
+  Segments               <span class="m">1</span>
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently <span class="nb">set</span> to     <span class="m">256</span>
+  Block device           <span class="m">252</span>:1
+
+  --- Logical volume ---
+  LV Path                /dev/mint-vg/swap_1
+  LV Name                swap_1
+  VG Name                mint-vg
+  LV UUID                jvIm9E-6mkf-PRmi-Ljtk-R5jn-2Cyw-UFbYAU
+  LV Write Access        read/write
+  LV Creation host, <span class="nb">time</span> mint, <span class="m">2015</span>-01-04 <span class="m">21</span>:11:08 -0500
+  LV Status              available
+  <span class="c1"># open                 2</span>
+  LV Size                <span class="m">15</span>.89 GiB
+  Current LE             <span class="m">4067</span>
+  Segments               <span class="m">1</span>
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently <span class="nb">set</span> to     <span class="m">256</span>
+  Block device           <span class="m">252</span>:2
+
+  --- Logical volume ---
+  LV Path                /dev/mint-vg/data
+  LV Name                data
+  VG Name                mint-vg
+  LV UUID                LNhabH-vfyi-1aoy-ZoLI-zxG8-T14P-8wqhJ6
+  LV Write Access        read/write
+  LV Creation host, <span class="nb">time</span> manchester, <span class="m">2015</span>-02-27 <span class="m">05</span>:47:28 -0500
+  LV Status              NOT available
+  LV Size                <span class="m">931</span>.51 GiB
+  Current LE             <span class="m">238467</span>
+  Segments               <span class="m">1</span>
+  Allocation             inherit
+  Read ahead sectors     auto
+</pre></div>
+</div>
 </div>
 <div class="section" id="volume-groups">
 <h4>Volume groups<a class="headerlink" href="#volume-groups" title="Permalink to this headline">¶</a></h4>
@@ -314,6 +389,29 @@ TARGET         SOURCE FSTYPE OPTIONS
   Reading all physical volumes.  This may take a while...
   Couldn&#39;t find device with uuid ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q.
   Found volume group &quot;mint-vg&quot; using metadata type lvm2
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ lvm vgdisplay
+  --- Volume group ---
+  VG Name               mint-vg
+  System ID
+  Format                lvm2
+  Metadata Areas        <span class="m">1</span>
+  Metadata Sequence No  <span class="m">7</span>
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                <span class="m">0</span>
+  Cur LV                <span class="m">3</span>
+  Open LV               <span class="m">2</span>
+  Max PV                <span class="m">0</span>
+  Cur PV                <span class="m">2</span>
+  Act PV                <span class="m">1</span>
+  VG Size               <span class="m">1</span>.13 TiB
+  PE Size               <span class="m">4</span>.00 MiB
+  Total PE              <span class="m">295511</span>
+  Alloc PE / Size       <span class="m">295511</span> / <span class="m">1</span>.13 TiB
+  Free  PE / Size       <span class="m">0</span> / <span class="m">0</span>
+  VG UUID               fB5w0I-sjIL-4prj-AXyH-e3x6-UMEF-LdAz19
 </pre></div>
 </div>
 </div>
@@ -413,7 +511,7 @@ write:
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Jan 20, 2019, 3:25:35 AM.
+      Last updated on Jan 20, 2019, 3:31:52 AM.
 
     </p>
   </div>

@@ -40,6 +40,32 @@ Physical volumes
 
 ::
 
+    $ lvm pvdisplay
+      Couldn't find device with uuid ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q.
+      --- Physical volume ---
+      PV Name               /dev/mapper/sda3_crypt
+      VG Name               mint-vg
+      PV Size               222.83 GiB / not usable 0
+      Allocatable           yes (but full)
+      PE Size               4.00 MiB
+      Total PE              57044
+      Free PE               0
+      Allocated PE          57044
+      PV UUID               HVi9at-O5W2-fgZJ-R6QB-fZa5-30HN-12zOe9
+
+      --- Physical volume ---
+      PV Name               unknown device
+      VG Name               mint-vg
+      PV Size               931.51 GiB / not usable 1.71 MiB
+      Allocatable           yes (but full)
+      PE Size               4.00 MiB
+      Total PE              238467
+      Free PE               0
+      Allocated PE          238467
+      PV UUID               ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q
+
+::
+
     $ lvm lvmdiskscan
       /dev/ram0              [      64.00 MiB]
       /dev/mapper/sda3_crypt [     222.83 GiB] LVM physical volume
@@ -86,6 +112,58 @@ Logical volumes
       ACTIVE            '/dev/mint-vg/swap_1' [15.89 GiB] inherit
       inactive          '/dev/mint-vg/data' [931.51 GiB] inherit
 
+::
+
+    $ lvm lvdisplay
+      --- Logical volume ---
+      LV Path                /dev/mint-vg/root
+      LV Name                root
+      VG Name                mint-vg
+      LV UUID                K1f3bU-81FN-hQPH-o3Bh-SXjl-lWbl-1II0vU
+      LV Write Access        read/write
+      LV Creation host, time mint, 2015-01-04 21:11:08 -0500
+      LV Status              available
+      # open                 1
+      LV Size                206.94 GiB
+      Current LE             52977
+      Segments               1
+      Allocation             inherit
+      Read ahead sectors     auto
+      - currently set to     256
+      Block device           252:1
+
+      --- Logical volume ---
+      LV Path                /dev/mint-vg/swap_1
+      LV Name                swap_1
+      VG Name                mint-vg
+      LV UUID                jvIm9E-6mkf-PRmi-Ljtk-R5jn-2Cyw-UFbYAU
+      LV Write Access        read/write
+      LV Creation host, time mint, 2015-01-04 21:11:08 -0500
+      LV Status              available
+      # open                 2
+      LV Size                15.89 GiB
+      Current LE             4067
+      Segments               1
+      Allocation             inherit
+      Read ahead sectors     auto
+      - currently set to     256
+      Block device           252:2
+
+      --- Logical volume ---
+      LV Path                /dev/mint-vg/data
+      LV Name                data
+      VG Name                mint-vg
+      LV UUID                LNhabH-vfyi-1aoy-ZoLI-zxG8-T14P-8wqhJ6
+      LV Write Access        read/write
+      LV Creation host, time manchester, 2015-02-27 05:47:28 -0500
+      LV Status              NOT available
+      LV Size                931.51 GiB
+      Current LE             238467
+      Segments               1
+      Allocation             inherit
+      Read ahead sectors     auto
+
+
 Volume groups
 ~~~~~~~~~~~~~
 
@@ -103,6 +181,29 @@ Volume groups
       Couldn't find device with uuid ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q.
       Found volume group "mint-vg" using metadata type lvm2
 
+::
+
+    $ lvm vgdisplay
+      --- Volume group ---
+      VG Name               mint-vg
+      System ID
+      Format                lvm2
+      Metadata Areas        1
+      Metadata Sequence No  7
+      VG Access             read/write
+      VG Status             resizable
+      MAX LV                0
+      Cur LV                3
+      Open LV               2
+      Max PV                0
+      Cur PV                2
+      Act PV                1
+      VG Size               1.13 TiB
+      PE Size               4.00 MiB
+      Total PE              295511
+      Alloc PE / Size       295511 / 1.13 TiB
+      Free  PE / Size       0 / 0
+      VG UUID               fB5w0I-sjIL-4prj-AXyH-e3x6-UMEF-LdAz19
 
 tree
 ----
