@@ -163,7 +163,6 @@ Logical volumes
       Allocation             inherit
       Read ahead sectors     auto
 
-
 Volume groups
 ~~~~~~~~~~~~~
 
@@ -205,6 +204,7 @@ Volume groups
       Free  PE / Size       0 / 0
       VG UUID               fB5w0I-sjIL-4prj-AXyH-e3x6-UMEF-LdAz19
 
+      
 tree
 ----
 

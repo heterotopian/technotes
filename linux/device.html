@@ -164,6 +164,19 @@
             
   <div class="section" id="devices">
 <h1>Devices<a class="headerlink" href="#devices" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="blkid">
+<h2>blkid<a class="headerlink" href="#blkid" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ blkid
+/dev/mapper/mint--vg-root: <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;05b074c5-6c17-4f36-86b7-b87acfc0dc7a&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;ext4&quot;</span>
+/dev/sda1: <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;2B46-95AA&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;vfat&quot;</span>
+/dev/sda2: <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;b4372355-0b66-4c19-b68e-4b02bb959331&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;ext2&quot;</span>
+/dev/sda3: <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;fdbd43c3-65ae-4b9c-93e9-c0f70a17b909&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;crypto_LUKS&quot;</span>
+/dev/mapper/sda3_crypt: <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;HVi9at-O5W2-fgZJ-R6QB-fZa5-30HN-12zOe9&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;LVM2_member&quot;</span>
+/dev/mapper/mint--vg-swap_1: <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;18163da4-e2e8-42d2-9a26-b32eee94756b&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;swap&quot;</span>
+/dev/sdf1: <span class="nv">LABEL</span><span class="o">=</span><span class="s2">&quot;USB Stick&quot;</span> <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;6592DFBE2883E179&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;ntfs&quot;</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="lsblk">
 <h2>lsblk<a class="headerlink" href="#lsblk" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ lsblk
@@ -190,7 +203,7 @@ sda              <span class="m">8</span>:0    <span class="m">0</span> <span cl
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Jan 20, 2019, 3:31:52 AM.
+      Last updated on Jan 20, 2019, 4:59:49 AM.
 
     </p>
   </div>
