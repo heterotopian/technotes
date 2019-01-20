@@ -33,9 +33,9 @@ Physical volumes
 
 ::
 
-    $ lvm pvscan
-      PV /dev/mapper/sda3_crypt   VG mint-vg   lvm2 [222.83 GiB / 0    free]
-      PV unknown device           VG mint-vg   lvm2 [931.51 GiB / 0    free]
+    $ lvm pvscan -u
+      PV /dev/mapper/sda3_crypt with UUID HVi9at-O5W2-fgZJ-R6QB-fZa5-30HN-12zOe9 VG mint-vg   lvm2 [222.83 GiB / 0    free]
+      PV unknown device         with UUID ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q VG mint-vg   lvm2 [931.51 GiB / 0    free]
       Total: 2 [1.13 TiB] / in use: 2 [1.13 TiB] / in no VG: 0 [0   ]
 
 ::

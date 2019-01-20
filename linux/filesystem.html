@@ -186,9 +186,9 @@ TARGET         SOURCE FSTYPE OPTIONS
   unknown device         mint-vg lvm2 a-m  <span class="m">931</span>.51g    <span class="m">0</span>
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ lvm pvscan
-  PV /dev/mapper/sda3_crypt   VG mint-vg   lvm2 <span class="o">[</span><span class="m">222</span>.83 GiB / <span class="m">0</span>    free<span class="o">]</span>
-  PV unknown device           VG mint-vg   lvm2 <span class="o">[</span><span class="m">931</span>.51 GiB / <span class="m">0</span>    free<span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ lvm pvscan -u
+  PV /dev/mapper/sda3_crypt with UUID HVi9at-O5W2-fgZJ-R6QB-fZa5-30HN-12zOe9 VG mint-vg   lvm2 <span class="o">[</span><span class="m">222</span>.83 GiB / <span class="m">0</span>    free<span class="o">]</span>
+  PV unknown device         with UUID ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q VG mint-vg   lvm2 <span class="o">[</span><span class="m">931</span>.51 GiB / <span class="m">0</span>    free<span class="o">]</span>
   Total: <span class="m">2</span> <span class="o">[</span><span class="m">1</span>.13 TiB<span class="o">]</span> / in use: <span class="m">2</span> <span class="o">[</span><span class="m">1</span>.13 TiB<span class="o">]</span> / in no VG: <span class="m">0</span> <span class="o">[</span><span class="m">0</span>   <span class="o">]</span>
 </pre></div>
 </div>
@@ -288,7 +288,7 @@ foo
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Jan 20, 2019, 3:14:03 AM.
+      Last updated on Jan 20, 2019, 3:25:35 AM.
 
     </p>
   </div>
