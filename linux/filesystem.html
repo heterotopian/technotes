@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Filesystem &mdash; Technotes Documentation</title>
+  <title>Filesystems &mdash; Technotes Documentation</title>
   
 
   
@@ -148,7 +148,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>Filesystem</li>
+    <li>Filesystems</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -162,8 +162,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="filesystem">
-<h1>Filesystem<a class="headerlink" href="#filesystem" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="filesystems">
+<h1>Filesystems<a class="headerlink" href="#filesystems" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="findmnt">
 <h2>findmnt<a class="headerlink" href="#findmnt" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ findmnt -t tmpfs
@@ -174,6 +174,85 @@ TARGET         SOURCE FSTYPE OPTIONS
 /run/shm              tmpfs  rw,nosuid,nodev,relatime
 /run/user             tmpfs  rw,nosuid,nodev,noexec,relatime,size<span class="o">=</span>102400k,mode<span class="o">=</span><span class="m">755</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="lvm">
+<h2>lvm<a class="headerlink" href="#lvm" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="physical-volumes">
+<h3>Physical volumes<a class="headerlink" href="#physical-volumes" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ lvm pvs
+  PV                     VG      Fmt  Attr PSize   PFree
+  /dev/mapper/sda3_crypt mint-vg lvm2 a--  <span class="m">222</span>.83g    <span class="m">0</span>
+  unknown device         mint-vg lvm2 a-m  <span class="m">931</span>.51g    <span class="m">0</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ lvm pvscan
+  PV /dev/mapper/sda3_crypt   VG mint-vg   lvm2 <span class="o">[</span><span class="m">222</span>.83 GiB / <span class="m">0</span>    free<span class="o">]</span>
+  PV unknown device           VG mint-vg   lvm2 <span class="o">[</span><span class="m">931</span>.51 GiB / <span class="m">0</span>    free<span class="o">]</span>
+  Total: <span class="m">2</span> <span class="o">[</span><span class="m">1</span>.13 TiB<span class="o">]</span> / in use: <span class="m">2</span> <span class="o">[</span><span class="m">1</span>.13 TiB<span class="o">]</span> / in no VG: <span class="m">0</span> <span class="o">[</span><span class="m">0</span>   <span class="o">]</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ lvm lvmdiskscan
+  /dev/ram0              <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
+  /dev/mapper/sda3_crypt <span class="o">[</span>     <span class="m">222</span>.83 GiB<span class="o">]</span> LVM physical volume
+  /dev/ram1              <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
+  /dev/sda1              <span class="o">[</span>     <span class="m">512</span>.00 MiB<span class="o">]</span>
+  /dev/mint-vg/root      <span class="o">[</span>     <span class="m">206</span>.94 GiB<span class="o">]</span>
+  /dev/ram2              <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
+  /dev/sda2              <span class="o">[</span>     <span class="m">244</span>.00 MiB<span class="o">]</span>
+  /dev/mint-vg/swap_1    <span class="o">[</span>      <span class="m">15</span>.89 GiB<span class="o">]</span>
+  /dev/ram3              <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
+  /dev/sda3              <span class="o">[</span>     <span class="m">222</span>.83 GiB<span class="o">]</span>
+  /dev/ram4              <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
+  /dev/ram5              <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
+  /dev/ram6              <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
+  /dev/ram7              <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
+  /dev/ram8              <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
+  /dev/ram9              <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
+  /dev/ram10             <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
+  /dev/ram11             <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
+  /dev/ram12             <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
+  /dev/ram13             <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
+  /dev/ram14             <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
+  /dev/ram15             <span class="o">[</span>      <span class="m">64</span>.00 MiB<span class="o">]</span>
+  /dev/sdf1              <span class="o">[</span>      <span class="m">30</span>.28 GiB<span class="o">]</span>
+  <span class="m">1</span> disk
+  <span class="m">21</span> partitions
+  <span class="m">1</span> LVM physical volume whole disk
+  <span class="m">0</span> LVM physical volumes
+</pre></div>
+</div>
+</div>
+<div class="section" id="logical-volumes">
+<h3>Logical volumes<a class="headerlink" href="#logical-volumes" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ lvm lvs
+  LV     VG      Attr      LSize   Pool Origin Data%  Move Log Copy%  Convert
+  data   mint-vg -wi-----p <span class="m">931</span>.51g
+  root   mint-vg -wi-ao--- <span class="m">206</span>.94g
+  swap_1 mint-vg -wi-ao---  <span class="m">15</span>.89g
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ lvm lvscan
+  ACTIVE            <span class="s1">&#39;/dev/mint-vg/root&#39;</span> <span class="o">[</span><span class="m">206</span>.94 GiB<span class="o">]</span> inherit
+  ACTIVE            <span class="s1">&#39;/dev/mint-vg/swap_1&#39;</span> <span class="o">[</span><span class="m">15</span>.89 GiB<span class="o">]</span> inherit
+  inactive          <span class="s1">&#39;/dev/mint-vg/data&#39;</span> <span class="o">[</span><span class="m">931</span>.51 GiB<span class="o">]</span> inherit
+</pre></div>
+</div>
+</div>
+<div class="section" id="volume-groups">
+<h3>Volume groups<a class="headerlink" href="#volume-groups" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ lvm vgs
+  Couldn&#39;t find device with uuid ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q.
+  VG      #PV #LV #SN Attr   VSize VFree
+  mint-vg   2   3   0 wz-pn- 1.13t    0
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ lvm vgscan
+  Reading all physical volumes.  This may take a while...
+  Couldn&#39;t find device with uuid ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q.
+  Found volume group &quot;mint-vg&quot; using metadata type lvm2
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="tree">
@@ -209,7 +288,7 @@ foo
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Jan 20, 2019, 2:10:38 AM.
+      Last updated on Jan 20, 2019, 3:14:03 AM.
 
     </p>
   </div>

@@ -6,10 +6,10 @@ Atom
 
 .. highlight:: console
 
-Documentation
-=============
+`Documentation <https://atom.io/docs>`_
+=======================================
 
-- `Atom Flight Manual <http://flight-manual.atom.io/>`_
+- `Atom Flight Manual <http://flight-manual.atom.io/>`_ - Official user guide
 
   - `Command palette <http://flight-manual.atom.io/getting-started/sections/atom-basics/#command-palette>`_
 
