@@ -204,7 +204,7 @@ Volume groups
       Free  PE / Size       0 / 0
       VG UUID               fB5w0I-sjIL-4prj-AXyH-e3x6-UMEF-LdAz19
 
-      
+
 tree
 ----
 
@@ -217,12 +217,3 @@ tree
         └── zzz.txt
 
     2 directories, 1 file
-
-::
-
-    $ tree foo -L 1
-    foo
-    ├── bar
-    └── baz
-
-    2 directories, 0 files
