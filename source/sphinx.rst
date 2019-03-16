@@ -82,3 +82,11 @@ Klink
 - `Documentation <http://pmorissette.github.io/klink/index.html>`_
 - Example:
   `Klink theme <http://pmorissette.github.io/klink/examples.html>`_
+
+
+TYPO3
+-----
+
+- `Documentation <https://github.com/TYPO3-Documentation/t3SphinxThemeRtd>`_
+- Example:
+  `t3SphinxThemeRtd Demo Docs <https://docs.typo3.org/typo3cms/drafts/github/TYPO3-Documentation/t3SphinxThemeRtdDemoDocs/>`_
