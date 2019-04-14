@@ -10,7 +10,7 @@ Controlers
 `journalctl <https://www.freedesktop.org/software/systemd/man/journalctl.html>`_
 --------------------------------------------------------------------------------
 
-- Supports tab completion on field names::
+Supports tab completion on field names::
 
     $ journalctl _G<TAB>
 
@@ -34,22 +34,22 @@ Controlers
 `systemctl <http://0pointer.de/public/systemd-man/systemctl.html>`_
 -------------------------------------------------------------------
 
-- List active units::
+List active units::
 
     $ systemctl list-units
 
-- List loaded units::
+List loaded units::
 
     $ systemctl list-units -a
 
-- List active service units::
+List active service units::
 
     $ systemctl list-units -t service
 
-- List unit files::
+List unit files::
 
     $ systemctl list-unit-files
 
-- Check if a unit is running::
+Check if unit is running::
 
     $ systemctl is-active unit
