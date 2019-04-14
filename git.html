@@ -249,18 +249,15 @@ Equivalent to a directory.
 <h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="commits">
 <h3>Commits<a class="headerlink" href="#commits" title="Permalink to this headline">¶</a></h3>
-<ul>
-<li><p class="first">Commits between <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal notranslate"><span class="pre">HEAD</span></code></p>
+<p>Commits between <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git log @^..@
 </pre></div>
 </div>
-</li>
-<li><p class="first">Commits between <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag</p>
+<p>Commits between <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git log v1.0..@
 </pre></div>
 </div>
-</li>
-<li><p class="first">Diff <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal notranslate"><span class="pre">HEAD</span></code></p>
+<p>Diff <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git diff HEAD^ HEAD
 <span class="gp">$</span> git diff HEAD^..HEAD
 <span class="gp">$</span> git diff @^ @
@@ -268,73 +265,55 @@ Equivalent to a directory.
 <span class="gp">$</span> git show
 </pre></div>
 </div>
-</li>
-<li><p class="first">Diff <code class="docutils literal notranslate"><span class="pre">master</span></code> and current branch:</p>
+<p>Diff <code class="docutils literal notranslate"><span class="pre">master</span></code> and current branch:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git log master..HEAD -p
 </pre></div>
 </div>
-</li>
-<li><p class="first">Diff <code class="docutils literal notranslate"><span class="pre">file.rst</span></code> from <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal notranslate"><span class="pre">HEAD</span></code></p>
+<p>Diff <code class="docutils literal notranslate"><span class="pre">file.rst</span></code> from <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git diff @:file.rst @^1:file.rst
 </pre></div>
 </div>
-</li>
-</ul>
 </div>
 <div class="section" id="tags">
 <h3>Tags<a class="headerlink" href="#tags" title="Permalink to this headline">¶</a></h3>
-<ul>
-<li><p class="first">Delete local tag:</p>
+<p>Delete local tag:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git tag -d TAGNAME
 </pre></div>
 </div>
-</li>
-<li><p class="first">Push deleted tag to <code class="docutils literal notranslate"><span class="pre">origin</span></code>:</p>
+<p>Push deleted tag to <code class="docutils literal notranslate"><span class="pre">origin</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git push origin :refs/tags/TAGNAME
 </pre></div>
 </div>
-</li>
-</ul>
 </div>
 <div class="section" id="working-tree">
 <h3>Working tree<a class="headerlink" href="#working-tree" title="Permalink to this headline">¶</a></h3>
-<ul>
-<li><p class="first">Cached files</p>
+<p>Cached files:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files
 </pre></div>
 </div>
-</li>
-<li><p class="first">Cached files under <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code></p>
+<p>Cached files under <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files foo/bar
 </pre></div>
 </div>
-</li>
-<li><p class="first">Untracked files</p>
+<p>Untracked files:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files -o
 </pre></div>
 </div>
-</li>
-</ul>
 </div>
 <div class="section" id="indexed-trees">
 <h3>Indexed trees<a class="headerlink" href="#indexed-trees" title="Permalink to this headline">¶</a></h3>
-<ul>
-<li><p class="first">Files in tree identified by <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag at the top level</p>
+<p>Files in tree identified by <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag at the top level:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0
 </pre></div>
 </div>
-</li>
-<li><p class="first">Files in tree identified by <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag at all levels</p>
+<p>Files in tree identified by <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag at all levels:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0 -r
 </pre></div>
 </div>
-</li>
-<li><p class="first">Files in tree identified by <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag in path <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code> at all levels</p>
+<p>Files in tree identified by <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag in path <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code> at all levels:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0 foo/bar -r
 </pre></div>
 </div>
-</li>
-</ul>
 </div>
 </div>
 </div>
@@ -357,7 +336,7 @@ Equivalent to a directory.
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Mar 16, 2019, 12:49:25 AM.
+      Last updated on Apr 14, 2019, 12:01:06 AM.
 
     </p>
   </div>
