@@ -102,26 +102,26 @@ Wikipedia: `Standard streams <https://en.wikipedia.org/wiki/Standard_streams>`_
 Redirection
 ===========
 
-- stdout to ``command.stdout``::
+stdout to ``command.stdout``::
 
-    $ command > command.stdout
+    $ command >command.stdout
 
-- stderr to ``command.stderr``::
+stderr to ``command.stderr``::
 
-    $ command 2> command.stderr
+    $ command 2>command.stderr
 
-- stdout to stderr::
+stdout to stderr::
 
     $ command 1>&2
 
-- stderr to stdout::
+stderr to stdout::
 
     $ command 2>&1
 
-- stderr and stdout to ``command.out``::
+stderr and stdout to ``command.out``::
 
-    $ command &> command.out
+    $ command &>command.out
 
-- stdout to ``/dev/null`` and stderr to stdout::
+stdout to ``/dev/null`` and stderr to stdout::
 
     $ command 2>&1 >/dev/null
