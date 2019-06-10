@@ -116,3 +116,7 @@ Search by channel, platform, and md5::
 Show detailed information about search results::
 
     $ conda search 'marshmallow' --info
+
+Include additional channel in search results::
+
+    $ conda search -c conda-forge 'marshmallow'
