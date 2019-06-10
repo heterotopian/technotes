@@ -95,8 +95,17 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="python/index.html">Python</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Conda</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#general">General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#repositories">Repositories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Search</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pre-4-4-0">Pre-4.4.0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#post-4-4-0">Post-4.4.0</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="frontend.html">Frontend</a></li>
@@ -170,10 +179,18 @@
             
   <div class="section" id="conda">
 <span id="id1"></span><h1>Conda<a class="headerlink" href="#conda" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="general">
-<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2><a class="reference external" href="https://conda.io/docs/">Documentation</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="https://conda.io/docs/">Documentation</a></li>
+<li>Commands:<ul>
+<li><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/commands/search.html">search</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
 <li>“Build strings have no semantic content” -
 <a class="reference external" href="https://github.com/conda/conda/issues/4956#issuecomment-291847858">Source</a></li>
 </ul>
@@ -197,6 +214,80 @@
 </li>
 </ul>
 </div>
+<div class="section" id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Search<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="pre-4-4-0">
+<h4>Pre-4.4.0<a class="headerlink" href="#pre-4-4-0" title="Permalink to this headline">¶</a></h4>
+<p>Search by name:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda search <span class="s1">&#39;marshmallow&#39;</span>
+</pre></div>
+</div>
+<p>Search by spec:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda search --spec <span class="s1">&#39;marshmallow=2.18.0&#39;</span>
+$ conda search --spec <span class="s1">&#39;marshmallow=2.18.0=py27_0&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="post-4-4-0">
+<h4>Post-4.4.0<a class="headerlink" href="#post-4-4-0" title="Permalink to this headline">¶</a></h4>
+<p>See <strong>enhanced package query language</strong> in <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/release-notes.html?highlight=info#id143">new feature highlights</a> of 4.4.0 release:</p>
+<blockquote>
+<div>Conda has a built-in query language for searching for and matching packages, what we often refer to as MatchSpec. The MatchSpec is what users input on the command line when they specify packages for create, install, update, and remove operations. With this release, MatchSpec (rather than a regex) becomes the default input for conda search.</div></blockquote>
+<p>Search by name:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda search <span class="s1">&#39;marshmallow&#39;</span>
+</pre></div>
+</div>
+<p>Search by name and version:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda search <span class="s1">&#39;marshmallow=2.18.0&#39;</span>
+$ conda search <span class="s1">&#39;marshmallow&gt;2.11&#39;</span>
+$ conda search <span class="s1">&#39;marshmallow&gt;2.11,&lt;2.15&#39;</span>
+$ conda search <span class="s1">&#39;marshmallow&gt;2.11,&lt;2.15|=2.18.0&#39;</span>
+</pre></div>
+</div>
+<p>Search by name and build:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda search <span class="s1">&#39;marshmallow[build=py27_0]&#39;</span>
+</pre></div>
+</div>
+<p>Search by name and platform:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda search <span class="s1">&#39;*/linux-64::marshmallow&#39;</span>
+</pre></div>
+</div>
+<p>Search by name, channel, and platform:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda search <span class="s1">&#39;defaults/linux-64::marshmallow&#39;</span>
+$ conda search <span class="s1">&#39;conda-forge/linux-64::marshmallow&#39;</span>
+</pre></div>
+</div>
+<p>Search by name, channel, platform, and version:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda search <span class="s1">&#39;defaults/linux-64::marshmallow=2.18.0&#39;</span>
+$ conda search <span class="s1">&#39;defaults/linux-64::marshmallow&gt;2.11&#39;</span>
+$ conda search <span class="s1">&#39;defaults/linux-64::marshmallow&gt;2.11,&lt;2.15&#39;</span>
+$ conda search <span class="s1">&#39;defaults/linux-64::marshmallow&gt;2.11,&lt;2.15|=2.18.0&#39;</span>
+</pre></div>
+</div>
+<p>Search by name, channel, platform, version, and build:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda search <span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0]=2.18.0&#39;</span>
+$ conda search <span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0]&gt;2.11&#39;</span>
+$ conda search <span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0]&gt;2.11,&lt;2.15&#39;</span>
+$ conda search <span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0]&gt;2.11,&lt;2.15|=2.18.0&#39;</span>
+</pre></div>
+</div>
+<p>Search by md5:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda search <span class="s1">&#39;*[md5=56a2e82b7205d97210d5162174e6bd5e]&#39;</span>
+</pre></div>
+</div>
+<p>Search by channel, platform, and md5:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda search <span class="s1">&#39;defaults/linux-64::*[md5=56a2e82b7205d97210d5162174e6bd5e]&#39;</span>
+</pre></div>
+</div>
+<p>Show detailed information about search results:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda search <span class="s1">&#39;marshmallow&#39;</span> --info
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -219,7 +310,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Apr 14, 2019, 12:07:54 AM.
+      Last updated on Jun 10, 2019, 3:44:31 AM.
 
     </p>
   </div>
