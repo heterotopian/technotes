@@ -45,6 +45,10 @@ Extensions
 Themes
 ======
 
+- `sphinx-themes.org <https://sphinx-themes.org/>`_
+
+
+
 Read The Docs
 -------------
 
