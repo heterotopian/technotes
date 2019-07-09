@@ -58,13 +58,10 @@ Shortcuts
 
 
 
-Commands
-========
+Command palette
+===============
 
-Editor
-------
-
-- `Log Cursor Scope <https://github.com/atom/atom/pull/4973>`_
+- `log-cursor-scope <https://github.com/atom/atom/pull/4973>`_
 
 
 
@@ -81,33 +78,17 @@ Install packages & themes from ``~/.atom_installed``::
 
 
 
-Packages
-========
-
-toggler
--------
-
-- `Package homepage <https://atom.io/packages/toggler>`_
-
-
-vim-mode-plus
--------------
-
-- `Package homepage <https://atom.io/packages/vim-mode-plus>`_
-- `Commands <https://github.com/t9md/atom-vim-mode-plus/wiki/Commands>`_
-
-sync-settings
--------------
-
-- `Package homepage <https://atom.io/packages/sync-settings>`_
-
-
-
 Resources
 =========
 
 - `AtomThemes.io <http://atomthemes.io/>`_
 - `Atom Packages Directory <http://atom-packages.directory/>`_
-- Discussion
+- Packages:
 
-  - `Ctrl-Tab order <https://github.com/atom/atom/issues/11650>`_
+  - `toggler <https://atom.io/packages/toggler>`_
+  - `vim-mode-plus <https://atom.io/packages/vim-mode-plus>`_
+
+Discussion
+----------
+
+- `Ctrl-Tab order <https://github.com/atom/atom/issues/11650>`_

@@ -96,8 +96,11 @@
 <li class="toctree-l1"><a class="reference internal" href="python/index.html">Python</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Conda</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#repositories">Repositories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#discussion">Discussion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#repositories">Repositories</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id3">Search</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pre-4-4-0">Pre-4.4.0</a></li>
@@ -190,13 +193,15 @@
 </div>
 <div class="section" id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="discussion">
+<h3>Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>“Build strings have no semantic content” -
 <a class="reference external" href="https://github.com/conda/conda/issues/4956#issuecomment-291847858">Source</a></li>
 </ul>
 </div>
 <div class="section" id="repositories">
-<h2>Repositories<a class="headerlink" href="#repositories" title="Permalink to this headline">¶</a></h2>
+<h3>Repositories<a class="headerlink" href="#repositories" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p class="first"><a class="reference external" href="https://anaconda.org/">Anaconda.org</a></p>
 </li>
@@ -204,7 +209,7 @@
 <ul>
 <li><p class="first"><a class="reference external" href="https://github.com/ContinuumIO/anaconda-issues">Issue tracker</a></p>
 </li>
-<li><p class="first">Quoting the <a class="reference external" href="https://repo.continuum.io/pkgs/">repository landing page</a>:</p>
+<li><p class="first">From the <a class="reference external" href="https://repo.continuum.io/pkgs/">repository landing page</a>:</p>
 <blockquote>
 <div><p><strong>What about the ‘anaconda’ channel on anaconda.org at https://anaconda.org/anaconda?</strong></p>
 <p>The Anaconda channel on anaconda.org is an aggregated mirror of the packages in <a class="reference external" href="https://repo.continuum.io/pkgs/main">https://repo.continuum.io/pkgs/main</a>, <a class="reference external" href="https://repo.continuum.io/pkgs/free">https://repo.continuum.io/pkgs/free</a>, and <a class="reference external" href="https://repo.continuum.io/pkgs/pro">https://repo.continuum.io/pkgs/pro</a>. If you are using conda’s ‘defaults’ channel, you do not need the ‘anaconda’ channel.</p>
@@ -213,6 +218,7 @@
 </ul>
 </li>
 </ul>
+</div>
 </div>
 <div class="section" id="commands">
 <h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
@@ -232,9 +238,9 @@ $ conda search --spec <span class="s1">&#39;marshmallow=2.18.0=py27_0&#39;</span
 </div>
 <div class="section" id="post-4-4-0">
 <h4>Post-4.4.0<a class="headerlink" href="#post-4-4-0" title="Permalink to this headline">¶</a></h4>
-<p>See <strong>enhanced package query language</strong> in <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/release-notes.html?highlight=info#id143">new feature highlights</a> of 4.4.0 release:</p>
+<p>See <strong>enhanced package query language</strong> under <strong>New Feature Highlights</strong> in 4.4.0 <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/release-notes.html">release notes</a>:</p>
 <blockquote>
-<div>Conda has a built-in query language for searching for and matching packages, what we often refer to as MatchSpec. The MatchSpec is what users input on the command line when they specify packages for create, install, update, and remove operations. With this release, MatchSpec (rather than a regex) becomes the default input for conda search.</div></blockquote>
+<div>“Conda has a built-in query language for searching for and matching packages, what we often refer to as MatchSpec. The MatchSpec is what users input on the command line when they specify packages for create, install, update, and remove operations. With this release, MatchSpec (rather than a regex) becomes the default input for conda search.”</div></blockquote>
 <p>Search by name:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda search <span class="s1">&#39;marshmallow&#39;</span>
 </pre></div>
@@ -314,7 +320,7 @@ $ conda search <span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Jun 16, 2019, 12:49:16 AM.
+      Last updated on Jul 9, 2019, 2:15:59 AM.
 
     </p>
   </div>
