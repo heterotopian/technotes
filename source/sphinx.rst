@@ -41,21 +41,20 @@ Extensions
 - `sphinx-jinja <https://pypi.org/project/sphinx-jinja/>`_
 
 
+,,,,,
+
 
 Themes
 ======
 
-- `sphinx-themes.org <https://sphinx-themes.org/>`_
+- `Sphinx-Themes.org <https://sphinx-themes.org/>`_
 
+`Read The Docs <http://sphinx-rtd-theme.readthedocs.io/en/latest/>`_
+--------------------------------------------------------------------
 
-
-Read The Docs
--------------
-
-- `Documentation <http://sphinx-rtd-theme.readthedocs.io/en/latest/>`_
 - `Wyrm <http://wyrmsass.org/>`_ -
   SASS framework that RTD theme extends
-- Examples: Read The Docs Sphinx Theme
+- Examples:
 
   - `Structural elements <http://sphinx-rtd-theme.readthedocs.io/en/latest/demo/structure.html>`_
   - `Paragraph level markup <http://sphinx-rtd-theme.readthedocs.io/en/latest/demo/demo.html>`_
@@ -63,34 +62,30 @@ Read The Docs
   - `Python module <http://sphinx-rtd-theme.readthedocs.io/en/latest/demo/api.html>`_
 
 
-Guzzle
-------
+`Guzzle <https://github.com/guzzle/guzzle_sphinx_theme>`_
+---------------------------------------------------------
 
-- `Project homepage <https://github.com/guzzle/guzzle_sphinx_theme>`_
 - Example:
   `Guzzle <http://docs.guzzlephp.org/en/stable/>`_
 
 
-Typlog
-------
+`Typlog <https://github.com/typlog/sphinx-typlog-theme>`_
+---------------------------------------------------------
 
-- `Project homepage <https://github.com/typlog/sphinx-typlog-theme>`_
 - Examples:
   `Typlog theme <https://sphinx-typlog-theme.readthedocs.io/en/latest/>`_,
   `Authlib <https://docs.authlib.org/en/latest/>`_
 
 
-Klink
------
+`Klink <http://pmorissette.github.io/klink/index.html>`_
+--------------------------------------------------------
 
-- `Documentation <http://pmorissette.github.io/klink/index.html>`_
 - Example:
   `Klink theme <http://pmorissette.github.io/klink/examples.html>`_
 
 
-TYPO3
------
+`TYPO3 <https://github.com/TYPO3-Documentation/t3SphinxThemeRtd>`_
+------------------------------------------------------------------
 
-- `Documentation <https://github.com/TYPO3-Documentation/t3SphinxThemeRtd>`_
 - Example:
   `t3SphinxThemeRtd Demo Docs <https://docs.typo3.org/typo3cms/drafts/github/TYPO3-Documentation/t3SphinxThemeRtdDemoDocs/>`_

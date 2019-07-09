@@ -19,20 +19,21 @@ Conda
 Resources
 =========
 
+Discussion
+----------
+
 - "Build strings have no semantic content" -
   `Source <https://github.com/conda/conda/issues/4956#issuecomment-291847858>`_
 
 
-
-
 Repositories
-============
+------------
 
 - `Anaconda.org <https://anaconda.org/>`_
 - `Anaconda repositories <https://repo.continuum.io/pkgs/>`_
 
   - `Issue tracker <https://github.com/ContinuumIO/anaconda-issues>`_
-  - Quoting the `repository landing page <https://repo.continuum.io/pkgs/>`_:
+  - From the `repository landing page <https://repo.continuum.io/pkgs/>`_:
 
       **What about the 'anaconda' channel on anaconda.org at https://anaconda.org/anaconda?**
 
@@ -63,9 +64,9 @@ Search by spec::
 Post-4.4.0
 ~~~~~~~~~~
 
-See **enhanced package query language** in `new feature highlights <https://docs.conda.io/projects/conda/en/latest/release-notes.html?highlight=info#id143>`_ of 4.4.0 release:
+See **enhanced package query language** under **New Feature Highlights** in 4.4.0 `release notes <https://docs.conda.io/projects/conda/en/latest/release-notes.html>`_:
 
-    Conda has a built-in query language for searching for and matching packages, what we often refer to as MatchSpec. The MatchSpec is what users input on the command line when they specify packages for create, install, update, and remove operations. With this release, MatchSpec (rather than a regex) becomes the default input for conda search.
+    "Conda has a built-in query language for searching for and matching packages, what we often refer to as MatchSpec. The MatchSpec is what users input on the command line when they specify packages for create, install, update, and remove operations. With this release, MatchSpec (rather than a regex) becomes the default input for conda search."
 
 Search by name::
 
