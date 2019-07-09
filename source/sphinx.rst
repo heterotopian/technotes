@@ -41,8 +41,6 @@ Extensions
 - `sphinx-jinja <https://pypi.org/project/sphinx-jinja/>`_
 
 
-,,,,,
-
 
 Themes
 ======
