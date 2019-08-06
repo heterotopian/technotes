@@ -15,8 +15,6 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
-  
-  
 
   
 
@@ -26,14 +24,19 @@
 
   
 
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
 <link rel="stylesheet" href="../_static/css/theme-custom.css" type="text/css" />
 
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Docker" href="../docker.html" />
-    <link rel="prev" title="Linux" href="../linux/index.html" />
+    <link rel="top" title="Technotes Documentation" href="../index.html"/>
+        <link rel="next" title="Docker" href="../docker.html"/>
+        <link rel="prev" title="Linux" href="../linux/index.html"/>
  
 
   
@@ -41,9 +44,8 @@
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -78,14 +80,11 @@
 
             
             
-              
-            
-            
-              <p class="caption"><span class="caption-text">Essentials</span></p>
+                <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../bash.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">systemd</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">systemd</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id2">Manpages</a></li>
 </ul>
@@ -151,54 +150,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Technotes</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Technotes</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-      <li>systemd</li>
-    
-    
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>systemd</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/systemd/index.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/systemd/index.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -229,7 +208,7 @@ Bidirectionally proxy local sockets to another (possibly remote) socket.</li>
 <span id="systemd-command"></span><h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id3">
 <h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-cgls.html">systemd-cgls</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemd-cgls
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> systemd-cgls
 <span class="go">Control group /:</span>
 <span class="go">-.slice</span>
 <span class="go">├─init.scope</span>
@@ -245,11 +224,11 @@ Bidirectionally proxy local sockets to another (possibly remote) socket.</li>
 </div>
 <div class="section" id="id4">
 <h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-run.html">systemd-run</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemd-run <span class="nb">echo</span> yes
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> systemd-run <span class="nb">echo</span> yes
 <span class="go">Running as unit run-rd639c9dc8b974744bc1b88ff8319cb47.service.</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemd-run --scope <span class="nb">echo</span> yes
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> systemd-run --scope <span class="nb">echo</span> yes
 <span class="go">Running scope as unit run-r56133a46ffdf44a0b416864461fc7ee0.scope.</span>
 <span class="go">yes</span>
 </pre></div>
@@ -257,7 +236,7 @@ Bidirectionally proxy local sockets to another (possibly remote) socket.</li>
 </div>
 <div class="section" id="id5">
 <h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-cgtop.html">systemd-cgtop</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemd-cgtop
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> systemd-cgtop
 <span class="go">Control Group                                 Tasks   %CPU   Memory  Input/s Output/s</span>
 <span class="go">/                                                 -  266.3   478.0G        -        -</span>
 <span class="go">/user.slice                                    1874  252.8   471.0G        -        -</span>
@@ -280,7 +259,7 @@ Bidirectionally proxy local sockets to another (possibly remote) socket.</li>
 <div class="section" id="id7">
 <h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/journalctl.html">journalctl</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <p>Supports tab completion on field names:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> journalctl _G&lt;TAB&gt;
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> journalctl _G&lt;TAB&gt;
 </pre></div>
 </div>
 </div>
@@ -299,23 +278,23 @@ Bidirectionally proxy local sockets to another (possibly remote) socket.</li>
 <div class="section" id="id12">
 <h3><a class="reference external" href="http://0pointer.de/public/systemd-man/systemctl.html">systemctl</a><a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <p>List active units:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-units
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> systemctl list-units
 </pre></div>
 </div>
 <p>List loaded units:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-units -a
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> systemctl list-units -a
 </pre></div>
 </div>
 <p>List active service units:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-units -t service
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> systemctl list-units -t service
 </pre></div>
 </div>
 <p>List unit files:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-unit-files
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> systemctl list-unit-files
 </pre></div>
 </div>
 <p>Check if unit is running:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl is-active unit
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> systemctl is-active unit
 </pre></div>
 </div>
 </div>
@@ -324,16 +303,15 @@ Bidirectionally proxy local sockets to another (possibly remote) socket.</li>
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../docker.html" class="btn btn-neutral float-right" title="Docker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../docker.html" class="btn btn-neutral float-right" title="Docker" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../linux/index.html" class="btn btn-neutral" title="Linux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../linux/index.html" class="btn btn-neutral" title="Linux" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -342,12 +320,12 @@ Bidirectionally proxy local sockets to another (possibly remote) socket.</li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Chris
-      Last updated on Aug 6, 2019, 6:54:15 AM.
+        &copy; Copyright 2017, Chris.
+      Last updated on Tue Aug  6 11:58:41 2019.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -362,23 +340,35 @@ Bidirectionally proxy local sockets to another (possibly remote) socket.</li>
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
 
+  
+  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
+          SphinxRtdTheme.StickyNav.enable();
       });
-  </script> 
+  </script>
+   
 
 </body>
 </html>

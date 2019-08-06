@@ -15,8 +15,6 @@
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   
-  
-  
 
   
 
@@ -26,13 +24,18 @@
 
   
 
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
 <link rel="stylesheet" href="_static/css/theme-custom.css" type="text/css" />
 
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Sphinx" href="sphinx.html" />
+    <link rel="top" title="Technotes Documentation" href="index.html"/>
+        <link rel="prev" title="Sphinx" href="sphinx.html"/>
  
 
   
@@ -40,9 +43,8 @@
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -77,10 +79,7 @@
 
             
             
-              
-            
-            
-              <p class="caption"><span class="caption-text">Essentials</span></p>
+                <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="bash.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux</a></li>
@@ -107,7 +106,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Version control</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Git</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Git</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#cheat-sheets">Cheat sheets</a></li>
@@ -145,54 +144,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Technotes</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Technotes</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Git</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Git</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/git.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/git.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -251,11 +230,11 @@ Generate fake documentation</li>
 <h2>Terms<a class="headerlink" href="#terms" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt>&#64;</dt>
-<dd>Shorthand for <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>
+<dd>Shorthand for <code class="docutils literal"><span class="pre">HEAD</span></code>
 (<a class="reference external" href="https://github.com/git/git/blob/v1.8.5/Documentation/RelNotes/1.8.5.txt#L100-101">Release notes</a>)</dd>
 <dt>commit-ish</dt>
 <dd>Any object that leads to a commit, e.g.:
-a commit, a tag pointing to a commit, a tag pointing to a tag … pointing to a commit.
+a commit, a tag pointing to a commit, a tag pointing to a tag ... pointing to a commit.
 (<a class="reference external" href="https://git-scm.com/docs/gitglossary#gitglossary-aiddefcommit-ishacommit-ishalsocommittish">Source</a>)</dd>
 <dt>tree-ish</dt>
 <dd>Any object that contains a list of file names and modes along with refs to the associated blob and/or tree objects.
@@ -267,69 +246,69 @@ Equivalent to a directory.
 <h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="commits">
 <h3>Commits<a class="headerlink" href="#commits" title="Permalink to this headline">¶</a></h3>
-<p>Commits between <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git log @^..@
+<p>Commits between <code class="docutils literal"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal"><span class="pre">HEAD</span></code>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git log @^..@
 </pre></div>
 </div>
-<p>Commits between <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git log v1.0..@
+<p>Commits between <code class="docutils literal"><span class="pre">HEAD</span></code> and <code class="docutils literal"><span class="pre">v1.0</span></code> tag:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git log v1.0..@
 </pre></div>
 </div>
-<p>Diff <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git diff HEAD^ HEAD
+<p>Diff <code class="docutils literal"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal"><span class="pre">HEAD</span></code>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git diff HEAD^ HEAD
 <span class="gp">$</span> git diff HEAD^..HEAD
 <span class="gp">$</span> git diff @^ @
 <span class="gp">$</span> git diff @^..@
 <span class="gp">$</span> git show
 </pre></div>
 </div>
-<p>Diff <code class="docutils literal notranslate"><span class="pre">master</span></code> and current branch:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git log master..HEAD -p
+<p>Diff <code class="docutils literal"><span class="pre">master</span></code> and current branch:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git log master..HEAD -p
 </pre></div>
 </div>
-<p>Diff <code class="docutils literal notranslate"><span class="pre">file.rst</span></code> from <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git diff @:file.rst @^1:file.rst
+<p>Diff <code class="docutils literal"><span class="pre">file.rst</span></code> from <code class="docutils literal"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal"><span class="pre">HEAD</span></code>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git diff @:file.rst @^1:file.rst
 </pre></div>
 </div>
 </div>
 <div class="section" id="tags">
 <h3>Tags<a class="headerlink" href="#tags" title="Permalink to this headline">¶</a></h3>
 <p>Delete local tag:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git tag -d TAGNAME
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git tag -d TAGNAME
 </pre></div>
 </div>
-<p>Push deleted tag to <code class="docutils literal notranslate"><span class="pre">origin</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git push origin :refs/tags/TAGNAME
+<p>Push deleted tag to <code class="docutils literal"><span class="pre">origin</span></code>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git push origin :refs/tags/TAGNAME
 </pre></div>
 </div>
 </div>
 <div class="section" id="working-tree">
 <h3>Working tree<a class="headerlink" href="#working-tree" title="Permalink to this headline">¶</a></h3>
 <p>Cached files:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git ls-files
 </pre></div>
 </div>
-<p>Cached files under <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files foo/bar
+<p>Cached files under <code class="docutils literal"><span class="pre">foo/bar</span></code>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git ls-files foo/bar
 </pre></div>
 </div>
 <p>Untracked files:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files -o
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git ls-files -o
 </pre></div>
 </div>
 </div>
 <div class="section" id="indexed-trees">
 <h3>Indexed trees<a class="headerlink" href="#indexed-trees" title="Permalink to this headline">¶</a></h3>
-<p>Files in tree identified by <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag at the top level:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0
+<p>Files in tree identified by <code class="docutils literal"><span class="pre">v1.0</span></code> tag at the top level:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git ls-tree --name-only tags/v1.0
 </pre></div>
 </div>
-<p>Files in tree identified by <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag at all levels:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0 -r
+<p>Files in tree identified by <code class="docutils literal"><span class="pre">v1.0</span></code> tag at all levels:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git ls-tree --name-only tags/v1.0 -r
 </pre></div>
 </div>
-<p>Files in tree identified by <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> tag in path <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code> at all levels:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0 foo/bar -r
+<p>Files in tree identified by <code class="docutils literal"><span class="pre">v1.0</span></code> tag in path <code class="docutils literal"><span class="pre">foo/bar</span></code> at all levels:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> git ls-tree --name-only tags/v1.0 foo/bar -r
 </pre></div>
 </div>
 </div>
@@ -338,14 +317,13 @@ Equivalent to a directory.
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="sphinx.html" class="btn btn-neutral" title="Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="sphinx.html" class="btn btn-neutral" title="Sphinx" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -354,12 +332,12 @@ Equivalent to a directory.
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Chris
-      Last updated on Aug 6, 2019, 6:54:15 AM.
+        &copy; Copyright 2017, Chris.
+      Last updated on Tue Aug  6 11:58:41 2019.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -374,23 +352,35 @@ Equivalent to a directory.
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
-  <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
 
+  
+  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
+          SphinxRtdTheme.StickyNav.enable();
       });
-  </script> 
+  </script>
+   
 
 </body>
 </html>
