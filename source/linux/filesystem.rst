@@ -1,5 +1,5 @@
 
-.. highlight:: bash
+.. highlight:: console
 
 Filesystems
 ===========

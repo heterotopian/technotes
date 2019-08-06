@@ -4,7 +4,7 @@
 Conda
 =====
 
-.. highlight:: bash
+.. highlight:: console
 
 `Documentation <https://conda.io/docs/>`_
 =========================================

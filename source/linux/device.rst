@@ -1,5 +1,5 @@
 
-.. highlight:: bash
+.. highlight:: console
 
 Devices
 =======
@@ -18,7 +18,7 @@ blkid
     /dev/mapper/mint--vg-swap_1: UUID="18163da4-e2e8-42d2-9a26-b32eee94756b" TYPE="swap"
     /dev/sdf1: LABEL="USB Stick" UUID="6592DFBE2883E179" TYPE="ntfs"
 
-    
+
 lsblk
 -----
 
