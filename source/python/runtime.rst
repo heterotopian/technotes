@@ -29,7 +29,7 @@ Runtime
           $ python -c "import sys; print sys.stdout.encoding" | cat
           None
 
-      Set :envvar:`PYTHONIOENCODING` to override the default encoding for stdin, stdout, and stderr.
+      Set :envvar:`!PYTHONIOENCODING` to override the default encoding for stdin, stdout, and stderr.
 
       ::
 
