@@ -13,8 +13,12 @@ Community
 Trends
 ------
 
-- `Python Developers Survey 2017 <https://www.jetbrains.com/research/python-developers-survey-2017/>`_ -
-  Joint effort of the Python Software Foundation and JetBrains
+- Python Developers Survey:
+  `2017 <https://www.jetbrains.com/research/python-developers-survey-2017/>`_,
+  `2018 <https://www.jetbrains.com/research/python-developers-survey-2018/>`_ -
+  Comprehensive annual survey about development trends.  
+  Joint effort of the Python Software Foundation and JetBrains.
+
 - StackOverflow:
   `The Incredible Growth of Python <https://stackoverflow.blog/2017/09/06/incredible-growth-python/>`_ and
   `Why is Python Growing So Quickly? <https://stackoverflow.blog/2017/09/14/python-growing-quickly/>`_
