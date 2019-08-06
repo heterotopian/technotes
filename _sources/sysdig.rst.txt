@@ -4,7 +4,7 @@
 sysdig
 ======
 
-.. highlight:: bash
+.. highlight:: console
 
 General
 =======

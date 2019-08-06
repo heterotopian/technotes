@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
 
@@ -24,22 +26,14 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
 <link rel="stylesheet" href="../_static/css/theme-custom.css" type="text/css" />
 
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Technotes Documentation" href="../index.html"/>
-        <link rel="next" title="Docker" href="../docker.html"/>
-        <link rel="prev" title="Linux" href="../linux/index.html"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Docker" href="../docker.html" />
+    <link rel="prev" title="Linux" href="../linux/index.html" />
  
 
   
@@ -47,8 +41,9 @@
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,7 +78,10 @@
 
             
             
-                <p class="caption"><span class="caption-text">Essentials</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../bash.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
@@ -153,34 +151,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">Technotes</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Technotes</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>systemd</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>systemd</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/systemd/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -211,45 +229,45 @@ Bidirectionally proxy local sockets to another (possibly remote) socket.</li>
 <span id="systemd-command"></span><h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id3">
 <h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-cgls.html">systemd-cgls</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemd-cgls
-Control group /:
--.slice
-├─init.scope
-│ └─1 /sbin/init
-├─system.slice
-│ ├─mdadm.service
-│ │ └─2133 /sbin/mdadm --monitor --pid-file /run/mdadm/monitor.pid --daemonis...
-│ ├─dbus.service
-│ │ └─2066 /usr/bin/dbus-daemon --system --address<span class="o">=</span>systemd: --nofork --nopidf...
-│ ├─rpc-statd.service
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemd-cgls
+<span class="go">Control group /:</span>
+<span class="go">-.slice</span>
+<span class="go">├─init.scope</span>
+<span class="go">│ └─1 /sbin/init</span>
+<span class="go">├─system.slice</span>
+<span class="go">│ ├─mdadm.service</span>
+<span class="go">│ │ └─2133 /sbin/mdadm --monitor --pid-file /run/mdadm/monitor.pid --daemonis...</span>
+<span class="go">│ ├─dbus.service</span>
+<span class="go">│ │ └─2066 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidf...</span>
+<span class="go">│ ├─rpc-statd.service</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id4">
 <h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-run.html">systemd-run</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemd-run <span class="nb">echo</span> yes
-Running as unit run-rd639c9dc8b974744bc1b88ff8319cb47.service.
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemd-run <span class="nb">echo</span> yes
+<span class="go">Running as unit run-rd639c9dc8b974744bc1b88ff8319cb47.service.</span>
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemd-run --scope <span class="nb">echo</span> yes
-Running scope as unit run-r56133a46ffdf44a0b416864461fc7ee0.scope.
-yes
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemd-run --scope <span class="nb">echo</span> yes
+<span class="go">Running scope as unit run-r56133a46ffdf44a0b416864461fc7ee0.scope.</span>
+<span class="go">yes</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id5">
 <h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-cgtop.html">systemd-cgtop</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemd-cgtop
-Control Group                                 Tasks   %CPU   Memory  Input/s Output/s
-/                                                 -  <span class="m">266</span>.3   <span class="m">478</span>.0G        -        -
-/user.slice                                    <span class="m">1874</span>  <span class="m">252</span>.8   <span class="m">471</span>.0G        -        -
-/user.slice/user-641738498.slice                <span class="m">480</span>  <span class="m">146</span>.8     <span class="m">8</span>.7G        -        -
-/user.slice/user-641740830.slice                <span class="m">205</span>   <span class="m">96</span>.3   <span class="m">373</span>.5G        -        -
-/system.slice                                   <span class="m">241</span>   <span class="m">12</span>.6     <span class="m">6</span>.8G        -        -
-/system.slice/netdata.service                    <span class="m">20</span>   <span class="m">10</span>.1   <span class="m">135</span>.7M        -        -
-/user.slice/user-641754182.slice                <span class="m">122</span>    <span class="m">7</span>.4     <span class="m">1</span>.0G        -        -
-/system.slice/newrelic-infra.service             <span class="m">14</span>    <span class="m">2</span>.3    <span class="m">70</span>.4M        -        -
-/user.slice/user-641748370.slice                <span class="m">250</span>    <span class="m">0</span>.6     <span class="m">7</span>.9G        -        -
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemd-cgtop
+<span class="go">Control Group                                 Tasks   %CPU   Memory  Input/s Output/s</span>
+<span class="go">/                                                 -  266.3   478.0G        -        -</span>
+<span class="go">/user.slice                                    1874  252.8   471.0G        -        -</span>
+<span class="go">/user.slice/user-641738498.slice                480  146.8     8.7G        -        -</span>
+<span class="go">/user.slice/user-641740830.slice                205   96.3   373.5G        -        -</span>
+<span class="go">/system.slice                                   241   12.6     6.8G        -        -</span>
+<span class="go">/system.slice/netdata.service                    20   10.1   135.7M        -        -</span>
+<span class="go">/user.slice/user-641754182.slice                122    7.4     1.0G        -        -</span>
+<span class="go">/system.slice/newrelic-infra.service             14    2.3    70.4M        -        -</span>
+<span class="go">/user.slice/user-641748370.slice                250    0.6     7.9G        -        -</span>
 </pre></div>
 </div>
 </div>
@@ -262,7 +280,7 @@ Control Group                                 Tasks   %CPU   Memory  Input/s Out
 <div class="section" id="id7">
 <h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/journalctl.html">journalctl</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <p>Supports tab completion on field names:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ journalctl _G&lt;TAB&gt;
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> journalctl _G&lt;TAB&gt;
 </pre></div>
 </div>
 </div>
@@ -281,23 +299,23 @@ Control Group                                 Tasks   %CPU   Memory  Input/s Out
 <div class="section" id="id12">
 <h3><a class="reference external" href="http://0pointer.de/public/systemd-man/systemctl.html">systemctl</a><a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <p>List active units:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemctl list-units
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-units
 </pre></div>
 </div>
 <p>List loaded units:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemctl list-units -a
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-units -a
 </pre></div>
 </div>
 <p>List active service units:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemctl list-units -t service
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-units -t service
 </pre></div>
 </div>
 <p>List unit files:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemctl list-unit-files
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-unit-files
 </pre></div>
 </div>
 <p>Check if unit is running:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ systemctl is-active unit
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl is-active unit
 </pre></div>
 </div>
 </div>
@@ -306,15 +324,16 @@ Control Group                                 Tasks   %CPU   Memory  Input/s Out
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../docker.html" class="btn btn-neutral float-right" title="Docker" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../docker.html" class="btn btn-neutral float-right" title="Docker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../linux/index.html" class="btn btn-neutral" title="Linux" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../linux/index.html" class="btn btn-neutral" title="Linux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -323,12 +342,12 @@ Control Group                                 Tasks   %CPU   Memory  Input/s Out
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Chris.
-      Last updated on Aug 6, 2019, 4:29:17 AM.
+        &copy; Copyright 2017, Chris
+      Last updated on Aug 6, 2019, 5:22:44 AM.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -343,34 +362,23 @@ Control Group                                 Tasks   %CPU   Memory  Input/s Out
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

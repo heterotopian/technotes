@@ -4,7 +4,7 @@
 systemd
 =======
 
-.. highlight:: bash
+.. highlight:: console
 
 .. include:: doc.rst
 
