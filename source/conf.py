@@ -76,7 +76,21 @@ release = '1'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = []
+exclude_patterns = [
+    'python/doc.rst',
+    'python/pep.rst',
+    'python/runtime.rst',
+    'python/community.rst',
+    'python/stdlib.rst',
+    'python/thirdparty.rst',
+    'linux/cgroup.rst',
+    'linux/device.rst',
+    'linux/filesystem.rst',
+    'linux/nfs.rst',
+    'systemd/doc.rst',
+    'systemd/command.rst',
+    'systemd/controller.rst'
+]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
