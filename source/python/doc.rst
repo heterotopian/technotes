@@ -21,9 +21,6 @@ Describes the syntax and core semantics of the language.
   - :ref:`python:newstyle`
   - :ref:`python:specialnames`
 
-    - :ref:`Descriptors <python:descriptors>`
-      (See also: `Descriptor HowTo Guide <https://docs.python.org/2.7/howto/descriptor.html>`_)
-
 - :ref:`python:execmodel`
 
 
@@ -66,3 +63,11 @@ Guide to the Python Distribution Utilities (distutils) from a developer point of
 
 The comprehensive resource for contributing to CPython.
 Maintained by the CPython core developers.
+
+
+`Python HOWTOs <https://docs.python.org/2.7/howto/index.html>`_
+---------------------------------------------------------------
+
+Documents that cover a single, specific topic, and attempt to cover it fairly completely.
+
+- `Descriptors <https://docs.python.org/2.7/howto/descriptor.html>`_

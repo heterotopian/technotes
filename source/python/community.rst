@@ -10,6 +10,22 @@ Community
   - `A 20-minute introduction to DB-API2 <https://cewing.github.io/training.codefellows/lectures/day21/intro_to_dbapi2.html>`_
 
 
+Language
+--------
+
+- Metaclasses
+
+  - Metaclass Programming In Python: parts
+    `one <http://gnosis.cx/publish/programming/metaclass_1.html>`_,
+    `two <http://gnosis.cx/publish/programming/metaclass_2.html>`_,
+    `three <http://gnosis.cx/publish/programming/metaclass_3.html>`_ -
+    Primer focused on the fundamentals of metaclasses
+  - Methods:
+
+    - `__call__ <https://stackoverflow.com/questions/100003/what-are-metaclasses-in-python/40017019#40017019>`_
+    - `__init__ versus __new__ <https://python-3-patterns-idioms-test.readthedocs.io/en/latest/Metaprogramming.html#using-init-vs-new-in-metaclasses>`_
+
+
 Trends
 ------
 
@@ -64,20 +80,6 @@ Python 3
   `How do I port to Python 3? <https://eev.ee/blog/2016/07/31/python-faq-how-do-i-port-to-python-3/>`_
 
 
-Metaclasses
------------
-
-- Metaclass Programming In Python: parts
-  `one <http://gnosis.cx/publish/programming/metaclass_1.html>`_,
-  `two <http://gnosis.cx/publish/programming/metaclass_2.html>`_, and
-  `three <http://gnosis.cx/publish/programming/metaclass_3.html>`_ -
-  Thorough primer focused on the fundamentals
-- Methods explained in depth:
-
-    - `__call__ <https://stackoverflow.com/questions/100003/what-are-metaclasses-in-python/40017019#40017019>`_
-    - `__init__ versus __new__ <https://python-3-patterns-idioms-test.readthedocs.io/en/latest/Metaprogramming.html#using-init-vs-new-in-metaclasses>`_
-
-
 Asynchronous I/O
 ----------------
 
@@ -90,25 +92,25 @@ Asynchronous I/O
   Network protocol implementations that operate directly on text
 
 
-Reflection
-----------
-
-- `Green Tree Snakes <http://greentreesnakes.readthedocs.io/en/latest/>`_ -
-  A field guide to Abstract Syntax Trees in Python
-
-
 Quality
 -------
 
-- `Python linters and code analysis tools <https://github.com/vintasoftware/python-linters-and-code-analysis>`_
+- `Python linters and code analysis tools <https://github.com/vintasoftware/python-linters-and-code-analysis>`_ -
+  Curated list
 
 
 Scientific Computing
 --------------------
 
 - `Scipy Lecture Notes <http://www.scipy-lectures.org/>`_ -
-  Tutorials on the scientific Python ecosystem.
-  A quick introduction to central tools and techniques.
+  Tutorials on the scientific Python ecosystem
+
+
+Web
+---
+
+- `Internet Programming with Python <http://cewing.github.io/training.python_web/html/index.html>`_ -
+  Certificate course offered by University of Washington
 
 
 Infrastructure
@@ -119,6 +121,13 @@ Infrastructure
   - `MyBinder <https://mybinder.readthedocs.io/en/latest/>`_
 
 
+Reflection
+----------
+
+- `Green Tree Snakes <http://greentreesnakes.readthedocs.io/en/latest/>`_ -
+  A field guide to Abstract Syntax Trees in Python
+
+
 Docker
 ------
 
@@ -127,10 +136,3 @@ Docker
 
   - `Installing a custom Python version into a Docker image <http://blog.dscpl.com.au/2015/06/installing-custom-python-version-into.html>`_
   - `Python virtual environments and Docker <http://blog.dscpl.com.au/2016/01/python-virtual-environments-and-docker.html>`_
-
-  
-Web
----
-
-- `Internet Programming with Python <http://cewing.github.io/training.python_web/html/index.html>`_ -
-  Certificate course offered by University of Washington
