@@ -21,6 +21,9 @@ Describes the syntax and core semantics of the language.
   - :ref:`python:newstyle`
   - :ref:`python:specialnames`
 
+    - :ref:`Descriptors <python:descriptors>`
+      (See also: `Descriptor HowTo Guide <https://docs.python.org/2.7/howto/descriptor.html>`_)
+
 - :ref:`python:execmodel`
 
 

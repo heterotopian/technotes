@@ -16,7 +16,7 @@ Trends
 - Python Developers Survey:
   `2017 <https://www.jetbrains.com/research/python-developers-survey-2017/>`_,
   `2018 <https://www.jetbrains.com/research/python-developers-survey-2018/>`_ -
-  Comprehensive annual survey about development trends.  
+  Comprehensive annual survey about development trends.
   Joint effort of the Python Software Foundation and JetBrains.
 
 - StackOverflow:
@@ -64,7 +64,21 @@ Python 3
   `How do I port to Python 3? <https://eev.ee/blog/2016/07/31/python-faq-how-do-i-port-to-python-3/>`_
 
 
-Scientific computing
+Metaclasses
+-----------
+
+- Metaclass Programming In Python: parts
+  `one <http://gnosis.cx/publish/programming/metaclass_1.html>`_,
+  `two <http://gnosis.cx/publish/programming/metaclass_2.html>`_, and
+  `three <http://gnosis.cx/publish/programming/metaclass_3.html>`_ -
+  Thorough primer focused on the fundamentals
+- Methods explained in depth:
+
+    - `__call__ <https://stackoverflow.com/questions/100003/what-are-metaclasses-in-python/40017019#40017019>`_
+    - `__init__ versus __new__ <https://python-3-patterns-idioms-test.readthedocs.io/en/latest/Metaprogramming.html#using-init-vs-new-in-metaclasses>`_
+
+
+Scientific Computing
 --------------------
 
 - `Scipy Lecture Notes <http://www.scipy-lectures.org/>`_ -
@@ -84,11 +98,10 @@ Asynchronous I/O
   Network protocol implementations that operate directly on text
 
 
-Web
----
+Quality
+-------
 
-- `Internet Programming with Python <http://cewing.github.io/training.python_web/html/index.html>`_ -
-  Certificate course offered by University of Washington
+- `Python linters and code analysis tools <https://github.com/vintasoftware/python-linters-and-code-analysis>`_
 
 
 Reflection
@@ -96,6 +109,13 @@ Reflection
 
 - `Green Tree Snakes <http://greentreesnakes.readthedocs.io/en/latest/>`_ -
   A field guide to Abstract Syntax Trees in Python
+
+
+Web
+---
+
+- `Internet Programming with Python <http://cewing.github.io/training.python_web/html/index.html>`_ -
+  Certificate course offered by University of Washington
 
 
 Docker
