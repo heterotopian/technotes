@@ -9,6 +9,12 @@ Third Party
 - `Documentation <http://codetransformer.readthedocs.io/en/stable/>`_
 
 
+:py:mod:`connexion`
+-------------------
+
+- `Documentation <https://connexion.readthedocs.io/en/latest/>`_
+
+
 :py:mod:`distlib`
 -----------------
 

@@ -16,8 +16,8 @@ Trends
 - Python Developers Survey:
   `2017 <https://www.jetbrains.com/research/python-developers-survey-2017/>`_,
   `2018 <https://www.jetbrains.com/research/python-developers-survey-2018/>`_ -
-  Comprehensive annual survey about development trends.
-  Joint effort of the Python Software Foundation and JetBrains.
+  Comprehensive annual survey.
+  A joint effort of JetBrains and the Python Software Foundation.
 
 - StackOverflow:
   `The Incredible Growth of Python <https://stackoverflow.blog/2017/09/06/incredible-growth-python/>`_ and
@@ -78,14 +78,6 @@ Metaclasses
     - `__init__ versus __new__ <https://python-3-patterns-idioms-test.readthedocs.io/en/latest/Metaprogramming.html#using-init-vs-new-in-metaclasses>`_
 
 
-Scientific Computing
---------------------
-
-- `Scipy Lecture Notes <http://www.scipy-lectures.org/>`_ -
-  Tutorials on the scientific Python ecosystem.
-  A quick introduction to central tools and techniques.
-
-
 Asynchronous I/O
 ----------------
 
@@ -98,12 +90,6 @@ Asynchronous I/O
   Network protocol implementations that operate directly on text
 
 
-Quality
--------
-
-- `Python linters and code analysis tools <https://github.com/vintasoftware/python-linters-and-code-analysis>`_
-
-
 Reflection
 ----------
 
@@ -111,11 +97,26 @@ Reflection
   A field guide to Abstract Syntax Trees in Python
 
 
-Web
----
+Quality
+-------
 
-- `Internet Programming with Python <http://cewing.github.io/training.python_web/html/index.html>`_ -
-  Certificate course offered by University of Washington
+- `Python linters and code analysis tools <https://github.com/vintasoftware/python-linters-and-code-analysis>`_
+
+
+Scientific Computing
+--------------------
+
+- `Scipy Lecture Notes <http://www.scipy-lectures.org/>`_ -
+  Tutorials on the scientific Python ecosystem.
+  A quick introduction to central tools and techniques.
+
+
+Infrastructure
+--------------
+
+- `BinderHub <https://binderhub.readthedocs.io/en/latest/>`_
+
+  - `MyBinder <https://mybinder.readthedocs.io/en/latest/>`_
 
 
 Docker
@@ -126,3 +127,10 @@ Docker
 
   - `Installing a custom Python version into a Docker image <http://blog.dscpl.com.au/2015/06/installing-custom-python-version-into.html>`_
   - `Python virtual environments and Docker <http://blog.dscpl.com.au/2016/01/python-virtual-environments-and-docker.html>`_
+
+  
+Web
+---
+
+- `Internet Programming with Python <http://cewing.github.io/training.python_web/html/index.html>`_ -
+  Certificate course offered by University of Washington

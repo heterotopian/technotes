@@ -100,3 +100,12 @@ devguide: !!python/tuple
 mock: !!python/tuple
   - "https://mock.readthedocs.io/en/latest/"
   - null
+binderhub: !!python/tuple
+  - "https://binderhub.readthedocs.io/en/latest/"
+  - null
+mybinder: !!python/tuple
+  - "https://mybinder.readthedocs.io/en/latest/"
+  - null
+connexion: !!python/tuple
+  - "https://connexion.readthedocs.io/en/latest/"
+  - null
