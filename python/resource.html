@@ -115,10 +115,12 @@
 <li class="toctree-l4"><a class="reference internal" href="#trends">Trends</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#packaging">Packaging</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#python-3">Python 3</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#scientific-computing">Scientific computing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#metaclasses">Metaclasses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scientific-computing">Scientific Computing</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#asynchronous-i-o">Asynchronous I/O</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#web">Web</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quality">Quality</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#reflection">Reflection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#web">Web</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#docker">Docker</a></li>
 </ul>
 </li>
@@ -235,7 +237,11 @@
 <li><a class="reference external" href="https://docs.python.org/2/reference/datamodel.html#datamodel" title="(in Python v2.7)"><span>Data model</span></a><ul>
 <li><a class="reference external" href="https://docs.python.org/2/reference/datamodel.html#types" title="(in Python v2.7)"><span>The standard type hierarchy</span></a></li>
 <li><a class="reference external" href="https://docs.python.org/2/reference/datamodel.html#newstyle" title="(in Python v2.7)"><span>New-style and classic classes</span></a></li>
-<li><a class="reference external" href="https://docs.python.org/2/reference/datamodel.html#specialnames" title="(in Python v2.7)"><span>Special method names</span></a></li>
+<li><a class="reference external" href="https://docs.python.org/2/reference/datamodel.html#specialnames" title="(in Python v2.7)"><span>Special method names</span></a><ul>
+<li><a class="reference external" href="https://docs.python.org/2/reference/datamodel.html#descriptors" title="(in Python v2.7)"><span class="xref std std-ref">Descriptors</span></a>
+(See also: <a class="reference external" href="https://docs.python.org/2.7/howto/descriptor.html">Descriptor HowTo Guide</a>)</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference external" href="https://docs.python.org/2/reference/executionmodel.html#execmodel" title="(in Python v2.7)"><span>Execution model</span></a></li>
@@ -393,8 +399,27 @@ Compehensive FAQ by Nick Coghlan (Python core developer)</li>
 <a class="reference external" href="https://eev.ee/blog/2016/07/31/python-faq-how-do-i-port-to-python-3/">How do I port to Python 3?</a></li>
 </ul>
 </div>
+<div class="section" id="metaclasses">
+<h3>Metaclasses<a class="headerlink" href="#metaclasses" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Metaclass Programming In Python: parts
+<a class="reference external" href="http://gnosis.cx/publish/programming/metaclass_1.html">one</a>,
+<a class="reference external" href="http://gnosis.cx/publish/programming/metaclass_2.html">two</a>, and
+<a class="reference external" href="http://gnosis.cx/publish/programming/metaclass_3.html">three</a> -
+Thorough primer focused on the fundamentals</p>
+</li>
+<li><p class="first">Methods explained in depth:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="https://stackoverflow.com/questions/100003/what-are-metaclasses-in-python/40017019#40017019">__call__</a></li>
+<li><a class="reference external" href="https://python-3-patterns-idioms-test.readthedocs.io/en/latest/Metaprogramming.html#using-init-vs-new-in-metaclasses">__init__ versus __new__</a></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
 <div class="section" id="scientific-computing">
-<h3>Scientific computing<a class="headerlink" href="#scientific-computing" title="Permalink to this headline">¶</a></h3>
+<h3>Scientific Computing<a class="headerlink" href="#scientific-computing" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="http://www.scipy-lectures.org/">Scipy Lecture Notes</a> -
 Tutorials on the scientific Python ecosystem.
@@ -413,11 +438,10 @@ There are no shortcuts to making single-tasking code concurrent</li>
 Network protocol implementations that operate directly on text</li>
 </ul>
 </div>
-<div class="section" id="web">
-<h3>Web<a class="headerlink" href="#web" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="quality">
+<h3>Quality<a class="headerlink" href="#quality" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><a class="reference external" href="http://cewing.github.io/training.python_web/html/index.html">Internet Programming with Python</a> -
-Certificate course offered by University of Washington</li>
+<li><a class="reference external" href="https://github.com/vintasoftware/python-linters-and-code-analysis">Python linters and code analysis tools</a></li>
 </ul>
 </div>
 <div class="section" id="reflection">
@@ -425,6 +449,13 @@ Certificate course offered by University of Washington</li>
 <ul class="simple">
 <li><a class="reference external" href="http://greentreesnakes.readthedocs.io/en/latest/">Green Tree Snakes</a> -
 A field guide to Abstract Syntax Trees in Python</li>
+</ul>
+</div>
+<div class="section" id="web">
+<h3>Web<a class="headerlink" href="#web" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://cewing.github.io/training.python_web/html/index.html">Internet Programming with Python</a> -
+Certificate course offered by University of Washington</li>
 </ul>
 </div>
 <div class="section" id="docker">
@@ -462,7 +493,7 @@ A field guide to Abstract Syntax Trees in Python</li>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Aug 6, 2019, 6:03:16 AM.
+      Last updated on Aug 6, 2019, 6:40:48 AM.
 
     </p>
   </div>
