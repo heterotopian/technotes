@@ -97,3 +97,6 @@ jupyter: !!python/tuple
 devguide: !!python/tuple
   - "https://devguide.python.org/"
   - null
+mock: !!python/tuple
+  - "https://mock.readthedocs.io/en/latest/"
+  - null
