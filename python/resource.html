@@ -108,6 +108,12 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#peps">PEPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#runtime">Runtime</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pythonpath"><code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pythondontwritebytecode"><code class="docutils literal notranslate"><span class="pre">PYTHONDONTWRITEBYTECODE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pythonioencoding"><code class="docutils literal notranslate"><span class="pre">PYTHONIOENCODING</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#community">Community</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#trends">Trends</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#packaging">Packaging</a></li>
@@ -272,6 +278,41 @@ Maintained by the CPython core developers.</p>
 <li><span class="target" id="index-9"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3000"><strong>PEP 3000</strong></a> - Python 3000</li>
 </ul>
 </div>
+<div class="section" id="runtime">
+<span id="python-runtime"></span><h2>Runtime<a class="headerlink" href="#runtime" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pythonpath">
+<h3><span class="target" id="index-10"></span><a class="reference external" href="https://docs.python.org/2/using/cmdline.html#envvar-PYTHONPATH" title="(in Python v2.7)"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a><a class="headerlink" href="#pythonpath" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="pythondontwritebytecode">
+<h3><span class="target" id="index-11"></span><a class="reference external" href="https://docs.python.org/2/using/cmdline.html#envvar-PYTHONDONTWRITEBYTECODE" title="(in Python v2.7)"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONDONTWRITEBYTECODE</span></code></a><a class="headerlink" href="#pythondontwritebytecode" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Option: <a class="reference external" href="https://docs.python.org/2/using/cmdline.html#id1" title="(in Python v2.7)"><code class="xref std std-option docutils literal notranslate"><span class="pre">-B</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="pythonioencoding">
+<h3><span class="target" id="index-12"></span><a class="reference external" href="https://docs.python.org/2/using/cmdline.html#envvar-PYTHONIOENCODING" title="(in Python v2.7)"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONIOENCODING</span></code></a><a class="headerlink" href="#pythonioencoding" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">StackOverflow:
+<a class="reference external" href="https://stackoverflow.com/questions/4545661/unicodedecodeerror-when-redirecting-to-file/4546129#4546129">UnicodeDecodeError when redirecting to file</a></p>
+<blockquote>
+<div><p>When you redirect the output of your program, it is generally not possible to know what the input encoding of the receiving program is.
+The interpreter falls back to some default encoding for stdin, stdout, and stderr (None for Python 2, UTF-8 for Python 3).</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python -c <span class="s2">&quot;import sys; print sys.stdout.encoding&quot;</span>
+<span class="go">UTF-8</span>
+<span class="gp">$</span> python -c <span class="s2">&quot;import sys; print sys.stdout.encoding&quot;</span> <span class="p">|</span> cat
+<span class="go">None</span>
+</pre></div>
+</div>
+<p>Set <span class="target" id="index-13"></span><a class="reference external" href="https://docs.python.org/2/using/cmdline.html#envvar-PYTHONIOENCODING" title="(in Python v2.7)"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONIOENCODING</span></code></a> to override the default encoding for stdin, stdout, and stderr.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nv">PYTHONIOENCODING</span><span class="o">=</span>UTF-8 python -c <span class="s2">&quot;import sys; print sys.stdout.encoding&quot;</span> <span class="p">|</span> cat
+<span class="go">  UTF-8</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
 <div class="section" id="community">
 <span id="python-community"></span><h2>Community<a class="headerlink" href="#community" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -400,7 +441,7 @@ A field guide to Abstract Syntax Trees in Python</li>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris.
-      Last updated on Jul 10, 2019, 11:19:58 PM.
+      Last updated on Aug 6, 2019, 4:29:17 AM.
 
     </p>
   </div>

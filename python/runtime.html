@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>NFS &mdash; Technotes Documentation</title>
+  <title>Runtime &mdash; Technotes Documentation</title>
   
 
   
@@ -84,14 +84,14 @@
                 <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../bash.html">Bash</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../systemd/index.html">systemd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../docker.html">Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../x11.html">X11</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Programming</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../conda.html">Conda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../frontend.html">Frontend</a></li>
 </ul>
@@ -148,11 +148,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>NFS</li>
+    <li>Runtime</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/linux/nfs.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/python/runtime.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -162,56 +162,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="nfs">
-<h1>NFS<a class="headerlink" href="#nfs" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="nfsstat">
-<h2>nfsstat<a class="headerlink" href="#nfsstat" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ nfsstat
-
-
-Client rpc stats:
-calls      retrans    authrefrsh
-<span class="m">386800393</span>   <span class="m">0</span>          <span class="m">387762712</span>
-
-Client nfs v3:
-null         getattr      setattr      lookup       access       readlink
-<span class="m">0</span>         <span class="m">0</span>% <span class="m">259158128</span> <span class="m">66</span>% <span class="m">450431</span>    <span class="m">0</span>% <span class="m">20827600</span>  <span class="m">5</span>% <span class="m">61029281</span> <span class="m">15</span>% <span class="m">21567</span>     <span class="m">0</span>%
-<span class="nb">read</span>         write        create       mkdir        symlink      mknod
-<span class="m">17020877</span>  <span class="m">4</span>% <span class="m">5331960</span>   <span class="m">1</span>% <span class="m">403351</span>    <span class="m">0</span>% <span class="m">24746</span>     <span class="m">0</span>% <span class="m">1862</span>      <span class="m">0</span>% <span class="m">1</span>         <span class="m">0</span>%
-remove       rmdir        rename       link         readdir      readdirplus
-<span class="m">612324</span>    <span class="m">0</span>% <span class="m">21399</span>     <span class="m">0</span>% <span class="m">112009</span>    <span class="m">0</span>% <span class="m">1039</span>      <span class="m">0</span>% <span class="m">241247</span>    <span class="m">0</span>% <span class="m">6522117</span>   <span class="m">1</span>%
-fsstat       fsinfo       pathconf     commit
-<span class="m">15071064</span>  <span class="m">3</span>% <span class="m">22</span>        <span class="m">0</span>% <span class="m">11</span>        <span class="m">0</span>% <span class="m">0</span>         <span class="m">0</span>%
+  <div class="section" id="runtime">
+<span id="python-runtime"></span><h1>Runtime<a class="headerlink" href="#runtime" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="pythonpath">
+<h2><span class="target" id="index-0"></span><a class="reference external" href="https://docs.python.org/2/using/cmdline.html#envvar-PYTHONPATH" title="(in Python v2.7)"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a><a class="headerlink" href="#pythonpath" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="pythondontwritebytecode">
+<h2><span class="target" id="index-1"></span><a class="reference external" href="https://docs.python.org/2/using/cmdline.html#envvar-PYTHONDONTWRITEBYTECODE" title="(in Python v2.7)"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONDONTWRITEBYTECODE</span></code></a><a class="headerlink" href="#pythondontwritebytecode" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Option: <a class="reference external" href="https://docs.python.org/2/using/cmdline.html#id1" title="(in Python v2.7)"><code class="xref std std-option docutils literal notranslate"><span class="pre">-B</span></code></a></li>
+</ul>
+</div>
+<div class="section" id="pythonioencoding">
+<h2><span class="target" id="index-2"></span><a class="reference external" href="https://docs.python.org/2/using/cmdline.html#envvar-PYTHONIOENCODING" title="(in Python v2.7)"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONIOENCODING</span></code></a><a class="headerlink" href="#pythonioencoding" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">StackOverflow:
+<a class="reference external" href="https://stackoverflow.com/questions/4545661/unicodedecodeerror-when-redirecting-to-file/4546129#4546129">UnicodeDecodeError when redirecting to file</a></p>
+<blockquote>
+<div><p>When you redirect the output of your program, it is generally not possible to know what the input encoding of the receiving program is.
+The interpreter falls back to some default encoding for stdin, stdout, and stderr (None for Python 2, UTF-8 for Python 3).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -c &quot;import sys; print sys.stdout.encoding&quot;
+UTF-8
+$ python -c &quot;import sys; print sys.stdout.encoding&quot; | cat
+None
 </pre></div>
 </div>
-</div>
-<div class="section" id="nfsiostat">
-<h2>nfsiostat<a class="headerlink" href="#nfsiostat" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ nfsiostat
-
-nfs.domain.com:/foo mounted on /foo:
-
-   op/s         rpc bklog
- <span class="m">262</span>.16
-           <span class="m">0</span>.00
-read:
-  ops/s            kB/s           kB/op         retrans         avg RTT <span class="o">(</span>ms<span class="o">)</span>    avg exe <span class="o">(</span>ms<span class="o">)</span>
-                 <span class="m">11</span>.557
-        <span class="m">356</span>.081
-         <span class="m">30</span>.812
-       <span class="m">0</span> <span class="o">(</span><span class="m">0</span>.0%<span class="o">)</span>
-          <span class="m">5</span>.167
-          <span class="m">5</span>.239
-write:
-  ops/s            kB/s           kB/op         retrans         avg RTT <span class="o">(</span>ms<span class="o">)</span>    avg exe <span class="o">(</span>ms<span class="o">)</span>
-                  <span class="m">3</span>.620
-        <span class="m">105</span>.680
-         <span class="m">29</span>.190
-       <span class="m">0</span> <span class="o">(</span><span class="m">0</span>.0%<span class="o">)</span>
-         <span class="m">16</span>.032
-        <span class="m">331</span>.458
+<p>Set <span class="target" id="index-3"></span><a class="reference external" href="https://docs.python.org/2/using/cmdline.html#envvar-PYTHONIOENCODING" title="(in Python v2.7)"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONIOENCODING</span></code></a> to override the default encoding for stdin, stdout, and stderr.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ PYTHONIOENCODING=UTF-8 python -c &quot;import sys; print sys.stdout.encoding&quot; | cat
+  UTF-8
 </pre></div>
 </div>
+</div></blockquote>
+</li>
+</ul>
 </div>
 </div>
 

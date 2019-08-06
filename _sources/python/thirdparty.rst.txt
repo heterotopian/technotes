@@ -35,8 +35,9 @@ Third Party
       - `rst2html <http://docutils.sourceforge.net/docs/user/tools.html#rst2html-py>`_
       - `rst2pseudoxml <http://docutils.sourceforge.net/docs/user/tools.html#rst2pseudoxml-py>`_
 
-- `Sphinx documentation <https://docutils.readthedocs.io/en/sphinx-docs/>`_ -
-  Unnoficial, community-supported mirror of the offficial documentation
+  - `Sphinx mirror  <https://docutils.readthedocs.io/en/sphinx-docs/>`_ -
+    Mirror of project documentation, converted to Sphinx + RTD
+    (Official project resource, or community-driven?)
 
 
 :py:mod:`factory_boy`
