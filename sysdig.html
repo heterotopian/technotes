@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   
+  
+  
 
   
 
@@ -24,19 +26,14 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
 <link rel="stylesheet" href="_static/css/theme-custom.css" type="text/css" />
 
-    <link rel="top" title="Technotes Documentation" href="index.html"/>
-        <link rel="next" title="Atom" href="atom.html"/>
-        <link rel="prev" title="Frontend" href="frontend.html"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Atom" href="atom.html" />
+    <link rel="prev" title="Frontend" href="frontend.html" />
  
 
   
@@ -44,8 +41,9 @@
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -80,7 +78,10 @@
 
             
             
-                <p class="caption"><span class="caption-text">Essentials</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="bash.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux</a></li>
@@ -96,7 +97,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Diagnostic Tools</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">sysdig</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">sysdig</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#general">General</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#options">Options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#chisels">Chisels</a><ul>
@@ -140,34 +141,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Technotes</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Technotes</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>sysdig</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>sysdig</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/sysdig.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/sysdig.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -207,20 +228,20 @@
 <h2>Chisels<a class="headerlink" href="#chisels" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="ps">
 <h3>ps<a class="headerlink" href="#ps" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> sysdig -c ps proc.apid<span class="o">=</span>120954
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sysdig -c ps proc.apid<span class="o">=</span><span class="m">120954</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="lsof">
 <h3>lsof<a class="headerlink" href="#lsof" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> sysdig -c lsof fd.directory<span class="o">=</span>/var/log
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sysdig -c lsof fd.directory<span class="o">=</span>/var/log
 <span class="gp">$</span> sysdig -c lsof fd.type<span class="o">=</span>inotify
 </pre></div>
 </div>
 </div>
 <div class="section" id="netstat">
 <h3>netstat<a class="headerlink" href="#netstat" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> sysdig -c netstat fd.port<span class="o">=</span>80
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sysdig -c netstat fd.port<span class="o">=</span><span class="m">80</span>
 </pre></div>
 </div>
 </div>
@@ -233,7 +254,7 @@
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first"><a class="reference external" href="https://github.com/draios/sysdig/issues/562">Multiple command line filters</a></p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> sysdig -c lsof <span class="s2">&quot;&#39;proc.name=python and fd.type=ipv4&#39;&quot;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sysdig -c lsof <span class="s2">&quot;&#39;proc.name=python and fd.type=ipv4&#39;&quot;</span>
 </pre></div>
 </div>
 </li>
@@ -243,15 +264,16 @@
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="atom.html" class="btn btn-neutral float-right" title="Atom" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="atom.html" class="btn btn-neutral float-right" title="Atom" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="frontend.html" class="btn btn-neutral" title="Frontend" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="frontend.html" class="btn btn-neutral" title="Frontend" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -260,12 +282,12 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Chris.
-      Last updated on Wed Aug  7 10:17:38 2019.
+        &copy; Copyright 2017, Chris
+      Last updated on Aug 7, 2019, 10:31:47 AM.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -280,35 +302,23 @@
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>
