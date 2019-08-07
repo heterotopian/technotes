@@ -1,5 +1,6 @@
 .. _python_pep:
 
+====
 PEPs
 ====
 

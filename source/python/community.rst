@@ -1,5 +1,6 @@
 .. _python_community:
 
+=========
 Community
 =========
 
@@ -11,7 +12,7 @@ Community
 
 
 Language
---------
+========
 
 - Metaclasses
 
@@ -27,7 +28,7 @@ Language
 
 
 Trends
-------
+======
 
 - Python Developers Survey:
   `2017 <https://www.jetbrains.com/research/python-developers-survey-2017/>`_,
@@ -41,7 +42,7 @@ Trends
 
 
 Packaging
----------
+=========
 
 - Official
 
@@ -65,7 +66,7 @@ Packaging
 
 
 Python 3
---------
+========
 
 - `Python 3 Readiness <http://py3readiness.org/>`_ -
   Shows Python 3 support for the most popular packages on PyPI
@@ -81,7 +82,7 @@ Python 3
 
 
 Asynchronous I/O
-----------------
+================
 
 - `Unyielding <https://glyph.twistedmatrix.com/2014/02/unyielding.html>`_ -
   There are no shortcuts to making single-tasking code concurrent
@@ -93,28 +94,28 @@ Asynchronous I/O
 
 
 Quality
--------
+=======
 
 - `Python linters and code analysis tools <https://github.com/vintasoftware/python-linters-and-code-analysis>`_ -
   Curated list
 
 
 Scientific Computing
---------------------
+====================
 
 - `Scipy Lecture Notes <http://www.scipy-lectures.org/>`_ -
   Tutorials on the scientific Python ecosystem
 
 
 Web
----
+===
 
 - `Internet Programming with Python <http://cewing.github.io/training.python_web/html/index.html>`_ -
   Certificate course offered by University of Washington
 
 
 Infrastructure
---------------
+==============
 
 - `BinderHub <https://binderhub.readthedocs.io/en/latest/>`_
 
@@ -122,14 +123,14 @@ Infrastructure
 
 
 Reflection
-----------
+==========
 
 - `Green Tree Snakes <http://greentreesnakes.readthedocs.io/en/latest/>`_ -
   A field guide to Abstract Syntax Trees in Python
 
 
 Docker
-------
+======
 
 - `Deploying Python Applications with Docker <https://glyph.twistedmatrix.com/2015/03/docker-deploy-double-dutch.html>`_
 - `Using Python with Docker <http://blog.dscpl.com.au/p/using-python-with-docker.html>`_

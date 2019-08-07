@@ -77,12 +77,6 @@ release = '1'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 exclude_patterns = [
-    'python/doc.rst',
-    'python/pep.rst',
-    'python/runtime.rst',
-    'python/community.rst',
-    'python/stdlib.rst',
-    'python/thirdparty.rst',
     'linux/cgroup.rst',
     'linux/device.rst',
     'linux/filesystem.rst',

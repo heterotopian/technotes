@@ -7,5 +7,8 @@ Python
 .. toctree::
     :maxdepth: 2
 
-    resource
+    doc
+    pep
+    runtime
+    community
     module
