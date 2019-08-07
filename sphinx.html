@@ -15,8 +15,6 @@
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   
-  
-  
 
   
 
@@ -26,14 +24,19 @@
 
   
 
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
 <link rel="stylesheet" href="_static/css/theme-custom.css" type="text/css" />
 
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Git" href="git.html" />
-    <link rel="prev" title="tmux" href="tmux.html" />
+    <link rel="top" title="Technotes Documentation" href="index.html"/>
+        <link rel="next" title="Git" href="git.html"/>
+        <link rel="prev" title="tmux" href="tmux.html"/>
  
 
   
@@ -41,9 +44,8 @@
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -78,10 +80,7 @@
 
             
             
-              
-            
-            
-              <p class="caption"><span class="caption-text">Essentials</span></p>
+                <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="bash.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux</a></li>
@@ -104,7 +103,7 @@
 <li class="toctree-l1"><a class="reference internal" href="atom.html">Atom</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vim.html">Vim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tmux.html">tmux</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Sphinx</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#guides">Guides</a></li>
@@ -145,54 +144,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Technotes</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Technotes</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Sphinx</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Sphinx</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/sphinx.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/sphinx.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -205,16 +184,16 @@
 <ul class="simple">
 <li><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html">Domains</a><ul>
 <li><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#cross-referencing-syntax">Cross-referencing syntax</a><ul>
-<li>Prefix with <code class="docutils literal notranslate"><span class="pre">!</span></code> - no reference/hyperlink will be created</li>
-<li>Prefix with <code class="docutils literal notranslate"><span class="pre">~</span></code> - link text will only be the last component of target</li>
+<li>Prefix with <code class="docutils literal"><span class="pre">!</span></code> - no reference/hyperlink will be created</li>
+<li>Prefix with <code class="docutils literal"><span class="pre">~</span></code> - link text will only be the last component of target</li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#substitutions">Substitutions</a>
-(See also: <a class="reference internal" href="python/thirdparty.html#python-module-docutils"><span class="std std-ref">docutils</span></a>)</li>
+(See also: <a class="reference internal" href="python/thirdparty.html#python-module-docutils"><span>docutils</span></a>)</li>
 <li><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/">Extensions</a><ul>
-<li><a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#module-sphinx.ext.intersphinx" title="(in Sphinx v3.0.0+/47cd262b3)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.intersphinx</span></code></a><ul>
+<li><code class="xref py py-mod docutils literal"><span class="pre">sphinx.ext.intersphinx</span></code><ul>
 <li><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#showing-all-links-of-an-intersphinx-mapping-file">Showing all links of an Intersphinx mapping file</a></li>
 </ul>
 </li>
@@ -300,16 +279,15 @@ SASS framework that RTD theme extends</li>
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="git.html" class="btn btn-neutral float-right" title="Git" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="git.html" class="btn btn-neutral float-right" title="Git" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tmux.html" class="btn btn-neutral" title="tmux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tmux.html" class="btn btn-neutral" title="tmux" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -318,12 +296,12 @@ SASS framework that RTD theme extends</li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Chris
-      Last updated on Aug 7, 2019, 6:07:24 AM.
+        &copy; Copyright 2017, Chris.
+      Last updated on Wed Aug  7 10:17:38 2019.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -338,23 +316,35 @@ SASS framework that RTD theme extends</li>
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
-  <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
 
+  
+  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
+          SphinxRtdTheme.StickyNav.enable();
       });
-  </script> 
+  </script>
+   
 
 </body>
 </html>

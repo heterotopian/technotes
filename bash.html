@@ -15,8 +15,6 @@
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   
-  
-  
 
   
 
@@ -26,14 +24,19 @@
 
   
 
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
 <link rel="stylesheet" href="_static/css/theme-custom.css" type="text/css" />
 
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Linux" href="linux/index.html" />
-    <link rel="prev" title="Technical Notes" href="index.html" />
+    <link rel="top" title="Technotes Documentation" href="index.html"/>
+        <link rel="next" title="Linux" href="linux/index.html"/>
+        <link rel="prev" title="Technical Notes" href="index.html"/>
  
 
   
@@ -41,9 +44,8 @@
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -78,12 +80,9 @@
 
             
             
-              
-            
-            
-              <p class="caption"><span class="caption-text">Essentials</span></p>
+                <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Bash</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Bash</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tests">Tests</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#expansion">Expansion</a></li>
@@ -137,54 +136,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Technotes</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Technotes</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Bash</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Bash</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/bash.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/bash.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -206,7 +185,7 @@ A practical guide, with real-life (instead of theoretical) examples</li>
 <div class="section" id="expansion">
 <h2>Expansion<a class="headerlink" href="#expansion" title="Permalink to this headline">¶</a></h2>
 <p>Bash Guide for Beginners: <a class="reference external" href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html">Shell expansion</a></p>
-<table border="1" class="colwidths-given docutils">
+<table border="1" class="docutils">
 <colgroup>
 <col width="45%" />
 <col width="9%" />
@@ -221,27 +200,27 @@ A practical guide, with real-life (instead of theoretical) examples</li>
 <tbody valign="top">
 <tr class="row-even"><td>Brace expansion</td>
 <td>1</td>
-<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">foo{A,B,C}bar</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">foo{A,B,C}bar</span></code></td>
 </tr>
 <tr class="row-odd"><td>Tilde expansion</td>
 <td>2</td>
-<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ls</span> <span class="pre">~/.vimrc</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">ls</span> <span class="pre">~/.vimrc</span></code></td>
 </tr>
 <tr class="row-even"><td>Shell parameter &amp; variable subsitution</td>
 <td>3</td>
-<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">$PATH</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">$PATH</span></code></td>
 </tr>
 <tr class="row-odd"><td>Command substitution</td>
 <td>4</td>
-<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">readlink</span> <span class="pre">-f</span> <span class="pre">$(which</span> <span class="pre">python)</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">readlink</span> <span class="pre">-f</span> <span class="pre">$(which</span> <span class="pre">python)</span></code></td>
 </tr>
 <tr class="row-even"><td>Arithmetic expansion</td>
 <td>5</td>
-<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">$[</span> <span class="pre">365*24</span> <span class="pre">]</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">$[</span> <span class="pre">365*24</span> <span class="pre">]</span></code></td>
 </tr>
 <tr class="row-odd"><td>Process substitution</td>
 <td>6</td>
-<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">diff</span> <span class="pre">&lt;(date)</span> <span class="pre">&lt;(sleep</span> <span class="pre">1;</span> <span class="pre">date)</span></code></td>
+<td><code class="docutils literal"><span class="pre">$</span> <span class="pre">diff</span> <span class="pre">&lt;(date)</span> <span class="pre">&lt;(sleep</span> <span class="pre">1;</span> <span class="pre">date)</span></code></td>
 </tr>
 <tr class="row-even"><td>Word splitting</td>
 <td>7</td>
@@ -289,28 +268,28 @@ A practical guide, with real-life (instead of theoretical) examples</li>
 </div>
 <div class="section" id="redirection">
 <h2>Redirection<a class="headerlink" href="#redirection" title="Permalink to this headline">¶</a></h2>
-<p>stdout to <code class="docutils literal notranslate"><span class="pre">command.stdout</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> &gt;command.stdout
+<p>stdout to <code class="docutils literal"><span class="pre">command.stdout</span></code>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">command</span> &gt;command.stdout
 </pre></div>
 </div>
-<p>stderr to <code class="docutils literal notranslate"><span class="pre">command.stderr</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">2</span>&gt;command.stderr
+<p>stderr to <code class="docutils literal"><span class="pre">command.stderr</span></code>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">command</span> 2&gt;command.stderr
 </pre></div>
 </div>
 <p>stdout to stderr:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">1</span>&gt;<span class="p">&amp;</span><span class="m">2</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">command</span> 1&gt;<span class="p">&amp;</span>2
 </pre></div>
 </div>
 <p>stderr to stdout:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">command</span> 2&gt;<span class="p">&amp;</span>1
 </pre></div>
 </div>
-<p>stderr and stdout to <code class="docutils literal notranslate"><span class="pre">command.out</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="p">&amp;</span>&gt;command.out
+<p>stderr and stdout to <code class="docutils literal"><span class="pre">command.out</span></code>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">command</span> <span class="p">&amp;</span>&gt;command.out
 </pre></div>
 </div>
-<p>stdout to <code class="docutils literal notranslate"><span class="pre">/dev/null</span></code> and stderr to stdout:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> &gt;/dev/null
+<p>stdout to <code class="docutils literal"><span class="pre">/dev/null</span></code> and stderr to stdout:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> <span class="nb">command</span> 2&gt;<span class="p">&amp;</span><span class="m">1</span> &gt;/dev/null
 </pre></div>
 </div>
 </div>
@@ -318,16 +297,15 @@ A practical guide, with real-life (instead of theoretical) examples</li>
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="linux/index.html" class="btn btn-neutral float-right" title="Linux" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="linux/index.html" class="btn btn-neutral float-right" title="Linux" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Technical Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Technical Notes" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -336,12 +314,12 @@ A practical guide, with real-life (instead of theoretical) examples</li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Chris
-      Last updated on Aug 7, 2019, 6:07:24 AM.
+        &copy; Copyright 2017, Chris.
+      Last updated on Wed Aug  7 10:17:38 2019.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -356,23 +334,35 @@ A practical guide, with real-life (instead of theoretical) examples</li>
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
-  <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
 
+  
+  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
+          SphinxRtdTheme.StickyNav.enable();
       });
-  </script> 
+  </script>
+   
 
 </body>
 </html>

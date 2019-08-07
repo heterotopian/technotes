@@ -15,8 +15,6 @@
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   
-  
-  
 
   
 
@@ -26,14 +24,19 @@
 
   
 
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
 <link rel="stylesheet" href="_static/css/theme-custom.css" type="text/css" />
 
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="tmux" href="tmux.html" />
-    <link rel="prev" title="Atom" href="atom.html" />
+    <link rel="top" title="Technotes Documentation" href="index.html"/>
+        <link rel="next" title="tmux" href="tmux.html"/>
+        <link rel="prev" title="Atom" href="atom.html"/>
  
 
   
@@ -41,9 +44,8 @@
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -78,10 +80,7 @@
 
             
             
-              
-            
-            
-              <p class="caption"><span class="caption-text">Essentials</span></p>
+                <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="bash.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux</a></li>
@@ -102,7 +101,7 @@
 <p class="caption"><span class="caption-text">Applications</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="atom.html">Atom</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Vim</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Vim</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#text-objects">Text Objects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#terms">Terms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
@@ -134,54 +133,34 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Technotes</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Technotes</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Vim</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Vim</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/vim.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/vim.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -205,84 +184,84 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>word</td>
-<td><kbd class="kbd docutils literal notranslate">aw</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">iw</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">aw</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">iw</span></code></td>
 </tr>
 <tr class="row-odd"><td>whole word</td>
-<td><kbd class="kbd docutils literal notranslate">aW</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">iW</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">aW</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">iW</span></code></td>
 </tr>
 <tr class="row-even"><td>subword</td>
-<td><kbd class="kbd docutils literal notranslate">ad</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">id</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">ad</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">id</span></code></td>
 </tr>
 <tr class="row-odd"><td>any pair</td>
-<td><kbd class="kbd docutils literal notranslate">as</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">is</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">as</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">is</span></code></td>
 </tr>
 <tr class="row-even"><td>any quote</td>
-<td><kbd class="kbd docutils literal notranslate">aq</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">iq</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">aq</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">iq</span></code></td>
 </tr>
 <tr class="row-odd"><td>double quote</td>
-<td><kbd class="kbd docutils literal notranslate">a&quot;</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">i&quot;</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">a&quot;</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">i&quot;</span></code></td>
 </tr>
 <tr class="row-even"><td>single quote</td>
-<td><kbd class="kbd docutils literal notranslate">a'</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">i'</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">a'</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">i'</span></code></td>
 </tr>
 <tr class="row-odd"><td>back tick</td>
-<td><kbd class="kbd docutils literal notranslate">a`</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">i`</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">a`</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">i`</span></code></td>
 </tr>
 <tr class="row-even"><td>curly bracket</td>
-<td><kbd class="kbd docutils literal notranslate">a{</kbd>
-<kbd class="kbd docutils literal notranslate">a}</kbd>
-<kbd class="kbd docutils literal notranslate">aB</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">i{</kbd>
-<kbd class="kbd docutils literal notranslate">i}</kbd>
-<kbd class="kbd docutils literal notranslate">iB</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">a{</span></code>
+<code class="kbd docutils literal"><span class="pre">a}</span></code>
+<code class="kbd docutils literal"><span class="pre">aB</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">i{</span></code>
+<code class="kbd docutils literal"><span class="pre">i}</span></code>
+<code class="kbd docutils literal"><span class="pre">iB</span></code></td>
 </tr>
 <tr class="row-odd"><td>square bracket</td>
-<td><kbd class="kbd docutils literal notranslate">a[</kbd>
-<kbd class="kbd docutils literal notranslate">a[</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">i[</kbd>
-<kbd class="kbd docutils literal notranslate">i]</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">a[</span></code>
+<code class="kbd docutils literal"><span class="pre">a[</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">i[</span></code>
+<code class="kbd docutils literal"><span class="pre">i]</span></code></td>
 </tr>
 <tr class="row-even"><td>angle bracket</td>
-<td><kbd class="kbd docutils literal notranslate">a&lt;</kbd>
-<kbd class="kbd docutils literal notranslate">a&gt;</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">i&lt;</kbd>
-<kbd class="kbd docutils literal notranslate">i&gt;</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">a&lt;</span></code>
+<code class="kbd docutils literal"><span class="pre">a&gt;</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">i&lt;</span></code>
+<code class="kbd docutils literal"><span class="pre">i&gt;</span></code></td>
 </tr>
 <tr class="row-odd"><td>tag</td>
-<td><kbd class="kbd docutils literal notranslate">at</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">it</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">at</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">it</span></code></td>
 </tr>
 <tr class="row-even"><td>paragraph</td>
-<td><kbd class="kbd docutils literal notranslate">ap</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">ip</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">ap</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">ip</span></code></td>
 </tr>
 <tr class="row-odd"><td>indentation</td>
-<td><kbd class="kbd docutils literal notranslate">ai</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">ii</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">ai</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">ii</span></code></td>
 </tr>
 <tr class="row-even"><td>comment</td>
-<td><kbd class="kbd docutils literal notranslate">a/</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">i/</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">a/</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">i/</span></code></td>
 </tr>
 <tr class="row-odd"><td>function</td>
-<td><kbd class="kbd docutils literal notranslate">af</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">if</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">af</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">if</span></code></td>
 </tr>
 <tr class="row-even"><td>current line</td>
-<td><kbd class="kbd docutils literal notranslate">al</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">il</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">al</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">il</span></code></td>
 </tr>
 <tr class="row-odd"><td>entire</td>
-<td><kbd class="kbd docutils literal notranslate">ae</kbd></td>
-<td><kbd class="kbd docutils literal notranslate">ie</kbd></td>
+<td><code class="kbd docutils literal"><span class="pre">ae</span></code></td>
+<td><code class="kbd docutils literal"><span class="pre">ie</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -312,16 +291,15 @@
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tmux.html" class="btn btn-neutral float-right" title="tmux" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tmux.html" class="btn btn-neutral float-right" title="tmux" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="atom.html" class="btn btn-neutral" title="Atom" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="atom.html" class="btn btn-neutral" title="Atom" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -330,12 +308,12 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Chris
-      Last updated on Aug 7, 2019, 6:07:24 AM.
+        &copy; Copyright 2017, Chris.
+      Last updated on Wed Aug  7 10:17:38 2019.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -350,23 +328,35 @@
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
-  <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
 
+  
+  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
+          SphinxRtdTheme.StickyNav.enable();
       });
-  </script> 
+  </script>
+   
 
 </body>
 </html>

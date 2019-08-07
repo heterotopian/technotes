@@ -28,6 +28,7 @@ Resources
 =========
 
 - `What are commit-ish and tree-ish in Git? <https://stackoverflow.com/questions/23303549/what-are-commit-ish-and-tree-ish-in-git>`_
+- `Keeping a fork up to date <https://philna.sh/blog/2018/08/21/git-commands-to-keep-a-fork-up-to-date/>`_
 - `Changing author info <https://help.github.com/articles/changing-author-info/>`_ -
   Script for updating any commits with matching user/email fields
 
