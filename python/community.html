@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Resources &mdash; Technotes Documentation</title>
+  <title>Community &mdash; Technotes Documentation</title>
   
 
   
@@ -32,6 +32,8 @@
 
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Modules" href="module.html" />
+    <link rel="prev" title="Runtime" href="runtime.html" />
  
 
   
@@ -88,8 +90,28 @@
 <li class="toctree-l1"><a class="reference internal" href="../x11.html">X11</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Programming</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Python</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="doc.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pep.html">PEPs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="runtime.html">Runtime</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Community</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#language">Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trends">Trends</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#packaging">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-3">Python 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#asynchronous-i-o">Asynchronous I/O</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quality">Quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scientific-computing">Scientific Computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#web">Web</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#infrastructure">Infrastructure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reflection">Reflection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#docker">Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="module.html">Modules</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../conda.html">Conda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../frontend.html">Frontend</a></li>
 </ul>
@@ -161,13 +183,15 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Resources</li>
+          <li><a href="index.html">Python</a> &raquo;</li>
+        
+      <li>Community</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/python/resource.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/python/community.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -180,120 +204,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="resources">
-<span id="python-resource"></span><h1>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="documentation">
-<span id="python-doc"></span><h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><a class="reference external" href="https://docs.python.org/2/glossary.html">Glossary</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Definitions for common jargon terms</p>
-</div>
-<div class="section" id="id2">
-<h2><a class="reference external" href="https://docs.python.org/2/reference/index.html">The Python Language Reference</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>Describes the syntax and core semantics of the language.</p>
-<ul class="simple">
-<li><a class="reference external" href="https://docs.python.org/2/reference/lexical_analysis.html#keywords" title="(in Python v2.7)"><span>Keywords</span></a></li>
-<li><a class="reference external" href="https://docs.python.org/2/reference/datamodel.html#datamodel" title="(in Python v2.7)"><span>Data model</span></a><ul>
-<li><a class="reference external" href="https://docs.python.org/2/reference/datamodel.html#types" title="(in Python v2.7)"><span>The standard type hierarchy</span></a></li>
-<li><a class="reference external" href="https://docs.python.org/2/reference/datamodel.html#newstyle" title="(in Python v2.7)"><span>New-style and classic classes</span></a></li>
-<li><a class="reference external" href="https://docs.python.org/2/reference/datamodel.html#specialnames" title="(in Python v2.7)"><span>Special method names</span></a></li>
-</ul>
-</li>
-<li><a class="reference external" href="https://docs.python.org/2/reference/executionmodel.html#execmodel" title="(in Python v2.7)"><span>Execution model</span></a></li>
-</ul>
-</div>
-<div class="section" id="id3">
-<h2><a class="reference external" href="https://docs.python.org/2/library/index.html">The Python Standard Library</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>Describes the standard library that is distributed with Python.</p>
-<ul class="simple">
-<li><a class="reference external" href="https://docs.python.org/2/library/functions.html#built-in-funcs" title="(in Python v2.7)"><span>Built-in Functions</span></a></li>
-</ul>
-</div>
-<div class="section" id="id4">
-<h2><a class="reference external" href="https://docs.python.org/2/installing/">Installing Python Modules</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>Basic introduction to installing modules.</p>
-</div>
-<div class="section" id="id5">
-<h2><a class="reference external" href="https://docs.python.org/2/distributing/">Distributing Python Modules</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<p>Basic introduction to distributing modules.</p>
-</div>
-<div class="section" id="id6">
-<h2><a class="reference external" href="https://docs.python.org/2/install/">Installing Python Modules (Legacy version)</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
-<p>Guide to the Python Distribution Utilities (distutils) from an end=user point of view.</p>
-</div>
-<div class="section" id="id7">
-<h2><a class="reference external" href="https://docs.python.org/2/distutils/">Distributing Python Modules (Legacy version)</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
-<p>Guide to the Python Distribution Utilities (distutils) from a developer point of view.</p>
-<ul class="simple">
-<li><a class="reference external" href="https://docs.python.org/2/distutils/setupscript.html#relationships=between=distributions=and=packages">Relationships between Distributions and Packages</a></li>
-</ul>
-</div>
-<div class="section" id="id8">
-<h2><a class="reference external" href="https://devguide.python.org/">The CPython Developer’s Guide</a><a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
-<p>The comprehensive resource for contributing to CPython.
-Maintained by the CPython core developers.</p>
-</div>
-<div class="section" id="id9">
-<h2><a class="reference external" href="https://docs.python.org/2.7/howto/index.html">Python HOWTOs</a><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
-<p>Documents that cover a single, specific topic, and attempt to cover it fairly completely.</p>
-<ul class="simple">
-<li><a class="reference external" href="https://docs.python.org/2.7/howto/descriptor.html">Descriptors</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="peps">
-<span id="python-pep"></span><h1>PEPs<a class="headerlink" href="#peps" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0248"><strong>PEP 248</strong></a> - Python Database API Specification v1.0</li>
-<li><span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0249"><strong>PEP 249</strong></a> - Python Database API Specification v2.0</li>
-<li><span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0302"><strong>PEP 302</strong></a> - New Import Hooks</li>
-<li><span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0333"><strong>PEP 333</strong></a> - Python Web Server Gateway Interface v1.0<ul>
-<li><a class="reference external" href="https://www.python.org/dev/peps/pep-0333/#optional-platform-specific-file-handling">Optional Platform-Specific File Handling</a></li>
-</ul>
-</li>
-<li><span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0440"><strong>PEP 440</strong></a> - Version Identification and Dependency Specification<ul>
-<li><a class="reference external" href="https://www.python.org/dev/peps/pep-0440/#version-scheme">Version scheme</a></li>
-<li><a class="reference external" href="https://www.python.org/dev/peps/pep-0440/#version-specifiers">Version specifiers</a></li>
-</ul>
-</li>
-<li><span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0441"><strong>PEP 441</strong></a> - Improving Python ZIP Application Support</li>
-<li><span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0443"><strong>PEP 443</strong></a> - Single-dispatch generic functions</li>
-<li><span class="target" id="index-7"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0465"><strong>PEP 465</strong></a> - A dedicated infix operator for matrix multiplication</li>
-<li><span class="target" id="index-8"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0492"><strong>PEP 492</strong></a> - Coroutines with async and await syntax</li>
-<li><span class="target" id="index-9"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3000"><strong>PEP 3000</strong></a> - Python 3000</li>
-</ul>
-</div>
-<div class="section" id="runtime">
-<span id="python-runtime"></span><h1>Runtime<a class="headerlink" href="#runtime" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="pythonpath">
-<h2><span class="target" id="index-10"></span><a class="reference external" href="https://docs.python.org/2/using/cmdline.html#envvar-PYTHONPATH" title="(in Python v2.7)"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a><a class="headerlink" href="#pythonpath" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="pythondontwritebytecode">
-<h2><span class="target" id="index-11"></span><a class="reference external" href="https://docs.python.org/2/using/cmdline.html#envvar-PYTHONDONTWRITEBYTECODE" title="(in Python v2.7)"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONDONTWRITEBYTECODE</span></code></a><a class="headerlink" href="#pythondontwritebytecode" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Option: <a class="reference external" href="https://docs.python.org/2/using/cmdline.html#id1" title="(in Python v2.7)"><code class="xref std std-option docutils literal notranslate"><span class="pre">-B</span></code></a></li>
-</ul>
-</div>
-<div class="section" id="pythonioencoding">
-<h2><span class="target" id="index-12"></span><a class="reference external" href="https://docs.python.org/2/using/cmdline.html#envvar-PYTHONIOENCODING" title="(in Python v2.7)"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONIOENCODING</span></code></a><a class="headerlink" href="#pythonioencoding" title="Permalink to this headline">¶</a></h2>
-<p>StackOverflow: <a class="reference external" href="https://stackoverflow.com/questions/4545661/unicodedecodeerror-when-redirecting-to-file/4546129#4546129">UnicodeDecodeError when redirecting to file</a></p>
-<p>When you redirect the output of your program, it is generally not possible to know what the input encoding of the receiving program is.
-The interpreter falls back to some default encoding for stdin, stdout, and stderr (None for Python 2, UTF-8 for Python 3).</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python -c <span class="s2">&quot;import sys; print sys.stdout.encoding&quot;</span>
-<span class="go">UTF-8</span>
-<span class="gp">$</span> python -c <span class="s2">&quot;import sys; print sys.stdout.encoding&quot;</span> <span class="p">|</span> cat
-<span class="go">None</span>
-</pre></div>
-</div>
-<p>Set <code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONIOENCODING</span></code> to override the default encoding for stdin, stdout, and stderr.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nv">PYTHONIOENCODING</span><span class="o">=</span>UTF-8 python -c <span class="s2">&quot;import sys; print sys.stdout.encoding&quot;</span> <span class="p">|</span> cat
-<span class="go">  UTF-8</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="community">
+  <div class="section" id="community">
 <span id="python-community"></span><h1>Community<a class="headerlink" href="#community" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><a class="reference external" href="https://pyformat.info/">Pyformat.info</a> - String formatting cheat sheet</li>
@@ -441,6 +352,15 @@ A field guide to Abstract Syntax Trees in Python</li>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="module.html" class="btn btn-neutral float-right" title="Modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="runtime.html" class="btn btn-neutral" title="Runtime" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

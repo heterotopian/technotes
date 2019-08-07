@@ -9,6 +9,12 @@ Third Party
 - `Documentation <http://codetransformer.readthedocs.io/en/stable/>`_
 
 
+:py:mod:`connexion`
+-------------------
+
+- `Documentation <https://connexion.readthedocs.io/en/latest/>`_
+
+
 :py:mod:`distlib`
 -----------------
 
@@ -86,6 +92,12 @@ Third Party
 
 :py:mod:`marshmallow`
 ---------------------
+
+
+:py:mod:`mock`
+--------------
+
+- Chase Seibert: `Python Mock Cookbook <https://chase-seibert.github.io/blog/2015/06/25/python-mocking-cookbook.html>`_
 
 
 :py:mod:`nose`

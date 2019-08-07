@@ -1,5 +1,6 @@
 .. _python_community:
 
+=========
 Community
 =========
 
@@ -10,18 +11,38 @@ Community
   - `A 20-minute introduction to DB-API2 <https://cewing.github.io/training.codefellows/lectures/day21/intro_to_dbapi2.html>`_
 
 
-Trends
-------
+Language
+========
 
-- `Python Developers Survey 2017 <https://www.jetbrains.com/research/python-developers-survey-2017/>`_ -
-  Joint effort of the Python Software Foundation and JetBrains
+- Metaclasses
+
+  - Metaclass Programming In Python: parts
+    `one <http://gnosis.cx/publish/programming/metaclass_1.html>`_,
+    `two <http://gnosis.cx/publish/programming/metaclass_2.html>`_,
+    `three <http://gnosis.cx/publish/programming/metaclass_3.html>`_ -
+    Primer focused on the fundamentals of metaclasses
+  - Methods:
+
+    - `__call__ <https://stackoverflow.com/questions/100003/what-are-metaclasses-in-python/40017019#40017019>`_
+    - `__init__ versus __new__ <https://python-3-patterns-idioms-test.readthedocs.io/en/latest/Metaprogramming.html#using-init-vs-new-in-metaclasses>`_
+
+
+Trends
+======
+
+- Python Developers Survey:
+  `2017 <https://www.jetbrains.com/research/python-developers-survey-2017/>`_,
+  `2018 <https://www.jetbrains.com/research/python-developers-survey-2018/>`_ -
+  Comprehensive annual survey.
+  A joint effort of JetBrains and the Python Software Foundation.
+
 - StackOverflow:
   `The Incredible Growth of Python <https://stackoverflow.blog/2017/09/06/incredible-growth-python/>`_ and
   `Why is Python Growing So Quickly? <https://stackoverflow.blog/2017/09/14/python-growing-quickly/>`_
 
 
 Packaging
----------
+=========
 
 - Official
 
@@ -45,7 +66,7 @@ Packaging
 
 
 Python 3
---------
+========
 
 - `Python 3 Readiness <http://py3readiness.org/>`_ -
   Shows Python 3 support for the most popular packages on PyPI
@@ -60,16 +81,8 @@ Python 3
   `How do I port to Python 3? <https://eev.ee/blog/2016/07/31/python-faq-how-do-i-port-to-python-3/>`_
 
 
-Scientific computing
---------------------
-
-- `Scipy Lecture Notes <http://www.scipy-lectures.org/>`_ -
-  Tutorials on the scientific Python ecosystem.
-  A quick introduction to central tools and techniques.
-
-
 Asynchronous I/O
-----------------
+================
 
 - `Unyielding <https://glyph.twistedmatrix.com/2014/02/unyielding.html>`_ -
   There are no shortcuts to making single-tasking code concurrent
@@ -80,22 +93,44 @@ Asynchronous I/O
   Network protocol implementations that operate directly on text
 
 
+Quality
+=======
+
+- `Python linters and code analysis tools <https://github.com/vintasoftware/python-linters-and-code-analysis>`_ -
+  Curated list
+
+
+Scientific Computing
+====================
+
+- `Scipy Lecture Notes <http://www.scipy-lectures.org/>`_ -
+  Tutorials on the scientific Python ecosystem
+
+
 Web
----
+===
 
 - `Internet Programming with Python <http://cewing.github.io/training.python_web/html/index.html>`_ -
   Certificate course offered by University of Washington
 
 
+Infrastructure
+==============
+
+- `BinderHub <https://binderhub.readthedocs.io/en/latest/>`_
+
+  - `MyBinder <https://mybinder.readthedocs.io/en/latest/>`_
+
+
 Reflection
-----------
+==========
 
 - `Green Tree Snakes <http://greentreesnakes.readthedocs.io/en/latest/>`_ -
   A field guide to Abstract Syntax Trees in Python
 
 
 Docker
-------
+======
 
 - `Deploying Python Applications with Docker <https://glyph.twistedmatrix.com/2015/03/docker-deploy-double-dutch.html>`_
 - `Using Python with Docker <http://blog.dscpl.com.au/p/using-python-with-docker.html>`_
