@@ -289,30 +289,48 @@ A practical guide, with real-life (instead of theoretical) examples</li>
 </div>
 <div class="section" id="redirection">
 <h2>Redirection<a class="headerlink" href="#redirection" title="Permalink to this headline">¶</a></h2>
-<p>stdout to <code class="docutils literal notranslate"><span class="pre">command.stdout</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> &gt;command.stdout
-</pre></div>
-</div>
-<p>stderr to <code class="docutils literal notranslate"><span class="pre">command.stderr</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">2</span>&gt;command.stderr
-</pre></div>
-</div>
-<p>stdout to stderr:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">1</span>&gt;<span class="p">&amp;</span><span class="m">2</span>
-</pre></div>
-</div>
-<p>stderr to stdout:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
-</pre></div>
-</div>
-<p>stderr and stdout to <code class="docutils literal notranslate"><span class="pre">command.out</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="p">&amp;</span>&gt;command.out
-</pre></div>
-</div>
-<p>stdout to <code class="docutils literal notranslate"><span class="pre">/dev/null</span></code> and stderr to stdout:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">command</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> &gt;/dev/null
-</pre></div>
-</div>
+<table border="1" class="colwidths-auto docutils">
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">From</th>
+<th class="head">To</th>
+<th class="head">Syntax</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>stdout</td>
+<td><code class="docutils literal notranslate"><span class="pre">command.stdout</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">command</span> <span class="pre">&gt;command.stdout</span></code></td>
+</tr>
+<tr class="row-odd"><td>stderr</td>
+<td><code class="docutils literal notranslate"><span class="pre">command.stderr</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">command</span> <span class="pre">2&gt;command.stderr</span></code></td>
+</tr>
+<tr class="row-even"><td>stdout</td>
+<td>stderr</td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">command</span> <span class="pre">1&gt;&amp;2</span></code></td>
+</tr>
+<tr class="row-odd"><td>stderr</td>
+<td>stdout</td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">command</span> <span class="pre">2&gt;&amp;1</span></code></td>
+</tr>
+<tr class="row-even"><td>stderr and stdout</td>
+<td><code class="docutils literal notranslate"><span class="pre">command.out</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">command</span> <span class="pre">&amp;&gt;command.out</span></code></td>
+</tr>
+<tr class="row-odd"><td><ul class="list-nobullet first last simple">
+<li>stdout</li>
+<li>stderr</li>
+</ul>
+</td>
+<td><ul class="list-nobullet first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">/dev/null</span></code></li>
+<li>stdout</li>
+</ul>
+</td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">command</span> <span class="pre">2&gt;&amp;1</span> <span class="pre">&gt;/dev/null</span></code></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -337,7 +355,7 @@ A practical guide, with real-life (instead of theoretical) examples</li>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Aug 11, 2019, 11:47:42 PM.
+      Last updated on Aug 12, 2019, 3:59:28 AM.
 
     </p>
   </div>

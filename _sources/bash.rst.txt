@@ -102,26 +102,34 @@ Wikipedia: `Standard streams <https://en.wikipedia.org/wiki/Standard_streams>`_
 Redirection
 ===========
 
-stdout to ``command.stdout``::
+.. list-table::
+    :widths: auto
+    :header-rows: 1
 
-    $ command >command.stdout
+    * - From
+      - To
+      - Syntax
+    * - stdout
+      - ``command.stdout``
+      - ``$ command >command.stdout``
+    * - stderr
+      - ``command.stderr``
+      - ``$ command 2>command.stderr``
+    * - stdout
+      - stderr
+      - ``$ command 1>&2``
+    * - stderr
+      - stdout
+      - ``$ command 2>&1``
+    * - stderr and stdout
+      - ``command.out``
+      - ``$ command &>command.out``
+    * - .. rst-class:: list-nobullet
 
-stderr to ``command.stderr``::
+            * stdout
+            * stderr
+      - .. rst-class:: list-nobullet
 
-    $ command 2>command.stderr
-
-stdout to stderr::
-
-    $ command 1>&2
-
-stderr to stdout::
-
-    $ command 2>&1
-
-stderr and stdout to ``command.out``::
-
-    $ command &>command.out
-
-stdout to ``/dev/null`` and stderr to stdout::
-
-    $ command 2>&1 >/dev/null
+            * ``/dev/null``
+            * stdout
+      - ``$ command 2>&1 >/dev/null``
