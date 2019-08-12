@@ -15,11 +15,10 @@ Conda
 
 
 
-
 Resources
 =========
 
-- `Understanding and Improving Conda’s performance <https://www.anaconda.com/understanding-and-improving-condas-performance/>`_
+- `conda-forge <https://conda-forge.org/docs/>`_
 - "Build strings have no semantic content" -
   `Source <https://github.com/conda/conda/issues/4956#issuecomment-291847858>`_
 
@@ -36,7 +35,6 @@ Repositories
       **What about the 'anaconda' channel on anaconda.org at https://anaconda.org/anaconda?**
 
       The Anaconda channel on anaconda.org is an aggregated mirror of the packages in https://repo.continuum.io/pkgs/main, https://repo.continuum.io/pkgs/free, and https://repo.continuum.io/pkgs/pro. If you are using conda's 'defaults' channel, you do not need the 'anaconda' channel.
-
 
 
 
