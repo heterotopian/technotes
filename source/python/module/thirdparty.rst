@@ -1,4 +1,4 @@
-.. _python_thirdpartylib:
+.. _python_module_thirdparty:
 
 Third Party
 ===========

@@ -1,4 +1,4 @@
-.. _python_stdlib:
+.. _python_module_stdlib:
 
 Standard Library
 ================
