@@ -5,10 +5,10 @@
 Linux
 =====
 
-.. include:: cgroup.rst
+.. toctree::
+    :maxdepth: 2
 
-.. include:: device.rst
-
-.. include:: filesystem.rst
-
-.. include:: nfs.rst
+    cgroup
+    device
+    filesystem
+    nfs

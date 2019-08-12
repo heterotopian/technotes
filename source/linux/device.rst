@@ -1,11 +1,12 @@
 
-.. highlight:: console
-
+=======
 Devices
 =======
 
+.. highlight:: console
+
 blkid
------
+=====
 
 ::
 
@@ -20,7 +21,7 @@ blkid
 
 
 lsblk
------
+=====
 
 ::
 

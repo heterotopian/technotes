@@ -1,11 +1,12 @@
 
-.. highlight:: console
-
+===
 NFS
 ===
 
+.. highlight:: console
+
 nfsstat
--------
+=======
 
 ::
 
@@ -28,9 +29,9 @@ nfsstat
 
 
 nfsiostat
----------
+=========
 
-.. code-block:: shell
+::
 
     $ nfsiostat
 

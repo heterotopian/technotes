@@ -77,10 +77,6 @@ release = '1'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 exclude_patterns = [
-    'linux/cgroup.rst',
-    'linux/device.rst',
-    'linux/filesystem.rst',
-    'linux/nfs.rst',
     'systemd/doc.rst',
     'systemd/command.rst',
     'systemd/controller.rst'
