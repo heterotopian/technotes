@@ -23,7 +23,6 @@ Standard Library
 
 .. autosummary::
 
-    ~contextlib.ContextDecorator
     ~contextlib.contextmanager
     ~contextlib.closing
 
