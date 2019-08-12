@@ -11,4 +11,4 @@ Python
     pep
     runtime
     community
-    module
+    module/index

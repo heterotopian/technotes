@@ -1,11 +1,12 @@
 
-.. highlight:: bash
-
+=======
 Cgroups
 =======
 
+.. highlight:: console
+
 lsns
-----
+====
 
 ::
 

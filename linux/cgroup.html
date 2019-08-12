@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Linux &mdash; Technotes Documentation</title>
+  <title>Cgroups &mdash; Technotes Documentation</title>
   
 
   
@@ -32,8 +32,8 @@
 
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Cgroups" href="cgroup.html" />
-    <link rel="prev" title="Bash" href="../bash.html" />
+    <link rel="next" title="Devices" href="device.html" />
+    <link rel="prev" title="Linux" href="index.html" />
  
 
   
@@ -84,8 +84,11 @@
               <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../bash.html">Bash</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Linux</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cgroup.html">Cgroups</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Linux</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Cgroups</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lsns">lsns</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="device.html">Devices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filesystem.html">Filesystems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nfs.html">NFS</a></li>
@@ -169,13 +172,15 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Linux</li>
+          <li><a href="index.html">Linux</a> &raquo;</li>
+        
+      <li>Cgroups</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/linux/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/linux/cgroup.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -188,31 +193,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="linux">
-<span id="id1"></span><h1>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="cgroup.html">Cgroups</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cgroup.html#lsns">lsns</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="device.html">Devices</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="device.html#blkid">blkid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="device.html#lsblk">lsblk</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="filesystem.html">Filesystems</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="filesystem.html#findmnt">findmnt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filesystem.html#lvm">lvm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filesystem.html#tree">tree</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="nfs.html">NFS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nfs.html#nfsstat">nfsstat</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nfs.html#nfsiostat">nfsiostat</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="cgroups">
+<h1>Cgroups<a class="headerlink" href="#cgroups" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lsns">
+<h2>lsns<a class="headerlink" href="#lsns" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> lsns
+<span class="go">        NS TYPE   NPROCS PID USER COMMAND</span>
+<span class="go">4026531835 cgroup      2   1 root bash</span>
+<span class="go">4026531837 user        2   1 root bash</span>
+<span class="go">4026532666 mnt         2   1 root bash</span>
+<span class="go">4026532667 uts         2   1 root bash</span>
+<span class="go">4026532668 ipc         2   1 root bash</span>
+<span class="go">4026532669 pid         2   1 root bash</span>
+<span class="go">4026532671 net         2   1 root bash</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -224,10 +219,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cgroup.html" class="btn btn-neutral float-right" title="Cgroups" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="device.html" class="btn btn-neutral float-right" title="Devices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../bash.html" class="btn btn-neutral" title="Bash" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Linux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

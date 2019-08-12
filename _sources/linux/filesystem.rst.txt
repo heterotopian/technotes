@@ -1,11 +1,12 @@
 
-.. highlight:: bash
-
+===========
 Filesystems
 ===========
 
+.. highlight:: console
+
 findmnt
--------
+=======
 
 ::
 
@@ -19,10 +20,10 @@ findmnt
 
 
 lvm
----
+===
 
-Physical volumes
-~~~~~~~~~~~~~~~~
+Physical Volumes
+----------------
 
 ::
 
@@ -95,8 +96,8 @@ Physical volumes
       1 LVM physical volume whole disk
       0 LVM physical volumes
 
-Logical volumes
-~~~~~~~~~~~~~~~
+Logical Volumes
+---------------
 
 ::
 
@@ -163,8 +164,8 @@ Logical volumes
       Allocation             inherit
       Read ahead sectors     auto
 
-Volume groups
-~~~~~~~~~~~~~
+Volume Groups
+-------------
 
 ::
 
@@ -206,7 +207,7 @@ Volume groups
 
 
 tree
-----
+====
 
 ::
 

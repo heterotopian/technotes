@@ -1,0 +1,467 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Filesystems &mdash; Technotes Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../_static/css/theme-custom.css" type="text/css" />
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NFS" href="nfs.html" />
+    <link rel="prev" title="Devices" href="device.html" />
+ 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Technotes
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Essentials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../bash.html">Bash</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Linux</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cgroup.html">Cgroups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="device.html">Devices</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Filesystems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#findmnt">findmnt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lvm">lvm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#physical-volumes">Physical Volumes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#logical-volumes">Logical Volumes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#volume-groups">Volume Groups</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tree">tree</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nfs.html">NFS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../systemd/index.html">systemd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../x11.html">X11</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Programming</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conda.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../frontend.html">Frontend</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Diagnostic Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sysdig.html">sysdig</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Applications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../atom.html">Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vim.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tmux.html">tmux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx.html">Sphinx</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Version control</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../git.html">Git</a></li>
+</ul>
+
+            
+          
+<p class="caption">
+  <span class="caption-text">Reference</span>
+</p>
+<ul>
+  <li class="toctree-l1">
+    <a class="reference internal" href="../genindex.html">Index</a>
+  </li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Technotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Linux</a> &raquo;</li>
+        
+      <li>Filesystems</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/linux/filesystem.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="filesystems">
+<h1>Filesystems<a class="headerlink" href="#filesystems" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="findmnt">
+<h2>findmnt<a class="headerlink" href="#findmnt" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> findmnt -t tmpfs
+<span class="go">TARGET         SOURCE FSTYPE OPTIONS</span>
+<span class="go">/run           tmpfs  tmpfs  rw,nosuid,noexec,relatime,size=806096k,mode=755</span>
+<span class="go">/sys/fs/cgroup        tmpfs  rw,relatime,size=4k,mode=755</span>
+<span class="go">/run/lock             tmpfs  rw,nosuid,nodev,noexec,relatime,size=5120k</span>
+<span class="go">/run/shm              tmpfs  rw,nosuid,nodev,relatime</span>
+<span class="go">/run/user             tmpfs  rw,nosuid,nodev,noexec,relatime,size=102400k,mode=755</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lvm">
+<h2>lvm<a class="headerlink" href="#lvm" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="physical-volumes">
+<h3>Physical Volumes<a class="headerlink" href="#physical-volumes" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> lvm pvs
+<span class="go">  PV                     VG      Fmt  Attr PSize   PFree</span>
+<span class="go">  /dev/mapper/sda3_crypt mint-vg lvm2 a--  222.83g    0</span>
+<span class="go">  unknown device         mint-vg lvm2 a-m  931.51g    0</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> lvm pvscan -u
+<span class="go">  PV /dev/mapper/sda3_crypt with UUID HVi9at-O5W2-fgZJ-R6QB-fZa5-30HN-12zOe9 VG mint-vg   lvm2 [222.83 GiB / 0    free]</span>
+<span class="go">  PV unknown device         with UUID ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q VG mint-vg   lvm2 [931.51 GiB / 0    free]</span>
+<span class="go">  Total: 2 [1.13 TiB] / in use: 2 [1.13 TiB] / in no VG: 0 [0   ]</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> lvm pvdisplay
+<span class="go">  Couldn&#39;t find device with uuid ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q.</span>
+<span class="go">  --- Physical volume ---</span>
+<span class="go">  PV Name               /dev/mapper/sda3_crypt</span>
+<span class="go">  VG Name               mint-vg</span>
+<span class="go">  PV Size               222.83 GiB / not usable 0</span>
+<span class="go">  Allocatable           yes (but full)</span>
+<span class="go">  PE Size               4.00 MiB</span>
+<span class="go">  Total PE              57044</span>
+<span class="go">  Free PE               0</span>
+<span class="go">  Allocated PE          57044</span>
+<span class="go">  PV UUID               HVi9at-O5W2-fgZJ-R6QB-fZa5-30HN-12zOe9</span>
+
+<span class="go">  --- Physical volume ---</span>
+<span class="go">  PV Name               unknown device</span>
+<span class="go">  VG Name               mint-vg</span>
+<span class="go">  PV Size               931.51 GiB / not usable 1.71 MiB</span>
+<span class="go">  Allocatable           yes (but full)</span>
+<span class="go">  PE Size               4.00 MiB</span>
+<span class="go">  Total PE              238467</span>
+<span class="go">  Free PE               0</span>
+<span class="go">  Allocated PE          238467</span>
+<span class="go">  PV UUID               ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> lvm lvmdiskscan
+<span class="go">  /dev/ram0              [      64.00 MiB]</span>
+<span class="go">  /dev/mapper/sda3_crypt [     222.83 GiB] LVM physical volume</span>
+<span class="go">  /dev/ram1              [      64.00 MiB]</span>
+<span class="go">  /dev/sda1              [     512.00 MiB]</span>
+<span class="go">  /dev/mint-vg/root      [     206.94 GiB]</span>
+<span class="go">  /dev/ram2              [      64.00 MiB]</span>
+<span class="go">  /dev/sda2              [     244.00 MiB]</span>
+<span class="go">  /dev/mint-vg/swap_1    [      15.89 GiB]</span>
+<span class="go">  /dev/ram3              [      64.00 MiB]</span>
+<span class="go">  /dev/sda3              [     222.83 GiB]</span>
+<span class="go">  /dev/ram4              [      64.00 MiB]</span>
+<span class="go">  /dev/ram5              [      64.00 MiB]</span>
+<span class="go">  /dev/ram6              [      64.00 MiB]</span>
+<span class="go">  /dev/ram7              [      64.00 MiB]</span>
+<span class="go">  /dev/ram8              [      64.00 MiB]</span>
+<span class="go">  /dev/ram9              [      64.00 MiB]</span>
+<span class="go">  /dev/ram10             [      64.00 MiB]</span>
+<span class="go">  /dev/ram11             [      64.00 MiB]</span>
+<span class="go">  /dev/ram12             [      64.00 MiB]</span>
+<span class="go">  /dev/ram13             [      64.00 MiB]</span>
+<span class="go">  /dev/ram14             [      64.00 MiB]</span>
+<span class="go">  /dev/ram15             [      64.00 MiB]</span>
+<span class="go">  /dev/sdf1              [      30.28 GiB]</span>
+<span class="go">  1 disk</span>
+<span class="go">  21 partitions</span>
+<span class="go">  1 LVM physical volume whole disk</span>
+<span class="go">  0 LVM physical volumes</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="logical-volumes">
+<h3>Logical Volumes<a class="headerlink" href="#logical-volumes" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> lvm lvs
+<span class="go">  LV     VG      Attr      LSize   Pool Origin Data%  Move Log Copy%  Convert</span>
+<span class="go">  data   mint-vg -wi-----p 931.51g</span>
+<span class="go">  root   mint-vg -wi-ao--- 206.94g</span>
+<span class="go">  swap_1 mint-vg -wi-ao---  15.89g</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> lvm lvscan
+<span class="go">  ACTIVE            &#39;/dev/mint-vg/root&#39; [206.94 GiB] inherit</span>
+<span class="go">  ACTIVE            &#39;/dev/mint-vg/swap_1&#39; [15.89 GiB] inherit</span>
+<span class="go">  inactive          &#39;/dev/mint-vg/data&#39; [931.51 GiB] inherit</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> lvm lvdisplay
+<span class="go">  --- Logical volume ---</span>
+<span class="go">  LV Path                /dev/mint-vg/root</span>
+<span class="go">  LV Name                root</span>
+<span class="go">  VG Name                mint-vg</span>
+<span class="go">  LV UUID                K1f3bU-81FN-hQPH-o3Bh-SXjl-lWbl-1II0vU</span>
+<span class="go">  LV Write Access        read/write</span>
+<span class="go">  LV Creation host, time mint, 2015-01-04 21:11:08 -0500</span>
+<span class="go">  LV Status              available</span>
+<span class="gp">  #</span> open                 <span class="m">1</span>
+<span class="go">  LV Size                206.94 GiB</span>
+<span class="go">  Current LE             52977</span>
+<span class="go">  Segments               1</span>
+<span class="go">  Allocation             inherit</span>
+<span class="go">  Read ahead sectors     auto</span>
+<span class="go">  - currently set to     256</span>
+<span class="go">  Block device           252:1</span>
+
+<span class="go">  --- Logical volume ---</span>
+<span class="go">  LV Path                /dev/mint-vg/swap_1</span>
+<span class="go">  LV Name                swap_1</span>
+<span class="go">  VG Name                mint-vg</span>
+<span class="go">  LV UUID                jvIm9E-6mkf-PRmi-Ljtk-R5jn-2Cyw-UFbYAU</span>
+<span class="go">  LV Write Access        read/write</span>
+<span class="go">  LV Creation host, time mint, 2015-01-04 21:11:08 -0500</span>
+<span class="go">  LV Status              available</span>
+<span class="gp">  #</span> open                 <span class="m">2</span>
+<span class="go">  LV Size                15.89 GiB</span>
+<span class="go">  Current LE             4067</span>
+<span class="go">  Segments               1</span>
+<span class="go">  Allocation             inherit</span>
+<span class="go">  Read ahead sectors     auto</span>
+<span class="go">  - currently set to     256</span>
+<span class="go">  Block device           252:2</span>
+
+<span class="go">  --- Logical volume ---</span>
+<span class="go">  LV Path                /dev/mint-vg/data</span>
+<span class="go">  LV Name                data</span>
+<span class="go">  VG Name                mint-vg</span>
+<span class="go">  LV UUID                LNhabH-vfyi-1aoy-ZoLI-zxG8-T14P-8wqhJ6</span>
+<span class="go">  LV Write Access        read/write</span>
+<span class="go">  LV Creation host, time manchester, 2015-02-27 05:47:28 -0500</span>
+<span class="go">  LV Status              NOT available</span>
+<span class="go">  LV Size                931.51 GiB</span>
+<span class="go">  Current LE             238467</span>
+<span class="go">  Segments               1</span>
+<span class="go">  Allocation             inherit</span>
+<span class="go">  Read ahead sectors     auto</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="volume-groups">
+<h3>Volume Groups<a class="headerlink" href="#volume-groups" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> lvm vgs
+<span class="go">  Couldn&#39;t find device with uuid ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q.</span>
+<span class="go">  VG      #PV #LV #SN Attr   VSize VFree</span>
+<span class="go">  mint-vg   2   3   0 wz-pn- 1.13t    0</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> lvm vgscan
+<span class="go">  Reading all physical volumes.  This may take a while...</span>
+<span class="go">  Couldn&#39;t find device with uuid ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q.</span>
+<span class="go">  Found volume group &quot;mint-vg&quot; using metadata type lvm2</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> lvm vgdisplay
+<span class="go">  --- Volume group ---</span>
+<span class="go">  VG Name               mint-vg</span>
+<span class="go">  System ID</span>
+<span class="go">  Format                lvm2</span>
+<span class="go">  Metadata Areas        1</span>
+<span class="go">  Metadata Sequence No  7</span>
+<span class="go">  VG Access             read/write</span>
+<span class="go">  VG Status             resizable</span>
+<span class="go">  MAX LV                0</span>
+<span class="go">  Cur LV                3</span>
+<span class="go">  Open LV               2</span>
+<span class="go">  Max PV                0</span>
+<span class="go">  Cur PV                2</span>
+<span class="go">  Act PV                1</span>
+<span class="go">  VG Size               1.13 TiB</span>
+<span class="go">  PE Size               4.00 MiB</span>
+<span class="go">  Total PE              295511</span>
+<span class="go">  Alloc PE / Size       295511 / 1.13 TiB</span>
+<span class="go">  Free  PE / Size       0 / 0</span>
+<span class="go">  VG UUID               fB5w0I-sjIL-4prj-AXyH-e3x6-UMEF-LdAz19</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="tree">
+<h2>tree<a class="headerlink" href="#tree" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> tree foo
+<span class="go">foo</span>
+<span class="go">├── bar</span>
+<span class="go">└── baz</span>
+<span class="go">    └── zzz.txt</span>
+
+<span class="go">2 directories, 1 file</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="nfs.html" class="btn btn-neutral float-right" title="NFS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="device.html" class="btn btn-neutral" title="Devices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Chris
+      Last updated on Aug 11, 2019, 11:47:42 PM.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
