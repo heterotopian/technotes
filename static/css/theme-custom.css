@@ -11,3 +11,8 @@
     background-color: #2E736D;
 }
 */
+
+.rst-content .section ul.list-nobullet li {
+    list-style: none;
+    margin: 0;
+}
