@@ -37,6 +37,13 @@ Repositories
     -- Source: `repository landing page <https://repo.continuum.io/pkgs/>`_
 
 
+Extensions
+----------
+
+- `conda-depgraph <https://github.com/omegacen/conda-depgraph>`_ -
+  A command-line utility to plot Conda dependency graphs
+
+
 
 Commands
 ========
