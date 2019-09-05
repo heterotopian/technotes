@@ -1,13 +1,12 @@
 .. _systemd:
 
 =======
-systemd
+Systemd
 =======
 
-.. highlight:: console
+.. toctree::
+    :maxdepth: 2
 
-.. include:: doc.rst
-
-.. include:: command.rst
-
-.. include:: controller.rst
+    doc
+    command
+    controller

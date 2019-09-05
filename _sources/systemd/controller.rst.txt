@@ -1,14 +1,17 @@
 .. _systemd_controller:
 
-Controlers
-==========
+===========
+Controllers
+===========
+
+.. highlight:: console
 
 `busctl <https://www.freedesktop.org/software/systemd/man/busctl.html>`_
-------------------------------------------------------------------------
+========================================================================
 
 
 `journalctl <https://www.freedesktop.org/software/systemd/man/journalctl.html>`_
---------------------------------------------------------------------------------
+================================================================================
 
 Supports tab completion on field names::
 
@@ -16,23 +19,23 @@ Supports tab completion on field names::
 
 
 `localectl <https://www.freedesktop.org/software/systemd/man/localectl.html>`_
-------------------------------------------------------------------------------
+==============================================================================
 
 
 `loginctl <https://www.freedesktop.org/software/systemd/man/loginctl.html>`_
-----------------------------------------------------------------------------
+============================================================================
 
 
 `machinectl <https://www.freedesktop.org/software/systemd/man/machinectl.html>`_
---------------------------------------------------------------------------------
+================================================================================
 
 
 `timedatectl <https://www.freedesktop.org/software/systemd/man/timedatectl.html>`_
-----------------------------------------------------------------------------------
+==================================================================================
 
 
 `systemctl <http://0pointer.de/public/systemd-man/systemctl.html>`_
--------------------------------------------------------------------
+===================================================================
 
 List active units::
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>systemd &mdash; Technotes Documentation</title>
+  <title>Systemd &mdash; Technotes Documentation</title>
   
 
   
@@ -32,7 +32,7 @@
 
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Docker" href="../docker.html" />
+    <link rel="next" title="Documentation" href="doc.html" />
     <link rel="prev" title="NFS" href="../linux/nfs.html" />
  
 
@@ -85,27 +85,10 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../bash.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">systemd</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">Manpages</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">systemd-cgls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">systemd-run</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">systemd-cgtop</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#controlers">Controlers</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id6">busctl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">journalctl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id8">localectl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id9">loginctl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id10">machinectl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id11">timedatectl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id12">systemctl</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Systemd</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="doc.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command.html">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html">Controllers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../docker.html">Docker</a></li>
@@ -185,7 +168,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>systemd</li>
+      <li>Systemd</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -205,120 +188,30 @@
            <div itemprop="articleBody">
             
   <div class="section" id="systemd">
-<span id="id1"></span><h1>systemd<a class="headerlink" href="#systemd" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference external" href="https://www.freedesktop.org/wiki/Software/systemd/">Project homepage</a></li>
-</ul>
-<div class="section" id="id2">
-<h3><a class="reference external" href="http://0pointer.de/public/systemd-man/">Manpages</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html">systemd.unit</a><ul>
-<li><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html#Mapping%20of%20unit%20properties%20to%20their%20inverses">Mapping properties to their inverses</a></li>
+<span id="id1"></span><h1>Systemd<a class="headerlink" href="#systemd" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="doc.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="doc.html#id1">Manpages</a></li>
 </ul>
 </li>
-<li><a class="reference external" href="http://0pointer.de/public/systemd-man/systemd.directives.html">systemd.directives</a> -
-Index of configuration directives</li>
-<li><a class="reference external" href="http://0pointer.de/public/systemd-man/systemd-socket-proxyd.html">systemd-socket-proxyd</a> -
-Bidirectionally proxy local sockets to another (possibly remote) socket.</li>
+<li class="toctree-l1"><a class="reference internal" href="command.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="command.html#id1">systemd-cgls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command.html#id2">systemd-run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command.html#id3">systemd-cgtop</a></li>
 </ul>
-</div>
-</div>
-<div class="section" id="commands">
-<span id="systemd-command"></span><h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id3">
-<h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-cgls.html">systemd-cgls</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemd-cgls
-<span class="go">Control group /:</span>
-<span class="go">-.slice</span>
-<span class="go">├─init.scope</span>
-<span class="go">│ └─1 /sbin/init</span>
-<span class="go">├─system.slice</span>
-<span class="go">│ ├─mdadm.service</span>
-<span class="go">│ │ └─2133 /sbin/mdadm --monitor --pid-file /run/mdadm/monitor.pid --daemonis...</span>
-<span class="go">│ ├─dbus.service</span>
-<span class="go">│ │ └─2066 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidf...</span>
-<span class="go">│ ├─rpc-statd.service</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id4">
-<h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-run.html">systemd-run</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemd-run <span class="nb">echo</span> yes
-<span class="go">Running as unit run-rd639c9dc8b974744bc1b88ff8319cb47.service.</span>
-</pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemd-run --scope <span class="nb">echo</span> yes
-<span class="go">Running scope as unit run-r56133a46ffdf44a0b416864461fc7ee0.scope.</span>
-<span class="go">yes</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id5">
-<h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-cgtop.html">systemd-cgtop</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemd-cgtop
-<span class="go">Control Group                                 Tasks   %CPU   Memory  Input/s Output/s</span>
-<span class="go">/                                                 -  266.3   478.0G        -        -</span>
-<span class="go">/user.slice                                    1874  252.8   471.0G        -        -</span>
-<span class="go">/user.slice/user-641738498.slice                480  146.8     8.7G        -        -</span>
-<span class="go">/user.slice/user-641740830.slice                205   96.3   373.5G        -        -</span>
-<span class="go">/system.slice                                   241   12.6     6.8G        -        -</span>
-<span class="go">/system.slice/netdata.service                    20   10.1   135.7M        -        -</span>
-<span class="go">/user.slice/user-641754182.slice                122    7.4     1.0G        -        -</span>
-<span class="go">/system.slice/newrelic-infra.service             14    2.3    70.4M        -        -</span>
-<span class="go">/user.slice/user-641748370.slice                250    0.6     7.9G        -        -</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="controlers">
-<span id="systemd-controller"></span><h2>Controlers<a class="headerlink" href="#controlers" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id6">
-<h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/busctl.html">busctl</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="id7">
-<h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/journalctl.html">journalctl</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<p>Supports tab completion on field names:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> journalctl _G&lt;TAB&gt;
-</pre></div>
-</div>
-</div>
-<div class="section" id="id8">
-<h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/localectl.html">localectl</a><a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="id9">
-<h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/loginctl.html">loginctl</a><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="id10">
-<h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/machinectl.html">machinectl</a><a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="id11">
-<h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/timedatectl.html">timedatectl</a><a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="id12">
-<h3><a class="reference external" href="http://0pointer.de/public/systemd-man/systemctl.html">systemctl</a><a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
-<p>List active units:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-units
-</pre></div>
-</div>
-<p>List loaded units:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-units -a
-</pre></div>
-</div>
-<p>List active service units:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-units -t service
-</pre></div>
-</div>
-<p>List unit files:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-unit-files
-</pre></div>
-</div>
-<p>Check if unit is running:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl is-active unit
-</pre></div>
-</div>
-</div>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html">Controllers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="controller.html#id1">busctl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html#id2">journalctl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html#id3">localectl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html#id4">loginctl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html#id5">machinectl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html#id6">timedatectl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html#id7">systemctl</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 
@@ -330,7 +223,7 @@ Bidirectionally proxy local sockets to another (possibly remote) socket.</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../docker.html" class="btn btn-neutral float-right" title="Docker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="doc.html" class="btn btn-neutral float-right" title="Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../linux/nfs.html" class="btn btn-neutral" title="NFS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -343,7 +236,7 @@ Bidirectionally proxy local sockets to another (possibly remote) socket.</li>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Aug 13, 2019, 3:57:23 AM.
+      Last updated on Sep 5, 2019, 1:45:23 AM.
 
     </p>
   </div>

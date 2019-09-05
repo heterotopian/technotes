@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Runtime &mdash; Technotes Documentation</title>
+  <title>Documentation &mdash; Technotes Documentation</title>
   
 
   
@@ -32,8 +32,8 @@
 
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Community" href="community.html" />
-    <link rel="prev" title="PEPs" href="pep.html" />
+    <link rel="next" title="Commands" href="command.html" />
+    <link rel="prev" title="Systemd" href="index.html" />
  
 
   
@@ -82,28 +82,24 @@
             
             
               <p class="caption"><span class="caption-text">Essentials</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../bash.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../systemd/index.html">Systemd</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Systemd</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Manpages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="command.html">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html">Controllers</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../docker.html">Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../x11.html">X11</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Programming</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="doc.html">Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pep.html">PEPs</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Runtime</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#pythonpath"><code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pythondontwritebytecode"><code class="docutils literal notranslate"><span class="pre">PYTHONDONTWRITEBYTECODE</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pythonioencoding"><code class="docutils literal notranslate"><span class="pre">PYTHONIOENCODING</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="community.html">Community</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module/index.html">Modules</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../conda.html">Conda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../frontend.html">Frontend</a></li>
 </ul>
@@ -175,15 +171,15 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">Python</a> &raquo;</li>
+          <li><a href="index.html">Systemd</a> &raquo;</li>
         
-      <li>Runtime</li>
+      <li>Documentation</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/python/runtime.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/systemd/doc.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -196,33 +192,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="runtime">
-<span id="python-runtime"></span><h1>Runtime<a class="headerlink" href="#runtime" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="pythonpath">
-<h2><span class="target" id="index-0"></span><a class="reference external" href="https://docs.python.org/2/using/cmdline.html#envvar-PYTHONPATH" title="(in Python v2.7)"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a><a class="headerlink" href="#pythonpath" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="pythondontwritebytecode">
-<h2><span class="target" id="index-1"></span><a class="reference external" href="https://docs.python.org/2/using/cmdline.html#envvar-PYTHONDONTWRITEBYTECODE" title="(in Python v2.7)"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONDONTWRITEBYTECODE</span></code></a><a class="headerlink" href="#pythondontwritebytecode" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li>Option: <a class="reference external" href="https://docs.python.org/2/using/cmdline.html#id1" title="(in Python v2.7)"><code class="xref std std-option docutils literal notranslate"><span class="pre">-B</span></code></a></li>
+<li><a class="reference external" href="https://www.freedesktop.org/wiki/Software/systemd/">Project homepage</a></li>
 </ul>
-</div>
-<div class="section" id="pythonioencoding">
-<h2><span class="target" id="index-2"></span><a class="reference external" href="https://docs.python.org/2/using/cmdline.html#envvar-PYTHONIOENCODING" title="(in Python v2.7)"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONIOENCODING</span></code></a><a class="headerlink" href="#pythonioencoding" title="Permalink to this headline">¶</a></h2>
-<p>StackOverflow: <a class="reference external" href="https://stackoverflow.com/questions/4545661/unicodedecodeerror-when-redirecting-to-file/4546129#4546129">UnicodeDecodeError when redirecting to file</a></p>
-<p>When you redirect the output of your program, it is generally not possible to know what the input encoding of the receiving program is.
-The interpreter falls back to some default encoding for stdin, stdout, and stderr (None for Python 2, UTF-8 for Python 3).</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python -c <span class="s2">&quot;import sys; print sys.stdout.encoding&quot;</span>
-<span class="go">UTF-8</span>
-<span class="gp">$</span> python -c <span class="s2">&quot;import sys; print sys.stdout.encoding&quot;</span> <span class="p">|</span> cat
-<span class="go">None</span>
-</pre></div>
-</div>
-<p>Set <code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONIOENCODING</span></code> to override the default encoding for stdin, stdout, and stderr.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nv">PYTHONIOENCODING</span><span class="o">=</span>UTF-8 python -c <span class="s2">&quot;import sys; print sys.stdout.encoding&quot;</span> <span class="p">|</span> cat
-<span class="go">  UTF-8</span>
-</pre></div>
-</div>
+<div class="section" id="id1">
+<h2><a class="reference external" href="http://0pointer.de/public/systemd-man/">Manpages</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html">systemd.unit</a><ul>
+<li><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html#Mapping%20of%20unit%20properties%20to%20their%20inverses">Mapping properties to their inverses</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="http://0pointer.de/public/systemd-man/systemd.directives.html">systemd.directives</a> -
+Index of configuration directives</li>
+<li><a class="reference external" href="http://0pointer.de/public/systemd-man/systemd-socket-proxyd.html">systemd-socket-proxyd</a> -
+Bidirectionally proxy local sockets to another (possibly remote) socket.</li>
+</ul>
 </div>
 </div>
 
@@ -234,10 +220,10 @@ The interpreter falls back to some default encoding for stdin, stdout, and stder
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="community.html" class="btn btn-neutral float-right" title="Community" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="command.html" class="btn btn-neutral float-right" title="Commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pep.html" class="btn btn-neutral" title="PEPs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Systemd" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
