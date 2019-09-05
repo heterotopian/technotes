@@ -1,7 +1,10 @@
 .. _systemd_command:
 
+========
 Commands
 ========
+
+.. highlight:: console
 
 `systemd-cgls <https://www.freedesktop.org/software/systemd/man/systemd-cgls.html>`_
 ------------------------------------------------------------------------------------

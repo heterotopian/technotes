@@ -1,10 +1,14 @@
+
+=============
 Documentation
 =============
+
+.. highlight:: console
 
 - `Project homepage <https://www.freedesktop.org/wiki/Software/systemd/>`_
 
 `Manpages <http://0pointer.de/public/systemd-man/>`_
-----------------------------------------------------
+====================================================
 
 - `systemd.unit <https://www.freedesktop.org/software/systemd/man/systemd.unit.html>`_
 
