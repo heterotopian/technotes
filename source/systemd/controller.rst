@@ -17,6 +17,42 @@ Supports tab completion on field names::
 
     $ journalctl _G<TAB>
 
+Customizing Output
+------------------
+
+Fit output to terminal::
+
+    $ journalctl --no-full
+
+Disable pager::
+
+    $ journalctl --no-pager
+
+
+`Output Format <https://www.freedesktop.org/software/systemd/man/journalctl.html#-o>`_
+--------------------------------------------------------------------------------------
+
+::
+
+    $ journalctl -o FORMAT
+
+Options:
+    ``short``
+    ``short-full``
+    ``short-iso``
+    ``short-iso-precise``
+    ``short-precise``
+    ``short-monotonic``
+    ``short-unix``
+    ``verbose``
+    ``export``
+    ``json``
+    ``json-pretty``
+    ``json-sse``
+    ``json-seq``
+    ``cat``
+    ``with-unit``
+
 
 `localectl <https://www.freedesktop.org/software/systemd/man/localectl.html>`_
 ==============================================================================
