@@ -33,7 +33,7 @@ Technical Notes
     atom
     vim
     tmux
-    sphinx
+    sphinx/index
 
 .. toctree::
     :maxdepth: 1
