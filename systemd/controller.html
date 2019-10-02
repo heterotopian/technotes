@@ -90,12 +90,16 @@
 <li class="toctree-l2"><a class="reference internal" href="command.html">Commands</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Controllers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">busctl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">journalctl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">localectl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">loginctl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">machinectl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">timedatectl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">systemctl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">journalctl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#customizing-output">Customizing Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Output Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">localectl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">loginctl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">machinectl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">timedatectl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">systemctl</a></li>
 </ul>
 </li>
 </ul>
@@ -209,21 +213,56 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> journalctl _G&lt;TAB&gt;
 </pre></div>
 </div>
+<div class="section" id="customizing-output">
+<h3>Customizing Output<a class="headerlink" href="#customizing-output" title="Permalink to this headline">¶</a></h3>
+<p>Fit output to terminal:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> journalctl --no-full
+</pre></div>
+</div>
+<p>Disable pager:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> journalctl --no-pager
+</pre></div>
+</div>
 </div>
 <div class="section" id="id3">
-<h2><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/localectl.html">localectl</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/journalctl.html#-o">Output Format</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> journalctl -o FORMAT
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Options:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">short</span></code>
+<code class="docutils literal notranslate"><span class="pre">short-full</span></code>
+<code class="docutils literal notranslate"><span class="pre">short-iso</span></code>
+<code class="docutils literal notranslate"><span class="pre">short-iso-precise</span></code>
+<code class="docutils literal notranslate"><span class="pre">short-precise</span></code>
+<code class="docutils literal notranslate"><span class="pre">short-monotonic</span></code>
+<code class="docutils literal notranslate"><span class="pre">short-unix</span></code>
+<code class="docutils literal notranslate"><span class="pre">verbose</span></code>
+<code class="docutils literal notranslate"><span class="pre">export</span></code>
+<code class="docutils literal notranslate"><span class="pre">json</span></code>
+<code class="docutils literal notranslate"><span class="pre">json-pretty</span></code>
+<code class="docutils literal notranslate"><span class="pre">json-sse</span></code>
+<code class="docutils literal notranslate"><span class="pre">json-seq</span></code>
+<code class="docutils literal notranslate"><span class="pre">cat</span></code>
+<code class="docutils literal notranslate"><span class="pre">with-unit</span></code></dd>
+</dl>
+</div>
 </div>
 <div class="section" id="id4">
-<h2><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/loginctl.html">loginctl</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/localectl.html">localectl</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="id5">
-<h2><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/machinectl.html">machinectl</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/loginctl.html">loginctl</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="id6">
-<h2><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/timedatectl.html">timedatectl</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/machinectl.html">machinectl</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="id7">
-<h2><a class="reference external" href="http://0pointer.de/public/systemd-man/systemctl.html">systemctl</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/timedatectl.html">timedatectl</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id8">
+<h2><a class="reference external" href="http://0pointer.de/public/systemd-man/systemctl.html">systemctl</a><a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <p>List active units:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-units
 </pre></div>
@@ -268,7 +307,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Sep 10, 2019, 10:19:58 PM.
+      Last updated on Oct 2, 2019, 1:24:10 AM.
 
     </p>
   </div>
