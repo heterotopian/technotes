@@ -56,6 +56,12 @@ Shortcuts
     * - Open grammar selector
       - :kbd:`Ctrl-Shift-L`
 
+    * - Select larger syntax node
+      - :kbd:`Alt-Up`
+
+    * - Select smaller syntax node
+      - :kbd:`Alt-Down`
+
 
 
 Command palette
