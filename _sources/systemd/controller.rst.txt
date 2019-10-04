@@ -29,14 +29,11 @@ Disable pager::
     $ journalctl --no-pager
 
 
-`Output Format <https://www.freedesktop.org/software/systemd/man/journalctl.html#-o>`_
---------------------------------------------------------------------------------------
-
-::
+Format::
 
     $ journalctl -o FORMAT
 
-Options:
+`Options <https://www.freedesktop.org/software/systemd/man/journalctl.html#-o>`_
     ``short``
     ``short-full``
     ``short-iso``
