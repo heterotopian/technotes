@@ -17,8 +17,17 @@ Supports tab completion on field names::
 
     $ journalctl _G<TAB>
 
-Customizing Output
+Selecting Messages
 ------------------
+
+Since/before date::
+
+    $ journalctl --since='2010-01-01 08:00:00'
+    $ journalctl --until='2010-01-01 08:00:00'
+
+
+Formatting Output
+-----------------
 
 Fit output to terminal::
 

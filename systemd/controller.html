@@ -91,7 +91,8 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Controllers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">busctl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2">journalctl</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#customizing-output">Customizing Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#selecting-messages">Selecting Messages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#formatting-output">Formatting Output</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">localectl</a></li>
@@ -212,8 +213,16 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> journalctl _G&lt;TAB&gt;
 </pre></div>
 </div>
-<div class="section" id="customizing-output">
-<h3>Customizing Output<a class="headerlink" href="#customizing-output" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="selecting-messages">
+<h3>Selecting Messages<a class="headerlink" href="#selecting-messages" title="Permalink to this headline">¶</a></h3>
+<p>Since/before date:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> journalctl --since<span class="o">=</span><span class="s1">&#39;2010-01-01 08:00:00&#39;</span>
+<span class="gp">$</span> journalctl --until<span class="o">=</span><span class="s1">&#39;2010-01-01 08:00:00&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="formatting-output">
+<h3>Formatting Output<a class="headerlink" href="#formatting-output" title="Permalink to this headline">¶</a></h3>
 <p>Fit output to terminal:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> journalctl --no-full
 </pre></div>
@@ -304,7 +313,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Nov 1, 2019, 10:00:03 AM.
+      Last updated on Nov 1, 2019, 5:22:10 PM.
 
     </p>
   </div>
