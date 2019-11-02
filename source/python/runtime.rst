@@ -37,3 +37,12 @@ Set :envvar:`!PYTHONIOENCODING` to override the default encoding for stdin, stdo
 
     $ PYTHONIOENCODING=UTF-8 python -c "import sys; print sys.stdout.encoding" | cat
       UTF-8
+
+
+
+:envvar:`PYTHONWARNINGS`
+========================
+
+- Option: :option:`-W`
+
+Bugtracker: `-W option cannot use non-standard categories <https://bugs.python.org/issue22543>`_
