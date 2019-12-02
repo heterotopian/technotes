@@ -15,8 +15,6 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
-  
-  
 
   
 
@@ -26,14 +24,20 @@
 
   
 
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
 <link rel="stylesheet" href="../_static/css/theme-custom.css" type="text/css" />
 
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Systemd" href="../systemd/index.html" />
-    <link rel="prev" title="Filesystems" href="filesystem.html" />
+    <link rel="top" title="Technotes Documentation" href="../index.html"/>
+        <link rel="up" title="Linux" href="index.html"/>
+        <link rel="next" title="Systemd" href="../systemd/index.html"/>
+        <link rel="prev" title="Filesystems" href="filesystem.html"/>
  
 
   
@@ -41,9 +45,8 @@
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -78,17 +81,14 @@
 
             
             
-              
-            
-            
-              <p class="caption"><span class="caption-text">Essentials</span></p>
+                <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../bash.html">Bash</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Linux</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cgroup.html">Cgroups</a></li>
 <li class="toctree-l2"><a class="reference internal" href="device.html">Devices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filesystem.html">Filesystems</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">NFS</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="">NFS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#nfsstat">nfsstat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#nfsiostat">nfsiostat</a></li>
 </ul>
@@ -139,56 +139,36 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Technotes</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Technotes</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
           <li><a href="index.html">Linux</a> &raquo;</li>
-        
-      <li>NFS</li>
-    
-    
+      
+    <li>NFS</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/linux/nfs.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/linux/nfs.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -198,7 +178,7 @@
 <h1>NFS<a class="headerlink" href="#nfs" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="nfsstat">
 <h2>nfsstat<a class="headerlink" href="#nfsstat" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nfsstat
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> nfsstat
 
 
 <span class="go">Client rpc stats:</span>
@@ -219,7 +199,7 @@
 </div>
 <div class="section" id="nfsiostat">
 <h2>nfsiostat<a class="headerlink" href="#nfsiostat" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nfsiostat
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> nfsiostat
 
 <span class="go">nfs.domain.com:/foo mounted on /foo:</span>
 
@@ -249,16 +229,15 @@
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../systemd/index.html" class="btn btn-neutral float-right" title="Systemd" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../systemd/index.html" class="btn btn-neutral float-right" title="Systemd" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="filesystem.html" class="btn btn-neutral" title="Filesystems" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="filesystem.html" class="btn btn-neutral" title="Filesystems" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -267,12 +246,12 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Chris
-      Last updated on Nov 2, 2019, 3:21:09 AM.
+        &copy; Copyright 2017, Chris.
+      Last updated on Mon Dec  2 14:46:40 2019.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -287,23 +266,35 @@
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
 
+  
+  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
+          SphinxRtdTheme.StickyNav.enable();
       });
-  </script> 
+  </script>
+   
 
 </body>
 </html>
