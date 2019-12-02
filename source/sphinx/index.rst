@@ -7,6 +7,6 @@ Sphinx
 .. toctree::
     :maxdepth: 2
 
-    project
+    resource
     extension
     theme
