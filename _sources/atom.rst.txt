@@ -16,7 +16,6 @@ Atom
 - `API docs <https://atom.io/docs/api/>`_
 
 
-
 Shortcuts
 =========
 
@@ -25,53 +24,39 @@ Shortcuts
 
     * - Action
       - Keys
-
     * - Open command palette
       - :kbd:`Ctrl-Shift-P`
-
     * - Open settings
       - :kbd:`Ctrl-,`
-
     * - Toggle tree view visibility
       - :kbd:`Ctrl-\\`
-
     * - Toggle focus on tree view
       - :kbd:`Alt-\\`
-
     * - Reveal active file in tree view
       - :kbd:`Ctrl-Shift-\\`
-
     * - Close current tab
       - :kbd:`Ctrl-W Esc`
-
     * - Open fuzzy finder
       - :kbd:`Ctrl-P`
-
     * - Toggle keybinding resolver panel
       - :kbd:`Ctrl-.`
-
     * - Toggle Developer Tools
       - :kbd:`Ctrl-Shift-I`
-
     * - Open grammar selector
       - :kbd:`Ctrl-Shift-L`
-
     * - Select larger syntax node
       - :kbd:`Alt-Up`
-
     * - Select smaller syntax node
       - :kbd:`Alt-Down`
 
 
-
-Command palette
+Command Palette
 ===============
 
 - `log-cursor-scope <https://github.com/atom/atom/pull/4973>`_
 
 
-
-Command line
+Command Line
 ============
 
 Export installed packages & themes to ``~/dotfiles/home/.atom_installed``::

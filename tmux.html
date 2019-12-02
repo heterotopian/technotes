@@ -104,11 +104,10 @@
 <li class="toctree-l1"><a class="reference internal" href="atom.html">Atom</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vim.html">Vim</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">tmux</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#guides">Guides</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#session-management">Session management</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#guides">Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#session-managers">Session Managers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#synchronize-panes">Synchronize Panes</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sphinx/index.html">Sphinx</a></li>
@@ -191,32 +190,62 @@
             
   <div class="section" id="tmux">
 <span id="id1"></span><h1>tmux<a class="headerlink" href="#tmux" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="resources">
-<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://tmux.github.io/">Project homepage</a></li>
-<li>Commands:<ul>
-<li>list-sessions</li>
-<li>list-keys</li>
-<li>choose-tree</li>
-<li>kill-session</li>
 </ul>
-</li>
-</ul>
+<div class="section" id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Alias</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">list-sessions</kbd></td>
+<td><kbd class="kbd docutils literal notranslate">ls</kbd></td>
+</tr>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">list-keys</kbd></td>
+<td><kbd class="kbd docutils literal notranslate">lsk</kbd></td>
+</tr>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">choose-tree</kbd></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><kbd class="kbd docutils literal notranslate">kill-session</kbd></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><kbd class="kbd docutils literal notranslate">set-window-option</kbd></td>
+<td><kbd class="kbd docutils literal notranslate">setw</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="guides">
-<h3>Guides<a class="headerlink" href="#guides" title="Permalink to this headline">¶</a></h3>
+<h2>Guides<a class="headerlink" href="#guides" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://leanpub.com/the-tao-of-tmux">The Tao of tmux</a> -
 eBook guide based on tmux primitives: servers, sessions, windows, panes</li>
 <li>Daniel Miessler: <a class="reference external" href="https://danielmiessler.com/study/tmux/">A tmux Primer</a></li>
 </ul>
 </div>
-<div class="section" id="session-management">
-<h3>Session management<a class="headerlink" href="#session-management" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="session-managers">
+<h2>Session Managers<a class="headerlink" href="#session-managers" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://tmuxp.readthedocs.io/">tmuxp</a></li>
 <li><a class="reference external" href="https://github.com/tmuxinator/tmuxinator">tmuxinator</a></li>
 </ul>
+</div>
+<div class="section" id="synchronize-panes">
+<h2>Synchronize Panes<a class="headerlink" href="#synchronize-panes" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">setw synchronize-panes on</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">setw synchronize-panes off</span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -242,7 +271,7 @@ eBook guide based on tmux primitives: servers, sessions, windows, panes</li>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Dec 2, 2019, 3:55:15 PM.
+      Last updated on Dec 2, 2019, 5:27:51 PM.
 
     </p>
   </div>
