@@ -17,7 +17,7 @@ Technical Notes
     :caption: Programming
 
     python/index
-    conda
+    conda/index
     frontend
 
 .. toctree::
