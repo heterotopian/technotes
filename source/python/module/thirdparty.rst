@@ -45,6 +45,8 @@ Third Party
     Mirror of project documentation, converted to Sphinx + RTD
     (Official project resource, or community-driven?)
 
+- `Online reStructuredText editor <http://rst.ninjs.org/>`_
+
 
 :py:mod:`factory_boy`
 ---------------------

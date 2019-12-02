@@ -1,11 +1,16 @@
 
-=============
-Documentation
-=============
+=========
+Resources
+=========
 
 .. highlight:: console
 
 - `Project homepage <http://www.sphinx-doc.org>`_
+- Discussion group: `sphinx-users <https://groups.google.com/forum/#!forum/sphinx-users>`_
+- `Online reStructuredText editor <http://rst.ninjs.org/>`_
+
+Documentation
+=============
 
 - `Domains <https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html>`_
 
@@ -21,3 +26,14 @@ Documentation
   - :py:mod:`sphinx.ext.intersphinx`
 
     - `Showing all links of an Intersphinx mapping file <https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#showing-all-links-of-an-intersphinx-mapping-file>`_
+
+
+Guides
+======
+
+- `Sphinx/reST Memo <http://rest-sphinx-memo.readthedocs.io>`_ -
+  Condensed, example-based guide to Sphinx & reStructuredText
+- `Wiser > Sphinx & reStructuredText <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/index.html>`_ -
+  Broad tutorial
+
+  - `Escaping whitespace around interpreted text <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/OnReStructuredText.html#subscript-and-superscript>`_
