@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+  
+  
 
   
 
@@ -24,20 +26,14 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
 <link rel="stylesheet" href="../_static/css/theme-custom.css" type="text/css" />
 
-    <link rel="top" title="Technotes Documentation" href="../index.html"/>
-        <link rel="up" title="Systemd" href="index.html"/>
-        <link rel="next" title="Docker" href="../docker.html"/>
-        <link rel="prev" title="Commands" href="command.html"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Docker" href="../docker.html" />
+    <link rel="prev" title="Commands" href="command.html" />
  
 
   
@@ -45,8 +41,9 @@
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -81,14 +78,17 @@
 
             
             
-                <p class="caption"><span class="caption-text">Essentials</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../bash.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Systemd</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="doc.html">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="command.html">Commands</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Controllers</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Controllers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">busctl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2">journalctl</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#selecting-messages">Selecting Messages</a></li>
@@ -147,36 +147,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">Technotes</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Technotes</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">Systemd</a> &raquo;</li>
-      
-    <li>Controllers</li>
+        
+      <li>Controllers</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/systemd/controller.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/systemd/controller.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -190,13 +210,13 @@
 <div class="section" id="id2">
 <h2><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/journalctl.html">journalctl</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Supports tab completion on field names:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> journalctl _G&lt;TAB&gt;
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> journalctl _G&lt;TAB&gt;
 </pre></div>
 </div>
 <div class="section" id="selecting-messages">
 <h3>Selecting Messages<a class="headerlink" href="#selecting-messages" title="Permalink to this headline">¶</a></h3>
 <p>Since/before date:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> journalctl --since<span class="o">=</span><span class="s1">&#39;2010-01-01 08:00:00&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> journalctl --since<span class="o">=</span><span class="s1">&#39;2010-01-01 08:00:00&#39;</span>
 <span class="gp">$</span> journalctl --until<span class="o">=</span><span class="s1">&#39;2010-01-01 08:00:00&#39;</span>
 </pre></div>
 </div>
@@ -204,34 +224,34 @@
 <div class="section" id="formatting-output">
 <h3>Formatting Output<a class="headerlink" href="#formatting-output" title="Permalink to this headline">¶</a></h3>
 <p>Fit output to terminal:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> journalctl --no-full
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> journalctl --no-full
 </pre></div>
 </div>
 <p>Disable pager:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> journalctl --no-pager
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> journalctl --no-pager
 </pre></div>
 </div>
 <p>Format:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> journalctl -o FORMAT
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> journalctl -o FORMAT
 </pre></div>
 </div>
 <dl class="docutils">
 <dt><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/journalctl.html#-o">Options</a></dt>
-<dd><code class="docutils literal"><span class="pre">short</span></code>
-<code class="docutils literal"><span class="pre">short-full</span></code>
-<code class="docutils literal"><span class="pre">short-iso</span></code>
-<code class="docutils literal"><span class="pre">short-iso-precise</span></code>
-<code class="docutils literal"><span class="pre">short-precise</span></code>
-<code class="docutils literal"><span class="pre">short-monotonic</span></code>
-<code class="docutils literal"><span class="pre">short-unix</span></code>
-<code class="docutils literal"><span class="pre">verbose</span></code>
-<code class="docutils literal"><span class="pre">export</span></code>
-<code class="docutils literal"><span class="pre">json</span></code>
-<code class="docutils literal"><span class="pre">json-pretty</span></code>
-<code class="docutils literal"><span class="pre">json-sse</span></code>
-<code class="docutils literal"><span class="pre">json-seq</span></code>
-<code class="docutils literal"><span class="pre">cat</span></code>
-<code class="docutils literal"><span class="pre">with-unit</span></code></dd>
+<dd><code class="docutils literal notranslate"><span class="pre">short</span></code>
+<code class="docutils literal notranslate"><span class="pre">short-full</span></code>
+<code class="docutils literal notranslate"><span class="pre">short-iso</span></code>
+<code class="docutils literal notranslate"><span class="pre">short-iso-precise</span></code>
+<code class="docutils literal notranslate"><span class="pre">short-precise</span></code>
+<code class="docutils literal notranslate"><span class="pre">short-monotonic</span></code>
+<code class="docutils literal notranslate"><span class="pre">short-unix</span></code>
+<code class="docutils literal notranslate"><span class="pre">verbose</span></code>
+<code class="docutils literal notranslate"><span class="pre">export</span></code>
+<code class="docutils literal notranslate"><span class="pre">json</span></code>
+<code class="docutils literal notranslate"><span class="pre">json-pretty</span></code>
+<code class="docutils literal notranslate"><span class="pre">json-sse</span></code>
+<code class="docutils literal notranslate"><span class="pre">json-seq</span></code>
+<code class="docutils literal notranslate"><span class="pre">cat</span></code>
+<code class="docutils literal notranslate"><span class="pre">with-unit</span></code></dd>
 </dl>
 </div>
 </div>
@@ -250,23 +270,23 @@
 <div class="section" id="id7">
 <h2><a class="reference external" href="http://0pointer.de/public/systemd-man/systemctl.html">systemctl</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <p>List active units:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> systemctl list-units
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-units
 </pre></div>
 </div>
 <p>List loaded units:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> systemctl list-units -a
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-units -a
 </pre></div>
 </div>
 <p>List active service units:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> systemctl list-units -t service
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-units -t service
 </pre></div>
 </div>
 <p>List unit files:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> systemctl list-unit-files
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl list-unit-files
 </pre></div>
 </div>
 <p>Check if unit is running:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> systemctl is-active unit
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> systemctl is-active unit
 </pre></div>
 </div>
 </div>
@@ -274,15 +294,16 @@
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../docker.html" class="btn btn-neutral float-right" title="Docker" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../docker.html" class="btn btn-neutral float-right" title="Docker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="command.html" class="btn btn-neutral" title="Commands" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="command.html" class="btn btn-neutral" title="Commands" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -291,12 +312,12 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Chris.
-      Last updated on Mon Dec  2 14:48:47 2019.
+        &copy; Copyright 2017, Chris
+      Last updated on Dec 2, 2019, 2:59:05 PM.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -311,35 +332,23 @@
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>
