@@ -109,3 +109,6 @@ mybinder: !!python/tuple
 connexion: !!python/tuple
   - "https://connexion.readthedocs.io/en/latest/"
   - null
+conda: !!python/tuple
+  - "https://docs.conda.io/projects/conda/en/latest/"
+  - null
