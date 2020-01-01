@@ -4,8 +4,21 @@
 Modules
 =======
 
-.. toctree::
-    :maxdepth: 2
+Standard Library
+================
 
-    stdlib
-    thirdparty
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
+    stdlib/*
+
+
+Third Party
+===========
+
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
+    thirdparty/*
