@@ -121,8 +121,14 @@ Redirection
     * - stderr
       - stdout
       - ``$ command 2>&1``
-    * - stderr and stdout
-      - ``command.out``
+    * - .. rst-class:: list-nobullet
+
+            * stdout
+            * stderr
+      - .. rst-class:: list-nobullet
+
+            * ``command.out``
+            * ``command.out``
       - ``$ command &>command.out``
     * - .. rst-class:: list-nobullet
 
