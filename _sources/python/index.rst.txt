@@ -8,7 +8,6 @@ Python
     :maxdepth: 2
 
     doc
-    pep
     runtime
     community
     module/index
