@@ -16,5 +16,10 @@ Resources
 Workflow
 --------
 
-- `Source-to-Image <https://github.com/openshift/source-to-image>`_ (S2I) - Framework for building reproducible container images from source code
-- `repo2docker <https://repo2docker.readthedocs.io>`_ - Build, run, and push Docker images from source code repositories
+- `Source-to-Image <https://github.com/openshift/source-to-image>`_ (S2I) -
+  Framework for building reproducible container images from source code
+- `repo2docker <https://repo2docker.readthedocs.io>`_ -
+  Build, run, and push Docker images from source code repositories
+- `3 Musketeers <https://3musketeers.io/>`_ -
+  General pattern designed for consistency & repeatability.
+  Make for orchestration, Docker/Docker Compose for execution.
