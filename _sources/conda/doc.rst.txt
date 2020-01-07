@@ -10,6 +10,7 @@
   - `Conda performance <https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/conda-performance.html>`_
 
 - `Understanding and Improving Conda’s performance <https://www.anaconda.com/understanding-and-improving-condas-performance/>`_
+- `Why We Removed the “Free” Channel in Conda 4.7 <https://www.anaconda.com/why-we-removed-the-free-channel-in-conda-4-7/>`_
 - Discussion
 
   - "Build strings have no semantic content" -
