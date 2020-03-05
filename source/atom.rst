@@ -83,3 +83,16 @@ Discussion
 ----------
 
 - `Ctrl-Tab order <https://github.com/atom/atom/issues/11650>`_
+
+
+
+Packages
+========
+
+vim-mode-plus
+-------------
+
+- `Project homepage <https://atom.io/packages/vim-mode-plus>`_
+- Documentation
+
+  - `AdvancedTopicTutorial <https://github.com/t9md/atom-vim-mode-plus/wiki/AdvancedTopicTutorial>`_
