@@ -19,11 +19,11 @@ Show channels::
 
 Add a channel::
 
-    $ conda config --add channels CHANNEL-NAME
+    $ conda config --add channels CHANNEL
 
 Remove a channel::
 
-    $ conda config --remove channels CHANNEL-NAME
+    $ conda config --remove channels CHANNEL
 
 
 

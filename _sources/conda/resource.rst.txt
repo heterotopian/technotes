@@ -12,7 +12,13 @@ Resources
 Documentation
 =============
 
-- `Homepage <https://conda.io/docs/>`_
+- `conda <https://conda.io/projects/conda/en/latest/>`_
+
+  - `Configuration <https://conda.io/projects/conda/en/latest/configuration.html>`_
+
+- `conda-build <https://conda.io/projects/conda-build/en/latest/>`_
+- `Miniconda <https://conda.io/en/latest/miniconda.html>`_
+
 
 
 User Guide
@@ -21,6 +27,7 @@ User Guide
 - `Homepage <https://docs.conda.io/projects/conda/en/latest/user-guide/index.html>`_
 - `Conda performance <https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/conda-performance.html>`_
 - `Managing channels <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-channels.html>`_
+
 
 
 Discussion
