@@ -32,8 +32,8 @@
 
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Frontend" href="../frontend.html" />
-    <link rel="prev" title="Extensions" href="extension.html" />
+    <link rel="next" title="Repositories" href="repo.html" />
+    <link rel="prev" title="Resources" href="resource.html" />
  
 
   
@@ -93,10 +93,12 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Conda</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="doc.html">Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="repo.html">Repositories</a></li>
-<li class="toctree-l2"><a class="reference internal" href="extension.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource.html">Resources</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#config">config</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#channels">Channels</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#search">search</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pre-4-4-0">Pre-4.4.0</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#post-4-4-0">Post-4.4.0</a></li>
@@ -104,6 +106,8 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="repo.html">Repositories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extension.html">Extensions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../frontend.html">Frontend</a></li>
@@ -199,6 +203,27 @@
             
   <div class="section" id="commands">
 <h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="config">
+<h2>config<a class="headerlink" href="#config" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/commands/config.html">Documentation</a></li>
+</ul>
+<div class="section" id="channels">
+<h3>Channels<a class="headerlink" href="#channels" title="Permalink to this headline">¶</a></h3>
+<p>Show channels:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda config --get channels
+</pre></div>
+</div>
+<p>Add a channel:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda config --add channels CHANNEL-NAME
+</pre></div>
+</div>
+<p>Remove a channel:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda config --remove channels CHANNEL-NAME
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="search">
 <h2>search<a class="headerlink" href="#search" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -287,10 +312,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../frontend.html" class="btn btn-neutral float-right" title="Frontend" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="repo.html" class="btn btn-neutral float-right" title="Repositories" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="extension.html" class="btn btn-neutral" title="Extensions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="resource.html" class="btn btn-neutral" title="Resources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -300,7 +325,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Mar 25, 2020, 11:40:54 AM.
+      Last updated on Mar 25, 2020, 1:44:30 PM.
 
     </p>
   </div>

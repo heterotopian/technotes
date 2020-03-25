@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Systemd &mdash; Technotes Documentation</title>
+  <title>Resources &mdash; Technotes Documentation</title>
   
 
   
@@ -32,8 +32,8 @@
 
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Documentation" href="doc.html" />
-    <link rel="prev" title="NFS" href="../linux/nfs.html" />
+    <link rel="next" title="Commands" href="command.html" />
+    <link rel="prev" title="Conda" href="index.html" />
  
 
   
@@ -82,22 +82,28 @@
             
             
               <p class="caption"><span class="caption-text">Essentials</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../bash.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Systemd</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="doc.html">Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command.html">Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="controller.html">Controllers</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../systemd/index.html">Systemd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../docker.html">Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../x11.html">X11</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Programming</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../conda/index.html">Conda</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Conda</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-guide">User Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#discussion">Discussion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="command.html">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repo.html">Repositories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extension.html">Extensions</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../frontend.html">Frontend</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Diagnostic Tools</span></p>
@@ -168,13 +174,15 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Systemd</li>
+          <li><a href="index.html">Conda</a> &raquo;</li>
+        
+      <li>Resources</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/systemd/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/conda/resource.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -187,30 +195,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="systemd">
-<span id="id1"></span><h1>Systemd<a class="headerlink" href="#systemd" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="doc.html">Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="doc.html#id1">Manpages</a></li>
+  <div class="section" id="resources">
+<h1>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/conda/conda">Project homepage</a></li>
+<li><a class="reference external" href="https://www.anaconda.com/understanding-and-improving-condas-performance/">Understanding and Improving Conda’s performance</a></li>
+<li><a class="reference external" href="https://www.anaconda.com/why-we-removed-the-free-channel-in-conda-4-7/">Why We Removed the “Free” Channel in Conda 4.7</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="command.html">Commands</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="command.html#id1">systemd-cgls</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command.html#id2">systemd-run</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command.html#id3">systemd-cgtop</a></li>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://conda.io/docs/">Homepage</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="controller.html">Controllers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="controller.html#id1">busctl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="controller.html#id2">journalctl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="controller.html#id3">localectl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="controller.html#id4">loginctl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="controller.html#id5">machinectl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="controller.html#id6">timedatectl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="controller.html#id7">systemctl</a></li>
+</div>
+<div class="section" id="user-guide">
+<h2>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/index.html">Homepage</a></li>
+<li><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/conda-performance.html">Conda performance</a></li>
+<li><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-channels.html">Managing channels</a></li>
 </ul>
-</li>
+</div>
+<div class="section" id="discussion">
+<h2>Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>“Build strings have no semantic content” -
+<a class="reference external" href="https://github.com/conda/conda/issues/4956#issuecomment-291847858">Source</a></li>
 </ul>
 </div>
 </div>
@@ -223,10 +233,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="doc.html" class="btn btn-neutral float-right" title="Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="command.html" class="btn btn-neutral float-right" title="Commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../linux/nfs.html" class="btn btn-neutral" title="NFS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Conda" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
