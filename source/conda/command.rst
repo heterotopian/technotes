@@ -5,6 +5,28 @@ Commands
 
 .. highlight:: console
 
+config
+======
+
+- `Documentation <https://docs.conda.io/projects/conda/en/latest/commands/config.html>`_
+
+Channels
+--------
+
+Show channels::
+
+    $ conda config --get channels
+
+Add a channel::
+
+    $ conda config --add channels CHANNEL-NAME
+
+Remove a channel::
+
+    $ conda config --remove channels CHANNEL-NAME
+
+
+
 search
 ======
 

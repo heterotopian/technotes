@@ -7,7 +7,7 @@ Conda
 .. toctree::
     :maxdepth: 2
 
-    doc
+    resource
+    command
     repo
     extension
-    command
