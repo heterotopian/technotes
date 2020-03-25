@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; Technotes Documentation</title>
+  <title>config &mdash; Technotes Documentation</title>
   
 
   
@@ -32,6 +32,8 @@
 
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="search" href="search.html" />
+    <link rel="prev" title="Commands" href="../command.html" />
  
 
   
@@ -83,14 +85,27 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../bash.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../linux/index.html">Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Systemd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../systemd/index.html">Systemd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../docker.html">Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../x11.html">X11</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Programming</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../conda/index.html">Conda</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Conda</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../resource.html">Resources</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../command.html">Commands</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">config</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#channels">Channels</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="search.html">search</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../repo.html">Repositories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extension.html">Extensions</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../frontend.html">Frontend</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Diagnostic Tools</span></p>
@@ -161,13 +176,17 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+          <li><a href="../index.html">Conda</a> &raquo;</li>
+        
+          <li><a href="../command.html">Commands</a> &raquo;</li>
+        
+      <li>config</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/systemd/controller/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/conda/command/config.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -180,12 +199,42 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
+  <div class="section" id="config">
+<h1>config<a class="headerlink" href="#config" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/commands/config.html">Documentation</a></li>
+</ul>
+<div class="section" id="channels">
+<h2>Channels<a class="headerlink" href="#channels" title="Permalink to this headline">¶</a></h2>
+<p>Show channels:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda config --get channels
+</pre></div>
+</div>
+<p>Add a channel:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda config --add channels CHANNEL
+</pre></div>
+</div>
+<p>Remove a channel:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda config --remove channels CHANNEL
+</pre></div>
+</div>
+</div>
+</div>
+
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="search.html" class="btn btn-neutral float-right" title="search" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../command.html" class="btn btn-neutral" title="Commands" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

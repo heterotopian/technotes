@@ -32,7 +32,7 @@
 
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Repositories" href="repo.html" />
+    <link rel="next" title="config" href="command/config.html" />
     <link rel="prev" title="Resources" href="resource.html" />
  
 
@@ -95,15 +95,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Conda</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="resource.html">Resources</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Commands</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#config">config</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#channels">Channels</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#search">search</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#pre-4-4-0">Pre-4.4.0</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#post-4-4-0">Post-4.4.0</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="command/config.html">config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="command/search.html">search</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="repo.html">Repositories</a></li>
@@ -203,104 +196,11 @@
             
   <div class="section" id="commands">
 <h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="config">
-<h2>config<a class="headerlink" href="#config" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/commands/config.html">Documentation</a></li>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="command/config.html">config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command/search.html">search</a></li>
 </ul>
-<div class="section" id="channels">
-<h3>Channels<a class="headerlink" href="#channels" title="Permalink to this headline">¶</a></h3>
-<p>Show channels:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda config --get channels
-</pre></div>
-</div>
-<p>Add a channel:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda config --add channels CHANNEL
-</pre></div>
-</div>
-<p>Remove a channel:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda config --remove channels CHANNEL
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="search">
-<h2>search<a class="headerlink" href="#search" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/commands/search.html">Documentation</a></li>
-</ul>
-<div class="section" id="pre-4-4-0">
-<h3>Pre-4.4.0<a class="headerlink" href="#pre-4-4-0" title="Permalink to this headline">¶</a></h3>
-<p>Search by name:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda search <span class="s1">&#39;marshmallow&#39;</span>
-</pre></div>
-</div>
-<p>Search by spec:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda search --spec <span class="s1">&#39;marshmallow=2.18.0&#39;</span>
-<span class="gp">$</span> conda search --spec <span class="s1">&#39;marshmallow=2.18.0=py27_0&#39;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="post-4-4-0">
-<h3>Post-4.4.0<a class="headerlink" href="#post-4-4-0" title="Permalink to this headline">¶</a></h3>
-<p>See <strong>enhanced package query language</strong> under <strong>New Feature Highlights</strong> in 4.4.0 <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/release-notes.html">release notes</a>:</p>
-<blockquote>
-<div>“Conda has a built-in query language for searching for and matching packages, what we often refer to as MatchSpec. The MatchSpec is what users input on the command line when they specify packages for create, install, update, and remove operations. With this release, MatchSpec (rather than a regex) becomes the default input for conda search.”</div></blockquote>
-<p>Search by name:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda search <span class="s1">&#39;marshmallow&#39;</span>
-</pre></div>
-</div>
-<p>Search by name and version:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda search <span class="s1">&#39;marshmallow=2.18.0&#39;</span>
-<span class="gp">$</span> conda search <span class="s1">&#39;marshmallow&gt;2.11&#39;</span>
-<span class="gp">$</span> conda search <span class="s1">&#39;marshmallow&gt;2.11,&lt;2.15&#39;</span>
-<span class="gp">$</span> conda search <span class="s1">&#39;marshmallow&gt;2.11,&lt;2.15|=2.18.0&#39;</span>
-</pre></div>
-</div>
-<p>Search by name and build:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda search <span class="s1">&#39;marshmallow[build=py27_0]&#39;</span>
-</pre></div>
-</div>
-<p>Search by name and platform:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda search <span class="s1">&#39;*/linux-64::marshmallow&#39;</span>
-</pre></div>
-</div>
-<p>Search by name, channel, and platform:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda search <span class="s1">&#39;defaults/linux-64::marshmallow&#39;</span>
-<span class="gp">$</span> conda search <span class="s1">&#39;conda-forge/linux-64::marshmallow&#39;</span>
-</pre></div>
-</div>
-<p>Search by name, channel, platform, and version:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda search <span class="s1">&#39;defaults/linux-64::marshmallow=2.18.0&#39;</span>
-<span class="gp">$</span> conda search <span class="s1">&#39;defaults/linux-64::marshmallow&gt;2.11&#39;</span>
-<span class="gp">$</span> conda search <span class="s1">&#39;defaults/linux-64::marshmallow&gt;2.11,&lt;2.15&#39;</span>
-<span class="gp">$</span> conda search <span class="s1">&#39;defaults/linux-64::marshmallow&gt;2.11,&lt;2.15|=2.18.0&#39;</span>
-</pre></div>
-</div>
-<p>Search by name, channel, platform, version, and build:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda search <span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0]=2.18.0&#39;</span>
-<span class="gp">$</span> conda search <span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0]&gt;2.11&#39;</span>
-<span class="gp">$</span> conda search <span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0]&gt;2.11,&lt;2.15&#39;</span>
-<span class="gp">$</span> conda search <span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0]&gt;2.11,&lt;2.15|=2.18.0&#39;</span>
-</pre></div>
-</div>
-<p>Search by md5:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda search <span class="s1">&#39;*[md5=56a2e82b7205d97210d5162174e6bd5e]&#39;</span>
-</pre></div>
-</div>
-<p>Search by channel, platform, and md5:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda search <span class="s1">&#39;defaults/linux-64::*[md5=56a2e82b7205d97210d5162174e6bd5e]&#39;</span>
-</pre></div>
-</div>
-<p>Show detailed information about search results:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda search <span class="s1">&#39;marshmallow&#39;</span> --info
-</pre></div>
-</div>
-<p>Include additional channel in search results:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda search -c conda-forge <span class="s1">&#39;marshmallow&#39;</span>
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 
@@ -312,7 +212,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="repo.html" class="btn btn-neutral float-right" title="Repositories" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="command/config.html" class="btn btn-neutral float-right" title="config" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="resource.html" class="btn btn-neutral" title="Resources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -325,7 +225,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Mar 25, 2020, 1:51:28 PM.
+      Last updated on Mar 25, 2020, 1:59:40 PM.
 
     </p>
   </div>
