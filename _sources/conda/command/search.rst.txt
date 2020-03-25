@@ -1,7 +1,7 @@
 
-======
-search
-======
+==========
+``search``
+==========
 
 .. highlight:: console
 
