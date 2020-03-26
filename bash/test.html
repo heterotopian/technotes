@@ -214,15 +214,15 @@
 </pre></div>
 </div>
 <p>Length:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> -z VARIABLE <span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[[</span> -n <span class="si">${</span><span class="nv">VARIABLE</span><span class="si">}</span> <span class="o">]]</span>
 <span class="k">then</span>
-    <span class="c1"># VARIABLE length is 0</span>
+    <span class="c1"># VARIABLE has non-zero length</span>
 <span class="k">fi</span>
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> -n VARIABLE <span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[[</span> -z <span class="si">${</span><span class="nv">VARIABLE</span><span class="si">}</span> <span class="o">]]</span>
 <span class="k">then</span>
-    <span class="c1"># VARIABLE length is not 0</span>
+    <span class="c1"># VARIABLE has zero length or is unset</span>
 <span class="k">fi</span>
 </pre></div>
 </div>
@@ -266,7 +266,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Mar 26, 2020, 5:09:03 AM.
+      Last updated on Mar 26, 2020, 6:40:12 AM.
 
     </p>
   </div>
