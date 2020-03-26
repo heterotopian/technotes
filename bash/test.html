@@ -194,7 +194,17 @@
             
   <div class="section" id="tests">
 <h1>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h1>
-<p>Bash Guide for Beginners: <a class="reference external" href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#sect_07_01_01_01">Test primitives</a></p>
+<ul class="simple">
+<li>Bash Guide for Beginners: <a class="reference external" href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#sect_07_01_01_01">Test primitives</a></li>
+</ul>
+<p>Test if <code class="docutils literal notranslate"><span class="pre">VARIABLE</span></code> is set:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[[</span> ! -z <span class="si">${</span><span class="nv">VARIABLE</span><span class="p">+notset</span><span class="si">}</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="c1"># VARIABLE is set</span>
+<span class="k">else</span>
+    <span class="c1"># VARIALBE is not set</span>
+<span class="k">fi</span>
+</pre></div>
+</div>
 </div>
 
 
@@ -218,7 +228,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Mar 25, 2020, 8:51:05 PM.
+      Last updated on Mar 25, 2020, 9:13:24 PM.
 
     </p>
   </div>
