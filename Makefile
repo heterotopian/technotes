@@ -53,7 +53,7 @@ clean:
 	rm -rf $(BUILDDIR)/*
 
 watch:
-	$(AUTOBUILD) $(AUTOOPTS) -b html $(ALLSPHINXOPTS) $(OUTDIR)/html
+	$(AUTOBUILD) $(AUTOOPTS) -a -b html $(ALLSPHINXOPTS) $(OUTDIR)/html
 	@echo
 	@echo "Initial build finished. Watching for file changes."
 
