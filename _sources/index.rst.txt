@@ -6,7 +6,7 @@ Technical Notes
     :maxdepth: 1
     :caption: Essentials
 
-    bash
+    bash/index
     linux/index
     systemd/index
     docker

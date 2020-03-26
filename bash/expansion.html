@@ -1,0 +1,306 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Expansion &mdash; Technotes Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../_static/css/theme-custom.css" type="text/css" />
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Builtins" href="builtin.html" />
+    <link rel="prev" title="Tests" href="test.html" />
+ 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Technotes
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Essentials</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Bash</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="resource.html">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test.html">Tests</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Expansion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="builtin.html">Builtins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fd.html">File Descriptors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redirect.html">Redirection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../systemd/index.html">Systemd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../x11.html">X11</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Programming</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conda/index.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../frontend.html">Frontend</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Diagnostic Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sysdig.html">sysdig</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Applications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../atom.html">Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vim.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tmux.html">tmux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Version control</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../git.html">Git</a></li>
+</ul>
+
+            
+          
+<p class="caption">
+  <span class="caption-text">Reference</span>
+</p>
+<ul>
+  <li class="toctree-l1">
+    <a class="reference internal" href="../genindex.html">Index</a>
+  </li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Technotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Bash</a> &raquo;</li>
+        
+      <li>Expansion</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/bash/expansion.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="expansion">
+<h1>Expansion<a class="headerlink" href="#expansion" title="Permalink to this headline">¶</a></h1>
+<p>Bash Guide for Beginners: <a class="reference external" href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html">Shell expansion</a></p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="45%" />
+<col width="9%" />
+<col width="45%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Expansion type</th>
+<th class="head">Order</th>
+<th class="head">Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Brace expansion</td>
+<td>1</td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">foo{A,B,C}bar</span></code></td>
+</tr>
+<tr class="row-odd"><td>Tilde expansion</td>
+<td>2</td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ls</span> <span class="pre">~/.vimrc</span></code></td>
+</tr>
+<tr class="row-even"><td>Shell parameter &amp; variable subsitution</td>
+<td>3</td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">$PATH</span></code></td>
+</tr>
+<tr class="row-odd"><td>Command substitution</td>
+<td>4</td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">readlink</span> <span class="pre">-f</span> <span class="pre">$(which</span> <span class="pre">python)</span></code></td>
+</tr>
+<tr class="row-even"><td>Arithmetic expansion</td>
+<td>5</td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">echo</span> <span class="pre">$[</span> <span class="pre">365*24</span> <span class="pre">]</span></code></td>
+</tr>
+<tr class="row-odd"><td>Process substitution</td>
+<td>6</td>
+<td><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">diff</span> <span class="pre">&lt;(date)</span> <span class="pre">&lt;(sleep</span> <span class="pre">1;</span> <span class="pre">date)</span></code></td>
+</tr>
+<tr class="row-even"><td>Word splitting</td>
+<td>7</td>
+<td>See <a class="reference external" href="http://wiki.bash-hackers.org/syntax/expansion/wordsplit">wordsplitting</a> in Bash Hackers Wiki</td>
+</tr>
+<tr class="row-odd"><td>File name expansion</td>
+<td>8</td>
+<td>See <a class="reference external" href="http://wiki.bash-hackers.org/syntax/expansion/globs">globs</a> in Bash Hackers Wiki</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="builtin.html" class="btn btn-neutral float-right" title="Builtins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="test.html" class="btn btn-neutral" title="Tests" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Chris
+      Last updated on Mar 25, 2020, 8:51:05 PM.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
