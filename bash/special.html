@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Linux &mdash; Technotes Documentation</title>
+  <title>Special Variables &mdash; Technotes Documentation</title>
   
 
   
@@ -32,8 +32,8 @@
 
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Cgroups" href="cgroup.html" />
-    <link rel="prev" title="Redirection" href="../bash/redirect.html" />
+    <link rel="next" title="Tests" href="test.html" />
+    <link rel="prev" title="Resources" href="resource.html" />
  
 
   
@@ -83,14 +83,17 @@
             
               <p class="caption"><span class="caption-text">Essentials</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../bash/index.html">Bash</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Linux</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cgroup.html">Cgroups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="device.html">Devices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filesystem.html">Filesystems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nfs.html">NFS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Bash</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="resource.html">Resources</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Special Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test.html">Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expansion.html">Expansion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="builtin.html">Builtins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fd.html">File Descriptors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redirect.html">Redirection</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../systemd/index.html">Systemd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../docker.html">Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../x11.html">X11</a></li>
@@ -169,13 +172,15 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Linux</li>
+          <li><a href="index.html">Bash</a> &raquo;</li>
+        
+      <li>Special Variables</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/linux/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/bash/special.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -188,32 +193,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="linux">
-<span id="id1"></span><h1>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="cgroup.html">Cgroups</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cgroup.html#lsns">lsns</a></li>
+  <div class="section" id="special-variables">
+<h1>Special Variables<a class="headerlink" href="#special-variables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/Special-Parameters.html">Documentation</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="device.html">Devices</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="device.html#blkid">blkid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="device.html#lsblk">lsblk</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="filesystem.html">Filesystems</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="filesystem.html#findmnt">findmnt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filesystem.html#lvm">lvm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filesystem.html#tree">tree</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="nfs.html">NFS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nfs.html#nfsstat">nfsstat</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nfs.html#nfsiostat">nfsiostat</a></li>
-</ul>
-</li>
-</ul>
-</div>
+<dl class="docutils">
+<dt>$#</dt>
+<dd>Number of positional parameters.</dd>
+<dt>$*</dt>
+<dd>Positional parameters, starting from position 1.
+When the expansion is not within double quotes, each positional parameter expands to a separate word.
+When the expansion occurs within double quotes, it expands to a single word with the value of each parameter separated by the first character of the <code class="docutils literal notranslate"><span class="pre">IFS</span></code> special variable.</dd>
+<dt>$&#64;</dt>
+<dd>Positional parameters, starting from position 1.
+In contexts where word splitting is performed, this expands each positional parameter to a separate word; if not within double quotes, these words are subject to word splitting.
+In contexts where word splitting is not performed, this expands to a single word with each positional parameter separated by a space.
+When the expansion occurs within double quotes, and word splitting is performed, each parameter expands to a separate word.</dd>
+<dt>$?</dt>
+<dd>Exit status of the most recently executed foreground pipeline.</dd>
+<dt>$-</dt>
+<dd>Current option flags as specified upon invocation, by the set builtin command, or those set by the shell itself (such as the -i option).</dd>
+</dl>
+<dl class="docutils">
+<dt>$$</dt>
+<dd>Process ID of the shell.
+In a <code class="docutils literal notranslate"><span class="pre">()</span></code> subshell, it expands to the process ID of the invoking shell, not the subshell.</dd>
+<dt>$!</dt>
+<dd>Process ID of the job most recently placed into the background, whether executed as an asynchronous command or using the <code class="docutils literal notranslate"><span class="pre">bg</span></code> builtin.</dd>
+<dt>$0</dt>
+<dd>Name of the shell or shell script.</dd>
+<dt>$_</dt>
+<dd>At shell startup, set to the absolute pathname used to invoke the shell or shell script being executed as passed in the environment or argument list.
+Subsequently, expands to the last argument to the previous simple command executed in the foreground, after expansion.
+Also set to the full pathname used to invoke each command executed and placed in the environment exported to that command.</dd>
+</dl>
 </div>
 
 
@@ -224,10 +238,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cgroup.html" class="btn btn-neutral float-right" title="Cgroups" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="test.html" class="btn btn-neutral float-right" title="Tests" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../bash/redirect.html" class="btn btn-neutral" title="Redirection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="resource.html" class="btn btn-neutral" title="Resources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
