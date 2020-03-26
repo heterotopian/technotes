@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>loginctl &mdash; Technotes Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/css/theme-custom.css" type="text/css" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="machinectl" href="machinectl.html" />
+    <link rel="prev" title="localectl" href="localectl.html" />
+ 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Technotes
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Essentials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../bash/index.html">Bash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../linux/index.html">Linux</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Systemd</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../resource.html">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#commands">Commands</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#controllers">Controllers</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="busctl.html">busctl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="journalctl.html">journalctl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="localectl.html">localectl</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">loginctl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sessions">Sessions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#users">Users</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="machinectl.html">machinectl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="systemctl.html">timedatectl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timedatectl.html">systemctl</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../x11.html">X11</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Programming</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../conda/index.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../frontend.html">Frontend</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Diagnostic Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../sysdig.html">sysdig</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Applications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../atom/index.html">Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vim.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tmux.html">tmux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sphinx/index.html">Sphinx</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Version control</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../git.html">Git</a></li>
+</ul>
+
+            
+          
+<p class="caption">
+  <span class="caption-text">Reference</span>
+</p>
+<ul>
+  <li class="toctree-l1">
+    <a class="reference internal" href="../../genindex.html">Index</a>
+  </li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Technotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Systemd</a> &raquo;</li>
+        
+      <li>loginctl</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/systemd/controller/loginctl.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="loginctl">
+<h1>loginctl<a class="headerlink" href="#loginctl" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/loginctl.html">Documentation</a></li>
+</ul>
+<div class="section" id="sessions">
+<h2>Sessions<a class="headerlink" href="#sessions" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> loginctl list-sessions
+<span class="go">   SESSION        UID USER             SEAT</span>
+<span class="go">        c1       1000 chris            seat0</span>
+
+<span class="go">1 sessions listed.</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> loginctl session-status c1
+<span class="go">c1 - chris (1000)</span>
+<span class="go">           Since: Sun 2019-11-17 18:34:11 EST; 3 months 17 days ago</span>
+<span class="go">          Leader: 1639 (mdm)</span>
+<span class="go">            Seat: seat0; vc8</span>
+<span class="go">         Display: :0</span>
+<span class="go">         Service: mdm; type x11; class user</span>
+<span class="go">           State: active</span>
+<span class="go">          CGroup: systemd:/user/1000.user/c1.session</span>
+<span class="go">                  ├─ 1099 /opt/google/chrome/chrome --type=renderer --field-trial-handle=6315093843364672281,4974006865843957291,131072 --disable-gpu-compositing --service-pipe-token=AD7D579170EAC688447C54F3357FCF53 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-main-frame-before-activation --enable-compositor-image-animations --service-request-channel-token=AD7D579170EAC688447C54F3357FCF53 --renderer-client-id=2122 --shared-files=v8_context_snapshot_data:100,v8_natives_data:101,v8_snapshot_data:10</span>
+<span class="go">                  ├─ 1639 mdm</span>
+<span class="go">                  ├─ 2021 /usr/bin/gnome-keyring-daemon --daemonize --login</span>
+<span class="go">                  ├─ 2097 cinnamon-session --session cinnamon</span>
+<span class="go">                  ├─ 2154 /usr/bin/ssh-agent /usr/bin/dbus-launch --exit-with-session /usr/bin/im-launch x-session-manager</span>
+<span class="go">                  ├─ 2157 /usr/bin/dbus-launch --exit-with-session /usr/bin/im-launch x-session-manager</span>
+<span class="go">                  ├─ 2158 //bin/dbus-daemon --fork --print-pid 6 --print-address 9 --session</span>
+<span class="go">                  ├─ 2165 /usr/lib/at-spi2-core/at-spi-bus-launcher</span>
+<span class="go">                  ├─ 2169 /bin/dbus-daemon --config-file=/etc/at-spi2/accessibility.conf --nofork --print-address 3</span>
+<span class="go">                  ├─ 2172 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session</span>
+<span class="go">                  ├─ 2192 /usr/bin/pulseaudio --start --log-target=syslog</span>
+<span class="go">                  ├─ 2274 /usr/lib/gvfs/gvfsd</span>
+<span class="go">                  ├─ 2278 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> loginctl show-session c1
+<span class="go">Id=c1</span>
+<span class="go">Timestamp=Sun 2019-11-17 18:34:11 EST</span>
+<span class="go">TimestampMonotonic=66150378</span>
+<span class="go">DefaultControlGroup=systemd:/user/1000.user/c1.session</span>
+<span class="go">VTNr=8</span>
+<span class="go">Display=:0</span>
+<span class="go">Remote=no</span>
+<span class="go">Service=mdm</span>
+<span class="go">Leader=1639</span>
+<span class="go">Audit=0</span>
+<span class="go">Type=x11</span>
+<span class="go">Class=user</span>
+<span class="go">Active=yes</span>
+<span class="go">State=active</span>
+<span class="go">KillProcesses=no</span>
+<span class="go">IdleHint=no</span>
+<span class="go">IdleSinceHint=0</span>
+<span class="go">IdleSinceHintMonotonic=0</span>
+<span class="go">Name=chris</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="users">
+<h2>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> loginctl list-users
+<span class="go">       UID USER</span>
+<span class="go">      1000 chris</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> loginctl user-status chris
+<span class="go">chris (1000)</span>
+<span class="go">           Since: Sun 2019-11-17 18:34:11 EST; 3 months 17 days ago</span>
+<span class="go">           State: active</span>
+<span class="go">        Sessions: *c1</span>
+<span class="go">          CGroup: systemd:/user/1000.user</span>
+<span class="go">                  └─c1.session</span>
+<span class="go">                    ├─ 1099 /opt/google/chrome/chrome --type=renderer --field-trial-handle=6315093843364672281,4974006865843957291,131072 --disable-gpu-compositing --service-pipe-token=AD7D579170EAC688447C54F3357FCF53 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-main-frame-before-activation --enable-compositor-image-animations --service-request-channel-token=AD7D579170EAC688447C54F3357FCF53 --renderer-client-id=2122 --shared-files=v8_context_snapshot_data:100,v8_natives_data:101,v8_snapshot_data:10</span>
+<span class="go">                    ├─ 1639 mdm</span>
+<span class="go">                    ├─ 2021 /usr/bin/gnome-keyring-daemon --daemonize --login</span>
+<span class="go">                    ├─ 2097 cinnamon-session --session cinnamon</span>
+<span class="go">                    ├─ 2154 /usr/bin/ssh-agent /usr/bin/dbus-launch --exit-with-session /usr/bin/im-launch x-session-manager</span>
+<span class="go">                    ├─ 2157 /usr/bin/dbus-launch --exit-with-session /usr/bin/im-launch x-session-manager</span>
+<span class="go">                    ├─ 2158 //bin/dbus-daemon --fork --print-pid 6 --print-address 9 --session</span>
+<span class="go">                    ├─ 2165 /usr/lib/at-spi2-core/at-spi-bus-launcher</span>
+<span class="go">                    ├─ 2169 /bin/dbus-daemon --config-file=/etc/at-spi2/accessibility.conf --nofork --print-address 3</span>
+<span class="go">                    ├─ 2172 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session</span>
+<span class="go">                    ├─ 2192 /usr/bin/pulseaudio --start --log-target=syslog</span>
+<span class="go">                    ├─ 2274 /usr/lib/gvfs/gvfsd</span>
+<span class="go">                    ├─ 2278 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes</span>
+<span class="go">                    ├─ 2385 /usr/lib/gvfs/gvfs-udisks2-volume-monitor</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> loginctl show-user chris
+<span class="go">UID=1000</span>
+<span class="go">GID=1000</span>
+<span class="go">Name=chris</span>
+<span class="go">Timestamp=Sun 2019-11-17 18:34:11 EST</span>
+<span class="go">TimestampMonotonic=66150137</span>
+<span class="go">RuntimePath=/run/user/1000</span>
+<span class="go">DefaultControlGroup=systemd:/user/1000.user</span>
+<span class="go">Display=c1</span>
+<span class="go">State=active</span>
+<span class="go">Sessions=c1</span>
+<span class="go">IdleHint=no</span>
+<span class="go">IdleSinceHint=0</span>
+<span class="go">IdleSinceHintMonotonic=0</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="machinectl.html" class="btn btn-neutral float-right" title="machinectl" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="localectl.html" class="btn btn-neutral" title="localectl" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Chris
+      Last updated on Mar 26, 2020, 4:18:16 AM.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
