@@ -33,13 +33,6 @@ Number of arguments::
 
 ::
 
-    if [[ $# -eq 2 ]]
-    then
-        # 2 arguments passed
-    fi
-
-::
-
     if [[ $# -gt 1 ]]
     then
         # More than 1 argument passed
