@@ -10,7 +10,7 @@ Tests
 Variables
 =========
 
-``VARIABLE`` is set::
+Is ``VARIABLE`` set::
 
     if [[ ! -z ${VARIABLE+notset} ]]
     then
