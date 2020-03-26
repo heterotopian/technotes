@@ -23,3 +23,5 @@ vim-mode-plus
 - Documentation
 
   - `AdvancedTopicTutorial <https://github.com/t9md/atom-vim-mode-plus/wiki/AdvancedTopicTutorial>`_
+
+    - `Use persistent selection <https://github.com/t9md/atom-vim-mode-plus/wiki/AdvancedTopicTutorial#7-use-persistent-selection>`_
