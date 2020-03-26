@@ -3,46 +3,88 @@
 Expansion
 =========
 
-.. highlight:: console
+.. highlight:: bash
 
+- `Documentation <https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html>`_
 - Bash Guide for Beginners: `Shell expansion <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html>`_
 
 .. list-table::
-    :widths: 50 10 50
+    :widths: 10 30 50
     :header-rows: 1
 
-    * - Expansion type
-      - Order
+    * - Order
+      - Expansion type
       - Example
 
-    * - Brace expansion
-      - 1
-      - ``$ echo foo{A,B,C}bar``
+    * - 1
+      - `Brace expansion`_
+      - ::
 
-    * - Tilde expansion
-      - 2
-      - ``$ ls ~/.vimrc``
+            echo foo{A,B,C}bar
 
-    * - Shell parameter & variable subsitution
-      - 3
-      - ``$ echo $PATH``
+    * - 2
+      - `Tilde expansion`_
+      - ::
 
-    * - Command substitution
-      - 4
-      - ``$ readlink -f $(which python)``
+            ls ~/.vimrc
 
-    * - Arithmetic expansion
-      - 5
-      - ``$ echo $[ 365*24 ]``
+    * - 3
+      - `Parameter/variable subsitution`_
+      - ::
 
-    * - Process substitution
-      - 6
-      - ``$ diff <(date) <(sleep 1; date)``
+            echo ${PATH}
 
-    * - Word splitting
-      - 7
-      - See `wordsplitting <http://wiki.bash-hackers.org/syntax/expansion/wordsplit>`_ in Bash Hackers Wiki
+    * - 4
+      - `Command substitution`_
+      - ::
 
-    * - File name expansion
-      - 8
-      - See `globs <http://wiki.bash-hackers.org/syntax/expansion/globs>`_ in Bash Hackers Wiki
+            readlink -f $(which python)
+
+    * - 5
+      - `Arithmetic expansion`_
+      - ::
+
+            echo $(( 365 * 24 ))
+
+    * - 6
+      - `Process substitution`_
+      - ::
+
+            diff <(date) <(sleep 1; date)
+
+    * - 7
+      - `Word splitting`_
+      - ::
+
+            args () {
+                printf "%d arguments:" "$#"
+                printf " <%s>" "$@"
+                echo
+            }
+
+        ::
+
+            args hello world "how are you?"
+
+        ::
+
+            VAR="This is a variable"
+            args $VAR
+            args "$VAR"
+
+    * - 8
+      - `Filename expansion`_
+      - ::
+
+            ls *.pyc
+
+
+
+.. _Brace expansion: https://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html
+.. _Tilde expansion: https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html
+.. _Parameter/variable subsitution: https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
+.. _Command substitution: https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html
+.. _Arithmetic expansion: https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html
+.. _Process substitution: https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html
+.. _Word splitting: https://www.gnu.org/software/bash/manual/html_node/Word-Splitting.html
+.. _Filename expansion: https://www.gnu.org/software/bash/manual/html_node/Filename-Expansion.html
