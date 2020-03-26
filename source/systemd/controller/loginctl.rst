@@ -1,74 +1,14 @@
-.. _systemd_controller:
 
-===========
-Controllers
-===========
+========
+loginctl
+========
 
 .. highlight:: console
 
-`busctl <https://www.freedesktop.org/software/systemd/man/busctl.html>`_
-========================================================================
-
-
-`journalctl <https://www.freedesktop.org/software/systemd/man/journalctl.html>`_
-================================================================================
-
-Supports tab completion on field names::
-
-    $ journalctl _G<TAB>
-
-Selecting Messages
-------------------
-
-Since/before date::
-
-    $ journalctl --since='2010-01-01 08:00:00'
-    $ journalctl --until='2010-01-01 08:00:00'
-
-
-Formatting Output
------------------
-
-Fit output to terminal::
-
-    $ journalctl --no-full
-
-Disable pager::
-
-    $ journalctl --no-pager
-
-
-Format::
-
-    $ journalctl -o FORMAT
-
-`Options <https://www.freedesktop.org/software/systemd/man/journalctl.html#-o>`_
-    ``short``
-    ``short-full``
-    ``short-iso``
-    ``short-iso-precise``
-    ``short-precise``
-    ``short-monotonic``
-    ``short-unix``
-    ``verbose``
-    ``export``
-    ``json``
-    ``json-pretty``
-    ``json-sse``
-    ``json-seq``
-    ``cat``
-    ``with-unit``
-
-
-`localectl <https://www.freedesktop.org/software/systemd/man/localectl.html>`_
-==============================================================================
-
-
-`loginctl <https://www.freedesktop.org/software/systemd/man/loginctl.html>`_
-============================================================================
+- `Documentation <https://www.freedesktop.org/software/systemd/man/loginctl.html>`_
 
 Sessions
---------
+========
 
 ::
 
@@ -128,7 +68,7 @@ Sessions
 
 
 Users
------
+=====
 
 ::
 
@@ -177,38 +117,3 @@ Users
     IdleHint=no
     IdleSinceHint=0
     IdleSinceHintMonotonic=0
-
-
-
-
-
-`machinectl <https://www.freedesktop.org/software/systemd/man/machinectl.html>`_
-================================================================================
-
-
-`timedatectl <https://www.freedesktop.org/software/systemd/man/timedatectl.html>`_
-==================================================================================
-
-
-`systemctl <http://0pointer.de/public/systemd-man/systemctl.html>`_
-===================================================================
-
-List active units::
-
-    $ systemctl list-units
-
-List loaded units::
-
-    $ systemctl list-units -a
-
-List active service units::
-
-    $ systemctl list-units -t service
-
-List unit files::
-
-    $ systemctl list-unit-files
-
-Check if unit is running::
-
-    $ systemctl is-active unit

@@ -7,8 +7,7 @@ Systemd
 .. toctree::
     :maxdepth: 2
 
-    doc
-    controller
+    resource
 
 Commands
 ========
@@ -18,3 +17,14 @@ Commands
     :glob:
 
     command/*
+
+
+
+Controllers
+===========
+
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
+    controller/*
