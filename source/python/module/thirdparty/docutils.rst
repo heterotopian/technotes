@@ -1,3 +1,4 @@
+.. _python_module_docutils:
 
 ==================
 :py:mod:`docutils`
