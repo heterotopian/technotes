@@ -30,14 +30,14 @@ Length::
 
     if [[ -z ${VARIABLE} ]]
     then
-        # VARIABLE has zero length or is unset
+        # VARIABLE has zero length   or is unset
     fi
 
 
 Arguments
 =========
 
-Number of arguments::
+Count::
 
     if [[ $# -eq 1 ]]
     then
