@@ -16,3 +16,12 @@
     list-style: none;
     margin: 0;
 }
+
+/* Decrease whitespace between adjacent code blocks */
+
+div[class ^= 'highlight-'] ~ div[class ^= 'highlight-'],
+div[class ^= 'highlight-'] ~ div[class *= ' highlight-'],
+div[class *= ' highlight-'] ~ div[class ^= 'highlight-'],
+div[class *= ' highlight-'] ~ div[class *= ' highlight-'] {
+    margin-top: -16px;
+}
