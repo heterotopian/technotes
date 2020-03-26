@@ -30,7 +30,7 @@ Technical Notes
     :maxdepth: 1
     :caption: Applications
 
-    atom
+    atom/index
     vim
     tmux
     sphinx/index
