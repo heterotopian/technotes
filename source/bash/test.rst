@@ -10,13 +10,27 @@ Tests
 Variables
 =========
 
-Is ``VARIABLE`` set::
+Set/unset::
 
     if [[ ! -z ${VARIABLE+notset} ]]
     then
         # VARIABLE is set
     else
         # VARIALBE is not set
+    fi
+
+Length::
+
+    if [ -z VARIABLE ]
+    then
+        # VARIABLE length is 0
+    fi
+
+::
+
+    if [ -n VARIABLE ]
+    then
+        # VARIABLE length is not 0
     fi
 
 
