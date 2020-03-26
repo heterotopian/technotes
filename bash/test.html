@@ -204,12 +204,25 @@
 </ul>
 <div class="section" id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
-<p>Is <code class="docutils literal notranslate"><span class="pre">VARIABLE</span></code> set:</p>
+<p>Set/unset:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[[</span> ! -z <span class="si">${</span><span class="nv">VARIABLE</span><span class="p">+notset</span><span class="si">}</span> <span class="o">]]</span>
 <span class="k">then</span>
     <span class="c1"># VARIABLE is set</span>
 <span class="k">else</span>
     <span class="c1"># VARIALBE is not set</span>
+<span class="k">fi</span>
+</pre></div>
+</div>
+<p>Length:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> -z VARIABLE <span class="o">]</span>
+<span class="k">then</span>
+    <span class="c1"># VARIABLE length is 0</span>
+<span class="k">fi</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> -n VARIABLE <span class="o">]</span>
+<span class="k">then</span>
+    <span class="c1"># VARIABLE length is not 0</span>
 <span class="k">fi</span>
 </pre></div>
 </div>
@@ -253,7 +266,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Mar 26, 2020, 4:22:43 AM.
+      Last updated on Mar 26, 2020, 5:09:03 AM.
 
     </p>
   </div>
