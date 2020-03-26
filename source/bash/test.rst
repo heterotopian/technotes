@@ -21,18 +21,17 @@ Set/unset::
 
 Length::
 
-    if [ -z VARIABLE ]
+    if [[ -n ${VARIABLE} ]]
     then
-        # VARIABLE length is 0
+        # VARIABLE has non-zero length
     fi
 
 ::
 
-    if [ -n VARIABLE ]
+    if [[ -z ${VARIABLE} ]]
     then
-        # VARIABLE length is not 0
+        # VARIABLE has zero length or is unset
     fi
-
 
 
 Arguments
