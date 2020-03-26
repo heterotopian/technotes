@@ -8,5 +8,13 @@ Systemd
     :maxdepth: 2
 
     doc
-    command
     controller
+
+Commands
+========
+
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
+    command/*
