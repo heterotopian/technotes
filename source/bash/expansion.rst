@@ -5,7 +5,7 @@ Expansion
 
 .. highlight:: console
 
-Bash Guide for Beginners: `Shell expansion <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html>`_
+- Bash Guide for Beginners: `Shell expansion <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html>`_
 
 .. list-table::
     :widths: 50 10 50

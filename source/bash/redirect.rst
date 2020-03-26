@@ -5,6 +5,8 @@ Redirection
 
 .. highlight:: console
 
+- `Documentation <https://www.gnu.org/software/bash/manual/html_node/Redirections.html>`_
+
 .. list-table::
     :widths: auto
     :header-rows: 1
