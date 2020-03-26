@@ -23,6 +23,12 @@ Commands
     │ │ └─2066 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidf...
     │ ├─rpc-statd.service
 
+::
+
+    $ systemd-cgls /system.slice/dbus.service
+    Control group /system.slice/dbus.service:
+    └─2219 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+
 
 `systemd-run <https://www.freedesktop.org/software/systemd/man/systemd-run.html>`_
 ----------------------------------------------------------------------------------
