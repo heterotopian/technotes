@@ -5,5 +5,12 @@ Extensions
 
 .. highlight:: console
 
+- `Extensions <https://www.sphinx-doc.org/en/master/usage/extensions/>`_
+
+  - :py:mod:`sphinx.ext.extlinks`
+  - :py:mod:`sphinx.ext.intersphinx`
+
+    - `Showing all links of an Intersphinx mapping file <https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#showing-all-links-of-an-intersphinx-mapping-file>`_
+
 - `sphinx-jinja <https://pypi.org/project/sphinx-jinja/>`_ -
   Include content generated from Jinja templates in Sphinx documents

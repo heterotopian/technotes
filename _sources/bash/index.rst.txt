@@ -5,7 +5,6 @@ Bash
 ====
 
 .. toctree::
-    :maxdepth: 1
 
     resource
     special
