@@ -11,7 +11,6 @@ Sphinx
 - `Online reStructuredText editor <http://rst.ninjs.org/>`_
 
 .. toctree::
-    :maxdepth: 2
     :caption: Contents
 
     doc
