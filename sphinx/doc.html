@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Python &mdash; Technotes Documentation</title>
+  <title>Documentation &mdash; Technotes Documentation</title>
   
 
   
@@ -32,8 +32,8 @@
 
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Documentation" href="doc.html" />
-    <link rel="prev" title="X11" href="../x11.html" />
+    <link rel="next" title="Guides" href="guide.html" />
+    <link rel="prev" title="Sphinx" href="index.html" />
  
 
   
@@ -90,14 +90,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../x11.html">X11</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Programming</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="doc.html">Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="runtime.html">Runtime</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community.html">Community</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module/index.html">Modules</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../conda/index.html">Conda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../frontend.html">Frontend</a></li>
 </ul>
@@ -106,11 +100,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../sysdig.html">sysdig</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Applications</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../atom/index.html">Atom</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vim.html">Vim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tmux.html">tmux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Sphinx</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide.html">Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extension.html">Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theme.html">Themes</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Version control</span></p>
 <ul>
@@ -169,13 +169,15 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Python</li>
+          <li><a href="index.html">Sphinx</a> &raquo;</li>
+        
+      <li>Documentation</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/python/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/sphinx/doc.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -188,51 +190,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="python">
-<span id="id1"></span><h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="doc.html">Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="doc.html#peps">PEPs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="doc.html#id1">Glossary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="doc.html#id2">The Python Language Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="doc.html#id3">The Python Standard Library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="doc.html#id4">Installing Python Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="doc.html#id5">Distributing Python Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="doc.html#id6">Installing Python Modules (Legacy version)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="doc.html#id7">Distributing Python Modules (Legacy version)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="doc.html#id8">The CPython Developer’s Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="doc.html#id9">Python HOWTOs</a></li>
+  <div class="section" id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html">Directives</a><ul>
+<li><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-toctree">toctree</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="runtime.html">Runtime</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="runtime.html#pythonpath"><code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="runtime.html#pythondontwritebytecode"><code class="docutils literal notranslate"><span class="pre">PYTHONDONTWRITEBYTECODE</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="runtime.html#pythonioencoding"><code class="docutils literal notranslate"><span class="pre">PYTHONIOENCODING</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="runtime.html#pythonwarnings"><code class="docutils literal notranslate"><span class="pre">PYTHONWARNINGS</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="community.html">Community</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="community.html#language">Language</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community.html#trends">Trends</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community.html#packaging">Packaging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community.html#python-3">Python 3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community.html#asynchronous-i-o">Asynchronous I/O</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community.html#quality">Quality</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community.html#scientific-computing">Scientific Computing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community.html#web">Web</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community.html#infrastructure">Infrastructure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community.html#reflection">Reflection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community.html#docker">Docker</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="module/index.html">Modules</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="module/index.html#standard-library">Standard Library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module/index.html#third-party">Third Party</a></li>
+<li><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html">Domains</a><ul>
+<li><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#cross-referencing-syntax">Cross-referencing syntax</a><ul>
+<li>Prefix with <code class="docutils literal notranslate"><span class="pre">!</span></code> - no reference/hyperlink will be created</li>
+<li>Prefix with <code class="docutils literal notranslate"><span class="pre">~</span></code> - link text will only be the last component of target</li>
 </ul>
 </li>
 </ul>
-</div>
+</li>
+<li><a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">reStructuredText Primer</a><ul>
+<li><a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#substitutions">Substitutions</a>
+(See also: <a class="reference internal" href="../python/module/thirdparty/docutils.html#python-module-docutils"><span class="std std-ref">docutils</span></a>)</li>
+</ul>
+</li>
+</ul>
 </div>
 
 
@@ -243,10 +221,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="doc.html" class="btn btn-neutral float-right" title="Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="guide.html" class="btn btn-neutral float-right" title="Guides" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../x11.html" class="btn btn-neutral" title="X11" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
