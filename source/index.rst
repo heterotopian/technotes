@@ -39,4 +39,4 @@ Technical Notes
     :maxdepth: 1
     :caption: Version control
 
-    git
+    git/index
