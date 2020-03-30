@@ -1,16 +1,9 @@
 
-=========
-Resources
-=========
-
-.. highlight:: console
-
-- `Project homepage <http://www.sphinx-doc.org>`_
-- Discussion group: `sphinx-users <https://groups.google.com/forum/#!forum/sphinx-users>`_
-- `Online reStructuredText editor <http://rst.ninjs.org/>`_
-
+=============
 Documentation
 =============
+
+.. highlight:: console
 
 - `Directives <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html>`_
 
@@ -27,15 +20,3 @@ Documentation
 
   - `Substitutions <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#substitutions>`_
     (See also: :ref:`python_module_docutils`)
-
-
-
-Guides
-======
-
-- `Sphinx/reST Memo <http://rest-sphinx-memo.readthedocs.io>`_ -
-  Condensed, example-based guide to Sphinx & reStructuredText
-- `Wiser > Sphinx & reStructuredText <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/index.html>`_ -
-  Broad tutorial
-
-  - `Escaping whitespace around interpreted text <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/OnReStructuredText.html#subscript-and-superscript>`_
