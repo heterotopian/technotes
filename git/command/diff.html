@@ -204,7 +204,7 @@
 <li><a class="reference external" href="https://git-scm.com/docs/git-diff">Documentation</a></li>
 </ul>
 <p>Only changes (no context, no diff markers):</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git diff --unified<span class="o">=</span><span class="m">0</span> --color-words <span class="p">|</span> grep -P -v <span class="s2">&quot;^[\x03-\x1F]&quot;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git diff --unified<span class="o">=</span><span class="m">0</span> --color-words <span class="p">|</span> grep -P -v <span class="s2">&quot;^[\x03-\x1F]\[(1|36)m&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -230,7 +230,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Mar 30, 2020, 5:17:40 PM.
+      Last updated on Mar 30, 2020, 9:49:29 PM.
 
     </p>
   </div>
