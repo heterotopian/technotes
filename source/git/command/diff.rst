@@ -9,4 +9,4 @@
 
 Only changes (no context, no diff markers)::
 
-    $ git diff --unified=0 --color-words | grep -P -v "^[\x03-\x1F]"
+    $ git diff --unified=0 --color-words | grep -P -v "^[\x03-\x1F]\[(1|36)m"
