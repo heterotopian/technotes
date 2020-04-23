@@ -5,13 +5,10 @@ Resources
 
 .. highlight:: console
 
-- `Project homepage <https://www.gnu.org/software/bash/manual/>`_
-
 Documentation
 =============
 
-- `Separate pages <https://www.gnu.org/software/bash/manual/html_node/>`_
-- `Single page <https://www.gnu.org/software/bash/manual/bash.html>`_
+- `Homepage <https://www.gnu.org/software/bash/manual/html_node/>`_
 
 
 
@@ -26,10 +23,10 @@ Community
   - `How to read a file line-by-line <https://mywiki.wooledge.org/BashFAQ/001>`_
   - .. compound::
 
-      `Using find <https://mywiki.wooledge.org/UsingFind>`_
-
-      .. code-block:: bash
-
-          while IFS= read -r -d '' LINE; do
-              printf '%s\n' "$LINE"
-          done < <(find -name "$PATTERN" -print0)
+        `Using find <https://mywiki.wooledge.org/UsingFind>`_
+  
+        .. code-block:: bash
+  
+            while IFS= read -r -d '' LINE; do
+                printf '%s\n' "$LINE"
+            done < <(find -name "$PATTERN" -print0)
