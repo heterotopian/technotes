@@ -30,7 +30,7 @@ Length::
 
     if [[ -z ${VARIABLE} ]]
     then
-        # VARIABLE has zero length   or is unset
+        # VARIABLE either has zero length or is unset
     fi
 
 

@@ -13,7 +13,7 @@ Resources
 Cheat Sheets
 ============
 
-- GitHub: `Git cheat sheet <https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf>`_
+- GitHub: `Git cheat sheet <https://education.github.com/git-cheat-sheet-education.pdf>`_
 - `Git command visualizer <http://ndpsoftware.com/git-cheatsheet.html>`_ -
   Groups commands by subject
 
