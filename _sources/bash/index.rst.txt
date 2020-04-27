@@ -11,5 +11,4 @@ Bash
     test
     expansion
     builtin
-    fd
     redirect
