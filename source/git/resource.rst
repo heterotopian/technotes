@@ -9,6 +9,8 @@ Resources
 - `Keeping a fork up to date <https://philna.sh/blog/2018/08/21/git-commands-to-keep-a-fork-up-to-date/>`_
 - `Changing author info <https://help.github.com/articles/changing-author-info/>`_ -
   Script for updating any commits with matching user/email fields
+- Humour: `Git man page generator <https://git-man-page-generator.lokaltog.net/>`_ -
+  Generate fake documentation
 
 Documentation
 =============
@@ -36,11 +38,3 @@ Workflows
 
 - `GitHub Flow <https://guides.github.com/introduction/flow/>`_ -
   A lightweight, branch-based workflow that supports teams and projects where deployments are made regularly
-
-
-
-Humor
-=====
-
-- `Git man page generator <https://git-man-page-generator.lokaltog.net/>`_ -
-  Generate fake documentation
