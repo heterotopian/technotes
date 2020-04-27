@@ -10,6 +10,18 @@ Resources
 - `Changing author info <https://help.github.com/articles/changing-author-info/>`_ -
   Script for updating any commits with matching user/email fields
 
+Documentation
+=============
+
+- `Homepage <https://git-scm.com/docs>`_
+- `Pro Git <https://git-scm.com/book/en/v2>`_ -
+  second edition by Scott Chacon and Ben Straub
+  (`source <https://github.com/progit/progit2>`_)
+
+  - `Rebasing <https://git-scm.com/book/en/v2/Git-Branching-Rebasing>`_
+
+- `Specifying revisions <https://mirrors.edge.kernel.org/pub/software/scm/git/docs/gitrevisions.html#_specifying_revisions>`_
+
 Cheat Sheets
 ============
 
