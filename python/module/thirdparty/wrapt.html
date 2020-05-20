@@ -228,11 +228,14 @@
             
   <div class="section" id="wrapt">
 <h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">wrapt</span></code><a class="headerlink" href="#wrapt" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p class="first"><a class="reference external" href="https://wrapt.readthedocs.io/en/latest/">Documentation</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="http://blog.dscpl.com.au/2014/01/how-you-implemented-your-python.html">How you implemented your Python decorator is wrong</a>
+(<a class="reference external" href="https://github.com/openstack/deb-python-wrapt/tree/master/blog">GitHub</a>)</p>
+</li>
+<li><p class="first">Special attributes of <code class="xref py py-class docutils literal notranslate"><span class="pre">wrapt.FunctionWrapper</span></code> and derived types:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://wrapt.readthedocs.io/en/latest/">Documentation</a></li>
-<li><a class="reference external" href="http://blog.dscpl.com.au/2014/01/how-you-implemented-your-python.html">How you implemented your Python decorator is wrong</a>
-(<a class="reference external" href="https://github.com/openstack/deb-python-wrapt/tree/master/blog">GitHub</a>)</li>
-<li>Special attributes of wrapper objects:<ul>
 <li><code class="docutils literal notranslate"><span class="pre">__wrapped__</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">_self_instance</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">_self_wrapper</span></code></li>
@@ -240,6 +243,28 @@
 <li><code class="docutils literal notranslate"><span class="pre">_self_binding</span></code></li>
 <li><code class="docutils literal notranslate"><span class="pre">_self_parent</span></code></li>
 </ul>
+</li>
+<li><p class="first">Identify what kind of object is being decorated (necessary for “universal” decorators):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">inspect</span>
+
+<span class="nd">@wrapt</span><span class="o">.</span><span class="n">decorator</span>
+<span class="k">def</span> <span class="nf">universal</span><span class="p">(</span><span class="n">wrapped</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">instance</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">isclass</span><span class="p">(</span><span class="n">wrapped</span><span class="p">):</span>
+            <span class="c1"># Decorator was applied to a class.</span>
+            <span class="k">return</span> <span class="n">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Decorator was applied to a function or staticmethod.</span>
+            <span class="k">return</span> <span class="n">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">isclass</span><span class="p">(</span><span class="n">instance</span><span class="p">):</span>
+            <span class="c1"># Decorator was applied to a classmethod.</span>
+            <span class="k">return</span> <span class="n">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Decorator was applied to an instancemethod.</span>
+            <span class="k">return</span> <span class="n">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
 </li>
 </ul>
 </div>
@@ -265,7 +290,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on May 19, 2020, 11:57:21 PM.
+      Last updated on May 20, 2020, 3:57:17 AM.
 
     </p>
   </div>
