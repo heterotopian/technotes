@@ -35,8 +35,6 @@ Guides
 
 - Sphinx: :ref:`reStructuredText Guide <sphinx:rst-index>`
 
-  - :sphinx:`Substitutions <restructuredtext/basics.html#substitutions>`
-
 
 
 Discussion

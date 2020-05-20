@@ -21,5 +21,5 @@ Built-In
 Third-Party
 ===========
 
-- `sphinx-jinja <https://pypi.org/project/sphinx-jinja/>`_ -
+- :pypi:`sphinx-jinja` -
   Include content generated from Jinja templates in Sphinx documents

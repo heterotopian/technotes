@@ -14,13 +14,16 @@ Cross-References
     - Prefix with ``~`` -
       link text will only be the last component of target
 
+- :pypi:`sphobjinv` -
+  Inspect/manipulate ``objects.inv`` files
+
 .. highlight:: rst
 
 .. list-table::
     :header-rows: 1
 
-    * - Target
-      - Example
+    * - Refence Target
+      - Syntax
     * - Labels
       - ::
 

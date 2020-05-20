@@ -25,6 +25,10 @@ Documentation
 
   - :sphinx:`Python <restructuredtext/domains.html#the-python-domain>`
 
+- :sphinx:`reStructuredText <restructuredtext/index.html>` -
+  Covers the most important aspects of reStructuredText (wrt Sphinx)
+
+  - :sphinx:`Substitutions <restructuredtext/basics.html#substitutions>`
 
 
 Guides
