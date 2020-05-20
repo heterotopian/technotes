@@ -14,6 +14,9 @@ Cross-References
     - Prefix with ``~`` -
       link text will only be the last component of target
 
+- :pypi:`sphobjinv` -
+  Inspect/manipulate ``objects.inv`` files
+
 .. highlight:: rst
 
 .. list-table::

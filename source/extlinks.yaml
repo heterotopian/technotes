@@ -1,6 +1,9 @@
+pypi: !!python/tuple
+  - "https://pypi.org/project/%s/"
+  - ""
 docutils: !!python/tuple
   - "http://docutils.sourceforge.net/docs/%s"
-  - "docutils"
+  - "docutils: "
 sphinx: !!python/tuple
   - "https://www.sphinx-doc.org/en/master/usage/%s"
-  - "sphinx"
+  - "sphinx: "
