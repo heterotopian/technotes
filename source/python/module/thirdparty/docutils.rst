@@ -5,25 +5,37 @@
 ==================
 
 - `Project homepage <http://docutils.sourceforge.net/>`_
+- `Sphinx site <https://docutils.readthedocs.io/en/sphinx-docs/>`_ -
+  Project documentation converted to Sphinx + Read The Docs theme
 - `Online reStructuredText editor <http://rst.ninjs.org/>`_
-- `Docutils + Sphinx <https://docutils.readthedocs.io/en/sphinx-docs/>`_ -
-  Project documentation converted to Sphinx + RTD
+
+.. seealso::
+
+    :ref:`Sphinx <sphinx>` --
+    Static website generator optimized for documentation
 
 Documentation
 =============
 
-- reStructuredText
+- :docutils:`Markup specification <ref/rst/restructuredtext.html>`
+- :docutils:`Substitution definitions <ref/rst/restructuredtext.html#substitution-definitions>`
+- :docutils:`Standard definition files <ref/rst/definitions.html>`
 
-  - `Markup specification <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html>`_
-  - `Substitution definitions  <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#substitution-definitions>`_
-  - `Standard definition files <http://docutils.sourceforge.net/docs/ref/rst/definitions.html>`_
+  - "To use a substitution without intervening whitespace, you can use the disappearing-whitespace escape sequence, backslash-space"
 
-    - "To use a substitution without intervening whitespace, you can use the disappearing-whitespace escape sequence, backslash-space"
+- Frontends
 
-  - Frontends
+  - :docutils:`rst2html <user/tools.html#rst2html-py>`
+  - :docutils:`rst2pseudoxml <user/tools.html#rst2pseudoxml-py>`
 
-    - `rst2html <http://docutils.sourceforge.net/docs/user/tools.html#rst2html-py>`_
-    - `rst2pseudoxml <http://docutils.sourceforge.net/docs/user/tools.html#rst2pseudoxml-py>`_
+
+
+Guides
+======
+
+- Sphinx: :ref:`reStructuredText Guide <sphinx:rst-index>`
+
+  - `Substitutions <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#substitutions>`_
 
 
 
@@ -33,4 +45,4 @@ Discussion
 - `Unnecessary <p class="first"> inserted between <li> <https://github.com/sphinx-doc/sphinx/issues/3588#issuecomment-290398312>`_ -
   Docutils generates different markup for lists with "simple" and "non-simple" content
 
-  - Setting: `compact_lists <https://docutils.sourceforge.io/docs/user/config.html#compact-lists>`_
+  - Setting: :docutils:`compact_lists <user/config.html#compact-lists>`
