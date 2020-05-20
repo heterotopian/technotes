@@ -11,7 +11,7 @@
 
 .. seealso::
 
-    :ref:`Sphinx <sphinx>` --
+    :ref:`sphinx` -
     Static website generator optimized for documentation
 
 Documentation

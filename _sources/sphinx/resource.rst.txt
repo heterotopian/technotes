@@ -11,7 +11,7 @@ Resources
 
 .. seealso::
 
-    :ref:`Docutils <python_module_docutils>` --
+    :ref:`python_module_docutils` -
     Python text processing library that implements reStructuredText
 
 Documentation
