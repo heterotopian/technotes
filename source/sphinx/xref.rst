@@ -22,8 +22,8 @@ Cross-References
 .. list-table::
     :header-rows: 1
 
-    * - Target
-      - Example
+    * - Refence Target
+      - Syntax
     * - Labels
       - ::
 
