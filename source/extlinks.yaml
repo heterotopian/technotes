@@ -1,0 +1,6 @@
+docutils: !!python/tuple
+  - "http://docutils.sourceforge.net/docs/%s"
+  - "docutils"
+sphinx: !!python/tuple
+  - "https://www.sphinx-doc.org/en/master/usage/%s"
+  - "sphinx"

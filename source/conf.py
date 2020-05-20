@@ -37,6 +37,7 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
+    'sphinx.ext.extlinks'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -273,6 +274,10 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
 
-# Inter-project configuration
+# Configure cross-project references
 import intersphinx
 intersphinx_mapping = intersphinx.get_mapping()
+
+# Configure shorthand notation for external links
+import extlinks as extlinks_mod
+extlinks = extlinks_mod.get_mapping()
