@@ -9,21 +9,30 @@ Resources
 - Discussion group: `sphinx-users <https://groups.google.com/forum/#!forum/sphinx-users>`_
 - `Online reStructuredText editor <http://rst.ninjs.org/>`_
 
+.. seealso::
+
+    :ref:`Docutils <python_module_docutils>` --
+    Python text processing library that implements reStructuredText
+
 Documentation
 =============
 
-- `Directives <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html>`_
+- :sphinx:`Directives <restructuredtext/directives.html>`
 
-  - `toctree <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-toctree>`_
+  - :sphinx:`toctree <restructuredtext/directives.html#directive-toctree>`
 
-- `Domains <https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html>`_
+- :sphinx:`Domains <restructuredtext/domains.html>`
 
-  - `Cross-referencing syntax <https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#cross-referencing-syntax>`_
+  - :sphinx:`Python <restructuredtext/domains.html#the-python-domain>`
 
-    - Prefix with ``!`` - no reference/hyperlink will be created
-    - Prefix with ``~`` - link text will only be the last component of target
 
-- `reStructuredText Primer <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_
 
-  - `Substitutions <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#substitutions>`_
-    (See also: :ref:`python_module_docutils`)
+Guides
+======
+
+- `Sphinx/reST Memo <http://rest-sphinx-memo.readthedocs.io>`_ -
+  Condensed, example-based guide to Sphinx & reStructuredText
+- `Wiser > Sphinx & reStructuredText <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/index.html>`_ -
+  Broad tutorial
+
+  - `Escaping whitespace around interpreted text <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/OnReStructuredText.html#subscript-and-superscript>`_

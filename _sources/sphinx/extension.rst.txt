@@ -5,7 +5,7 @@ Extensions
 
 .. highlight:: console
 
-- `Documentation <https://www.sphinx-doc.org/en/master/usage/extensions/>`_
+- :sphinx:`Documentation <extensions>`
 
 Built-In
 ========
@@ -13,7 +13,8 @@ Built-In
 - :py:mod:`sphinx.ext.extlinks` - Markup to shorten external links
 - :py:mod:`sphinx.ext.intersphinx` - Link to other projects’ documentation
 
-  - `Showing all links of an Intersphinx mapping file <https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#showing-all-links-of-an-intersphinx-mapping-file>`_
+  - :sphinx:`Showing all links of an Intersphinx mapping file <extensions/intersphinx.html#showing-all-links-of-an-intersphinx-mapping-file>`
+  - Read The Docs: `Link to Other Projects’ Documentation With Intersphinx <https://docs.readthedocs.io/en/stable/guides/intersphinx.html>`_
 
 
 
