@@ -7,6 +7,6 @@ Sphinx
 .. toctree::
 
     resource
-    guide
+    xref
     extension
     theme
