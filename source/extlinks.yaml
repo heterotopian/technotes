@@ -7,3 +7,6 @@ docutils: !!python/tuple
 sphinx: !!python/tuple
   - "https://www.sphinx-doc.org/en/master/usage/%s"
   - "sphinx: "
+sphinx-themes: !!python/tuple
+  - "https://sphinx-themes.org/html/%s/index.html"
+  - ""
