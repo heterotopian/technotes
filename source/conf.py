@@ -274,10 +274,12 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
 
-# Configure cross-project references
-import intersphinx
-intersphinx_mapping = intersphinx.get_mapping()
+# Load external configuration
+import conftools
 
-# Configure shorthand notation for external links
-import extlinks as extlinks_mod
-extlinks = extlinks_mod.get_mapping()
+# Cross-project references
+intersphinx_timeout = 5
+intersphinx_mapping = conftools.load_intersphinx()
+
+# Concise markup for external links
+extlinks = conftools.load_extlinks()

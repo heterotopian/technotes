@@ -11,22 +11,22 @@ pandas: !!python/tuple
   - "http://pandas.pydata.org/pandas-docs/stable/"
   - null
 sphinx: !!python/tuple
-  - "http://www.sphinx-doc.org/en/stable/"
+  - "https://www.sphinx-doc.org/en/stable/"
   - null
 sqlalchemy: !!python/tuple
   - "https://docs.sqlalchemy.org/en/latest/"
   - null
 toolz: !!python/tuple
-  - "http://toolz.readthedocs.io/en/latest/"
+  - "https://toolz.readthedocs.io/en/latest/"
   - null
 trio: !!python/tuple
   - "https://trio.readthedocs.io/en/latest/"
   - null
 wrapt: !!python/tuple
-  - "http://wrapt.readthedocs.io/en/latest/"
+  - "https://wrapt.readthedocs.io/en/latest/"
   - null
 marshmallow: !!python/tuple
-  - "http://marshmallow.readthedocs.io/en/latest/"
+  - "https://marshmallow.readthedocs.io/en/latest/"
   - null
 tooz: !!python/tuple
   - "https://docs.openstack.org/tooz/latest/"
@@ -38,7 +38,7 @@ pweave: !!python/tuple
   - "http://mpastell.com/pweave/"
   - null
 distlib: !!python/tuple
-  - "http://distlib.readthedocs.io/en/latest/"
+  - "https://distlib.readthedocs.io/en/latest/"
   - null
 pex: !!python/tuple
   - "https://pex.readthedocs.io/en/stable/"
@@ -83,7 +83,7 @@ placebo: !!python/tuple
   - "https://placebo.readthedocs.io/en/latest/"
   - null
 great_expectations: !!python/tuple
-  - "https://great-expectations.readthedocs.io/en/stable/"
+  - "https://docs.greatexpectations.io/en/stable/"
   - null
 docutils: !!python/tuple
   - "https://docutils.readthedocs.io/en/sphinx-docs/"
