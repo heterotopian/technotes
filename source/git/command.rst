@@ -66,6 +66,10 @@ Untracked files::
 
     $ git ls-files -o
 
+Untracked files that are ignored::
+
+    $ git ls-files -o -i --exclude-standard
+    
 
 Indexed Trees
 -------------
