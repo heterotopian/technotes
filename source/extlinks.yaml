@@ -10,3 +10,6 @@ sphinx: !!python/tuple
 sphinx-themes: !!python/tuple
   - "https://sphinx-themes.org/html/%s/index.html"
   - ""
+atom-package: !!python/tuple
+  - "https://atom.io/packages/%s"
+  - ""
