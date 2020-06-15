@@ -1,11 +1,13 @@
+'''
+Configure Sphinx using external data files.
+'''
+
 __all__ = [
     'load_mapping',
     'load_intersphinx',
     'load_extlinks'
 ]
-'''
-Configure Sphinx using external data files.
-'''
+
 import yaml
 import pkg_resources
 import functools
