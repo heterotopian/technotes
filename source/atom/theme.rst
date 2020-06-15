@@ -15,10 +15,8 @@ User Interface
 One Light
 ---------
 
-- Project homepage
-
-  - `Original <https://github.com/atom/one-light-ui>`_
-  - Current: `Atom core <https://github.com/atom/atom/tree/master/packages/one-light-ui>`_
+- `Project homepage <https://github.com/atom/atom/tree/master/packages/one-light-ui>`_
+  (`original <https://github.com/atom/one-light-ui>`_)
 
 
 
