@@ -27,19 +27,19 @@ Cross-References
     * - Labels
       - ::
 
-            `:ref:`label`
+            :ref:`label`
 
     * - Documents
       - ::
 
-            `:doc:`path`
+            :doc:`path`
 
     * - Labels (cross-project)
       - ::
 
-            `:ref:`project:label`
+            :ref:`project:label`
 
     * - Documents (cross-project)
       - ::
 
-            `:doc:`project:path`
+            :doc:`project:path`
