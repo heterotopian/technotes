@@ -11,7 +11,7 @@ Resources
 Documentation
 =============
 
-- `Atom Flight Manual <http://flight-manual.atom.io/>`_ - User guide
+- `User guide <http://flight-manual.atom.io/>`_
 - `API Reference <https://atom.io/docs/api/>`_
 
 
