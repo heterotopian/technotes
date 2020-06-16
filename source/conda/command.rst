@@ -7,4 +7,5 @@ Commands
     :maxdepth: 1
     :glob:
 
-    command/*
+    config <command/config>
+    search <command/search>
