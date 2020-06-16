@@ -13,3 +13,6 @@ sphinx-themes: !!python/tuple
 atom-package: !!python/tuple
   - "https://atom.io/packages/%s"
   - ""
+git-glossary: !!python/tuple
+  - "https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-%s"
+  - ""
