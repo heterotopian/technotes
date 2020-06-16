@@ -88,7 +88,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#cgroups">CGroups</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#device">Device</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#filesystem">Filesystem</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">findmnt</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">findmnt</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#options">Options</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="lvm.html">lvm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tree.html">tree</a></li>
 </ul>
@@ -197,14 +200,105 @@
             
   <div class="section" id="findmnt">
 <h1>findmnt<a class="headerlink" href="#findmnt" title="Permalink to this headline">¶</a></h1>
+<p>Show filesystems:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> findmnt
+<span class="go">TARGET                        SOURCE      FSTYPE          OPTIONS</span>
+<span class="go">/                             /dev/dm-1   ext4            rw,relatime,errors=remount-ro,data=ordered</span>
+<span class="go">├─/sys                        sysfs       sysfs           rw,nosuid,nodev,noexec,relatime</span>
+<span class="go">│ ├─/sys/fs/cgroup                        tmpfs           rw,relatime,size=4k,mode=755</span>
+<span class="go">│ │ └─/sys/fs/cgroup/systemd  systemd     cgroup          rw,nosuid,nodev,noexec,relatime,name=systemd</span>
+<span class="go">│ ├─/sys/fs/fuse/connections              fusectl         rw,relatime</span>
+<span class="go">│ ├─/sys/kernel/debug                     debugfs         rw,relatime</span>
+<span class="go">│ ├─/sys/kernel/security                  securityfs      rw,relatime</span>
+<span class="go">│ ├─/sys/firmware/efi/efivars             efivarfs        rw,relatime</span>
+<span class="go">│ └─/sys/fs/pstore                        pstore          rw,relatime</span>
+<span class="go">├─/proc                       proc        proc            rw,nosuid,nodev,noexec,relatime</span>
+<span class="go">│ └─/proc/sys/fs/binfmt_misc  binfmt_misc binfmt_misc     rw,nosuid,nodev,noexec,relatime</span>
+<span class="go">├─/dev                        udev        devtmpfs        rw,relatime,size=8113024k,nr_inodes=2028256,mode=755</span>
+<span class="go">│ └─/dev/pts                  devpts      devpts          rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000</span>
+<span class="go">├─/run                        tmpfs       tmpfs           rw,nosuid,noexec,relatime,size=1625608k,mode=755</span>
+<span class="go">│ ├─/run/lock                             tmpfs           rw,nosuid,nodev,noexec,relatime,size=5120k</span>
+<span class="go">│ ├─/run/shm                              tmpfs           rw,nosuid,nodev,relatime</span>
+<span class="go">│ └─/run/user                             tmpfs           rw,nosuid,nodev,noexec,relatime,size=102400k,mode=755</span>
+<span class="go">│   └─/run/user/1000/gvfs     gvfsd-fuse  fuse.gvfsd-fuse rw,nosuid,nodev,relatime,user_id=1000,group_id=1000</span>
+<span class="go">└─/boot                       /dev/sda2   ext2            rw,relatime</span>
+<span class="go">  └─/boot/efi                 /dev/sda1   vfat            rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro</span>
+</pre></div>
+</div>
+<p>Show tmpfs filesystems:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> findmnt -t tmpfs
 <span class="go">TARGET         SOURCE FSTYPE OPTIONS</span>
-<span class="go">/run           tmpfs  tmpfs  rw,nosuid,noexec,relatime,size=806096k,mode=755</span>
+<span class="go">/run           tmpfs  tmpfs  rw,nosuid,noexec,relatime,size=1625608k,mode=755</span>
 <span class="go">/sys/fs/cgroup        tmpfs  rw,relatime,size=4k,mode=755</span>
 <span class="go">/run/lock             tmpfs  rw,nosuid,nodev,noexec,relatime,size=5120k</span>
 <span class="go">/run/shm              tmpfs  rw,nosuid,nodev,relatime</span>
 <span class="go">/run/user             tmpfs  rw,nosuid,nodev,noexec,relatime,size=102400k,mode=755</span>
 </pre></div>
+</div>
+<p>Show submounts of <code class="docutils literal notranslate"><span class="pre">/sys</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> findmnt /sys -R
+<span class="go">TARGET                      SOURCE  FSTYPE     OPTIONS</span>
+<span class="go">/sys                        sysfs   sysfs      rw,nosuid,nodev,noexec,relatime</span>
+<span class="go">├─/sys/fs/cgroup                    tmpfs      rw,relatime,size=4k,mode=755</span>
+<span class="go">│ └─/sys/fs/cgroup/systemd  systemd cgroup     rw,nosuid,nodev,noexec,relatime,name=systemd</span>
+<span class="go">├─/sys/fs/fuse/connections          fusectl    rw,relatime</span>
+<span class="go">├─/sys/kernel/debug                 debugfs    rw,relatime</span>
+<span class="go">├─/sys/kernel/security              securityfs rw,relatime</span>
+<span class="go">├─/sys/firmware/efi/efivars         efivarfs   rw,relatime</span>
+<span class="go">└─/sys/fs/pstore                    pstore     rw,relatime</span>
+</pre></div>
+</div>
+<p>List filesystem mountpoints:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> findmnt -ln -o TARGET <span class="p">|</span> sort
+<span class="go">/</span>
+<span class="go">/boot</span>
+<span class="go">/boot/efi</span>
+<span class="go">/dev</span>
+<span class="go">/dev/pts</span>
+<span class="go">/proc</span>
+<span class="go">/proc/sys/fs/binfmt_misc</span>
+<span class="go">/run</span>
+<span class="go">/run/lock</span>
+<span class="go">/run/shm</span>
+<span class="go">/run/user</span>
+<span class="go">/run/user/1000/gvfs</span>
+<span class="go">/sys</span>
+<span class="go">/sys/firmware/efi/efivars</span>
+<span class="go">/sys/fs/cgroup</span>
+<span class="go">/sys/fs/cgroup/systemd</span>
+<span class="go">/sys/fs/fuse/connections</span>
+<span class="go">/sys/fs/pstore</span>
+<span class="go">/sys/kernel/debug</span>
+<span class="go">/sys/kernel/security</span>
+</pre></div>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-t</span>, <span class="option">--types <var>list</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Show filesystems of given types</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-R</span>, <span class="option">--submounts</span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Show submounts of selected filesystem</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-o</span>, <span class="option">--output <var>list</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Output columns to display</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-l</span>, <span class="option">--list</span></kbd></td>
+<td>Use list output format</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-n</span>, <span class="option">--noheadings</span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Suppress columns headings</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -229,7 +323,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Jun 16, 2020, 12:18:09 AM.
+      Last updated on Jun 16, 2020, 1:16:56 AM.
 
     </p>
   </div>
