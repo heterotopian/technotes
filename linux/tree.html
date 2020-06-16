@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>tree &mdash; Technotes Documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../_static/css/theme-custom.css" type="text/css" />
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="nfsstat" href="nfsstat.html" />
+    <link rel="prev" title="lvm" href="lvm.html" />
+ 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Technotes
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Essentials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../bash/index.html">Bash</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Linux</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#cgroups">CGroups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device">Device</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#filesystem">Filesystem</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="findmnt.html">findmnt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lvm.html">lvm</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">tree</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#options">Options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#nfs">NFS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../systemd/index.html">Systemd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../x11.html">X11</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Programming</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conda/index.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../frontend.html">Frontend</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Diagnostic Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sysdig.html">sysdig</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Applications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../atom/index.html">Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vim.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tmux.html">tmux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Version control</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../git/index.html">Git</a></li>
+</ul>
+
+            
+          
+<p class="caption">
+  <span class="caption-text">Reference</span>
+</p>
+<ul>
+  <li class="toctree-l1">
+    <a class="reference internal" href="../genindex.html">Index</a>
+  </li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Technotes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Linux</a> &raquo;</li>
+        
+      <li>tree</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/linux/tree.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tree">
+<h1>tree<a class="headerlink" href="#tree" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> tree /etc/apt
+<span class="go">/etc/apt</span>
+<span class="go">├── apt.conf.d</span>
+<span class="go">│   ├── 00aptitude</span>
+<span class="go">│   ├── 00cdrom</span>
+<span class="go">│   ├── 00recommends</span>
+<span class="go">│   ├── 00trustcdrom</span>
+<span class="go">│   ├── 01autoremove</span>
+<span class="go">│   ├── 01autoremove-kernels</span>
+<span class="go">│   ├── 20changelog</span>
+<span class="go">│   ├── 20dbus</span>
+<span class="go">│   ├── 50unattended-upgrades</span>
+<span class="go">│   ├── 70debconf</span>
+<span class="go">│   └── 99synaptic</span>
+<span class="go">├── apt-file.conf</span>
+<span class="go">├── preferences.d</span>
+<span class="go">│   ├── official-extra-repositories.pref</span>
+<span class="go">│   └── official-package-repositories.pref</span>
+<span class="go">├── sources.list</span>
+<span class="go">├── sources.list.d</span>
+<span class="go">│   ├── cernekee-ppa-trusty.list</span>
+<span class="go">│   ├── getdeb.list</span>
+<span class="go">│   ├── google-chrome.list</span>
+<span class="go">│   ├── neovim-ppa-unstable-trusty.list</span>
+<span class="go">│   ├── noobslab-icons-trusty.list</span>
+<span class="go">│   ├── noobslab-themes-trusty.list</span>
+<span class="go">│   ├── numix-ppa-trusty.list</span>
+<span class="go">│   ├── official-package-repositories.list</span>
+<span class="go">│   └── snwh-pulp-trusty.list</span>
+<span class="go">├── trustdb.gpg</span>
+<span class="go">├── trusted.gpg</span>
+<span class="go">├── trusted.gpg~</span>
+<span class="go">└── trusted.gpg.d</span>
+
+<span class="go">4 directories, 27 files</span>
+</pre></div>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-a</span></kbd></td>
+<td>Include hidden files beginning with <code class="docutils literal notranslate"><span class="pre">.</span></code></td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-L <var>levels</var></span></kbd></td>
+<td>Maximum number of levels to show</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-I <var>pattern</var></span></kbd></td>
+<td>Ignore files matching pattern</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">--noreport</span></kbd></td>
+<td>Suppress summary report</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="nfsstat.html" class="btn btn-neutral float-right" title="nfsstat" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lvm.html" class="btn btn-neutral" title="lvm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Chris
+      Last updated on Jun 16, 2020, 12:18:09 AM.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

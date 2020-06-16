@@ -32,7 +32,7 @@
 
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Cgroups" href="cgroup.html" />
+    <link rel="next" title="lsns" href="lsns.html" />
     <link rel="prev" title="Redirection" href="../bash/redirect.html" />
  
 
@@ -85,10 +85,26 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../bash/index.html">Bash</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Linux</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cgroup.html">Cgroups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="device.html">Devices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filesystem.html">Filesystems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nfs.html">NFS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cgroups">CGroups</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lsns.html">lsns</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#device">Device</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="blkid.html">blkid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lsblk.html">lsblk</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#filesystem">Filesystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="findmnt.html">findmnt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lvm.html">lvm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tree.html">tree</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#nfs">NFS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nfsstat.html">nfsstat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nfsiostat.html">nfsiostat</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../systemd/index.html">Systemd</a></li>
@@ -190,29 +206,41 @@
             
   <div class="section" id="linux">
 <span id="id1"></span><h1>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="cgroups">
+<h2>CGroups<a class="headerlink" href="#cgroups" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="cgroup.html">Cgroups</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cgroup.html#lsns">lsns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lsns.html">lsns</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="device.html">Devices</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="device.html#blkid">blkid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="device.html#lsblk">lsblk</a></li>
+</div>
+</div>
+<div class="section" id="device">
+<h2>Device<a class="headerlink" href="#device" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="blkid.html">blkid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lsblk.html">lsblk</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="filesystem.html">Filesystems</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="filesystem.html#findmnt">findmnt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filesystem.html#lvm">lvm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filesystem.html#tree">tree</a></li>
+</div>
+</div>
+<div class="section" id="filesystem">
+<h2>Filesystem<a class="headerlink" href="#filesystem" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="findmnt.html">findmnt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lvm.html">lvm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tree.html">tree</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="nfs.html">NFS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nfs.html#nfsstat">nfsstat</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nfs.html#nfsiostat">nfsiostat</a></li>
+</div>
+</div>
+<div class="section" id="nfs">
+<h2>NFS<a class="headerlink" href="#nfs" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nfsstat.html">nfsstat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nfsiostat.html">nfsiostat</a></li>
 </ul>
-</li>
-</ul>
+</div>
 </div>
 </div>
 
@@ -224,7 +252,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cgroup.html" class="btn btn-neutral float-right" title="Cgroups" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="lsns.html" class="btn btn-neutral float-right" title="lsns" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../bash/redirect.html" class="btn btn-neutral" title="Redirection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -237,7 +265,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Jun 15, 2020, 11:23:28 PM.
+      Last updated on Jun 16, 2020, 12:18:09 AM.
 
     </p>
   </div>

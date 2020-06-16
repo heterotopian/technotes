@@ -5,10 +5,44 @@
 Linux
 =====
 
-.. toctree::
-    :maxdepth: 2
+CGroups
+=======
 
-    cgroup
-    device
-    filesystem
-    nfs
+.. toctree::
+    :maxdepth: 1
+
+    lsns
+
+
+
+Device
+======
+
+.. toctree::
+    :maxdepth: 1
+
+    blkid
+    lsblk
+
+
+
+Filesystem
+==========
+
+.. toctree::
+    :maxdepth: 1
+
+    findmnt
+    lvm
+    tree
+
+
+
+NFS
+===
+
+.. toctree::
+    :maxdepth: 1
+
+    nfsstat
+    nfsiostat
