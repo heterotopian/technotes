@@ -214,12 +214,32 @@ Concise treatment of advanced topics</p>
 <ul>
 <li><p class="first"><a class="reference external" href="https://mywiki.wooledge.org/BashPitfalls">Bash Pitfalls</a></p>
 </li>
-<li><p class="first"><a class="reference external" href="https://mywiki.wooledge.org/BashFAQ/001">How to read a file line-by-line</a></p>
+<li><div class="first compound">
+<p class="compound-first"><a class="reference external" href="https://mywiki.wooledge.org/BashFAQ/001">How to read a file line-by-line</a></p>
+<div class="compound-last highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
+    <span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -r LINE
+    <span class="k">do</span>
+        <span class="nb">printf</span> <span class="s1">&#39;%s\n&#39;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">LINE</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">done</span>
+
+    <span class="c1"># Edge case: last line isn&#39;t newline terminated</span>
+    <span class="c1"># `read` consumes LINE but returns false</span>
+    <span class="c1"># Handle leftover partial line</span>
+
+    <span class="k">if</span> <span class="o">[[</span> -n <span class="si">${</span><span class="nv">LINE</span><span class="si">}</span> <span class="o">]]</span>
+    <span class="k">then</span>
+        <span class="nb">printf</span> <span class="s1">&#39;%s\n&#39;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">LINE</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">fi</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
 </li>
 <li><div class="first compound">
 <p class="compound-first"><a class="reference external" href="https://mywiki.wooledge.org/UsingFind">Using find</a></p>
-<div class="compound-last highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -r -d <span class="s1">&#39;&#39;</span> LINE<span class="p">;</span> <span class="k">do</span>
-    <span class="nb">printf</span> <span class="s1">&#39;%s\n&#39;</span> <span class="s2">&quot;</span><span class="nv">$LINE</span><span class="s2">&quot;</span>
+<div class="compound-last highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -r -d <span class="s1">&#39;&#39;</span> LINE
+<span class="k">do</span>
+    <span class="nb">printf</span> <span class="s1">&#39;%s\n&#39;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">LINE</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="k">done</span> &lt; &lt;<span class="o">(</span>find -name <span class="s2">&quot;</span><span class="nv">$PATTERN</span><span class="s2">&quot;</span> -print0<span class="o">)</span>
 </pre></div>
 </div>
@@ -252,7 +272,7 @@ Concise treatment of advanced topics</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Jun 15, 2020, 10:46:11 PM.
+      Last updated on Jun 15, 2020, 11:20:53 PM.
 
     </p>
   </div>

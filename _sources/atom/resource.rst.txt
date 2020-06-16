@@ -6,7 +6,7 @@ Resources
 .. highlight:: console
 
 - `Project homepage <https://atom.io/>`_
-- `Discussion forum <https://discuss.atom.io/>`_
+- `Discussion group <https://discuss.atom.io/>`_
 
 Documentation
 =============
