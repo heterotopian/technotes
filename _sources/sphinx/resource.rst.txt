@@ -12,7 +12,7 @@ Resources
 .. seealso::
 
     :ref:`python_module_docutils` -
-    Python text processing library that implements reStructuredText
+    Python library that implements reStructuredText
 
 Documentation
 =============
