@@ -29,12 +29,16 @@ Community
             {
                 while IFS= read -r LINE
                 do
-                    echo "${LINE}"
+                    printf '%s\n' "${LINE}"
                 done
+
+                # Edge case: last line isn't newline terminated
+                # `read` consumes LINE but returns false
+                # Handle leftover partial line
 
                 if [[ -n ${LINE} ]]
                 then
-                    echo "${LINE}"
+                    printf '%s\n' "${LINE}"
                 fi
             }
 
@@ -44,6 +48,7 @@ Community
 
         .. code-block:: bash
 
-            while IFS= read -r -d '' LINE; do
-                printf '%s\n' "$LINE"
+            while IFS= read -r -d '' LINE
+            do
+                printf '%s\n' "${LINE}"
             done < <(find -name "$PATTERN" -print0)
