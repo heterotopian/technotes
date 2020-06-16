@@ -12,7 +12,7 @@
 .. seealso::
 
     :ref:`sphinx` -
-    Static website generator optimized for documentation
+    Static website generator designed for documentation
 
 Documentation
 =============
