@@ -1,20 +1,26 @@
 
-=====
-Terms
-=====
+========
+Glossary
+========
 
 .. highlight:: console
 
+- `Documentation <https://git-scm.com/docs/gitglossary>`_
+
 @
-    Shorthand for |HEAD|
-    (`Release notes <https://github.com/git/git/blob/v1.8.5/Documentation/RelNotes/1.8.5.txt#L100-101>`_)
+    Alias for |HEAD|
+    (`release notes <https://github.com/git/git/blob/v1.8.5/Documentation/RelNotes/1.8.5.txt#L100-L101>`_)
 
-commit-ish
-    Any object that leads to a commit, e.g.:
-    a commit, a tag pointing to a commit, a tag pointing to a tag ... pointing to a commit.
-    (`Source <https://git-scm.com/docs/gitglossary#gitglossary-aiddefcommit-ishacommit-ishalsocommittish>`_)
+:git-glossary:`commit-ish <aiddefcommit-ishacommit-ishalsocommittish>`
+    Any object that leads to a commit, e.g.: a commit, a tag pointing to a commit, a tag pointing to a tag ... pointing to a commit.
 
-tree-ish
+:git-glossary:`tree-ish <aiddeftree-ishatree-ishalsotreeish>`
     Any object that contains a list of file names and modes along with refs to the associated blob and/or tree objects.
     Equivalent to a directory.
-    (`Source <https://git-scm.com/docs/gitglossary#gitglossary-aiddeftree-ishatree-ishalsotreeish>`_)
+
+
+
+.. |HEAD| replace:: ``HEAD``
+.. |master| replace:: ``master``
+.. |origin| replace:: ``origin``
+.. |v1.0| replace:: ``v1.0``
