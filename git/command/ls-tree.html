@@ -32,6 +32,7 @@
 
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="git push" href="push.html" />
     <link rel="prev" title="git ls-files" href="ls-files.html" />
  
 
@@ -111,10 +112,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../resource.html">Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../term.html">Glossary</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../command.html">Commands</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="diff.html"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="ls-files.html"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">ls-files</span></code></a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">ls-tree</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../command.html#examples">Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="diff.html">diff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log.html">log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ls-files.html">ls-files</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ls-tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="push.html">push</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tag.html">tag</a></li>
 </ul>
 </li>
 </ul>
@@ -201,6 +204,18 @@
 <ul class="simple">
 <li><a class="reference external" href="https://git-scm.com/docs/git-ls-tree">Documentation</a></li>
 </ul>
+<p>Files in tree identified by tag <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> at the top level:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0
+</pre></div>
+</div>
+<p>Files in tree identified by tag <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> at all levels:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0 -r
+</pre></div>
+</div>
+<p>Files in tree identified by tag <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> in path <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code> at all levels:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-tree --name-only tags/v1.0 foo/bar -r
+</pre></div>
+</div>
 </div>
 
 
@@ -210,6 +225,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="push.html" class="btn btn-neutral float-right" title="git push" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="ls-files.html" class="btn btn-neutral" title="git ls-files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -222,7 +239,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Jun 15, 2020, 8:56:36 PM.
+      Last updated on Jun 15, 2020, 10:46:11 PM.
 
     </p>
   </div>

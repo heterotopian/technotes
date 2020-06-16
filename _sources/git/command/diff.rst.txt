@@ -9,22 +9,22 @@
 
 - `Documentation <https://git-scm.com/docs/git-diff>`_
 
-|HEAD| and commit before |HEAD|::
+  - `Generating patch text with -p <https://git-scm.com/docs/diff-generate-patch/>`_
+
+Diff |head-1| and |head|::
 
     $ git diff HEAD^ HEAD
     $ git diff HEAD^..HEAD
     $ git diff @^ @
     $ git diff @^..@
-    $ git show
 
-|master| and current branch::
+Diff ``file.txt`` from |head-1| and |head|::
 
-    $ git log master..HEAD -p
+    $ git diff HEAD^ HEAD -- file.txt
+    $ git diff HEAD^..HEAD -- file.txt
+    $ git diff @^ @ -- file.txt
+    $ git diff @^..@ -- file.txt
 
-``file.rst`` from |HEAD| and commit before |HEAD|::
-
-    $ git diff @:file.rst @^1:file.rst
-
-Only changes (no context, no diff markers)::
+Just changes (no context, no diff markers)::
 
     $ git diff --unified=0 --color-words | grep -P -v "^[\x03-\x1F]\[(1|36)m"

@@ -32,7 +32,7 @@
 
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="git ls-files" href="ls-files.html" />
+    <link rel="next" title="git log" href="log.html" />
     <link rel="prev" title="Commands" href="../command.html" />
  
 
@@ -112,10 +112,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../resource.html">Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../term.html">Glossary</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../command.html">Commands</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="ls-files.html"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">ls-files</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="ls-tree.html"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">ls-tree</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../command.html#examples">Examples</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">diff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log.html">log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ls-files.html">ls-files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ls-tree.html">ls-tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="push.html">push</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tag.html">tag</a></li>
 </ul>
 </li>
 </ul>
@@ -200,25 +202,26 @@
   <div class="section" id="git-diff">
 <h1><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code><a class="headerlink" href="#git-diff" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><a class="reference external" href="https://git-scm.com/docs/git-diff">Documentation</a></li>
+<li><a class="reference external" href="https://git-scm.com/docs/git-diff">Documentation</a><ul>
+<li><a class="reference external" href="https://git-scm.com/docs/diff-generate-patch/">Generating patch text with -p</a></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
+</li>
+</ul>
+<p>Diff commit before <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git diff HEAD^ HEAD
 <span class="gp">$</span> git diff HEAD^..HEAD
 <span class="gp">$</span> git diff @^ @
 <span class="gp">$</span> git diff @^..@
-<span class="gp">$</span> git show
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">master</span></code> and current branch:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git log master..HEAD -p
+<p>Diff <code class="docutils literal notranslate"><span class="pre">file.txt</span></code> from commit before <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git diff HEAD^ HEAD -- file.txt
+<span class="gp">$</span> git diff HEAD^..HEAD -- file.txt
+<span class="gp">$</span> git diff @^ @ -- file.txt
+<span class="gp">$</span> git diff @^..@ -- file.txt
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">file.rst</span></code> from <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and commit before <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git diff @:file.rst @^1:file.rst
-</pre></div>
-</div>
-<p>Only changes (no context, no diff markers):</p>
+<p>Just changes (no context, no diff markers):</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git diff --unified<span class="o">=</span><span class="m">0</span> --color-words <span class="p">|</span> grep -P -v <span class="s2">&quot;^[\x03-\x1F]\[(1|36)m&quot;</span>
 </pre></div>
 </div>
@@ -232,7 +235,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ls-files.html" class="btn btn-neutral float-right" title="git ls-files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="log.html" class="btn btn-neutral float-right" title="git log" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../command.html" class="btn btn-neutral" title="Commands" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -245,7 +248,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Jun 15, 2020, 8:56:36 PM.
+      Last updated on Jun 15, 2020, 10:46:11 PM.
 
     </p>
   </div>

@@ -10,7 +10,7 @@ Glossary
 - `Documentation <https://git-scm.com/docs/gitglossary>`_
 
 @
-    Alias for |HEAD|
+    Alias for |head|
     (`release notes <https://github.com/git/git/blob/v1.8.5/Documentation/RelNotes/1.8.5.txt#L100-L101>`_)
 
 :git-glossary:`commit-ish <aiddefcommit-ishacommit-ishalsocommittish>`

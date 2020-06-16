@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git ls-files &mdash; Technotes Documentation</title>
+  <title>git log &mdash; Technotes Documentation</title>
   
 
   
@@ -32,8 +32,8 @@
 
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="git ls-tree" href="ls-tree.html" />
-    <link rel="prev" title="git log" href="log.html" />
+    <link rel="next" title="git ls-files" href="ls-files.html" />
+    <link rel="prev" title="git diff" href="diff.html" />
  
 
   
@@ -113,8 +113,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../term.html">Glossary</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../command.html">Commands</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="diff.html">diff</a></li>
-<li class="toctree-l3"><a class="reference internal" href="log.html">log</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">ls-files</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ls-files.html">ls-files</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ls-tree.html">ls-tree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="push.html">push</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tag.html">tag</a></li>
@@ -180,13 +180,13 @@
         
           <li><a href="../command.html">Commands</a> &raquo;</li>
         
-      <li><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">ls-files</span></code></li>
+      <li><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code></li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/git/command/ls-files.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/git/command/log.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -199,25 +199,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="git-ls-files">
-<h1><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">ls-files</span></code><a class="headerlink" href="#git-ls-files" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="git-log">
+<h1><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code><a class="headerlink" href="#git-log" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><a class="reference external" href="https://git-scm.com/docs/git-ls-files">Documentation</a></li>
+<li><a class="reference external" href="https://git-scm.com/docs/git-diff">Documentation</a><ul>
+<li><a class="reference external" href="https://git-scm.com/docs/diff-generate-patch/">Generating patch text with -p</a></li>
 </ul>
-<p>Cached files:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files
+</li>
+</ul>
+<p>Commits between tag <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> and <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git log v1.0..HEAD
 </pre></div>
 </div>
-<p>Cached files under <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files foo/bar
-</pre></div>
-</div>
-<p>Untracked files:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files -o
-</pre></div>
-</div>
-<p>Untracked files that are ignored:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git ls-files -o -i --exclude-standard
+<p>Diff between tag <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> and <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git log v1.0..HEAD -p
 </pre></div>
 </div>
 </div>
@@ -230,10 +225,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ls-tree.html" class="btn btn-neutral float-right" title="git ls-tree" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ls-files.html" class="btn btn-neutral float-right" title="git ls-files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="log.html" class="btn btn-neutral" title="git log" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="diff.html" class="btn btn-neutral" title="git diff" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
