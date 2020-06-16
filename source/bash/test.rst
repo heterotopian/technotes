@@ -10,7 +10,7 @@ Tests
 Variables
 =========
 
-Set/unset::
+Set::
 
     if [[ ! -z ${VARIABLE+notset} ]]
     then
