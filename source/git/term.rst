@@ -5,10 +5,12 @@ Glossary
 
 .. highlight:: console
 
+.. include:: substitute.rst
+
 - `Documentation <https://git-scm.com/docs/gitglossary>`_
 
 @
-    Alias for |HEAD|
+    Alias for |head|
     (`release notes <https://github.com/git/git/blob/v1.8.5/Documentation/RelNotes/1.8.5.txt#L100-L101>`_)
 
 :git-glossary:`commit-ish <aiddefcommit-ishacommit-ishalsocommittish>`
@@ -17,10 +19,3 @@ Glossary
 :git-glossary:`tree-ish <aiddeftree-ishatree-ishalsotreeish>`
     Any object that contains a list of file names and modes along with refs to the associated blob and/or tree objects.
     Equivalent to a directory.
-
-
-
-.. |HEAD| replace:: ``HEAD``
-.. |master| replace:: ``master``
-.. |origin| replace:: ``origin``
-.. |v1.0| replace:: ``v1.0``
