@@ -1,12 +1,9 @@
 
-=======
-Devices
-=======
-
-.. highlight:: console
-
+=====
 blkid
 =====
+
+.. highlight:: console
 
 ::
 
@@ -18,18 +15,3 @@ blkid
     /dev/mapper/sda3_crypt: UUID="HVi9at-O5W2-fgZJ-R6QB-fZa5-30HN-12zOe9" TYPE="LVM2_member"
     /dev/mapper/mint--vg-swap_1: UUID="18163da4-e2e8-42d2-9a26-b32eee94756b" TYPE="swap"
     /dev/sdf1: LABEL="USB Stick" UUID="6592DFBE2883E179" TYPE="ntfs"
-
-
-lsblk
-=====
-
-::
-
-    $ lsblk
-    NAME           MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
-    sda              8:0    0 278.5G  0 disk
-    ├─sda1           8:1    0   487M  0 part /boot/efi
-    ├─sda2           8:2    0   488M  0 part
-    └─sda3           8:3    0 277.5G  0 part
-      ├─VG1-System 252:0    0 270.1G  0 lvm  /
-      └─VG1-Swap   252:1    0   7.5G  0 lvm  [SWAP]

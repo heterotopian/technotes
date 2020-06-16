@@ -1,12 +1,9 @@
 
-=======
-Cgroups
-=======
-
-.. highlight:: console
-
+====
 lsns
 ====
+
+.. highlight:: console
 
 ::
 
