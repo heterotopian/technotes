@@ -9,5 +9,5 @@ Python
 
     doc
     runtime
-    community
     module/index
+    community
