@@ -1,0 +1,4 @@
+.. |HEAD| replace:: ``HEAD``
+.. |master| replace:: ``master``
+.. |origin| replace:: ``origin``
+.. |v1.0| replace:: ``v1.0``

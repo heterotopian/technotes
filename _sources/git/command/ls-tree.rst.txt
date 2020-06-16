@@ -5,4 +5,6 @@
 
 .. highlight:: console
 
+.. include:: ../substitute.rst
+
 - `Documentation <https://git-scm.com/docs/git-ls-tree>`_

@@ -1,7 +1,7 @@
 
-==========
-``search``
-==========
+================
+``conda search``
+================
 
 .. highlight:: console
 
@@ -35,7 +35,7 @@ Show detailed information about search results::
 Include additional channel in search results::
 
     $ conda search -c conda-forge 'marshmallow'
-    
+
 Package Selection
 -----------------
 

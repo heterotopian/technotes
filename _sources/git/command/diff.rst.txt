@@ -5,7 +5,25 @@
 
 .. highlight:: console
 
+.. include:: ../substitute.rst
+
 - `Documentation <https://git-scm.com/docs/git-diff>`_
+
+|HEAD| and commit before |HEAD|::
+
+    $ git diff HEAD^ HEAD
+    $ git diff HEAD^..HEAD
+    $ git diff @^ @
+    $ git diff @^..@
+    $ git show
+
+|master| and current branch::
+
+    $ git log master..HEAD -p
+
+``file.rst`` from |HEAD| and commit before |HEAD|::
+
+    $ git diff @:file.rst @^1:file.rst
 
 Only changes (no context, no diff markers)::
 
