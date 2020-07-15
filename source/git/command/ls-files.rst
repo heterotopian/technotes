@@ -19,8 +19,8 @@ Cached files under ``foo/bar``::
 
 Untracked files::
 
-    $ git ls-files -o
+    $ git ls-files -o --exclude-standard
 
-Untracked files that are ignored::
+Ignored files::
 
     $ git ls-files -o -i --exclude-standard
