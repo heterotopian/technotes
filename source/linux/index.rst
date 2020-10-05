@@ -5,6 +5,16 @@
 Linux
 =====
 
+General
+=======
+
+.. toctree::
+    :maxdepth: 1
+
+    xargs
+
+
+
 CGroups
 =======
 
