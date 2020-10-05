@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>lsblk &mdash; Technotes Documentation</title>
+  <title>xargs &mdash; Technotes Documentation</title>
   
 
   
@@ -32,8 +32,8 @@
 
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="findmnt" href="findmnt.html" />
-    <link rel="prev" title="blkid" href="blkid.html" />
+    <link rel="next" title="lsns" href="lsns.html" />
+    <link rel="prev" title="Linux" href="index.html" />
  
 
   
@@ -85,13 +85,15 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../bash/index.html">Bash</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Linux</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#general">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#cgroups">CGroups</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#device">Device</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="blkid.html">blkid</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">lsblk</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#general">General</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">xargs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#options">Options</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#cgroups">CGroups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#device">Device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#filesystem">Filesystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#nfs">NFS</a></li>
 </ul>
@@ -176,13 +178,13 @@
         
           <li><a href="index.html">Linux</a> &raquo;</li>
         
-      <li>lsblk</li>
+      <li>xargs</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/linux/lsblk.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/linux/xargs.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -195,17 +197,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="lsblk">
-<h1>lsblk<a class="headerlink" href="#lsblk" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> lsblk
-<span class="go">NAME           MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT</span>
-<span class="go">sda              8:0    0 278.5G  0 disk</span>
-<span class="go">├─sda1           8:1    0   487M  0 part /boot/efi</span>
-<span class="go">├─sda2           8:2    0   488M  0 part</span>
-<span class="go">└─sda3           8:3    0 277.5G  0 part</span>
-<span class="go">  ├─VG1-System 252:0    0 270.1G  0 lvm  /</span>
-<span class="go">  └─VG1-Swap   252:1    0   7.5G  0 lvm  [SWAP]</span>
+  <div class="section" id="xargs">
+<h1>xargs<a class="headerlink" href="#xargs" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Always use <code class="docutils literal notranslate"><span class="pre">-r</span></code></p>
+</div>
+<p>Run a separate command for each item:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> env <span class="p">|</span> xargs -r -L1 <span class="nb">echo</span>
 </pre></div>
+</div>
+<p>Read input from <code class="docutils literal notranslate"><span class="pre">find</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> find -print0 <span class="p">|</span> xargs -r -0 file
+</pre></div>
+</div>
+<p>Invoke a shell command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> find -print0 <span class="p">|</span> xargs -r -0 bash -c <span class="s1">&#39;file $@&#39;</span> _
+</pre></div>
+</div>
+<p>Invoke a separate shell command for each item:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> find -print0 <span class="p">|</span> xargs -r -0 -L1 bash -c <span class="s1">&#39;file $1&#39;</span> _
+</pre></div>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-0</span>, <span class="option">--null</span></kbd></td>
+<td>Input items are terminated by a null character instead of whitespace, quotes and backslash are not special</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-L <var>max-lines</var></span></kbd></td>
+<td>Use at most max-lines input lines per command</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-r</span>, <span class="option">--no-run-if-empty</span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Don’t run command if there aren’t any input lines</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -217,10 +248,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="findmnt.html" class="btn btn-neutral float-right" title="findmnt" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="lsns.html" class="btn btn-neutral float-right" title="lsns" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="blkid.html" class="btn btn-neutral" title="blkid" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Linux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

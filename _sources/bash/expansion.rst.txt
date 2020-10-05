@@ -29,7 +29,7 @@ Expansion
             ls ~/.vimrc
 
     * - 3
-      - `Parameter/variable subsitution`_
+      - `Parameter expansion`_
       - ::
 
             echo ${PATH}
@@ -82,7 +82,7 @@ Expansion
 
 .. _Brace expansion: https://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html
 .. _Tilde expansion: https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html
-.. _Parameter/variable subsitution: https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
+.. _Parameter expansion: https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
 .. _Command substitution: https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html
 .. _Arithmetic expansion: https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html
 .. _Process substitution: https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html
