@@ -113,7 +113,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../term.html">Glossary</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../command.html">Commands</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="diff.html">diff</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">log</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">log</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#selecting-commits">Selecting Commits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#formatting-output">Formatting Output</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="ls-files.html">ls-files</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ls-tree.html">ls-tree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="push.html">push</a></li>
@@ -207,13 +211,24 @@
 </ul>
 </li>
 </ul>
+<div class="section" id="selecting-commits">
+<h2>Selecting Commits<a class="headerlink" href="#selecting-commits" title="Permalink to this headline">¶</a></h2>
 <p>Commits between tag <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> and <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git log v1.0..HEAD
 </pre></div>
 </div>
-<p>Diff between tag <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> and <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
+<p>Diff between tag <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> and <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> in <a class="reference external" href="https://git-scm.com/docs/diff-generate-patch/">patch format</a>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git log v1.0..HEAD -p
 </pre></div>
+</div>
+</div>
+<div class="section" id="formatting-output">
+<h2>Formatting Output<a class="headerlink" href="#formatting-output" title="Permalink to this headline">¶</a></h2>
+<p>Parent hashes + commit hash:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git log --format<span class="o">=</span><span class="s2">&quot;%P %H&quot;</span>
+<span class="gp">$</span> git log --format<span class="o">=</span><span class="s2">&quot;%P %H&quot;</span> <span class="p">|</span> xargs -r -L1 git diff   <span class="c1"># Diff every commit against its parent(s)</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -238,7 +253,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Oct 5, 2020, 1:05:26 AM.
+      Last updated on Oct 5, 2020, 2:45:10 AM.
 
     </p>
   </div>

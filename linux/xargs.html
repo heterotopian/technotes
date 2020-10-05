@@ -201,11 +201,7 @@
 <h1>xargs<a class="headerlink" href="#xargs" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Always use <code class="docutils literal notranslate"><span class="pre">-r</span></code></p>
-</div>
-<p>Run a separate command for each item:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> env <span class="p">|</span> xargs -r -L1 <span class="nb">echo</span>
-</pre></div>
+<p class="last">Always use <code class="docutils literal notranslate"><span class="pre">-r</span></code> for easier handling of empty input</p>
 </div>
 <p>Read input from <code class="docutils literal notranslate"><span class="pre">find</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> find -print0 <span class="p">|</span> xargs -r -0 file
@@ -215,8 +211,12 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> find -print0 <span class="p">|</span> xargs -r -0 bash -c <span class="s1">&#39;file $@&#39;</span> _
 </pre></div>
 </div>
-<p>Invoke a separate shell command for each item:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> find -print0 <span class="p">|</span> xargs -r -0 -L1 bash -c <span class="s1">&#39;file $1&#39;</span> _
+<p>Run a separate command for each <strong>argument</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> env <span class="p">|</span> xargs -r -n1 <span class="nb">echo</span>
+</pre></div>
+</div>
+<p>Run a separate command for each <strong>input line</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git log --format<span class="o">=</span><span class="s2">&quot;%P %H&quot;</span> <span class="p">|</span> xargs -r -L1 git diff
 </pre></div>
 </div>
 <div class="section" id="options">
@@ -228,13 +228,21 @@
 <tr><td class="option-group">
 <kbd><span class="option">-0</span>, <span class="option">--null</span></kbd></td>
 <td>Input items are terminated by a null character instead of whitespace, quotes and backslash are not special</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--delimiter=<var>delim</var></span>, <span class="option">-d <var>delim</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Input items are terminated by the specified character</td></tr>
 <tr><td class="option-group">
 <kbd><span class="option">-L <var>max-lines</var></span></kbd></td>
-<td>Use at most max-lines input lines per command</td></tr>
+<td>Use at most max-lines (non-blank) input lines per command</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-n <var>max-args</var></span>, <span class="option">--max-args=<var>max-args</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Use at most max-args arguments per command</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-r</span>, <span class="option">--no-run-if-empty</span></kbd></td>
 </tr>
-<tr><td>&#160;</td><td>Don’t run command if there aren’t any input lines</td></tr>
+<tr><td>&#160;</td><td>Only run command if there are non-blank input lines</td></tr>
 </tbody>
 </table>
 </div>
@@ -261,7 +269,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Oct 5, 2020, 1:05:26 AM.
+      Last updated on Oct 5, 2020, 2:45:10 AM.
 
     </p>
   </div>
