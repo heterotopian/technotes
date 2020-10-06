@@ -94,12 +94,11 @@
               
             
             
-              <p class="caption"><span class="caption-text">Essentials</span></p>
+              <p class="caption"><span class="caption-text">System</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="bash/index.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="systemd/index.html">Systemd</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docker.html">Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="x11.html">X11</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Programming</span></p>
@@ -108,20 +107,22 @@
 <li class="toctree-l1"><a class="reference internal" href="conda/index.html">Conda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="frontend.html">Frontend</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Diagnostic Tools</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="sysdig.html">sysdig</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Applications</span></p>
+<p class="caption"><span class="caption-text">Editors</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="atom/index.html">Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vscode/index.html">Visual Studio Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vim.html">Vim</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tmux.html">tmux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sphinx/index.html">Sphinx</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Version control</span></p>
+<p class="caption"><span class="caption-text">Development</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="git/index.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tmux.html">Tmux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sysdig.html">Sysdig</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Publishing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sphinx/index.html">Sphinx</a></li>
 </ul>
 
             
@@ -196,7 +197,7 @@
 
 <h1>Technotes Documentation</h1>
 
-<h2>Essentials</h2>
+<h2>System Components</h2>
 <table>
   <tbody>
     <tr>
@@ -218,20 +219,11 @@
     <tr>
       <td>
   <p>
-    <a href="systemd/index.html">systemd</a>
+    <a href="systemd/index.html">Systemd</a>
     <br/>
     <span>Init system & userspace framework</span>
   </p>
 </td>
-      <td>
-  <p>
-    <a href="docker.html">Docker</a>
-    <br/>
-    <span>Universal process container & runtime</span>
-  </p>
-</td>
-    </tr>
-    <tr>
       <td>
   <p>
     <a href="x11.html">X11</a>
@@ -274,22 +266,7 @@
   </tbody>
 </table>
 
-<h2>Diagnostic Tools</h2>
-<table>
-  <tbody>
-    <tr>
-      <td>
-  <p>
-    <a href="sysdig.html">Sysdig</a>
-    <br/>
-    <span>System visibility tool for Linux</span>
-  </p>
-</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2>Applications</h2>
+<h2>Text Editors</h2>
 <table>
   <tbody>
     <tr>
@@ -297,9 +274,18 @@
   <p>
     <a href="atom/index.html">Atom</a>
     <br/>
-    <span>Hackable text editor built on Chromium</span>
+    <span>Hackable editor and original Electron app</span>
   </p>
 </td>
+      <td>
+  <p>
+    <a href="vscode/index.html">Visual Studio Code</a>
+    <br/>
+    <span>Builds on foundation laid by Atom</span>
+  </p>
+</td>
+    </tr>
+    <tr>
       <td>
   <p>
     <a href="vim.html">Vim</a>
@@ -308,26 +294,10 @@
   </p>
 </td>
     </tr>
-    <tr>
-      <td>
-  <p>
-    <a href="tmux.html">tmux</a>
-    <br/>
-    <span>Teminal multiplexer</span>
-  </p>
-</td>
-      <td>
-  <p>
-    <a href="sphinx/index.html">Sphinx</a>
-    <br/>
-    <span>Semantic documentation system</span>
-  </p>
-</td>
-    </tr>
   </tbody>
 </table>
 
-<h2>Version Control</h2>
+<h2>Development Tools</h2>
 <table>
   <tbody>
     <tr>
@@ -335,7 +305,45 @@
   <p>
     <a href="git/index.html">Git</a>
     <br/>
-    <span>Distributed version control tool</span>
+    <span>Ubiquitous VCS tool</span>
+  </p>
+</td>
+      <td>
+  <p>
+    <a href="tmux.html">Tmux</a>
+    <br/>
+    <span>Teminal multiplexer</span>
+  </p>
+</td>
+    </tr>
+    <tr>
+      <td>
+  <p>
+    <a href="docker.html">Docker</a>
+    <br/>
+    <span>Container runtime</span>
+  </p>
+</td>
+      <td>
+  <p>
+    <a href="sysdig.html">Sysdig</a>
+    <br/>
+    <span>System exploration & visibility tool</span>
+  </p>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Publishing</h2>
+<table>
+  <tbody>
+    <tr>
+      <td>
+  <p>
+    <a href="sphinx/index.html">Sphinx</a>
+    <br/>
+    <span>Semantic documentation system</span>
   </p>
 </td>
     </tr>
@@ -354,7 +362,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Chris
-      Last updated on Oct 5, 2020, 2:45:10 AM.
+      Last updated on Oct 6, 2020, 3:20:03 AM.
 
     </p>
   </div>
