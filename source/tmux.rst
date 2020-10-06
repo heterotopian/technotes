@@ -1,7 +1,7 @@
 .. _tmux:
 
 ====
-tmux
+Tmux
 ====
 
 .. highlight:: console

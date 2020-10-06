@@ -32,7 +32,7 @@
 
 <h1>{{ docstitle|e }}</h1>
 
-<h2>Essentials</h2>
+<h2>System Components</h2>
 <table>
   <tbody>
     <tr>
@@ -40,10 +40,7 @@
       {{ section('linux/index', 'Linux', 'Commands & internals') }}
     </tr>
     <tr>
-      {{ section('systemd/index', 'systemd', 'Init system & userspace framework') }}
-      {{ section('docker', 'Docker', 'Universal process container & runtime') }}
-    </tr>
-    <tr>
+      {{ section('systemd/index', 'Systemd', 'Init system & userspace framework') }}
       {{ section('x11', 'X11', 'GUI windowing system') }}
     </tr>
   </tbody>
@@ -62,34 +59,38 @@
   </tbody>
 </table>
 
-<h2>Diagnostic Tools</h2>
+<h2>Text Editors</h2>
 <table>
   <tbody>
     <tr>
-      {{ section('sysdig', 'Sysdig', 'System visibility tool for Linux') }}
+      {{ section('atom/index', 'Atom', 'Hackable editor and original Electron app') }}
+      {{ section('vscode/index', 'Visual Studio Code', "Builds on foundation laid by Atom") }}
     </tr>
-  </tbody>
-</table>
-
-<h2>Applications</h2>
-<table>
-  <tbody>
     <tr>
-      {{ section('atom/index', 'Atom', 'Hackable text editor built on Chromium') }}
       {{ section('vim', 'Vim', 'Terminal-friendly modal text editor') }}
     </tr>
+  </tbody>
+</table>
+
+<h2>Development Tools</h2>
+<table>
+  <tbody>
     <tr>
-      {{ section('tmux', 'tmux', 'Teminal multiplexer') }}
-      {{ section('sphinx/index', 'Sphinx', 'Semantic documentation system') }}
+      {{ section('git/index', 'Git', 'Ubiquitous VCS tool') }}
+      {{ section('tmux', 'Tmux', 'Teminal multiplexer') }}
+    </tr>
+    <tr>
+      {{ section('docker', 'Docker', 'Container runtime') }}
+      {{ section('sysdig', 'Sysdig', 'System exploration & visibility tool') }}
     </tr>
   </tbody>
 </table>
 
-<h2>Version Control</h2>
+<h2>Publishing</h2>
 <table>
   <tbody>
     <tr>
-      {{ section('git/index', 'Git', 'Distributed version control tool') }}
+      {{ section('sphinx/index', 'Sphinx', 'Semantic documentation system') }}
     </tr>
   </tbody>
 </table>

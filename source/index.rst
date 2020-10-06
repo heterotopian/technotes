@@ -3,40 +3,41 @@ Technical Notes
 ===============
 
 .. toctree::
+    :caption: System
     :maxdepth: 1
-    :caption: Essentials
 
     bash/index
     linux/index
     systemd/index
-    docker
     x11
 
 .. toctree::
-    :maxdepth: 1
     :caption: Programming
+    :maxdepth: 1
 
     python/index
     conda/index
     frontend
 
 .. toctree::
+    :caption: Editors
     :maxdepth: 1
-    :caption: Diagnostic Tools
 
+    atom/index
+    vscode/index
+    vim
+
+.. toctree::
+    :caption: Development
+    :maxdepth: 1
+
+    git/index
+    tmux
+    docker
     sysdig
 
 .. toctree::
+    :caption: Publishing
     :maxdepth: 1
-    :caption: Applications
 
-    atom/index
-    vim
-    tmux
     sphinx/index
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Version control
-
-    git/index
