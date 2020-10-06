@@ -1,7 +1,7 @@
 .. _sysdig:
 
 ======
-sysdig
+Sysdig
 ======
 
 .. highlight:: console
