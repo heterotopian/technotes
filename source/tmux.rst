@@ -4,7 +4,7 @@
 Tmux
 ====
 
-.. highlight:: console
+.. highlight:: tmux
 
 Resources
 =========
@@ -31,7 +31,7 @@ Session Managers
 Commands
 ========
 
-.. list-table::
+.. list-table:: General
     :header-rows: 1
     :widths: auto
 
@@ -43,30 +43,77 @@ Commands
       - :kbd:`list-keys`
       - :kbd:`lsk`
 
-    * - Select session / window / pane
+    * - Set server option
+      - :kbd:`set-option -s option value`
+      - :kbd:`set -s option value`
+
+    * - Set session option
+      - :kbd:`set-option option value`
+      - :kbd:`set option value`
+
+    * - Set window option
+      - :kbd:`set-window-option option value`
+      - :kbd:`setw option value`
+
+    * - Select session / window interactively
       - :kbd:`choose-tree -u`
       -
+
+
+.. list-table:: Clients
+    :header-rows: 1
+    :widths: auto
+
+    * - Action
+      - Command
+      - Alias
+
+    * - List clients
+      - :kbd:`list-clients`
+      - :kbd:`lsc`
+
+    * - Detach client from session
+      - :kbd:`detach-client [ -s target-session ]`
+      - :kbd:`detach [ -s target-session ]`
+
+
+.. list-table:: Sessions
+    :header-rows: 1
+    :widths: auto
+
+    * - Action
+      - Command
+      - Alias
 
     * - List sessions
       - :kbd:`list-sessions`
       - :kbd:`ls`
 
-    * - Attach to session X
-      - :kbd:`attach-session -t X`
-      - :kbd:`attach -t X`
-
-    * - Detach from current session
-      - :kbd:`detach-session`
-      - :kbd:`detach`
+    * - Attach to session
+      - :kbd:`attach-session -t target-session`
+      - :kbd:`attach -t target-session`
 
     * - Kill current session
       - :kbd:`kill-session`
       -
 
-    * - Enable synchronized input
-      - :kbd:`set-window-option synchronize-panes on`
-      - :kbd:`setw synchronize-panes on`
 
-    * - Disable synchronized input
-      - :kbd:`set-window-option synchronize-panes off`
-      - :kbd:`setw synchronize-panes off`
+
+Options
+=======
+
+Server
+------
+
+
+Session
+-------
+
+
+Window
+------
+
+Synchronize input::
+
+    setw synchronize-panes on
+    setw synchronize-panes off
