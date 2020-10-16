@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   
@@ -19,15 +22,20 @@
   
 
   
-
-  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
 <link rel="stylesheet" href="_static/css/theme-custom.css" type="text/css" />
 
     <link rel="index" title="Index" href="genindex.html" />
@@ -35,25 +43,20 @@
     <link rel="next" title="Sysdig" href="sysdig.html" />
     <link rel="prev" title="Tmux" href="tmux.html" />
  
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="index.html" class="icon icon-home"> Technotes
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Technotes
           
 
           
@@ -73,6 +76,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
 
@@ -130,6 +134,7 @@
 </ul>
 
         </div>
+        
       </div>
     </nav>
 
@@ -168,7 +173,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Docker</li>
     
@@ -194,22 +199,22 @@
 <div class="section" id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="https://www.redhat.com/en/resources/cloud-native-container-design-whitepaper">Principles of container-based application design</a> -
-Becoming good cloud-native citizens</li>
-<li><a class="reference external" href="https://developer.atlassian.com/blog/2015/03/docker-systemd-socket-activation/">On-demand activation of Docker containers with systemd</a></li>
-<li><a class="reference external" href="https://matthiasnoback.nl/2017/04/docker-build-patterns/">Docker build patterns</a> -
-Patterns for using containers during the build process</li>
+<li><p><a class="reference external" href="https://www.redhat.com/en/resources/cloud-native-container-design-whitepaper">Principles of container-based application design</a> -
+Becoming good cloud-native citizens</p></li>
+<li><p><a class="reference external" href="https://developer.atlassian.com/blog/2015/03/docker-systemd-socket-activation/">On-demand activation of Docker containers with systemd</a></p></li>
+<li><p><a class="reference external" href="https://matthiasnoback.nl/2017/04/docker-build-patterns/">Docker build patterns</a> -
+Patterns for using containers during the build process</p></li>
 </ul>
 <div class="section" id="workflow">
 <h3>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/openshift/source-to-image">Source-to-Image</a> (S2I) -
-Framework for building reproducible container images from source code</li>
-<li><a class="reference external" href="https://repo2docker.readthedocs.io">repo2docker</a> -
-Build, run, and push Docker images from source code repositories</li>
-<li><a class="reference external" href="https://3musketeers.io/">3 Musketeers</a> -
+<li><p><a class="reference external" href="https://github.com/openshift/source-to-image">Source-to-Image</a> (S2I) -
+Framework for building reproducible container images from source code</p></li>
+<li><p><a class="reference external" href="https://repo2docker.readthedocs.io">repo2docker</a> -
+Build, run, and push Docker images from source code repositories</p></li>
+<li><p><a class="reference external" href="https://3musketeers.io/">3 Musketeers</a> -
 General pattern designed for consistency &amp; repeatability.
-Make for orchestration, Docker/Docker Compose for execution.</li>
+Make for orchestration, Docker/Docker Compose for execution.</p></li>
 </ul>
 </div>
 </div>
@@ -226,7 +231,7 @@ Make for orchestration, Docker/Docker Compose for execution.</li>
         <a href="sysdig.html" class="btn btn-neutral float-right" title="Sysdig" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tmux.html" class="btn btn-neutral" title="Tmux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tmux.html" class="btn btn-neutral float-left" title="Tmux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -235,12 +240,22 @@ Make for orchestration, Docker/Docker Compose for execution.</li>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2017, Chris
-      Last updated on Oct 6, 2020, 3:20:03 AM.
+      <span class="lastupdated">
+        Last updated on Oct 16, 2020, 3:13:01 PM.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -252,26 +267,16 @@ Make for orchestration, Docker/Docker Compose for execution.</li>
   </div>
   
 
-
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

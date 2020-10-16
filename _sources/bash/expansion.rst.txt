@@ -9,8 +9,8 @@ Expansion
 - Bash Guide for Beginners: `Shell expansion <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html>`_
 
 .. list-table::
-    :widths: 10 30 50
     :header-rows: 1
+    :widths: auto
 
     * - Order
       - Expansion type

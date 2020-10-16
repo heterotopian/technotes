@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
@@ -19,15 +22,20 @@
   
 
   
-
-  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
 <link rel="stylesheet" href="../_static/css/theme-custom.css" type="text/css" />
 
     <link rel="index" title="Index" href="../genindex.html" />
@@ -35,25 +43,20 @@
     <link rel="next" title="Glossary" href="term.html" />
     <link rel="prev" title="Git" href="index.html" />
  
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="../index.html" class="icon icon-home"> Technotes
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Technotes
           
 
           
@@ -73,6 +76,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
 
@@ -134,6 +138,7 @@
 </ul>
 
         </div>
+        
       </div>
     </nav>
 
@@ -172,7 +177,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="index.html">Git</a> &raquo;</li>
         
@@ -198,39 +203,40 @@
   <div class="section" id="resources">
 <h1>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><a class="reference external" href="https://stackoverflow.com/questions/23303549/what-are-commit-ish-and-tree-ish-in-git">What are commit-ish and tree-ish in Git?</a></li>
-<li><a class="reference external" href="https://philna.sh/blog/2018/08/21/git-commands-to-keep-a-fork-up-to-date/">Keeping a fork up to date</a></li>
-<li><a class="reference external" href="https://help.github.com/articles/changing-author-info/">Changing author info</a> -
-Script for updating any commits with matching user/email fields</li>
-<li><a class="reference external" href="https://git-man-page-generator.lokaltog.net/">Git man page generator</a> -
-Generate fake documentation (humor)</li>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/23303549/what-are-commit-ish-and-tree-ish-in-git">What are commit-ish and tree-ish in Git?</a></p></li>
+<li><p><a class="reference external" href="https://philna.sh/blog/2018/08/21/git-commands-to-keep-a-fork-up-to-date/">Keeping a fork up to date</a></p></li>
+<li><p><a class="reference external" href="https://help.github.com/articles/changing-author-info/">Changing author info</a> -
+Script for updating any commits with matching user/email fields</p></li>
+<li><p><a class="reference external" href="https://git-man-page-generator.lokaltog.net/">Git man page generator</a> -
+Generate fake documentation (humor)</p></li>
 </ul>
 <div class="section" id="documentation">
 <h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="https://git-scm.com/docs">Homepage</a></li>
-<li><a class="reference external" href="https://git-scm.com/book/en/v2">Pro Git</a> -
+<li><p><a class="reference external" href="https://git-scm.com/docs">Homepage</a></p></li>
+<li><p><a class="reference external" href="https://git-scm.com/book/en/v2">Pro Git</a> -
 second edition by Scott Chacon and Ben Straub
-(<a class="reference external" href="https://github.com/progit/progit2">source</a>)<ul>
-<li><a class="reference external" href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">Rebasing</a></li>
+(<a class="reference external" href="https://github.com/progit/progit2">source</a>)</p>
+<ul>
+<li><p><a class="reference external" href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">Rebasing</a></p></li>
 </ul>
 </li>
-<li><a class="reference external" href="https://mirrors.edge.kernel.org/pub/software/scm/git/docs/gitrevisions.html#_specifying_revisions">Specifying revisions</a></li>
+<li><p><a class="reference external" href="https://mirrors.edge.kernel.org/pub/software/scm/git/docs/gitrevisions.html#_specifying_revisions">Specifying revisions</a></p></li>
 </ul>
 </div>
 <div class="section" id="cheat-sheets">
 <h2>Cheat Sheets<a class="headerlink" href="#cheat-sheets" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>GitHub: <a class="reference external" href="https://education.github.com/git-cheat-sheet-education.pdf">Git cheat sheet</a></li>
-<li><a class="reference external" href="http://ndpsoftware.com/git-cheatsheet.html">Git command visualizer</a> -
-Groups commands by subject</li>
+<li><p>GitHub: <a class="reference external" href="https://education.github.com/git-cheat-sheet-education.pdf">Git cheat sheet</a></p></li>
+<li><p><a class="reference external" href="http://ndpsoftware.com/git-cheatsheet.html">Git command visualizer</a> -
+Groups commands by subject</p></li>
 </ul>
 </div>
 <div class="section" id="workflows">
 <h2>Workflows<a class="headerlink" href="#workflows" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="https://guides.github.com/introduction/flow/">GitHub Flow</a> -
-A lightweight, branch-based workflow that supports teams and projects where deployments are made regularly</li>
+<li><p><a class="reference external" href="https://guides.github.com/introduction/flow/">GitHub Flow</a> -
+A lightweight, branch-based workflow that supports teams and projects where deployments are made regularly</p></li>
 </ul>
 </div>
 </div>
@@ -246,7 +252,7 @@ A lightweight, branch-based workflow that supports teams and projects where depl
         <a href="term.html" class="btn btn-neutral float-right" title="Glossary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -255,12 +261,22 @@ A lightweight, branch-based workflow that supports teams and projects where depl
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2017, Chris
-      Last updated on Oct 6, 2020, 3:20:03 AM.
+      <span class="lastupdated">
+        Last updated on Oct 16, 2020, 3:13:01 PM.
+      </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -272,26 +288,16 @@ A lightweight, branch-based workflow that supports teams and projects where depl
   </div>
   
 
-
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
