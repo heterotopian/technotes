@@ -5,3 +5,4 @@ build
 *.swn
 pyenv
 dependencies.txt
+__pycache__
