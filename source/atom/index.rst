@@ -9,6 +9,7 @@ Atom
 
     resource
     shortcut
+    customize
     palette
     command
     package
