@@ -16,3 +16,6 @@ atom-package: !!python/tuple
 git-glossary: !!python/tuple
   - "https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-%s"
   - ""
+twitter: !!python/tuple
+  - "https://twitter.com/%s"
+  - ""
