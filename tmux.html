@@ -114,6 +114,12 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options">Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#server">Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#session">Session</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#window">Window</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="docker.html">Docker</a></li>
@@ -222,7 +228,8 @@
 </div>
 <div class="section" id="commands">
 <h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto docutils align-default">
+<table class="colwidths-auto docutils align-default" id="id2">
+<caption><span class="caption-text">General</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Action</p></th>
 <th class="head"><p>Command</p></th>
@@ -234,36 +241,83 @@
 <td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">list</kbd>-<kbd class="kbd docutils literal notranslate">keys</kbd></kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">lsk</kbd></p></td>
 </tr>
-<tr class="row-odd"><td><p>Select session / window / pane</p></td>
+<tr class="row-odd"><td><p>Set server option</p></td>
+<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">set</kbd>-<kbd class="kbd docutils literal notranslate">option</kbd> <kbd class="kbd docutils literal notranslate"></kbd>-<kbd class="kbd docutils literal notranslate">s</kbd> <kbd class="kbd docutils literal notranslate">option</kbd> <kbd class="kbd docutils literal notranslate">value</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">set</kbd> <kbd class="kbd docutils literal notranslate"></kbd>-<kbd class="kbd docutils literal notranslate">s</kbd> <kbd class="kbd docutils literal notranslate">option</kbd> <kbd class="kbd docutils literal notranslate">value</kbd></kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>Set session option</p></td>
+<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">set</kbd>-<kbd class="kbd docutils literal notranslate">option</kbd> <kbd class="kbd docutils literal notranslate">option</kbd> <kbd class="kbd docutils literal notranslate">value</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">set</kbd> <kbd class="kbd docutils literal notranslate">option</kbd> <kbd class="kbd docutils literal notranslate">value</kbd></kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>Set window option</p></td>
+<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">set</kbd>-<kbd class="kbd docutils literal notranslate">window</kbd>-<kbd class="kbd docutils literal notranslate">option</kbd> <kbd class="kbd docutils literal notranslate">option</kbd> <kbd class="kbd docutils literal notranslate">value</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">setw</kbd> <kbd class="kbd docutils literal notranslate">option</kbd> <kbd class="kbd docutils literal notranslate">value</kbd></kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>Select session / window interactively</p></td>
 <td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">choose</kbd>-<kbd class="kbd docutils literal notranslate">tree</kbd> <kbd class="kbd docutils literal notranslate"></kbd>-<kbd class="kbd docutils literal notranslate">u</kbd></kbd></p></td>
 <td></td>
 </tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id3">
+<caption><span class="caption-text">Clients</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Action</p></th>
+<th class="head"><p>Command</p></th>
+<th class="head"><p>Alias</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>List clients</p></td>
+<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">list</kbd>-<kbd class="kbd docutils literal notranslate">clients</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">lsc</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>Detach client from session</p></td>
+<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">detach</kbd>-<kbd class="kbd docutils literal notranslate">client</kbd> <kbd class="kbd docutils literal notranslate">[</kbd> <kbd class="kbd docutils literal notranslate"></kbd>-<kbd class="kbd docutils literal notranslate">s</kbd> <kbd class="kbd docutils literal notranslate">target</kbd>-<kbd class="kbd docutils literal notranslate">session</kbd> <kbd class="kbd docutils literal notranslate">]</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">detach</kbd> <kbd class="kbd docutils literal notranslate">[</kbd> <kbd class="kbd docutils literal notranslate"></kbd>-<kbd class="kbd docutils literal notranslate">s</kbd> <kbd class="kbd docutils literal notranslate">target</kbd>-<kbd class="kbd docutils literal notranslate">session</kbd> <kbd class="kbd docutils literal notranslate">]</kbd></kbd></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id4">
+<caption><span class="caption-text">Sessions</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Action</p></th>
+<th class="head"><p>Command</p></th>
+<th class="head"><p>Alias</p></th>
+</tr>
+</thead>
+<tbody>
 <tr class="row-even"><td><p>List sessions</p></td>
 <td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">list</kbd>-<kbd class="kbd docutils literal notranslate">sessions</kbd></kbd></p></td>
 <td><p><kbd class="kbd docutils literal notranslate">ls</kbd></p></td>
 </tr>
-<tr class="row-odd"><td><p>Attach to session X</p></td>
-<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">attach</kbd>-<kbd class="kbd docutils literal notranslate">session</kbd> <kbd class="kbd docutils literal notranslate"></kbd>-<kbd class="kbd docutils literal notranslate">t</kbd> <kbd class="kbd docutils literal notranslate">X</kbd></kbd></p></td>
-<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">attach</kbd> <kbd class="kbd docutils literal notranslate"></kbd>-<kbd class="kbd docutils literal notranslate">t</kbd> <kbd class="kbd docutils literal notranslate">X</kbd></kbd></p></td>
+<tr class="row-odd"><td><p>Attach to session</p></td>
+<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">attach</kbd>-<kbd class="kbd docutils literal notranslate">session</kbd> <kbd class="kbd docutils literal notranslate"></kbd>-<kbd class="kbd docutils literal notranslate">t</kbd> <kbd class="kbd docutils literal notranslate">target</kbd>-<kbd class="kbd docutils literal notranslate">session</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">attach</kbd> <kbd class="kbd docutils literal notranslate"></kbd>-<kbd class="kbd docutils literal notranslate">t</kbd> <kbd class="kbd docutils literal notranslate">target</kbd>-<kbd class="kbd docutils literal notranslate">session</kbd></kbd></p></td>
 </tr>
-<tr class="row-even"><td><p>Detach from current session</p></td>
-<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">detach</kbd>-<kbd class="kbd docutils literal notranslate">session</kbd></kbd></p></td>
-<td><p><kbd class="kbd docutils literal notranslate">detach</kbd></p></td>
-</tr>
-<tr class="row-odd"><td><p>Kill current session</p></td>
+<tr class="row-even"><td><p>Kill current session</p></td>
 <td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">kill</kbd>-<kbd class="kbd docutils literal notranslate">session</kbd></kbd></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>Enable synchronized input</p></td>
-<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">set</kbd>-<kbd class="kbd docutils literal notranslate">window</kbd>-<kbd class="kbd docutils literal notranslate">option</kbd> <kbd class="kbd docutils literal notranslate">synchronize</kbd>-<kbd class="kbd docutils literal notranslate">panes</kbd> <kbd class="kbd docutils literal notranslate">on</kbd></kbd></p></td>
-<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">setw</kbd> <kbd class="kbd docutils literal notranslate">synchronize</kbd>-<kbd class="kbd docutils literal notranslate">panes</kbd> <kbd class="kbd docutils literal notranslate">on</kbd></kbd></p></td>
-</tr>
-<tr class="row-odd"><td><p>Disable synchronized input</p></td>
-<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">set</kbd>-<kbd class="kbd docutils literal notranslate">window</kbd>-<kbd class="kbd docutils literal notranslate">option</kbd> <kbd class="kbd docutils literal notranslate">synchronize</kbd>-<kbd class="kbd docutils literal notranslate">panes</kbd> <kbd class="kbd docutils literal notranslate">off</kbd></kbd></p></td>
-<td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">setw</kbd> <kbd class="kbd docutils literal notranslate">synchronize</kbd>-<kbd class="kbd docutils literal notranslate">panes</kbd> <kbd class="kbd docutils literal notranslate">off</kbd></kbd></p></td>
-</tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="server">
+<h3>Server<a class="headerlink" href="#server" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="session">
+<h3>Session<a class="headerlink" href="#session" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="window">
+<h3>Window<a class="headerlink" href="#window" title="Permalink to this headline">¶</a></h3>
+<p>Synchronize input:</p>
+<div class="highlight-tmux notranslate"><div class="highlight"><pre><span></span>setw synchronize-panes on
+setw synchronize-panes off
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -290,7 +344,7 @@
         
         &copy; Copyright 2017, Chris
       <span class="lastupdated">
-        Last updated on Oct 16, 2020, 3:32:35 PM.
+        Last updated on Oct 16, 2020, 4:37:10 PM.
       </span>
 
     </p>
