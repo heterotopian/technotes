@@ -14,8 +14,9 @@ Resources
 Guides
 ------
 
-- `The Tao of tmux <https://leanpub.com/the-tao-of-tmux>`_ -
-  eBook guide based on tmux primitives: servers, sessions, windows, panes
+- The Tao of tmux:
+  `eBook <https://leanpub.com/the-tao-of-tmux>`_,
+  :twitter:`Twitter <TheTaoOfTmux>`
 - Daniel Miessler: `A tmux Primer <https://danielmiessler.com/study/tmux/>`_
 
 
@@ -62,10 +63,10 @@ Commands
       - :kbd:`kill-session`
       -
 
-    * - Enable synchronized input to all panes in current window
+    * - Enable synchronized input
       - :kbd:`set-window-option synchronize-panes on`
       - :kbd:`setw synchronize-panes on`
 
-    * - Disable synchronized input to all panes in current window
+    * - Disable synchronized input
       - :kbd:`set-window-option synchronize-panes off`
       - :kbd:`setw synchronize-panes off`
