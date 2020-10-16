@@ -1,0 +1,27 @@
+.rst-content a:visited {
+    color: #2980B9;
+}
+
+/*
+.wy-side-nav-search {
+    background-color: #2E736D;
+}
+
+.wy-menu-vertical a:active {
+    background-color: #2E736D;
+}
+*/
+
+.rst-content .section ul.list-nobullet li {
+    list-style: none;
+    margin: 0;
+}
+
+/* Decrease whitespace between adjacent code blocks */
+
+div[class ^= 'highlight-'] + div[class ^= 'highlight-'],
+div[class ^= 'highlight-'] + div[class *= ' highlight-'],
+div[class *= ' highlight-'] + div[class ^= 'highlight-'],
+div[class *= ' highlight-'] + div[class *= ' highlight-'] {
+    margin-top: -16px;
+}
