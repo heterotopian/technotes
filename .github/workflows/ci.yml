@@ -2,8 +2,8 @@ name: Continuous integration
 
 on:
   push:
-    branches:
-      - master
+#   branches:
+#     - master
 
 jobs:
   pages:
@@ -25,15 +25,21 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements/DOC
 
+      - name: Set time zone
+        run: |
+          date
+          echo "America/New_York" > /etc/timezone
+          date
+
       - name: Build Sphinx project
         run: |
           make clean html
           mv build/html public
 
-      - name: Deploy pages
-        uses: JamesIves/github-pages-deploy-action@3.6.2
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: public
-          CLEAN: true
+#     - name: Deploy pages
+#       uses: JamesIves/github-pages-deploy-action@3.6.2
+#       with:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         BRANCH: gh-pages
+#         FOLDER: public
+#         CLEAN: true
