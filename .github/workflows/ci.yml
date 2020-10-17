@@ -15,6 +15,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set timezone
+        uses: zcong1993/setup-timezone@v1.1.1
+        with:
+          timezone: "America/New_York"
+
       - name: Setup Python interpreter
         uses: actions/setup-python@v2
         with:
