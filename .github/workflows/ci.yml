@@ -31,7 +31,7 @@ jobs:
           date
 
       - name: Set timezone
-        uses: zcong1993/setup-timezone@v1
+        uses: zcong1993/setup-timezone@v1.1.1
         with:
           timezone: "America/New_York"
 
@@ -39,7 +39,7 @@ jobs:
         run: |
           date
 
-          
+
 
       - name: Build Sphinx project
         run: |
