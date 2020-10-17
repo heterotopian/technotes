@@ -25,10 +25,21 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements/DOC
 
+
+      - name: Show date/time - before
+        run: |
+          date
+
       - name: Set timezone
         uses: zcong1993/setup-timezone@v1
         with:
           timezone: "America/New_York"
+
+      - name: Show date/time - after
+        run: |
+          date
+
+          
 
       - name: Build Sphinx project
         run: |
