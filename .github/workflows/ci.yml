@@ -2,8 +2,8 @@ name: Continuous integration
 
 on:
   push:
-#   branches:
-#     - master
+    branches:
+      - $default-branch
 
 jobs:
   pages:
