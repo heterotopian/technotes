@@ -32,9 +32,9 @@ Trends
 
 - Python Developers Survey:
   `2017 <https://www.jetbrains.com/research/python-developers-survey-2017/>`_,
-  `2018 <https://www.jetbrains.com/research/python-developers-survey-2018/>`_ -
-  Comprehensive annual survey.
-  A joint effort of JetBrains and the Python Software Foundation.
+  `2018 <https://www.jetbrains.com/research/python-developers-survey-2018/>`_,
+  `2019 <https://www.jetbrains.com/lp/python-developers-survey-2019/>`_ -
+  Collaboration between JetBrains & the Python Software Foundation
 
 - StackOverflow:
   `The Incredible Growth of Python <https://stackoverflow.blog/2017/09/06/incredible-growth-python/>`_ and
