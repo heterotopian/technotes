@@ -3,7 +3,7 @@
 Resources
 =========
 
-.. highlight:: console
+.. highlight:: bash
 
 Documentation
 =============
@@ -15,40 +15,56 @@ Documentation
 Community
 =========
 
-- `Bash Guide for Beginners <http://tldp.org/LDP/Bash-Beginners-Guide/html/>`_
-- `BashFAQ <https://mywiki.wooledge.org/BashFAQ>`_ -
+- TLDP:
+  `Bash Guide for Beginners <http://tldp.org/LDP/Bash-Beginners-Guide/html/>`_,
+  `Advanced Bash-Scripting Guide <https://tldp.org/LDP/abs/html/>`_
+
+- Greg Wooledge: `BashFAQ <https://mywiki.wooledge.org/BashFAQ>`_ -
   Concise treatment of advanced topics
 
-  - `Bash Pitfalls <https://mywiki.wooledge.org/BashPitfalls>`_
-  - .. compound::
+  - `Bash Pitfalls <https://mywiki.wooledge.org/BashPitfalls>`_ -
+    Collection of common mistakes
+  - `Storing command results (output/status) in variables <http://mywiki.wooledge.org/BashFAQ/002>`_::
 
-        `How to read a file line-by-line <https://mywiki.wooledge.org/BashFAQ/001>`_
+        OUTPUT=$(command)
+        STATUS=$?
 
-        .. code-block:: bash
+    Branch on status::
 
-            {
-                while IFS= read -r LINE
-                do
-                    printf '%s\n' "${LINE}"
-                done
+        if command
+        then
+            echo "success"
+        fi
 
-                # Edge case: last line isn't newline terminated
-                # `read` consumes LINE but returns false
-                # Handle leftover partial line
+        if OUTPUT=$(command)
+        then
+            echo "success - ${OUTPUT}"
+        fi
 
-                if [[ -n ${LINE} ]]
-                then
-                    printf '%s\n' "${LINE}"
-                fi
-            }
+    Pipelines::
 
-  - .. compound::
+        set -o pipefail
+        find /invalidpath | wc -l  # Returns last non-zero subcommand status
 
-        `Using find <https://mywiki.wooledge.org/UsingFind>`_
+  - `Reading files line-by-line <https://mywiki.wooledge.org/BashFAQ/001>`_::
 
-        .. code-block:: bash
-
-            while IFS= read -r -d '' LINE
+        {
+            while IFS= read -r LINE
             do
                 printf '%s\n' "${LINE}"
-            done < <(find -name "$PATTERN" -print0)
+            done
+            # Edge case: last line isn't newline terminated
+            # `read` consumes LINE but returns false
+            # Handle leftover partial line
+            if [[ -n ${LINE} ]]
+            then
+                printf '%s\n' "${LINE}"
+            fi
+        }
+
+  - `Using 'find' <https://mywiki.wooledge.org/UsingFind>`_::
+
+        while IFS= read -r -d '' LINE
+        do
+            printf '%s\n' "${LINE}"
+        done < <(find -name "$PATTERN" -print0)
