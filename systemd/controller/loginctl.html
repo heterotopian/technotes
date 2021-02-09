@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>loginctl &mdash; Technotes Documentation</title>
   
@@ -18,7 +18,10 @@
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
+
   
+  
+
   
 
   
@@ -55,7 +58,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Technotes
+            <a href="../../index.html" class="icon icon-home"> Technotes
           
 
           
@@ -180,6 +183,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -193,7 +198,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../../_sources/systemd/controller/loginctl.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -214,14 +219,14 @@
 </ul>
 <div class="section" id="sessions">
 <h2>Sessions<a class="headerlink" href="#sessions" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> loginctl list-sessions
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl list-sessions
 <span class="go">   SESSION        UID USER             SEAT</span>
 <span class="go">        c1       1000 chris            seat0</span>
 
 <span class="go">1 sessions listed.</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> loginctl session-status c1
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl session-status c1
 <span class="go">c1 - chris (1000)</span>
 <span class="go">           Since: Sun 2019-11-17 18:34:11 EST; 3 months 17 days ago</span>
 <span class="go">          Leader: 1639 (mdm)</span>
@@ -245,7 +250,7 @@
 <span class="go">                  ├─ 2278 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> loginctl show-session c1
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl show-session c1
 <span class="go">Id=c1</span>
 <span class="go">Timestamp=Sun 2019-11-17 18:34:11 EST</span>
 <span class="go">TimestampMonotonic=66150378</span>
@@ -270,12 +275,12 @@
 </div>
 <div class="section" id="users">
 <h2>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> loginctl list-users
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl list-users
 <span class="go">       UID USER</span>
 <span class="go">      1000 chris</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> loginctl user-status chris
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl user-status chris
 <span class="go">chris (1000)</span>
 <span class="go">           Since: Sun 2019-11-17 18:34:11 EST; 3 months 17 days ago</span>
 <span class="go">           State: active</span>
@@ -298,7 +303,7 @@
 <span class="go">                    ├─ 2385 /usr/lib/gvfs/gvfs-udisks2-volume-monitor</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> loginctl show-user chris
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl show-user chris
 <span class="go">UID=1000</span>
 <span class="go">GID=1000</span>
 <span class="go">Name=chris</span>
@@ -322,25 +327,18 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="machinectl.html" class="btn btn-neutral float-right" title="machinectl" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="localectl.html" class="btn btn-neutral float-left" title="localectl" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="machinectl.html" class="btn btn-neutral float-right" title="machinectl" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="localectl.html" class="btn btn-neutral float-left" title="localectl" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, CS
+        &#169; Copyright 2021, CS.
       <span class="lastupdated">
-        Last updated on Dec 28, 2020, 5:41:22 AM.
+        Last updated on Feb 9, 2021, 10:23:42 AM.
       </span>
 
     </p>
@@ -348,14 +346,13 @@
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

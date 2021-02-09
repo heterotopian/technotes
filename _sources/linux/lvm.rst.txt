@@ -5,6 +5,9 @@ lvm
 
 .. highlight:: console
 
+.. contents::
+    :local:
+
 Physical Volumes
 ================
 
@@ -81,6 +84,49 @@ Physical Volumes
 
 
 
+Volume Groups
+=============
+
+::
+
+    $ lvm vgs
+      Couldn't find device with uuid ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q.
+      VG      #PV #LV #SN Attr   VSize VFree
+      mint-vg   2   3   0 wz-pn- 1.13t    0
+
+::
+
+    $ lvm vgscan
+      Reading all physical volumes.  This may take a while...
+      Couldn't find device with uuid ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q.
+      Found volume group "mint-vg" using metadata type lvm2
+
+::
+
+    $ lvm vgdisplay
+      --- Volume group ---
+      VG Name               mint-vg
+      System ID
+      Format                lvm2
+      Metadata Areas        1
+      Metadata Sequence No  7
+      VG Access             read/write
+      VG Status             resizable
+      MAX LV                0
+      Cur LV                3
+      Open LV               2
+      Max PV                0
+      Cur PV                2
+      Act PV                1
+      VG Size               1.13 TiB
+      PE Size               4.00 MiB
+      Total PE              295511
+      Alloc PE / Size       295511 / 1.13 TiB
+      Free  PE / Size       0 / 0
+      VG UUID               fB5w0I-sjIL-4prj-AXyH-e3x6-UMEF-LdAz19
+
+
+
 Logical Volumes
 ===============
 
@@ -148,46 +194,3 @@ Logical Volumes
       Segments               1
       Allocation             inherit
       Read ahead sectors     auto
-
-
-
-Volume Groups
-=============
-
-::
-
-    $ lvm vgs
-      Couldn't find device with uuid ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q.
-      VG      #PV #LV #SN Attr   VSize VFree
-      mint-vg   2   3   0 wz-pn- 1.13t    0
-
-::
-
-    $ lvm vgscan
-      Reading all physical volumes.  This may take a while...
-      Couldn't find device with uuid ozPdAM-hmks-tyLK-b0zu-KWIE-GYZ9-I9fR5Q.
-      Found volume group "mint-vg" using metadata type lvm2
-
-::
-
-    $ lvm vgdisplay
-      --- Volume group ---
-      VG Name               mint-vg
-      System ID
-      Format                lvm2
-      Metadata Areas        1
-      Metadata Sequence No  7
-      VG Access             read/write
-      VG Status             resizable
-      MAX LV                0
-      Cur LV                3
-      Open LV               2
-      Max PV                0
-      Cur PV                2
-      Act PV                1
-      VG Size               1.13 TiB
-      PE Size               4.00 MiB
-      Total PE              295511
-      Alloc PE / Size       295511 / 1.13 TiB
-      Free  PE / Size       0 / 0
-      VG UUID               fB5w0I-sjIL-4prj-AXyH-e3x6-UMEF-LdAz19
