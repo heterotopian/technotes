@@ -13,12 +13,9 @@
 Community
 =========
 
-- `I Don't Like Notebooks <https://conferences.oreilly.com/jupyter/jup-ny/public/schedule/detail/68282>`_ -
-  Comprehensive & entertaining presentation about notebook shortcomings
+- Joel Grus:
+  `I Don't Like Notebooks <https://conferences.oreilly.com/jupyter/jup-ny/public/schedule/detail/68282>`_ -
+  Entertaining rant about notebook shortcomings
 
-  - `Slides <https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI/edit?usp=sharing>`_
-  - Threads:
-    `Twitter <https://twitter.com/joelgrus/status/1033035196428378113?lang=en>`_,
-    `Hacker News <https://news.ycombinator.com/item?id=17856700>`_
-  - Responses:
-    `The First Notebook War <https://yihui.name/en/2018/09/notebook-war/>`_
+  - :hackernews:`17856700`
+  - `The First Notebook War <https://yihui.name/en/2018/09/notebook-war/>`_
