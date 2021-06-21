@@ -27,6 +27,14 @@ Documentation
 Shortcuts
 =========
 
+.. list-table::
+    :header-rows: 1
+
+    * - Action
+      - Keys
+    * - Add multi-cursor
+      - :kbd:`Ctrl-Click`
+
 
 
 Command Line
@@ -36,7 +44,7 @@ Export installed package versions to ``~/dotfiles/src/.config/Code/User/extensio
 
     $ code --list-extensions --show-versions > ~/dotfiles/src/.config/Code/User/extensions.list
 
-    
+
 
 Packages
 ========
