@@ -216,45 +216,53 @@
 <p>Stack open file tabs vertically (<a class="reference external" href="https://gist.github.com/jasesmith/4b4a5ab6445ed8ce7c23791041c31408">source</a>):</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">style.less</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-less notranslate"><div class="highlight"><pre><span></span>@tab-border: rgba(24, 26, 31, 0.2);
+<div class="highlight-less notranslate"><div class="highlight"><pre><span></span><span class="nv">@tab-border</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">);</span>
 
-atom-workspace-axis.vertical atom-pane {
-  flex-direction: row;
-  .tab-bar:not(:empty) {
-    box-shadow: inset -1px 0 0 @tab-border;
-    resize: horizontal;
-    height: auto;
-    display: block;
-    padding-right: 1px;
-    padding-bottom: 3em;
-    min-width: 14em;
-    &amp;::after {
-      content: &#39;&#39;;
-      position: absolute;
-      bottom: 1px;
-      right: 1px;
-      width: 0;
-      height: 0;
-      border: .7em solid transparent;
-      border-color: transparent @ui-site-color-2 @ui-site-color-2 transparent;
-      box-shadow: 1px 1px 0 0 @tab-border;
-    }
-  }
-  .tab-bar .tab {
-    display: block;
-    border: none;
-  }
-  .tab-bar .tab,
-  .tab-bar .tab.active {
-    flex: none;
-    width: auto;
-    max-width: none;
-    box-shadow: inset 0 -1px 0 0 @tab-border;
-  }
-  .tab-bar .tab .title {
-    text-align: left;
-  }
-}
+<span class="nt">atom-workspace-axis</span><span class="p">.</span><span class="nc">vertical</span> <span class="nt">atom-pane</span> <span class="p">{</span>
+  <span class="k">flex-direction</span><span class="p">:</span> <span class="kc">row</span><span class="p">;</span>
+
+  <span class="p">.</span><span class="nc">tab-bar</span> <span class="p">{</span>
+
+    <span class="nd">&amp;</span><span class="p">:</span><span class="nd">not</span><span class="err">(</span><span class="p">:</span><span class="nd">empty</span><span class="err">)</span> <span class="p">{</span>
+      <span class="k">box-shadow</span><span class="p">:</span> <span class="kc">inset</span> <span class="mi">-1</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">@</span><span class="n">tab-border</span><span class="p">;</span>
+      <span class="k">resize</span><span class="p">:</span> <span class="kc">horizontal</span><span class="p">;</span>
+      <span class="k">height</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+      <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+      <span class="k">padding-right</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+      <span class="k">padding-bottom</span><span class="p">:</span> <span class="mi">3</span><span class="kt">em</span><span class="p">;</span>
+      <span class="k">min-width</span><span class="p">:</span> <span class="mi">14</span><span class="kt">em</span><span class="p">;</span>
+
+      <span class="nd">&amp;</span><span class="p">::</span><span class="nd">after</span> <span class="p">{</span>
+        <span class="k">content</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+        <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+        <span class="k">bottom</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+        <span class="k">right</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+        <span class="k">width</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">height</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">border</span><span class="p">:</span> <span class="mf">0.7</span><span class="kt">em</span> <span class="kc">solid</span> <span class="kc">transparent</span><span class="p">;</span>
+        <span class="k">border-color</span><span class="p">:</span> <span class="kc">transparent</span> <span class="o">@</span><span class="n">ui-site-color-2</span> <span class="o">@</span><span class="n">ui-site-color-2</span> <span class="kc">transparent</span><span class="p">;</span>
+        <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">@</span><span class="n">tab-border</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="p">.</span><span class="nc">tab</span> <span class="p">{</span>
+      <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+      <span class="k">border</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="p">.</span><span class="nc">tab</span><span class="p">,</span>
+    <span class="p">.</span><span class="nc">tab</span><span class="p">.</span><span class="nc">active</span> <span class="p">{</span>
+      <span class="k">flex</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+      <span class="k">width</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+      <span class="k">max-width</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+      <span class="k">box-shadow</span><span class="p">:</span> <span class="kc">inset</span> <span class="mi">0</span> <span class="mi">-1</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">@</span><span class="n">tab-border</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="p">.</span><span class="nc">tab</span> <span class="p">.</span><span class="nc">title</span> <span class="p">{</span>
+      <span class="k">text-align</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -277,7 +285,7 @@ atom-workspace-axis.vertical atom-pane {
     <p>
         &#169; Copyright 2021, CS.
       <span class="lastupdated">
-        Last updated on Jun 21, 2021, 2:48:11 PM.
+        Last updated on Jun 22, 2021, 3:40:51 AM.
       </span>
 
     </p>

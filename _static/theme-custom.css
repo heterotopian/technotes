@@ -25,3 +25,9 @@ div[class *= ' highlight-'] + div[class ^= 'highlight-'],
 div[class *= ' highlight-'] + div[class *= ' highlight-'] {
     margin-top: -16px;
 }
+
+/* Hide Pygments errors */
+
+.highlight .err {
+    border: none;
+}
