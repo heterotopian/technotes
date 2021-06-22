@@ -279,9 +279,12 @@ texinfo_documents = [
 # Load external configuration
 import conftools
 
-# Cross-project references
 intersphinx_timeout = 5
 intersphinx_mapping = conftools.load_intersphinx()
-
-# Concise markup for external links
 extlinks = conftools.load_extlinks()
+
+# Custom syntax highlighting
+from sphinx.highlighting import lexers
+from lexer import CustomLessCssLexer
+
+lexers['less'] = CustomLessCssLexer()
