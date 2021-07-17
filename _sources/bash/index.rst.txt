@@ -139,8 +139,8 @@ Expansion
 Bash Guide for Beginners: `Shell expansion <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html>`_
 
 .. list-table::
-    :header-rows: 1
     :widths: auto
+    :header-rows: 1
 
     * - Order
       - Expansion type
@@ -266,13 +266,16 @@ $#
 
 $*
     Positional parameters, starting from position 1.
-    When the expansion is not within double quotes, each positional parameter expands to a separate word.
-    When the expansion occurs within double quotes, it expands to a single word with the value of each parameter separated by the first character of the ``IFS`` special variable.
+
+    - When the expansion is not within double quotes, each positional parameter expands to a separate word.
+    - When the expansion occurs within double quotes, it expands to a single word with the value of each parameter separated by the first character of the ``IFS`` special variable.
 
 $@
     Positional parameters, starting from position 1.
-    In contexts where word splitting is performed, this expands each positional parameter to a separate word; if not within double quotes, these words are subject to word splitting.
-    In contexts where word splitting is not performed, this expands to a single word with each positional parameter separated by a space.
+
+    - In contexts where word splitting is performed, this expands each positional parameter to a separate word; if not within double quotes, these words are subject to word splitting.
+    - In contexts where word splitting is not performed, this expands to a single word with each positional parameter separated by a space.
+
     When the expansion occurs within double quotes, and word splitting is performed, each parameter expands to a separate word.
 
 $?
@@ -294,6 +297,7 @@ $0
 $_
     At shell startup, set to the absolute pathname used to invoke the shell or shell script being executed as passed in the environment or argument list.
     Subsequently, expands to the last argument to the previous simple command executed in the foreground, after expansion.
+
     Also set to the full pathname used to invoke each command executed and placed in the environment exported to that command.
 
 

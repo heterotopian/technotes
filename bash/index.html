@@ -90,7 +90,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">System</span></p>
+              <p class="caption" role="heading"><span class="caption-text">System</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Bash</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a></li>
@@ -110,26 +110,26 @@
 <li class="toctree-l1"><a class="reference internal" href="../systemd/index.html">Systemd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../x11.html">X11</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Programming</span></p>
+<p class="caption" role="heading"><span class="caption-text">Programming</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../conda/index.html">Conda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../frontend.html">Frontend</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Editors</span></p>
+<p class="caption" role="heading"><span class="caption-text">Editors</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../atom/index.html">Atom</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vscode/index.html">Visual Studio Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vim.html">Vim</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Development</span></p>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../git/index.html">Git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tmux.html">Tmux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../docker.html">Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sysdig.html">Sysdig</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Publishing</span></p>
+<p class="caption" role="heading"><span class="caption-text">Publishing</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx</a></li>
 </ul>
@@ -457,24 +457,28 @@ args <span class="s2">&quot;</span><span class="nv">$VAR</span><span class="s2">
 <div class="section" id="id5">
 <h2>Special Variables<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>Bash Guide for Beginners: <a class="reference external" href="https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html#sect_03_02_05">Special parameters</a></p>
-<dl class="simple">
+<dl>
 <dt>$#</dt><dd><p>Number of positional parameters.</p>
 </dd>
-<dt>$*</dt><dd><p>Positional parameters, starting from position 1.
-When the expansion is not within double quotes, each positional parameter expands to a separate word.
-When the expansion occurs within double quotes, it expands to a single word with the value of each parameter separated by the first character of the <code class="docutils literal notranslate"><span class="pre">IFS</span></code> special variable.</p>
+<dt>$*</dt><dd><p>Positional parameters, starting from position 1.</p>
+<ul class="simple">
+<li><p>When the expansion is not within double quotes, each positional parameter expands to a separate word.</p></li>
+<li><p>When the expansion occurs within double quotes, it expands to a single word with the value of each parameter separated by the first character of the <code class="docutils literal notranslate"><span class="pre">IFS</span></code> special variable.</p></li>
+</ul>
 </dd>
-<dt>$&#64;</dt><dd><p>Positional parameters, starting from position 1.
-In contexts where word splitting is performed, this expands each positional parameter to a separate word; if not within double quotes, these words are subject to word splitting.
-In contexts where word splitting is not performed, this expands to a single word with each positional parameter separated by a space.
-When the expansion occurs within double quotes, and word splitting is performed, each parameter expands to a separate word.</p>
+<dt>$&#64;</dt><dd><p>Positional parameters, starting from position 1.</p>
+<ul class="simple">
+<li><p>In contexts where word splitting is performed, this expands each positional parameter to a separate word; if not within double quotes, these words are subject to word splitting.</p></li>
+<li><p>In contexts where word splitting is not performed, this expands to a single word with each positional parameter separated by a space.</p></li>
+</ul>
+<p>When the expansion occurs within double quotes, and word splitting is performed, each parameter expands to a separate word.</p>
 </dd>
 <dt>$?</dt><dd><p>Exit status of the most recently executed foreground pipeline.</p>
 </dd>
 <dt>$-</dt><dd><p>Current option flags as specified upon invocation, by the set builtin command, or those set by the shell itself (such as the -i option).</p>
 </dd>
 </dl>
-<dl class="simple">
+<dl>
 <dt>$$</dt><dd><p>Process ID of the shell.
 In a <code class="docutils literal notranslate"><span class="pre">()</span></code> subshell, it expands to the process ID of the invoking shell, not the subshell.</p>
 </dd>
@@ -483,8 +487,8 @@ In a <code class="docutils literal notranslate"><span class="pre">()</span></cod
 <dt>$0</dt><dd><p>Name of the shell or shell script.</p>
 </dd>
 <dt>$_</dt><dd><p>At shell startup, set to the absolute pathname used to invoke the shell or shell script being executed as passed in the environment or argument list.
-Subsequently, expands to the last argument to the previous simple command executed in the foreground, after expansion.
-Also set to the full pathname used to invoke each command executed and placed in the environment exported to that command.</p>
+Subsequently, expands to the last argument to the previous simple command executed in the foreground, after expansion.</p>
+<p>Also set to the full pathname used to invoke each command executed and placed in the environment exported to that command.</p>
 </dd>
 </dl>
 </div>
@@ -506,7 +510,7 @@ Also set to the full pathname used to invoke each command executed and placed in
     <p>
         &#169; Copyright 2021, CS.
       <span class="lastupdated">
-        Last updated on Jun 22, 2021, 3:40:51 AM.
+        Last updated on Jul 17, 2021, 2:41:13 AM.
       </span>
 
     </p>
