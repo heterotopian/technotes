@@ -12,7 +12,11 @@
 }
 */
 
-.rst-content .section ul.list-nobullet li {
+.rst-content ul.list-nobullet {
+    margin-bottom: 0;
+}
+
+.rst-content ul.list-nobullet li {
     list-style: none;
     margin: 0;
 }
