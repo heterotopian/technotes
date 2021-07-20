@@ -12,14 +12,15 @@ Python2
     module/index
     community
 
-
 Documentation
 =============
 
+Reference
+---------
+
 - :ref:`python:glossary`
 
-- `The Python Language Reference <https://docs.python.org/2/reference/index.html>`_ -
-  Describes the syntax and core semantics of the language.
+- `The Python Language Reference <https://docs.python.org/3/reference/index.html>`_
 
   - :ref:`python:keywords`
   - :ref:`python:datamodel`
@@ -29,40 +30,26 @@ Documentation
 
   - :ref:`python:execmodel`
 
-
-- `The Python Standard Library <https://docs.python.org/2/library/index.html>`_ -
-  Describes the standard library that is distributed with Python.
+- `The Python Standard Library <https://docs.python.org/3/library/index.html>`_
 
   - :ref:`python:built-in-funcs`
 
 
-- `Installing Python Modules <https://docs.python.org/2/installing/>`_ -
-  Basic introduction to installing modules.
+Guides
+------
 
+- :ref:`python:installing-index` and
+  :ref:`python:install-index`
 
-- `Distributing Python Modules <https://docs.python.org/2/distributing/>`_ -
-  Basic introduction to distributing modules.
+- :ref:`python:distributing-index` and
+  :ref:`python:distutils-index`
 
+- `Python Developer's Guide <https://devguide.python.org/>`_
 
-- `Installing Python Modules (Legacy version) <https://docs.python.org/2/install/>`_ -
-  Guide to the Python Distribution Utilities (distutils) from an end=user point of view.
+- `Python HOWTOs <https://docs.python.org/3/howto/index.html>`_ -
+  Deep dives on complex topics.
 
-
-- `Distributing Python Modules (Legacy version) <https://docs.python.org/2/distutils/>`_ -
-  Guide to the Python Distribution Utilities (distutils) from a developer point of view.
-
-  - `Relationships between Distributions and Packages <https://docs.python.org/2/distutils/setupscript.html#relationships=between=distributions=and=packages>`_
-
-
-- `The CPython Developer's Guide <https://devguide.python.org/>`_ -
-  The comprehensive resource for contributing to CPython.
-  Maintained by the CPython core developers.
-
-- `Python HOWTOs <https://docs.python.org/2.7/howto/index.html>`_ -
-  Documents that cover a single, specific topic, and attempt to cover it fairly completely.
-
-  - `Descriptors <https://docs.python.org/2.7/howto/descriptor.html>`_
-
+  - `Descriptors <https://docs.python.org/3/howto/descriptor.html>`_
 
 
 
@@ -74,7 +61,7 @@ Python Enhancement Proposals
     :header-rows: 1
 
     * - PEP
-      - Description
+      - Title
       - See Also
 
     * - :pep:`248 <248>`
@@ -85,13 +72,13 @@ Python Enhancement Proposals
       - Python Database API Specification v2.0
       -
 
-    * - :pep:`g02 <302>`
+    * - :pep:`302 <302>`
       - New Import Hooks
       -
 
-    * - :pep:`g33 <333>`
+    * - :pep:`333 <333>`
       - Python Web Server Gateway Interface v1.0
-      - `Optional Platform-Specific File Handling <https://www.python.org/dev/peps/pep-0g33/#optional-platform-specific-file-handling>`_
+      - `Optional Platform-Specific File Handling <https://www.python.org/dev/peps/pep-0333/#optional-platform-specific-file-handling>`_
 
     * - :pep:`440 <440>`
       - Version Identification and Dependency Specification
@@ -104,7 +91,7 @@ Python Enhancement Proposals
       - Improving Python ZIP Application Support
       -
 
-    * - :pep:`44g <443>`
+    * - :pep:`443 <443>`
       - Single-dispatch generic functions
       -
 
@@ -116,58 +103,6 @@ Python Enhancement Proposals
       - Coroutines with async and await syntax
       -
 
-    * - :pep:`g000 <3000>`
-      - Python g000
+    * - :pep:`3000 <3000>`
+      - Python 3000
       -
-
-
-
-
-
-`The Python Standard Library <https://docs.python.org/2/library/index.html>`_
-=============================================================================
-
-Describes the standard library that is distributed with Python.
-
-- :ref:`python:built-in-funcs`
-
-
-`Installing Python Modules <https://docs.python.org/2/installing/>`_
-====================================================================
-
-Basic introduction to installing modules.
-
-
-`Distributing Python Modules <https://docs.python.org/2/distributing/>`_
-========================================================================
-
-Basic introduction to distributing modules.
-
-
-`Installing Python Modules (Legacy version) <https://docs.python.org/2/install/>`_
-==================================================================================
-
-Guide to the Python Distribution Utilities (distutils) from an end=user point of view.
-
-
-`Distributing Python Modules (Legacy version) <https://docs.python.org/2/distutils/>`_
-======================================================================================
-
-Guide to the Python Distribution Utilities (distutils) from a developer point of view.
-
-- `Relationships between Distributions and Packages <https://docs.python.org/2/distutils/setupscript.html#relationships=between=distributions=and=packages>`_
-
-
-`The CPython Developer's Guide <https://devguide.python.org/>`_
-===============================================================
-
-The comprehensive resource for contributing to CPython.
-Maintained by the CPython core developers.
-
-
-`Python HOWTOs <https://docs.python.org/2.7/howto/index.html>`_
-===============================================================
-
-Documents that cover a single, specific topic, and attempt to cover it fairly completely.
-
-- `Descriptors <https://docs.python.org/2.7/howto/descriptor.html>`_
