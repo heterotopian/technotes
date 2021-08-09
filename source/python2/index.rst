@@ -20,7 +20,7 @@ Reference
 
 - :ref:`python:glossary`
 
-- `The Python Language Reference <https://docs.python.org/3/reference/index.html>`_
+- :ref:`python:reference-index`
 
   - :ref:`python:keywords`
   - :ref:`python:datamodel`
@@ -30,7 +30,7 @@ Reference
 
   - :ref:`python:execmodel`
 
-- `The Python Standard Library <https://docs.python.org/3/library/index.html>`_
+- :ref:`python:library-index`
 
   - :ref:`python:built-in-funcs`
 
@@ -38,18 +38,18 @@ Reference
 Guides
 ------
 
+- `Developer's Guide <https://devguide.python.org/>`_
+
+- `HOWTOs <https://docs.python.org/3/howto/index.html>`_ -
+  Deep dives into specific topics
+
+  - :ref:`Descriptors <python:descriptorhowto>`
+
 - :ref:`python:installing-index` and
   :ref:`python:install-index`
 
 - :ref:`python:distributing-index` and
   :ref:`python:distutils-index`
-
-- `Python Developer's Guide <https://devguide.python.org/>`_
-
-- `Python HOWTOs <https://docs.python.org/3/howto/index.html>`_ -
-  Deep dives on complex topics.
-
-  - `Descriptors <https://docs.python.org/3/howto/descriptor.html>`_
 
 
 
