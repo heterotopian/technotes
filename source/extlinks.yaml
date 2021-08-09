@@ -22,3 +22,6 @@ twitter: !!python/tuple
 hackernews: !!python/tuple
   - "https://news.ycombinator.com/item?id=%s"
   - null
+systemd: !!python/tuple
+  - "https://www.freedesktop.org/software/systemd/man/%s.html"
+  - "Systemd documentation: "
