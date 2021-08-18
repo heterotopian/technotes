@@ -16,6 +16,7 @@ Technical Notes
     :maxdepth: 1
 
     python/index
+    python2/index
     conda/index
     frontend
 
