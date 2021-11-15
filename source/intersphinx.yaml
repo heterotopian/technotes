@@ -1,5 +1,5 @@
 python: !!python/tuple
-  - "http://docs.python.org/2/"
+  - "http://docs.python.org/3/"
   - null
 nose: !!python/tuple
   - "http://nose.readthedocs.org/en/latest/"
