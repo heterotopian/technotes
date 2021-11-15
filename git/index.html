@@ -20,7 +20,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Resources" href="resource.html" />
+    <link rel="next" title="git diff" href="command/diff.html" />
     <link rel="prev" title="Vim" href="../vim.html" /> 
 </head>
 
@@ -62,9 +62,21 @@
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Git</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="resource.html">Resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="term.html">Glossary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command.html">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cheat-sheets">Cheat Sheets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#glossary">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="command/diff.html">git diff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="command/log.html">git log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="command/ls-files.html">git ls-files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="command/ls-tree.html">git ls-tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="command/push.html">git push</a></li>
+<li class="toctree-l3"><a class="reference internal" href="command/tag.html">git tag</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tmux.html">Tmux</a></li>
@@ -113,30 +125,72 @@
              
   <section id="git">
 <span id="id1"></span><h1>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h1>
+<section id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/23303549/what-are-commit-ish-and-tree-ish-in-git">What are commit-ish and tree-ish in Git?</a></p></li>
+<li><p><a class="reference external" href="https://philna.sh/blog/2018/08/21/git-commands-to-keep-a-fork-up-to-date/">Keeping a fork up to date</a></p></li>
+<li><p><a class="reference external" href="https://help.github.com/articles/changing-author-info/">Changing author info</a> -
+Script for updating any commits with matching user/email fields</p></li>
+<li><p><a class="reference external" href="https://git-man-page-generator.lokaltog.net/">Git man page generator</a> -
+Generate fake documentation (humor)</p></li>
+<li><p>Workflows</p>
+<ul>
+<li><p><a class="reference external" href="https://guides.github.com/introduction/flow/">GitHub Flow</a> -
+A lightweight, branch-based workflow that supports teams and projects where deployments are made regularly</p></li>
+</ul>
+</li>
+</ul>
+<section id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://git-scm.com/docs">Homepage</a></p></li>
+<li><p><a class="reference external" href="https://git-scm.com/book/en/v2">Pro Git</a> -
+second edition by Scott Chacon and Ben Straub
+(<a class="reference external" href="https://github.com/progit/progit2">source</a>)</p>
+<ul>
+<li><p><a class="reference external" href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">Rebasing</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://mirrors.edge.kernel.org/pub/software/scm/git/docs/gitrevisions.html#_specifying_revisions">Specifying revisions</a></p></li>
+</ul>
+</section>
+<section id="cheat-sheets">
+<h3>Cheat Sheets<a class="headerlink" href="#cheat-sheets" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>GitHub: <a class="reference external" href="https://education.github.com/git-cheat-sheet-education.pdf">Git cheat sheet</a></p></li>
+<li><p><a class="reference external" href="http://ndpsoftware.com/git-cheatsheet.html">Git command visualizer</a> -
+Groups commands by subject</p></li>
+</ul>
+</section>
+</section>
+<section id="glossary">
+<h2>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://git-scm.com/docs/gitglossary">Documentation</a></p>
+<dl class="simple">
+<dt>&#64;</dt><dd><p>Alias for <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>
+(<a class="reference external" href="https://github.com/git/git/blob/v1.8.5/Documentation/RelNotes/1.8.5.txt#L100-L101">release notes</a>)</p>
+</dd>
+<dt><a class="reference external" href="https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefcommit-ishacommit-ishalsocommittish">commit-ish</a></dt><dd><p>Any object that leads to a commit, e.g.: a commit, a tag pointing to a commit, a tag pointing to a tag … pointing to a commit.</p>
+</dd>
+<dt><a class="reference external" href="https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddeftree-ishatree-ishalsotreeish">tree-ish</a></dt><dd><p>Any object that contains a list of file names and modes along with refs to the associated blob and/or tree objects.
+Equivalent to a directory.</p>
+</dd>
+</dl>
+</section>
+<section id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="resource.html">Resources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="resource.html#documentation">Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="resource.html#cheat-sheets">Cheat Sheets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="resource.html#workflows">Workflows</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="term.html">Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command.html">Commands</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="command/diff.html">diff</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command/log.html">log</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="command/log.html#selecting-commits">Selecting Commits</a></li>
-<li class="toctree-l3"><a class="reference internal" href="command/log.html#formatting-output">Formatting Output</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="command/ls-files.html">ls-files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command/ls-tree.html">ls-tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command/push.html">push</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command/tag.html">tag</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="command/diff.html">git diff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command/log.html">git log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command/ls-files.html">git ls-files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command/ls-tree.html">git ls-tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command/push.html">git push</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command/tag.html">git tag</a></li>
 </ul>
 </div>
+</section>
 </section>
 
 
@@ -144,14 +198,14 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../vim.html" class="btn btn-neutral float-left" title="Vim" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="resource.html" class="btn btn-neutral float-right" title="Resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="command/diff.html" class="btn btn-neutral float-right" title="git diff" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2021, CS.
-      <span class="lastupdated">Last updated on Nov 15, 2021, 5:28:20 AM.
+      <span class="lastupdated">Last updated on Nov 15, 2021, 5:35:25 AM.
       </span></p>
   </div>
 
