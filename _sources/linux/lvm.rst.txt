@@ -5,9 +5,6 @@ lvm
 
 .. highlight:: console
 
-.. contents::
-    :local:
-
 Physical Volumes
 ================
 
