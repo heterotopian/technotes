@@ -10,6 +10,7 @@ Linux
     :caption: General
 
     command/xargs
+    command/watch
 
 .. toctree::
     :maxdepth: 1

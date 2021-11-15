@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>systemd-run &mdash; Technotes Documentation</title>
+  <title>watch &mdash; Technotes Documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme-custom.css" type="text/css" />
@@ -20,8 +20,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="systemd-socket-proxyd" href="systemd-socket-proxyd.html" />
-    <link rel="prev" title="systemd-cgtop" href="systemd-cgtop.html" /> 
+    <link rel="next" title="lsns" href="lsns.html" />
+    <link rel="prev" title="xargs" href="xargs.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,25 +43,20 @@
               <p class="caption" role="heading"><span class="caption-text">System</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../bash/index.html">Bash</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../linux/index.html">Linux</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Systemd</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../index.html#documentation">Documentation</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#commands">Commands</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="systemd-cgls.html">systemd-cgls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="systemd-cgtop.html">systemd-cgtop</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">systemd-run</a></li>
-<li class="toctree-l3"><a class="reference internal" href="systemd-socket-proxyd.html">systemd-socket-proxyd</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../controller/busctl.html">busctl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../controller/journalctl.html">journalctl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../controller/localectl.html">localectl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../controller/loginctl.html">loginctl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../controller/machinectl.html">machinectl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../controller/systemctl.html">timedatectl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../controller/timedatectl.html">systemctl</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Linux</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="xargs.html">xargs</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">watch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#options">Options</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="lsns.html">lsns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blkid.html">blkid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lsblk.html">lsblk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nfsstat.html">nfsstat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nfsiostat.html">nfsiostat</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../systemd/index.html">Systemd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../x11.html">X11</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Programming</span></p>
@@ -113,10 +108,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">Systemd</a> &raquo;</li>
-      <li>systemd-run</li>
+          <li><a href="../index.html">Linux</a> &raquo;</li>
+      <li>watch</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/systemd/command/systemd-run.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/linux/command/watch.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -124,26 +119,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="systemd-run">
-<h1>systemd-run<a class="headerlink" href="#systemd-run" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd-run.html">Systemd documentation: systemd-run</a></p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemd-run <span class="nb">echo</span> yes
-<span class="go">Running as unit run-rd639c9dc8b974744bc1b88ff8319cb47.service.</span>
+  <section id="watch">
+<h1>watch<a class="headerlink" href="#watch" title="Permalink to this headline">¶</a></h1>
+<p>Execute a program periodically, showing output fullscreen.</p>
+<p>Simple command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>watch wc -l foo/<span class="se">\*</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemd-run --scope <span class="nb">echo</span> yes
-<span class="go">Running scope as unit run-r56133a46ffdf44a0b416864461fc7ee0.scope.</span>
-<span class="go">yes</span>
+<p>Use bash in command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>watch -x bash -cl <span class="s2">&quot;find foo/ -exec wc -l {} \;&quot;</span>
 </pre></div>
 </div>
+<section id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<dl class="option-list">
+<dt><kbd><span class="option">-d</span>, <span class="option">--differences</span></kbd></dt>
+<dd><p>Highlight the differences between successive updates.
+Option will read optional argument that changes highlight to be permanent, allowing to see what has  changed  at  least  once since first iteration.</p>
+</dd>
+<dt><kbd><span class="option">-g</span>, <span class="option">--chgexit</span></kbd></dt>
+<dd><p>Exit when the output of command changes.</p>
+</dd>
+<dt><kbd><span class="option">-x</span>, <span class="option">--exec</span></kbd></dt>
+<dd><p>Pass command to exec(2) instead of sh -c which reduces the need to use extra quoting to get the desired effect.</p>
+</dd>
+</dl>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="systemd-cgtop.html" class="btn btn-neutral float-left" title="systemd-cgtop" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="systemd-socket-proxyd.html" class="btn btn-neutral float-right" title="systemd-socket-proxyd" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="xargs.html" class="btn btn-neutral float-left" title="xargs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="lsns.html" class="btn btn-neutral float-right" title="lsns" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
