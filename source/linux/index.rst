@@ -5,54 +5,36 @@
 Linux
 =====
 
-General
-=======
+.. toctree::
+    :maxdepth: 1
+    :caption: General
+
+    command/xargs
 
 .. toctree::
     :maxdepth: 1
+    :caption: CGroups
 
-    xargs
-
-
-
-CGroups
-=======
+    command/lsns
 
 .. toctree::
     :maxdepth: 1
+    :caption: Device
 
-    lsns
-
-
-
-Device
-======
+    command/blkid
+    command/lsblk
 
 .. toctree::
     :maxdepth: 1
+    :filesystem:
 
-    blkid
-    lsblk
-
-
-
-Filesystem
-==========
+    command/findmnt
+    command/lvm
+    command/tree
 
 .. toctree::
     :maxdepth: 1
+    :caption: NFS
 
-    findmnt
-    lvm
-    tree
-
-
-
-NFS
-===
-
-.. toctree::
-    :maxdepth: 1
-
-    nfsstat
-    nfsiostat
+    command/nfsstat
+    command/nfsiostat
