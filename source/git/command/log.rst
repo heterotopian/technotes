@@ -1,7 +1,7 @@
 
-===========
-``git log``
-===========
+=======
+git log
+=======
 
 .. highlight:: console
 

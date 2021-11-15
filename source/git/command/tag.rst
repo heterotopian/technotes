@@ -1,7 +1,7 @@
 
-===========
-``git tag``
-===========
+=======
+git tag
+=======
 
 .. highlight:: console
 
