@@ -1,7 +1,7 @@
 
-============
-``git diff``
-============
+========
+git diff
+========
 
 .. highlight:: console
 

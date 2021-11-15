@@ -1,7 +1,7 @@
 
-============
-``git push``
-============
+========
+git push
+========
 
 .. highlight:: console
 
