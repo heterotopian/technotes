@@ -27,7 +27,7 @@ Linux
 
 .. toctree::
     :maxdepth: 1
-    :filesystem:
+    :caption: Filesystem
 
     command/findmnt
     command/lvm
