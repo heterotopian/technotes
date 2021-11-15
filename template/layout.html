@@ -1,12 +1,9 @@
 {% extends "!layout.html" %}
-
-{%block linktags %}
-<link rel="stylesheet" href="{{ pathto('_static/theme-custom.css', 1) }}" type="text/css" />
-{{ super() }}
-{% endblock %}
+{% set css_files = css_files + ['_static/css/theme-custom.css'] %}
 
 {% block menu %}
 {{ super() }}
+
 <p class="caption">
   <span class="caption-text">Reference</span>
 </p>
@@ -15,4 +12,5 @@
     <a class="reference internal" href="{{ pathto('genindex') }}">{{ _('Index') }}</a>
   </li>
 </ul>
+
 {% endblock %}
