@@ -5,7 +5,7 @@ journalctl
 
 .. highlight:: console
 
-- :systemd:`journalctl`
+:systemd:`journalctl`
 
 General
 =======

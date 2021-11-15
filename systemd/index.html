@@ -20,7 +20,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Resources" href="resource.html" />
+    <link rel="next" title="systemd-cgls" href="command/systemd-cgls.html" />
     <link rel="prev" title="nfsiostat" href="../linux/nfsiostat.html" /> 
 </head>
 
@@ -45,14 +45,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../bash/index.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Systemd</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="resource.html">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="command/systemdcgls.html">systemd-cgls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="command/systemdcgtop.html">systemd-cgtop</a></li>
-<li class="toctree-l3"><a class="reference internal" href="command/systemdrun.html">systemd-run</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#controllers">Controllers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="command/systemd-cgls.html">systemd-cgls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="command/systemd-cgtop.html">systemd-cgtop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="command/systemd-run.html">systemd-run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="command/systemd-socket-proxyd.html">systemd-socket-proxyd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="controller/busctl.html">busctl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="controller/journalctl.html">journalctl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="controller/localectl.html">localectl</a></li>
@@ -127,28 +125,35 @@
              
   <section id="systemd">
 <span id="id1"></span><h1>Systemd<a class="headerlink" href="#systemd" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.freedesktop.org/wiki/Software/systemd/">Project homepage</a></p></li>
+<li><p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.index.html">Manpages</a></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="resource.html">Resources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="resource.html#documentation">Documentation</a></li>
+<li><p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.directives.html">Directives</a></p></li>
+<li><p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html">Unit configuration</a></p>
+<ul>
+<li><p>Mapping of unit properties to their inverses</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.exec.html">Execution environment configuration</a></p>
+<ul>
+<li><p>Environment varialbes in spawned processes</p></li>
 </ul>
 </li>
 </ul>
-</div>
+</li>
+</ul>
+</section>
 <section id="commands">
 <h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="command/systemdcgls.html">systemd-cgls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command/systemdcgtop.html">systemd-cgtop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command/systemdrun.html">systemd-run</a></li>
-</ul>
-</div>
-</section>
-<section id="controllers">
-<h2>Controllers<a class="headerlink" href="#controllers" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
+<li class="toctree-l1"><a class="reference internal" href="command/systemd-cgls.html">systemd-cgls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command/systemd-cgtop.html">systemd-cgtop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command/systemd-run.html">systemd-run</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command/systemd-socket-proxyd.html">systemd-socket-proxyd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="controller/busctl.html">busctl</a></li>
 <li class="toctree-l1"><a class="reference internal" href="controller/journalctl.html">journalctl</a></li>
 <li class="toctree-l1"><a class="reference internal" href="controller/localectl.html">localectl</a></li>
@@ -166,14 +171,14 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../linux/nfsiostat.html" class="btn btn-neutral float-left" title="nfsiostat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="resource.html" class="btn btn-neutral float-right" title="Resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="command/systemd-cgls.html" class="btn btn-neutral float-right" title="systemd-cgls" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2021, CS.
-      <span class="lastupdated">Last updated on Nov 15, 2021, 3:46:09 AM.
+      <span class="lastupdated">Last updated on Nov 15, 2021, 4:21:09 AM.
       </span></p>
   </div>
 

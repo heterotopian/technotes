@@ -3,7 +3,9 @@
 systemd-cgtop
 =============
 
-- `Documentation <https://www.freedesktop.org/software/systemd/man/systemd-cgtop.html>`_
+.. highlight:: console
+
+- :systemd:`systemd-cgtop`
 
 ::
 
