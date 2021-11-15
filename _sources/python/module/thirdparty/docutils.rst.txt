@@ -4,15 +4,15 @@
 :py:mod:`docutils`
 ==================
 
-- `Project homepage <http://docutils.sourceforge.net/>`_
-- `Sphinx site <https://docutils.readthedocs.io/en/sphinx-docs/>`_ -
-  Project documentation converted to Sphinx + Read The Docs theme
-- `Online reStructuredText editor <http://rst.ninjs.org/>`_
-
 .. seealso::
 
     :ref:`sphinx` -
     Static website generator designed for documentation
+
+- `Project homepage <http://docutils.sourceforge.net/>`_
+- `Sphinx site <https://docutils.readthedocs.io/en/sphinx-docs/>`_ -
+  Project documentation converted to Sphinx + Read The Docs theme
+- `Online reStructuredText editor <http://rst.ninjs.org/>`_
 
 Documentation
 =============
