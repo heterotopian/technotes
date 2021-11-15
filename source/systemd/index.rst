@@ -4,10 +4,25 @@
 Systemd
 =======
 
-.. toctree::
-    :maxdepth: 2
+.. highlight:: console
 
-    resource
+Documentation
+=============
+
+- `Project homepage <https://www.freedesktop.org/wiki/Software/systemd/>`_
+
+- :systemd:`Manpages <systemd.index>`
+
+  - :systemd:`Directives <systemd.directives>`
+  - :systemd:`Unit configuration <systemd.unit>`
+
+    - Mapping of unit properties to their inverses
+
+  - :systemd:`Execution environment configuration <systemd.exec>`
+
+    - Environment varialbes in spawned processes
+
+
 
 Commands
 ========
@@ -17,14 +32,4 @@ Commands
     :glob:
 
     command/*
-
-
-
-Controllers
-===========
-
-.. toctree::
-    :maxdepth: 1
-    :glob:
-
     controller/*

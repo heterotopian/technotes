@@ -5,7 +5,7 @@ systemctl
 
 .. highlight:: console
 
-- `Documentation <http://0pointer.de/public/systemd-man/systemctl.html>`_
+:systemd:`systemctl`
 
 List active units::
 

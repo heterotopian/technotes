@@ -5,7 +5,7 @@ loginctl
 
 .. highlight:: console
 
-- `Documentation <https://www.freedesktop.org/software/systemd/man/loginctl.html>`_
+:systemd:`loginctl`
 
 Sessions
 ========

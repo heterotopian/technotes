@@ -3,7 +3,9 @@
 systemd-run
 ===========
 
-- `Documentation <https://www.freedesktop.org/software/systemd/man/systemd-run.html>`_
+.. highlight:: console
+
+:systemd:`systemd-run`
 
 ::
 
