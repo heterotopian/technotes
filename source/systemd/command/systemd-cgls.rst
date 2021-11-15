@@ -5,7 +5,7 @@ systemd-cgls
 
 .. highlight:: console
 
-- :systemd:`systemd-cgls`
+:systemd:`systemd-cgls`
 
 ::
 
