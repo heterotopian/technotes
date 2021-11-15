@@ -5,7 +5,7 @@ systemd-cgtop
 
 .. highlight:: console
 
-- :systemd:`systemd-cgtop`
+:systemd:`systemd-cgtop`
 
 ::
 
