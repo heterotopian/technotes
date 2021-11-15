@@ -1,11 +1,11 @@
 
-================
-``conda search``
-================
+============
+conda search
+============
 
 .. highlight:: console
 
-- `Documentation <https://docs.conda.io/projects/conda/en/latest/commands/search.html>`_
+:conda:`Documentation <commands/search>`
 
 Pre-4.4.0
 =========

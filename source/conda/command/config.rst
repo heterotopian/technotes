@@ -1,11 +1,11 @@
 
-================
-``conda config``
-================
+============
+conda config
+============
 
 .. highlight:: console
 
-- `Documentation <https://docs.conda.io/projects/conda/en/latest/commands/config.html>`_
+:conda:`Documentation <commands/config>`
 
 Channels
 ========

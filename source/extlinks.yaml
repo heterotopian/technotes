@@ -25,3 +25,6 @@ hackernews: !!python/tuple
 systemd: !!python/tuple
   - "https://www.freedesktop.org/software/systemd/man/%s.html"
   - "Systemd documentation: "
+conda: !!python/tuple
+  - "https://docs.conda.io/projects/conda/en/latest/%s.html"
+  - "Conda documentation: "
