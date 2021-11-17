@@ -7,6 +7,9 @@ systemctl
 
 :systemd:`systemctl`
 
+General
+=======
+
 List active units::
 
     $ systemctl list-units
@@ -26,3 +29,7 @@ List unit files::
 Check if unit is running::
 
     $ systemctl is-active unit
+
+
+Environment
+===========
