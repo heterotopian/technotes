@@ -46,6 +46,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Systemd</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="command/systemd-cgls.html">systemd-cgls</a></li>
 <li class="toctree-l3"><a class="reference internal" href="command/systemd-cgtop.html">systemd-cgtop</a></li>
@@ -56,8 +57,8 @@
 <li class="toctree-l3"><a class="reference internal" href="controller/localectl.html">localectl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="controller/loginctl.html">loginctl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="controller/machinectl.html">machinectl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="controller/systemctl.html">timedatectl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="controller/timedatectl.html">systemctl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controller/systemctl.html">systemctl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controller/timedatectl.html">timedatectl</a></li>
 </ul>
 </li>
 </ul>
@@ -146,6 +147,39 @@
 </li>
 </ul>
 </section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>Process ⟹ Service ⟹ CGroup:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pgrep -u cstevens -f gnome-terminal
+<span class="go">187072</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl status <span class="m">187072</span>
+<span class="go">● user@641738498.service - User Manager for UID 641738498</span>
+<span class="go">     Loaded: loaded (/lib/systemd/system/user@.service; static; vendor preset: enabled)</span>
+<span class="go">    Drop-In: /lib/systemd/system/user@.service.d</span>
+<span class="go">             └─timeout.conf</span>
+<span class="go">     Active: active (running) since Tue 2021-10-26 08:48:31 EDT; 3 weeks 0 days ago</span>
+<span class="go">       Docs: man:user@.service(5)</span>
+<span class="go">   Main PID: 185899 (systemd)</span>
+<span class="go">     Status: &quot;Startup finished in 1.054s.&quot;</span>
+<span class="go">      Tasks: 320</span>
+<span class="go">     Memory: 2.5G</span>
+<span class="go">     CGroup: /user.slice/user-641738498.slice/user@641738498.service</span>
+<span class="go">             ├─apps.slice</span>
+<span class="go">             │ └─apps-org.gnome.Terminal.slice</span>
+<span class="go">             │   ├─gnome-terminal-server.service</span>
+<span class="go">             │   │ └─187072 /usr/libexec/gnome-terminal-server</span>
+<span class="go">             │   └─vte-spawn-3ebe7ad4-9463-4b7d-b374-cb53b8058dbf.scope</span>
+<span class="go">             │     ├─   4089 -bash</span>
+<span class="go">             │     ├─   4503 ssh -X bos-rndapp04</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl show user@641738498.service -p ControlGroup
+<span class="go">ControlGroup=/user.slice/user-641738498.slice/user@641738498.service</span>
+</pre></div>
+</div>
+</section>
 <section id="commands">
 <h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
@@ -159,8 +193,8 @@
 <li class="toctree-l1"><a class="reference internal" href="controller/localectl.html">localectl</a></li>
 <li class="toctree-l1"><a class="reference internal" href="controller/loginctl.html">loginctl</a></li>
 <li class="toctree-l1"><a class="reference internal" href="controller/machinectl.html">machinectl</a></li>
-<li class="toctree-l1"><a class="reference internal" href="controller/systemctl.html">timedatectl</a></li>
-<li class="toctree-l1"><a class="reference internal" href="controller/timedatectl.html">systemctl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller/systemctl.html">systemctl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller/timedatectl.html">timedatectl</a></li>
 </ul>
 </div>
 </section>
@@ -178,7 +212,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2021, CS.
-      <span class="lastupdated">Last updated on Nov 15, 2021, 9:21:05 AM.
+      <span class="lastupdated">Last updated on Nov 17, 2021, 3:43:34 AM.
       </span></p>
   </div>
 

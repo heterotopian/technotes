@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>systemctl &mdash; Technotes Documentation</title>
+  <title>timedatectl &mdash; Technotes Documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme-custom.css" type="text/css" />
@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="X11" href="../../x11.html" />
-    <link rel="prev" title="timedatectl" href="systemctl.html" /> 
+    <link rel="prev" title="systemctl" href="systemctl.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,6 +46,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../linux/index.html">Linux</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Systemd</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../index.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#examples">Examples</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#commands">Commands</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../command/systemd-cgls.html">systemd-cgls</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../command/systemd-cgtop.html">systemd-cgtop</a></li>
@@ -56,8 +57,8 @@
 <li class="toctree-l3"><a class="reference internal" href="localectl.html">localectl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="loginctl.html">loginctl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="machinectl.html">machinectl</a></li>
-<li class="toctree-l3"><a class="reference internal" href="systemctl.html">timedatectl</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">systemctl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="systemctl.html">systemctl</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">timedatectl</a></li>
 </ul>
 </li>
 </ul>
@@ -114,7 +115,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../index.html">Systemd</a> &raquo;</li>
-      <li>systemctl</li>
+      <li>timedatectl</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/systemd/controller/timedatectl.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -124,36 +125,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="systemctl">
-<h1>systemctl<a class="headerlink" href="#systemctl" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemctl.html">Systemd documentation: systemctl</a></p>
-<p>List active units:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl list-units
-</pre></div>
-</div>
-<p>List loaded units:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl list-units -a
-</pre></div>
-</div>
-<p>List active service units:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl list-units -t service
-</pre></div>
-</div>
-<p>List unit files:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl list-unit-files
-</pre></div>
-</div>
-<p>Check if unit is running:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl is-active unit
-</pre></div>
-</div>
+  <section id="timedatectl">
+<h1>timedatectl<a class="headerlink" href="#timedatectl" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/timedatectl.html">Systemd documentation: timedatectl</a></p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="systemctl.html" class="btn btn-neutral float-left" title="timedatectl" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="systemctl.html" class="btn btn-neutral float-left" title="systemctl" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../../x11.html" class="btn btn-neutral float-right" title="X11" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -161,7 +142,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2021, CS.
-      <span class="lastupdated">Last updated on Nov 15, 2021, 9:21:05 AM.
+      <span class="lastupdated">Last updated on Nov 17, 2021, 3:43:34 AM.
       </span></p>
   </div>
 
