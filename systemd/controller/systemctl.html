@@ -57,7 +57,11 @@
 <li class="toctree-l3"><a class="reference internal" href="localectl.html">localectl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="loginctl.html">loginctl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="machinectl.html">machinectl</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">systemctl</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">systemctl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general">General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#environment">Environment</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="timedatectl.html">timedatectl</a></li>
 </ul>
 </li>
@@ -128,6 +132,8 @@
   <section id="systemctl">
 <h1>systemctl<a class="headerlink" href="#systemctl" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemctl.html">Systemd documentation: systemctl</a></p>
+<section id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
 <p>List active units:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl list-units
 </pre></div>
@@ -149,6 +155,88 @@
 </pre></div>
 </div>
 </section>
+<section id="environment">
+<h2>Environment<a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h2>
+<section id="system-service-manager">
+<h3>System Service Manager<a class="headerlink" href="#system-service-manager" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl show-environment
+<span class="go">LANG=en_US.UTF-8</span>
+<span class="go">PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin</span>
+</pre></div>
+</div>
+</section>
+<section id="user-service-manager">
+<h3>User Service Manager<a class="headerlink" href="#user-service-manager" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl --user show-environment
+<span class="go">HOME=/home/cstevens</span>
+<span class="go">KRB5CCNAME=FILE:/tmp/krb5cc_641738498</span>
+<span class="go">LANG=en_US.UTF-8</span>
+<span class="go">LOGNAME=cstevens</span>
+<span class="go">PATH=/usr/share/centrifydc/kerberos/bin:/usr/share/centrifydc/kerberos/bin:/home/cstevens/bin.local:/home/cstevens/bin:/home/cstevens/.okta/bin:/usr/share/centrifydc/kerberos/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/share/centrifydc/kerberos/bin:/usr/share/centrifydc/kerberos/sbin:/opt/puppetlabs/bin</span>
+<span class="go">SHELL=/bin/bash</span>
+<span class="go">USER=cstevens</span>
+<span class="go">XDG_RUNTIME_DIR=/run/user/641738498</span>
+<span class="go">QT_ACCESSIBILITY=1</span>
+<span class="go">PYCONFIG_SETTING_CONSULADDR=https://consul.service.dev.acadian-asset.com:443</span>
+<span class="go">VAULT_USER_ID=dd5aade0-868f-4911-ba00-7495f0097883</span>
+<span class="go">SLURM_STRICT_MEMORY=TRUE</span>
+<span class="go">KV_DJANGOREDISSTORE_ENVIRONMENT=production</span>
+<span class="go">XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop</span>
+<span class="go">BROWSER=/home/cstevens/.vscode-server/bin/3a6960b964327f0e3882ce18fcebd07ed191b316/bin/helpers/browser.sh</span>
+<span class="go">CDC_JOINED_DC=bos-dc02.acadian-asset.com</span>
+<span class="go">CDC_JOINED_DOMAIN=acadian-asset.com</span>
+<span class="go">CDC_JOINED_SITE=Boston</span>
+<span class="go">CDC_JOINED_ZONE=DC=acadian-asset,DC=com</span>
+<span class="go">CDC_LOCALHOST=bos-rnd3.acadian-asset.com</span>
+<span class="go">...</span>
+</pre></div>
+</div>
+</section>
+<section id="environment-generators">
+<h3>Environment Generators<a class="headerlink" href="#environment-generators" title="Permalink to this headline">¶</a></h3>
+<p>StackOverflow:
+<a class="reference external" href="https://superuser.com/questions/1649684/how-is-the-path-environment-variable-set-in-systemd-user-instance">How is the PATH environment variable set in systemd user instance?</a></p>
+<ol class="arabic">
+<li><div class="compound">
+<p>Before <code class="docutils literal notranslate"><span class="pre">systemd</span> <span class="pre">--user</span></code> starts, all PAM ‘session’ modules from <code class="docutils literal notranslate"><span class="pre">/etc/pam.d/systemd-user</span></code> are called.</p>
+</div>
+</li>
+<li><div class="compound">
+<p class="compound-first">When <code class="docutils literal notranslate"><span class="pre">systemd</span> <span class="pre">--user</span></code> starts, it runs a set of “environment generators” which are programs that output environment variables. They can be found in:</p>
+<ul class="compound-last simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/etc/systemd/user-environment-generators/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/usr/local/lib/systemd/user-environment-generators/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/usr/lib/systemd/user-environment-generators/</span></code></p></li>
+</ul>
+</div>
+</li>
+<li><div class="compound">
+<p class="compound-first">Systemd by default comes with just one such “environment generator”, which reads simple KEY=value files from environment.d directories:</p>
+<ul class="compound-last simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">~/.config/environment.d/*.conf</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/etc/environment.d/*.conf</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/run/environment.d/*.conf</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/usr/lib/environment.d/*.conf</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/etc/environment</span></code></p></li>
+</ul>
+</div>
+</li>
+<li><div class="compound">
+<p class="compound-first">When your graphical session starts (whether using startx or a display manager), there is usually some script in the chain that calls <code class="docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">--user</span> <span class="pre">import-environment</span></code> and copies your <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> and everything else from your interactive environment into the systemd environment.</p>
+<p class="compound-middle">The same is also done by <code class="docutils literal notranslate"><span class="pre">dbus-update-activation-environment</span> <span class="pre">--systemd</span></code>, which copies environment variables into a running ‘dbus-daemon –session’, but with the extra option it’ll also update systemd.</p>
+<p class="compound-middle">The same is also done natively by gnome-session, for a selection of environment variables (I’m not sure whether $PATH is one of them).</p>
+<p class="compound-middle">The “import” tools might be called from:</p>
+<ul class="compound-last simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">~/.xinitrc</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">~/.xsession</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/etc/X11/xinit/xinitrc.d/50-systemd-user.sh</span></code></p></li>
+</ul>
+</div>
+</li>
+</ol>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -162,7 +250,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2021, CS.
-      <span class="lastupdated">Last updated on Nov 17, 2021, 3:43:34 AM.
+      <span class="lastupdated">Last updated on Nov 17, 2021, 5:20:32 AM.
       </span></p>
   </div>
 
