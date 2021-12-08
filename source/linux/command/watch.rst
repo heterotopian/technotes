@@ -5,7 +5,11 @@ watch
 
 .. highlight:: console
 
-Execute a program periodically, showing output fullscreen.
+Execute a program periodically and display its output.
+
+.. warning::
+
+    Shell aliases are difficult to use with ``watch``, steer clear. 
 
 Simple command::
 

@@ -6,19 +6,10 @@ Bash
 
 .. highlight:: bash
 
-Documentation
-=============
-
-- `Homepage <https://www.gnu.org/software/bash/manual/html_node/>`_
-- `Builtins <https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html>`_
-- `Parameter expansion <https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html>`_
-- `Redirection <https://www.gnu.org/software/bash/manual/html_node/Redirections.html>`_
-- `Special variables <https://www.gnu.org/software/bash/manual/html_node/Special-Parameters.html>`_
-
-
-
 Resources
 =========
+
+- :bash:`Documentation <>`
 
 The Linux Documentation Project
 -------------------------------
@@ -92,9 +83,8 @@ BashFAQ
 Tests
 =====
 
-.. highlight:: bash
-
-Bash Guide for Beginners: `Test primitives <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#sect_07_01_01_01>`_
+- Bash Guide for Beginners:
+  `Test primitives <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#sect_07_01_01_01>`_
 
 Variable is set::
 
@@ -136,7 +126,9 @@ Argument count::
 Expansion
 =========
 
-Bash Guide for Beginners: `Shell expansion <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html>`_
+- :bash:`Documentation <Shell-Parameter-Expansion.html>`
+- Bash Guide for Beginners:
+  `Shell expansion <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html>`_
 
 .. list-table::
     :widths: auto
@@ -147,43 +139,43 @@ Bash Guide for Beginners: `Shell expansion <http://tldp.org/LDP/Bash-Beginners-G
       - Example
 
     * - 1
-      - `Brace expansion`_
+      - :bash:`Brace expansion <Brace-Expansion.html>`
       - ::
 
             echo foo{A,B,C}bar
 
     * - 2
-      - `Tilde expansion`_
+      - :bash:`Tilde expansion <Tilde-Expansion.html>`
       - ::
 
             ls ~/.vimrc
 
     * - 3
-      - `Parameter expansion`_
+      - :bash:`Parameter expansion <Shell-Parameter-Expansion.html>`
       - ::
 
             echo ${PATH}
 
     * - 4
-      - `Command substitution`_
+      - :bash:`Command substitution <Command-Substitution.html>`
       - ::
 
             readlink -f $(which python)
 
     * - 5
-      - `Arithmetic expansion`_
+      - :bash:`Arithmetic expansion <Arithmetic-Expansion.html>`
       - ::
 
             echo $(( 365 * 24 ))
 
     * - 6
-      - `Process substitution`_
+      - :bash:`Process substitution <Process-Substitution.html>`
       - ::
 
             diff <(date) <(sleep 1; date)
 
     * - 7
-      - `Word splitting`_
+      - :bash:`Word splitting <Word-Splitting.html>`
       - ::
 
             args () {
@@ -203,7 +195,7 @@ Bash Guide for Beginners: `Shell expansion <http://tldp.org/LDP/Bash-Beginners-G
             args "$VAR"
 
     * - 8
-      - `Filename expansion`_
+      - :bash:`Filename expansion <Filename-Expansion.html>`
       - ::
 
             ls *.pyc
@@ -212,6 +204,8 @@ Bash Guide for Beginners: `Shell expansion <http://tldp.org/LDP/Bash-Beginners-G
 
 Redirection
 ===========
+
+- :bash:`Documentation <Redirections.html>`
 
 .. list-table::
     :widths: auto
@@ -250,16 +244,23 @@ Redirection
 Builtins
 ========
 
-Bash Guide for Beginners: `Shell built-in commands <https://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_01_03.html#sect_01_03_02>`_
+- :bash:`Documentation <Bash-Builtins.html>`
 
-- `read <http://wiki.bash-hackers.org/commands/builtin/read>`_
+:bash:`help <Bash-Builtins.html#index-help>`
+    Online help for builtin commands.
+
+:bash:`read <Bash-Builtins.html#index-read>`
+    Read from stdin or file descriptor.
+    (See also: `Bash Hackers Wiki <http://wiki.bash-hackers.org/commands/builtin/read>`_)
 
 
 
 Special Variables
 =================
 
-Bash Guide for Beginners: `Special parameters <https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html#sect_03_02_05>`_
+- :bash:`Documentation <Special-Parameters.html>`
+- Bash Guide for Beginners:
+  `Special parameters <https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html#sect_03_02_05>`_
 
 $#
     Number of positional parameters.
@@ -302,16 +303,30 @@ $_
 
 
 
-.. _Brace expansion: https://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html
-.. _Tilde expansion: https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html
-.. _Parameter expansion: https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
-.. _Command substitution: https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html
-.. _Arithmetic expansion: https://www.gnu.org/software/bash/manual/html_node/Arithmetic-Expansion.html
-.. _Process substitution: https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html
-.. _Word splitting: https://www.gnu.org/software/bash/manual/html_node/Word-Splitting.html
-.. _Filename expansion: https://www.gnu.org/software/bash/manual/html_node/Filename-Expansion.html
+Aliases
+=======
+
+Advanced Bash-Scripting Guide: `Aliases <https://tldp.org/LDP/abs/html/aliases.html>`_
+
+  In a script, aliases have very limited usefulness.
+  It would be nice if aliases could assume some of the functionality of the C preprocessor, such as macro expansion, but unfortunately Bash does not expand arguments within the alias body.
+  Moreover, a script fails to expand an alias itself within "compound constructs," such as if/then statements, loops, and functions.
+  An added limitation is that an alias will not expand recursively.
+  Almost invariably, whatever we would like an alias to do could be accomplished much more effectively with a function.
+
+StackOverflow: `Watch command alias expansion <https://unix.stackexchange.com/a/25329>`_
+
+  Aliases are only expanded as the first argument, or after another alias with a trailing space on the end of the command.  From ``bash``'s ``help alias``:
+
+    A trailing space in VALUE causes the next word to be checked for alias substitution when the alias is expanded.
+
+  To do this, try the following::
+
+      alias watch='watch '
+      alias ll='ls -l --color=tty'
+      watch ll
 
 
 
-.. |stdout| replace:: **stdout**
-.. |stderr| replace:: **stderr**
+.. |stdout| replace:: stdout
+.. |stderr| replace:: stderr
