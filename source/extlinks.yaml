@@ -8,7 +8,7 @@ sphinx: !!python/tuple
   - "https://www.sphinx-doc.org/en/master/usage/%s"
   - "sphinx: "
 sphinx-themes: !!python/tuple
-  - "https://sphinx-themes.org/html/%s/index.html"
+  - "https://sphinx-themes.org/sample-sites/%s/"
   - ""
 atom-package: !!python/tuple
   - "https://atom.io/packages/%s"
