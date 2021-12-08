@@ -43,7 +43,6 @@
               <p class="caption" role="heading"><span class="caption-text">System</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Bash</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#the-linux-documentation-project">The Linux Documentation Project</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#bashfaq">BashFAQ</a></li>
@@ -51,9 +50,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#tests">Tests</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#expansion">Expansion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">Redirection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">Builtins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">Special Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#redirection">Redirection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#builtins">Builtins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#special-variables">Special Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#aliases">Aliases</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
@@ -121,18 +121,11 @@
              
   <section id="bash">
 <span id="id1"></span><h1>Bash<a class="headerlink" href="#bash" title="Permalink to this headline">¶</a></h1>
-<section id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/">Homepage</a></p></li>
-<li><p><a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html">Builtins</a></p></li>
-<li><p><a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html">Parameter expansion</a></p></li>
-<li><p><a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/Redirections.html">Redirection</a></p></li>
-<li><p><a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/Special-Parameters.html">Special variables</a></p></li>
-</ul>
-</section>
 <section id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/">Documentation</a></p></li>
+</ul>
 <section id="the-linux-documentation-project">
 <h3>The Linux Documentation Project<a class="headerlink" href="#the-linux-documentation-project" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -202,7 +195,10 @@ find /invalidpath <span class="p">|</span> wc -l  <span class="c1"># Returns las
 </section>
 <section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h2>
-<p>Bash Guide for Beginners: <a class="reference external" href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#sect_07_01_01_01">Test primitives</a></p>
+<ul class="simple">
+<li><p>Bash Guide for Beginners:
+<a class="reference external" href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#sect_07_01_01_01">Test primitives</a></p></li>
+</ul>
 <p>Variable is set:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[[</span> -z <span class="si">${</span><span class="nv">VARIABLE</span><span class="p">+notset</span><span class="si">}</span> <span class="o">]]</span>
 <span class="k">then</span>
@@ -241,7 +237,11 @@ find /invalidpath <span class="p">|</span> wc -l  <span class="c1"># Returns las
 </section>
 <section id="expansion">
 <h2>Expansion<a class="headerlink" href="#expansion" title="Permalink to this headline">¶</a></h2>
-<p>Bash Guide for Beginners: <a class="reference external" href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html">Shell expansion</a></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html">Documentation</a></p></li>
+<li><p>Bash Guide for Beginners:
+<a class="reference external" href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html">Shell expansion</a></p></li>
+</ul>
 <table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Order</p></th>
@@ -321,8 +321,11 @@ args <span class="s2">&quot;</span><span class="nv">$VAR</span><span class="s2">
 </tbody>
 </table>
 </section>
-<section id="id3">
-<h2>Redirection<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<section id="redirection">
+<h2>Redirection<a class="headerlink" href="#redirection" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/Redirections.html">Documentation</a></p></li>
+</ul>
 <table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>From</p></th>
@@ -331,43 +334,53 @@ args <span class="s2">&quot;</span><span class="nv">$VAR</span><span class="s2">
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>stdout</strong></p></td>
+<tr class="row-even"><td><p>stdout</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">command.stdout</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">&gt;command.stdout</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>stderr</strong></p></td>
+<tr class="row-odd"><td><p>stderr</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">command.stderr</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">2&gt;command.stderr</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><strong>stdout</strong></p></td>
-<td><p><strong>stderr</strong></p></td>
+<tr class="row-even"><td><p>stdout</p></td>
+<td><p>stderr</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">1&gt;&amp;2</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>stderr</strong></p></td>
-<td><p><strong>stdout</strong></p></td>
+<tr class="row-odd"><td><p>stderr</p></td>
+<td><p>stdout</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">2&gt;&amp;1</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><strong>stdout</strong> &amp; <strong>stderr</strong></p></td>
+<tr class="row-even"><td><p>stdout &amp; stderr</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">command.out</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">&amp;&gt;command.out</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>stdout</strong> &amp; <strong>stderr</strong></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">/dev/null</span></code> &amp; <strong>stdout</strong></p></td>
+<tr class="row-odd"><td><p>stdout &amp; stderr</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">/dev/null</span></code> &amp; stdout</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">2&gt;&amp;1</span> <span class="pre">&gt;/dev/null</span></code></p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="id4">
-<h2>Builtins<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>Bash Guide for Beginners: <a class="reference external" href="https://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_01_03.html#sect_01_03_02">Shell built-in commands</a></p>
+<section id="builtins">
+<h2>Builtins<a class="headerlink" href="#builtins" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="http://wiki.bash-hackers.org/commands/builtin/read">read</a></p></li>
+<li><p><a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html">Documentation</a></p></li>
 </ul>
+<dl class="simple">
+<dt><a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html#index-help">help</a></dt><dd><p>Online help for builtin commands.</p>
+</dd>
+<dt><a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html#index-read">read</a></dt><dd><p>Read from stdin or file descriptor.
+(See also: <a class="reference external" href="http://wiki.bash-hackers.org/commands/builtin/read">Bash Hackers Wiki</a>)</p>
+</dd>
+</dl>
 </section>
-<section id="id5">
-<h2>Special Variables<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<p>Bash Guide for Beginners: <a class="reference external" href="https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html#sect_03_02_05">Special parameters</a></p>
+<section id="special-variables">
+<h2>Special Variables<a class="headerlink" href="#special-variables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/Special-Parameters.html">Documentation</a></p></li>
+<li><p>Bash Guide for Beginners:
+<a class="reference external" href="https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html#sect_03_02_05">Special parameters</a></p></li>
+</ul>
 <dl>
 <dt>$#</dt><dd><p>Number of positional parameters.</p>
 </dd>
@@ -403,6 +416,30 @@ Subsequently, expands to the last argument to the previous simple command execut
 </dd>
 </dl>
 </section>
+<section id="aliases">
+<h2>Aliases<a class="headerlink" href="#aliases" title="Permalink to this headline">¶</a></h2>
+<p>Advanced Bash-Scripting Guide: <a class="reference external" href="https://tldp.org/LDP/abs/html/aliases.html">Aliases</a></p>
+<blockquote>
+<div><p>In a script, aliases have very limited usefulness.
+It would be nice if aliases could assume some of the functionality of the C preprocessor, such as macro expansion, but unfortunately Bash does not expand arguments within the alias body.
+Moreover, a script fails to expand an alias itself within “compound constructs,” such as if/then statements, loops, and functions.
+An added limitation is that an alias will not expand recursively.
+Almost invariably, whatever we would like an alias to do could be accomplished much more effectively with a function.</p>
+</div></blockquote>
+<p>StackOverflow: <a class="reference external" href="https://unix.stackexchange.com/a/25329">Watch command alias expansion</a></p>
+<blockquote>
+<div><p>Aliases are only expanded as the first argument, or after another alias with a trailing space on the end of the command.  From <code class="docutils literal notranslate"><span class="pre">bash</span></code>’s <code class="docutils literal notranslate"><span class="pre">help</span> <span class="pre">alias</span></code>:</p>
+<blockquote>
+<div><p>A trailing space in VALUE causes the next word to be checked for alias substitution when the alias is expanded.</p>
+</div></blockquote>
+<p>To do this, try the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">watch</span><span class="o">=</span><span class="s1">&#39;watch &#39;</span>
+<span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -l --color=tty&#39;</span>
+watch ll
+</pre></div>
+</div>
+</div></blockquote>
+</section>
 </section>
 
 
@@ -417,7 +454,7 @@ Subsequently, expands to the last argument to the previous simple command execut
 
   <div role="contentinfo">
     <p>&#169; Copyright 2021, CS.
-      <span class="lastupdated">Last updated on Dec 8, 2021, 1:08:49 AM.
+      <span class="lastupdated">Last updated on Dec 8, 2021, 3:14:09 AM.
       </span></p>
   </div>
 
