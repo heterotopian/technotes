@@ -17,9 +17,24 @@ Resources
 - `Project homepage <http://www.sphinx-doc.org>`_
 - `Discussion group <https://groups.google.com/forum/#!forum/sphinx-users>`_
 - `Online reStructuredText editor <http://rst.ninjs.org/>`_
+- Guides
+
+  - :sphinx:`reStructuredText <restructuredtext/index.html>` -
+    Sphinx's guide to reST
+
+    - :sphinx:`Substitutions <restructuredtext/basics.html#substitutions>`
+
+  - `Sphinx/reST Memo <http://rest-sphinx-memo.readthedocs.io>`_ -
+    Condensed, example-based guide to Sphinx & reStructuredText
+  - `Wiser > Sphinx & reStructuredText <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/index.html>`_ -
+    Broad tutorial
+
+    - `Escaping whitespace around interpreted text <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/OnReStructuredText.html#subscript-and-superscript>`_
+
+
 
 Documentation
--------------
+=============
 
 - :sphinx:`Directives <restructuredtext/directives.html>`
 
@@ -28,22 +43,6 @@ Documentation
 - :sphinx:`Domains <restructuredtext/domains.html>`
 
   - :sphinx:`Python <restructuredtext/domains.html#the-python-domain>`
-
-- :sphinx:`reStructuredText <restructuredtext/index.html>` -
-  Covers the most important aspects of reStructuredText (wrt Sphinx)
-
-  - :sphinx:`Substitutions <restructuredtext/basics.html#substitutions>`
-
-
-Guides
-------
-
-- `Sphinx/reST Memo <http://rest-sphinx-memo.readthedocs.io>`_ -
-  Condensed, example-based guide to Sphinx & reStructuredText
-- `Wiser > Sphinx & reStructuredText <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/index.html>`_ -
-  Broad tutorial
-
-  - `Escaping whitespace around interpreted text <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/OnReStructuredText.html#subscript-and-superscript>`_
 
 
 
@@ -115,7 +114,7 @@ Extensions
 Themes
 ======
 
-`Sphinx-Themes.org <https://sphinx-themes.org/>`_ (community)
+- `Sphinx-Themes.org <https://sphinx-themes.org/>`_
 
 .. list-table::
     :header-rows: 1
@@ -126,18 +125,16 @@ Themes
 
     * - `Read The Docs <http://sphinx-rtd-theme.readthedocs.io/en/latest/>`_
       - `demo <http://sphinx-rtd-theme.readthedocs.io/en/latest/demo/structure.html>`_,
-        :sphinx-themes:`sphinx-themes <sphinx_rtd_theme/sphinx_rtd_theme>`
+        :sphinx-themes:`sphinx-themes <sphinx-rtd-theme>`
       - `Wyrm <https://github.com/snide/wyrm>`_ -
         base SASS framework
 
     * - `Guzzle <https://github.com/guzzle/guzzle_sphinx_theme>`_
-      - `demo <http://docs.guzzlephp.org/en/stable/>`_,
-        :sphinx-themes:`sphinx-themes <guzzle_sphinx_theme/guzzle_sphinx_theme>`
+      - `demo <http://docs.guzzlephp.org/en/stable/>`_
       -
 
     * - `Typelog <https://github.com/typlog/sphinx-typlog-theme>`_
-      - `Authlib <https://docs.authlib.org/en/latest/>`_,
-        :sphinx-themes:`sphinx-themes <sphinx-typlog-theme/sphinx_typlog_theme>`
+      - `Authlib <https://docs.authlib.org/en/latest/>`_
       - `Documentation <https://sphinx-typlog-theme.readthedocs.io/en/latest/>`_
 
     * - `Klink <http://pmorissette.github.io/klink/index.html>`_
@@ -145,6 +142,10 @@ Themes
       -
 
     * - `TYPO3 <https://github.com/TYPO3-Documentation/t3SphinxThemeRtd>`_
-      - `demo <https://docs.typo3.org/typo3cms/drafts/github/TYPO3-Documentation/t3SphinxThemeRtdDemoDocs/>`_,
-        :sphinx-themes:`sphinx-themes <t3SphinxThemeRtd/t3SphinxThemeRtd>`
+      - `demo <https://docs.typo3.org/typo3cms/drafts/github/TYPO3-Documentation/t3SphinxThemeRtdDemoDocs/>`_
+      -
+
+    * - `PyData <https://github.com/pydata/pydata-sphinx-theme>`_
+      - `demo <https://pydata-sphinx-theme.readthedocs.io/en/latest/>`_,
+        :sphinx-themes:`sphinx-themes <pydata-sphinx-theme>`
       -
