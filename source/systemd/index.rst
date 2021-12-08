@@ -20,6 +20,23 @@ Documentation
 
     - Mapping of unit properties to their inverses
 
+      ========================= =====================
+      "Forward" property        "Reverse" property
+      ========================= =====================
+      ``Before=``               ``After=``
+      ``After=``                ``Before=``
+      ``Requires=``             ``RequiredBy=``
+      ``Wants=``                ``WantedBy=``
+      ``PartOf=``               ``ConsistsOf=``
+      ``BindsTo=``              ``BoundBy=``
+      ``Requisite=``            ``RequisiteOf=``
+      ``Triggers=``             ``TriggeredBy=``
+      ``Conflicts=``            ``ConflictedBy=``
+      ``PropagatesReloadTo=``   ``ReloadPropagatedFrom=``
+      ``ReloadPropagatedFrom=`` ``PropagatesReloadTo=``
+      ``Following=``            n/a
+      ========================= =====================
+
   - :systemd:`Execution environment configuration <systemd.exec>`
 
     - Environment varialbes in spawned processes
