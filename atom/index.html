@@ -246,52 +246,52 @@
 <p>Stack open file tabs vertically (<a class="reference external" href="https://gist.github.com/jasesmith/4b4a5ab6445ed8ce7c23791041c31408">source</a>):</p>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">style.less</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
-<div class="highlight-less notranslate"><div class="highlight"><pre><span></span><span class="nv">@tab-border</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">);</span>
+<div class="highlight-less notranslate"><div class="highlight"><pre><span></span><span class="nv">@tab-border</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span><span class="w"></span>
 
-<span class="nt">atom-workspace-axis</span><span class="p">.</span><span class="nc">vertical</span> <span class="nt">atom-pane</span> <span class="p">{</span>
-  <span class="k">flex-direction</span><span class="p">:</span> <span class="kc">row</span><span class="p">;</span>
+<span class="nt">atom-workspace-axis</span><span class="p">.</span><span class="nc">vertical</span><span class="w"> </span><span class="nt">atom-pane</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">flex-direction</span><span class="p">:</span><span class="w"> </span><span class="kc">row</span><span class="p">;</span><span class="w"></span>
 
-  <span class="p">.</span><span class="nc">tab-bar</span> <span class="p">{</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">tab-bar</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-    <span class="nd">&amp;</span><span class="p">:</span><span class="nd">not</span><span class="err">(</span><span class="p">:</span><span class="nd">empty</span><span class="err">)</span> <span class="p">{</span>
-      <span class="k">box-shadow</span><span class="p">:</span> <span class="kc">inset</span> <span class="mi">-1</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">@</span><span class="n">tab-border</span><span class="p">;</span>
-      <span class="k">resize</span><span class="p">:</span> <span class="kc">horizontal</span><span class="p">;</span>
-      <span class="k">height</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
-      <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-      <span class="k">padding-right</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
-      <span class="k">padding-bottom</span><span class="p">:</span> <span class="mi">3</span><span class="kt">em</span><span class="p">;</span>
-      <span class="k">min-width</span><span class="p">:</span> <span class="mi">14</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">    </span><span class="nd">&amp;</span><span class="p">:</span><span class="nd">not</span><span class="err">(</span><span class="p">:</span><span class="nd">empty</span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="kc">inset</span><span class="w"> </span><span class="mi">-1</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">@</span><span class="n">tab-border</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">resize</span><span class="p">:</span><span class="w"> </span><span class="kc">horizontal</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">padding-right</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">padding-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">em</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">min-width</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">em</span><span class="p">;</span><span class="w"></span>
 
-      <span class="nd">&amp;</span><span class="p">::</span><span class="nd">after</span> <span class="p">{</span>
-        <span class="k">content</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-        <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
-        <span class="k">bottom</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
-        <span class="k">right</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
-        <span class="k">width</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="k">height</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="k">border</span><span class="p">:</span> <span class="mf">0.7</span><span class="kt">em</span> <span class="kc">solid</span> <span class="kc">transparent</span><span class="p">;</span>
-        <span class="k">border-color</span><span class="p">:</span> <span class="kc">transparent</span> <span class="o">@</span><span class="n">ui-site-color-2</span> <span class="o">@</span><span class="n">ui-site-color-2</span> <span class="kc">transparent</span><span class="p">;</span>
-        <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">@</span><span class="n">tab-border</span><span class="p">;</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
+<span class="w">      </span><span class="nd">&amp;</span><span class="p">::</span><span class="nd">after</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">content</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7</span><span class="kt">em</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">transparent</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="kc">transparent</span><span class="w"> </span><span class="o">@</span><span class="n">ui-site-color-2</span><span class="w"> </span><span class="o">@</span><span class="n">ui-site-color-2</span><span class="w"> </span><span class="kc">transparent</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">@</span><span class="n">tab-border</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="p">.</span><span class="nc">tab</span> <span class="p">{</span>
-      <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-      <span class="k">border</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">tab</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="p">.</span><span class="nc">tab</span><span class="p">,</span>
-    <span class="p">.</span><span class="nc">tab</span><span class="p">.</span><span class="nc">active</span> <span class="p">{</span>
-      <span class="k">flex</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-      <span class="k">width</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
-      <span class="k">max-width</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-      <span class="k">box-shadow</span><span class="p">:</span> <span class="kc">inset</span> <span class="mi">0</span> <span class="mi">-1</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">@</span><span class="n">tab-border</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">tab</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nc">tab</span><span class="p">.</span><span class="nc">active</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">flex</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="kc">inset</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">-1</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">@</span><span class="n">tab-border</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="p">.</span><span class="nc">tab</span> <span class="p">.</span><span class="nc">title</span> <span class="p">{</span>
-      <span class="k">text-align</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">tab</span><span class="w"> </span><span class="p">.</span><span class="nc">title</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -309,8 +309,8 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, CS.
-      <span class="lastupdated">Last updated on Dec 8, 2021, 3:14:09 AM.
+    <p>&#169; Copyright 2022, CS.
+      <span class="lastupdated">Last updated on Jan 6, 2022, 9:11:31 AM.
       </span></p>
   </div>
 

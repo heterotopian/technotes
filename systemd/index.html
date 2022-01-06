@@ -45,7 +45,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../bash/index.html">Bash</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Systemd</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#manpages">Manpages</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="command/systemd-cgls.html">systemd-cgls</a></li>
@@ -130,22 +133,294 @@
 <h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.freedesktop.org/wiki/Software/systemd/">Project homepage</a></p></li>
-<li><p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.index.html">Manpages</a></p>
+</ul>
+<section id="manpages">
+<h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.index.html">Manpages</a><a class="headerlink" href="#manpages" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.directives.html">Directives</a></p></li>
 <li><p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html">Unit configuration</a></p>
 <ul>
-<li><p>Mapping of unit properties to their inverses</p></li>
+<li><p class="rubric">Mapping of unit properties to their inverses</p>
+<p>Unit settings that create a relationship with a second unit usually show up in properties of both units, for example in systemctl show output.
+In some cases the name of the property is the same as the name of the configuration setting, but not always.
+This table lists the properties that are shown on two units which are connected through some dependency, and shows which property on “source” unit corresponds to which property on the “target” unit.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Forward property</p></th>
+<th class="head"><p>Reverse property</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Before=</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">After=</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">After=</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Before=</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Requires=</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">RequiredBy=</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Wants=</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WantedBy=</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PartOf=</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ConsistsOf=</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">BindsTo=</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">BoundBy=</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Requisite=</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">RequisiteOf=</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Triggers=</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TriggeredBy=</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Conflicts=</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ConflictedBy=</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">PropagatesReloadTo=</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ReloadPropagatedFrom=</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ReloadPropagatedFrom=</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">PropagatesReloadTo=</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Following=</span></code></p></td>
+<td><p>n/a</p></td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 </li>
 <li><p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.exec.html">Execution environment configuration</a></p>
 <ul>
-<li><p>Environment varialbes in spawned processes</p></li>
+<li><p class="rubric">Environment Variables in Spawned Processes</p>
+<p>Processes started by the service manager are executed with an environment variable block assembled from multiple sources.
+Processes started by the system service manager generally do not inherit environment variables set for the service manager itself (but this may be altered via PassEnvironment=), but processes started by the user service manager instances generally do inherit all environment variables set for the service manager itself.</p>
+<p>For each invoked process the list of environment variables set is compiled from the following sources:</p>
+<ul class="simple">
+<li><p>Variables globally configured for the service manager, using the <code class="docutils literal notranslate"><span class="pre">DefaultEnvironment=</span></code> setting in <strong>systemd-system.conf(5)</strong>, the kernel command line option <code class="docutils literal notranslate"><span class="pre">systemd.setenv=</span></code> understood by <strong>systemd(1)</strong>, or via <strong>systemctl(1)</strong> <code class="docutils literal notranslate"><span class="pre">set-environment</span></code> verb.</p></li>
+<li><p>Variables defined by the service manager itself (see the list below).</p></li>
+<li><p>Variables set in the service manager’s own environment variable block (subject to <code class="docutils literal notranslate"><span class="pre">PassEnvironment=</span></code> for the system service manager).</p></li>
+<li><p>Variables set via <code class="docutils literal notranslate"><span class="pre">Environment=</span></code> in the unit file.</p></li>
+<li><p>Variables read from files specified via <code class="docutils literal notranslate"><span class="pre">EnvironmentFile=</span></code> in the unit file.</p></li>
+<li><p>Variables set by any PAM modules in case <code class="docutils literal notranslate"><span class="pre">PAMName=</span></code> is in effect, cf. <strong>pam_env(8)</strong>.</p></li>
 </ul>
+<p>If the same environment variable is set by multiple of these sources, the later source — according to the order of the list above — wins.
+Note that as the final step all variables listed in <code class="docutils literal notranslate"><span class="pre">UnsetEnvironment=</span></code> are removed from the compiled environment variable list, immediately before it is passed to the executed process.</p>
+<p>The general philosophy is to expose a small curated list of environment variables to processes.
+Services started by the system manager (PID 1) will be started, without additional service-specific configuration, with just a few environment variables.
+The user manager inherits environment variables as any other system service, but in addition may receive additional environment variables from PAM, and, typically, additional imported variables when the user starts a graphical session.
+It is recommended to keep the environment blocks in both the system and user managers lean.
+Importing all variables inherited by the graphical session or by one of the user shells is strongly discouraged.</p>
+<p>Hint: <code class="docutils literal notranslate"><span class="pre">systemd-run</span> <span class="pre">-P</span> <span class="pre">env</span></code> and <code class="docutils literal notranslate"><span class="pre">systemd-run</span> <span class="pre">--user</span> <span class="pre">-P</span> <span class="pre">env</span></code> print the effective system and user service environment blocks.</p>
+</li>
+<li><p class="rubric">Environment Variables Set or Propagated by the Service Manager</p>
+<p>The following environment variables are propagated by the service manager or generated internally for each invoked process:</p>
+<dl>
+<dt><span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PATH</span></code></dt><dd><p>Colon-separated list of directories to use when launching executables.
+systemd uses a fixed value of <code class="docutils literal notranslate"><span class="pre">/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin</span></code> in the system manager.
+When compiled for systems with “unmerged /usr/” (<code class="docutils literal notranslate"><span class="pre">/bin</span></code> is not a symlink to <code class="docutils literal notranslate"><span class="pre">/usr/bin</span></code>), <code class="docutils literal notranslate"><span class="pre">:/sbin:/bin</span></code> is appended.
+In case of the user manager, a different path may be configured by the distribution.
+It is recommended to not rely on the order of entries, and have only one program with a given name in <span class="target" id="index-1"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PATH</span></code>.</p>
+</dd>
+<dt><span class="target" id="index-2"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LANG</span></code></dt><dd><p>Locale. Can be set in <code class="docutils literal notranslate"><span class="pre">locale.conf(5)</span></code> or on the kernel command line (see <code class="docutils literal notranslate"><span class="pre">systemd(1)</span></code> and <code class="docutils literal notranslate"><span class="pre">kernel-command-line(7)</span></code>).</p>
+</dd>
+<dt><span class="target" id="index-3"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">USER</span></code>, <span class="target" id="index-4"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LOGNAME</span></code>, <span class="target" id="index-5"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">HOME</span></code>, <span class="target" id="index-6"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">SHELL</span></code></dt><dd><p>User name (twice), home directory, and the login shell.
+The variables are set for the units that have <code class="docutils literal notranslate"><span class="pre">User=</span></code> set, which includes user systemd instances.
+See <strong>passwd(5)</strong>.</p>
+</dd>
+<dt><span class="target" id="index-7"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">INVOCATION_ID</span></code></dt><dd><p>Contains a randomized, unique 128bit ID identifying each runtime cycle of the unit, formatted as 32 character hexadecimal string.
+A new ID is assigned each time the unit changes from an inactive state into an activating or active state, and may be used to identify this specific runtime cycle, in particular in data stored offline, such as the journal.
+The same ID is passed to all processes run as part of the unit.</p>
+</dd>
+<dt><span class="target" id="index-8"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">XDG_RUNTIME_DIR</span></code></dt><dd><p>The directory to use for runtime objects (such as IPC objects) and volatile state.
+Set for all services run by the user systemd instance, as well as any system services that use <code class="docutils literal notranslate"><span class="pre">PAMName=</span></code> with a PAM stack that includes <strong>pam_systemd</strong>.
+See below and <strong>pam_systemd(8)</strong> for more information.</p>
+</dd>
+<dt><span class="target" id="index-9"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">RUNTIME_DIRECTORY</span></code>, <span class="target" id="index-10"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">STATE_DIRECTORY</span></code>, <span class="target" id="index-11"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">CACHE_DIRECTORY</span></code>, <span class="target" id="index-12"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LOGS_DIRECTORY</span></code>, <span class="target" id="index-13"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">CONFIGURATION_DIRECTORY</span></code></dt><dd><p>Absolute paths to the directories defined with <code class="docutils literal notranslate"><span class="pre">RuntimeDirectory=</span></code>, <code class="docutils literal notranslate"><span class="pre">StateDirectory=</span></code>, <code class="docutils literal notranslate"><span class="pre">CacheDirectory=</span></code>, <code class="docutils literal notranslate"><span class="pre">LogsDirectory=</span></code>, and <code class="docutils literal notranslate"><span class="pre">ConfigurationDirectory=</span></code> when those settings are used.</p>
+</dd>
+<dt><span class="target" id="index-14"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">CREDENTIALS_DIRECTORY</span></code></dt><dd><p>An absolute path to the per-unit directory with credentials configured via <code class="docutils literal notranslate"><span class="pre">LoadCredential=</span></code>/<code class="docutils literal notranslate"><span class="pre">SetCredential=</span></code>.
+The directory is marked read-only and is placed in unswappable memory (if supported and permitted), and is only accessible to the UID associated with the unit via <code class="docutils literal notranslate"><span class="pre">User=</span></code> or <code class="docutils literal notranslate"><span class="pre">DynamicUser=</span></code> (and the superuser).</p>
+</dd>
+<dt><span class="target" id="index-15"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">MAINPID</span></code></dt><dd><p>The PID of the unit’s main process if it is known.
+This is only set for control processes as invoked by <code class="docutils literal notranslate"><span class="pre">ExecReload=</span></code> and similar.</p>
+</dd>
+<dt><span class="target" id="index-16"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">MANAGERPID</span></code></dt><dd><p>The PID of the user systemd instance, set for processes spawned by it.</p>
+</dd>
+<dt><span class="target" id="index-17"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LISTEN_FDS</span></code>, <span class="target" id="index-18"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LISTEN_PID</span></code>, <span class="target" id="index-19"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LISTEN_FDNAMES</span></code></dt><dd><p>Information about file descriptors passed to a service for socket activation.
+See <strong>sd_listen_fds(3)</strong>.</p>
+</dd>
+<dt><span class="target" id="index-20"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">NOTIFY_SOCKET</span></code></dt><dd><p>The socket <code class="docutils literal notranslate"><span class="pre">sd_notify()</span></code> talks to.
+See <strong>sd_notify(3)</strong>.</p>
+</dd>
+<dt><span class="target" id="index-21"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">WATCHDOG_PID</span></code>, <span class="target" id="index-22"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">WATCHDOG_USEC</span></code></dt><dd><p>Information about watchdog keep-alive notifications.
+See <strong>sd_watchdog_enabled(3)</strong>.</p>
+</dd>
+<dt><span class="target" id="index-23"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">SYSTEMD_EXEC_PID</span></code></dt><dd><p>The PID of the unit process (e.g. process invoked by <code class="docutils literal notranslate"><span class="pre">ExecStart=</span></code>).
+The child process can use this information to determine whether the process is directly invoked by the service manager or indirectly as a child of another process by comparing this value with the current PID (as similar to the scheme used in <strong>sd_listen_fds(3)</strong> with <span class="target" id="index-24"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LISTEN_PID</span></code> and <span class="target" id="index-25"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LISTEN_FDS</span></code>).</p>
+</dd>
+<dt><span class="target" id="index-26"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">TERM</span></code></dt><dd><p>Terminal type, set only for units connected to a terminal (<code class="docutils literal notranslate"><span class="pre">StandardInput=tty</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardOutput=tty</span></code>, or <code class="docutils literal notranslate"><span class="pre">StandardError=tty</span></code>).
+See <strong>termcap(5)</strong>.</p>
+</dd>
+<dt><span class="target" id="index-27"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LOG_NAMESPACE</span></code></dt><dd><p>Contains the name of the selected logging namespace when the <code class="docutils literal notranslate"><span class="pre">LogNamespace=</span></code> service setting is used.</p>
+</dd>
+<dt><span class="target" id="index-28"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">JOURNAL_STREAM</span></code></dt><dd><p>If the standard output or standard error output of the executed processes are connected to the journal (for example, by setting <code class="docutils literal notranslate"><span class="pre">StandardError=journal</span></code>) <span class="target" id="index-29"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">JOURNAL_STREAM</span></code> contains the device and inode numbers of the connection file descriptor, formatted in decimal, separated by a colon (“:”).
+This permits invoked processes to safely detect whether their standard output or standard error output are connected to the journal.
+The device and inode numbers of the file descriptors should be compared with the values set in the environment variable to determine whether the process output is still connected to the journal.
+Note that it is generally not sufficient to only check whether <span class="target" id="index-30"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">JOURNAL_STREAM</span></code> is set at all as services might invoke external processes replacing their standard output or standard error output, without unsetting the environment variable.</p>
+<p>If both standard output and standard error of the executed processes are connected to the journal via a stream socket, this environment variable will contain information about the standard error stream, as that’s usually the preferred destination for log data. (Note that typically the same stream is used for both standard output and standard error, hence very likely the environment variable contains device and inode information matching both stream file descriptors.)</p>
+<p>This environment variable is primarily useful to allow services to optionally upgrade their used log protocol to the native journal protocol (using <strong>sd_journal_print(3)</strong> and other functions) if their standard output or standard error output is connected to the journal anyway, thus enabling delivery of structured metadata along with logged messages.</p>
+</dd>
+<dt><span class="target" id="index-31"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">SERVICE_RESULT</span></code></dt><dd><p>Only defined for the service unit type, this environment variable is passed to all <code class="docutils literal notranslate"><span class="pre">ExecStop=</span></code> and <code class="docutils literal notranslate"><span class="pre">ExecStopPost=</span></code> processes, and encodes the service “result”.
+Currently, the following values are defined:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>“success”</p></td>
+<td><p>The service ran successfully and exited cleanly.</p></td>
+</tr>
+<tr class="row-odd"><td><p>“protocol”</p></td>
+<td><p>A protocol violation occurred: the service did not take the steps required by its unit configuration (specifically what is configured in its Type= setting).</p></td>
+</tr>
+<tr class="row-even"><td><p>“timeout”</p></td>
+<td><p>One of the steps timed out.</p></td>
+</tr>
+<tr class="row-odd"><td><p>“exit-code”</p></td>
+<td><p>Service process exited with a non-zero exit code; see $EXIT_CODE below for the actual exit code returned.</p></td>
+</tr>
+<tr class="row-even"><td><p>“signal”</p></td>
+<td><p>A service process was terminated abnormally by a signal, without dumping core. See $EXIT_CODE below for the actual signal causing the termination.</p></td>
+</tr>
+<tr class="row-odd"><td><p>“core-dump”</p></td>
+<td><p>A service process terminated abnormally with a signal and dumped core. See $EXIT_CODE below for the signal causing the termination.</p></td>
+</tr>
+<tr class="row-even"><td><p>“watchdog”</p></td>
+<td><p>Watchdog keep-alive ping was enabled for the service, but the deadline was missed.</p></td>
+</tr>
+<tr class="row-odd"><td><p>“start-limit-hit”</p></td>
+<td><p>A start limit was defined for the unit and it was hit, causing the unit to fail to start. See systemd.unit(5)’s StartLimitIntervalSec= and StartLimitBurst= for details.</p></td>
+</tr>
+<tr class="row-even"><td><p>“resources”</p></td>
+<td><p>A catch-all condition in case a system operation failed.</p></td>
+</tr>
+</tbody>
+</table>
+<p>This environment variable is useful to monitor failure or successful termination of a service.
+Even though this variable is available in both <code class="docutils literal notranslate"><span class="pre">ExecStop=</span></code> and <code class="docutils literal notranslate"><span class="pre">ExecStopPost=</span></code>, it is usually a better choice to place monitoring tools in the latter, as the former is only invoked for services that managed to start up correctly, and the latter covers both services that failed during their start-up and those which failed during their runtime.</p>
+</dd>
+<dt><span class="target" id="index-32"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">EXIT_CODE</span></code>, <span class="target" id="index-33"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">EXIT_STATUS</span></code></dt><dd><p>Only defined for the service unit type, these environment variables are passed to all <code class="docutils literal notranslate"><span class="pre">ExecStop=</span></code>, <code class="docutils literal notranslate"><span class="pre">ExecStopPost=</span></code> processes and contain exit status/code information of the main process of the service.
+For the precise definition of the exit code and status, see <strong>wait(2)</strong>.
+<span class="target" id="index-34"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">EXIT_CODE</span></code> is one of “exited”, “killed”, “dumped”.
+<span class="target" id="index-35"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">EXIT_STATUS</span></code> contains the numeric exit code formatted as string if <span class="target" id="index-36"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">EXIT_CODE</span></code> is “exited”, and the signal name in all other cases.
+Note that these environment variables are only set if the service manager succeeded to start and identify the main process of the service.</p>
+<p>Summary of possible service result variable values:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 38%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>$SERVICE_RESULT</p></th>
+<th class="head"><p>$EXIT_CODE</p></th>
+<th class="head"><p>$EXIT_STATUS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>“success”</p></td>
+<td><p>“killed”</p></td>
+<td><p>“HUP”, “INT”, “TERM”, “PIPE”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“exited”</p></td>
+<td><p>“0”</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>“protocol”</p></td>
+<td><p>not set</p></td>
+<td><p>not set</p></td>
+</tr>
+<tr class="row-odd"><td><p>“exited”</p></td>
+<td><p>“0”</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>“timeout”</p></td>
+<td><p>“killed”</p></td>
+<td><p>“TERM”, “KILL”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“exited”</p></td>
+<td><p>“0”, “1”, “2”, “3”, …, “255”</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>“exit-code”</p></td>
+<td><p>“exited”</p></td>
+<td><p>“1”, “2”, “3”, …, “255”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“signal”</p></td>
+<td><p>“killed”</p></td>
+<td><p>“HUP”, “INT”, “KILL”, …</p></td>
+</tr>
+<tr class="row-even"><td><p>“core-dump”</p></td>
+<td><p>“dumped”</p></td>
+<td><p>“ABRT”, “SEGV”, “QUIT”, …</p></td>
+</tr>
+<tr class="row-odd"><td><p>“watchdog”</p></td>
+<td><p>“dumped”</p></td>
+<td><p>“ABRT”</p></td>
+</tr>
+<tr class="row-even"><td><p>“killed”</p></td>
+<td><p>“TERM”, “KILL”</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>“exited”</p></td>
+<td><p>“0”, “1”, “2”, “3”, …, “255”</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>“exec-condition”</p></td>
+<td><p>“exited”</p></td>
+<td><p>“1”, “2”, “3”, “4”, …, “254”</p></td>
+</tr>
+<tr class="row-odd"><td><p>“oom-kill”</p></td>
+<td><p>“killed”</p></td>
+<td><p>“TERM”, “KILL”</p></td>
+</tr>
+<tr class="row-even"><td><p>“start-limit-hit”</p></td>
+<td><p>not set</p></td>
+<td><p>not set</p></td>
+</tr>
+<tr class="row-odd"><td><p>“resources”</p></td>
+<td><p>any of the above</p></td>
+<td><p>any of the above</p></td>
+</tr>
+</tbody>
+</table>
+<p>Note: the process may be also terminated by a signal not sent by systemd.
+In particular the process may send an arbitrary signal to itself in a handler for any of the non-maskable signals.
+Nevertheless, in the “timeout” and “watchdog” rows above only the signals that systemd sends have been included.
+Moreover, using <code class="docutils literal notranslate"><span class="pre">SuccessExitStatus=</span></code> additional exit statuses may be declared to indicate clean termination, which is not reflected by this table.</p>
+</dd>
+<dt><span class="target" id="index-37"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PIDFILE</span></code></dt><dd><p>The path to the configured PID file, in case the process is forked off on behalf of a service that uses the <code class="docutils literal notranslate"><span class="pre">PIDFile=</span></code> setting, see <strong>systemd.service(5)</strong> for details. Service code may use this environment variable to automatically generate a PID file at the location configured in the unit file. This field is set to an absolute path in the file system.</p>
+</dd>
+</dl>
+<p>For system services, when <code class="docutils literal notranslate"><span class="pre">PAMName=</span></code> is enabled and <strong>pam_systemd</strong> is part of the selected PAM stack, additional environment variables defined by systemd may be set for services.
+Specifically, these are <span class="target" id="index-38"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">XDG_SEAT</span></code>, <span class="target" id="index-39"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">XDG_VTNR</span></code>, see <strong>pam_systemd(8)</strong> for details.</p>
 </li>
 </ul>
 </li>
 </ul>
+</section>
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
@@ -211,8 +486,8 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, CS.
-      <span class="lastupdated">Last updated on Dec 8, 2021, 3:14:09 AM.
+    <p>&#169; Copyright 2022, CS.
+      <span class="lastupdated">Last updated on Jan 6, 2022, 9:11:31 AM.
       </span></p>
   </div>
 
