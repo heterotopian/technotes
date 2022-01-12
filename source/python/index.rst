@@ -95,6 +95,10 @@ Python Enhancement Proposals
       - Coroutines with async and await syntax
       -
 
+    * - :pep:`567 <567>`
+      - Context Variables
+      -
+
     * - :pep:`3000 <3000>`
       - Python 3000
       -
