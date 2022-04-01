@@ -6,13 +6,14 @@ Sphinx
 
 .. highlight:: console
 
-.. seealso::
+Resources
+=========
+
+.. sidebar:: See also
+    :class: sidebar-admonition
 
     :ref:`python_module_docutils` -
     Python library that implements reStructuredText
-
-Resources
-=========
 
 - `Project homepage <http://www.sphinx-doc.org>`_
 - `Discussion group <https://groups.google.com/forum/#!forum/sphinx-users>`_

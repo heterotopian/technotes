@@ -5,10 +5,6 @@ xargs
 
 .. highlight:: console
 
-.. note::
-
-    Always use ``-r`` for easier handling of empty input
-
 Read input from ``find``::
 
     $ find -print0 | xargs -r -0 file
@@ -29,6 +25,11 @@ Run a separate command for each **input line**::
 
 Options
 =======
+
+.. sidebar:: Note
+    :class: sidebar-admonition
+
+    Always use ``-r`` for easier handling of empty input
 
 -0, --null
   Input items are terminated by a null character instead of whitespace, quotes and backslash are not special
