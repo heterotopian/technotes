@@ -9,13 +9,18 @@ Conda
 Documentation
 =============
 
-- `Conda configuration <https://conda.io/projects/conda/en/latest/configuration.html>`_
-- `Conda-build <https://conda.io/projects/conda-build/en/latest/>`_
-- `Miniconda <https://conda.io/en/latest/miniconda.html>`_
-- `User guide <https://docs.conda.io/projects/conda/en/latest/user-guide/index.html>`_
+.. sidebar:: Related Projects
+    :class: sidebar-admonition
 
-  - `Conda performance <https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/conda-performance.html>`_
-  - `Managing channels <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-channels.html>`_
+    * `Conda-build <https://conda.io/projects/conda-build/en/latest/>`_
+    * `Miniconda <https://conda.io/en/latest/miniconda.html>`_
+
+- :doc:`conda:user-guide/cheatsheet`
+- :doc:`conda:configuration`
+- :doc:`conda:user-guide/index`
+
+  - :doc:`conda:user-guide/concepts/conda-performance`
+  - :doc:`conda:user-guide/tasks/manage-channels`
 
 
 
