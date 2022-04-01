@@ -50,6 +50,29 @@ Filter on field value::
 Output Formatting
 =================
 
+.. sidebar:: See also
+    :class: sidebar-admonition
+
+    `Output formats supported by journalctl <https://www.freedesktop.org/software/systemd/man/journalctl.html#-o>`_
+
+    ::
+
+        short
+        short-full
+        short-iso
+        short-iso-precise
+        short-precise
+        short-monotonic
+        short-unix
+        verbose
+        export
+        json
+        json-pretty
+        json-sse
+        json-seq
+        cat
+        with-unit
+
 Show timestamps with microsecond precision::
 
     $ journalctl -o short-precise
@@ -57,26 +80,6 @@ Show timestamps with microsecond precision::
 Format messages as JSON::
 
     $ journalctl -o json
-
-.. seealso::
-
-    `Supported output formats <https://www.freedesktop.org/software/systemd/man/journalctl.html#-o>`_
-
-    |short|
-    |short-full|
-    |short-iso|
-    |short-iso-precise|
-    |short-precise|
-    |short-monotonic|
-    |short-unix|
-    |verbose|
-    |export|
-    |json|
-    |json-pretty|
-    |json-sse|
-    |json-seq|
-    |cat|
-    |with-unit|
 
 
 
@@ -92,21 +95,3 @@ Options
 
 --no-pager
     Do not pipe output into a pager.
-
-
-
-.. |short|             replace:: ``short``
-.. |short-full|        replace:: ``short-full``
-.. |short-iso|         replace:: ``short-iso``
-.. |short-iso-precise| replace:: ``short-iso-precise``
-.. |short-precise|     replace:: ``short-precise``
-.. |short-monotonic|   replace:: ``short-monotonic``
-.. |short-unix|        replace:: ``short-unix``
-.. |verbose|           replace:: ``verbose``
-.. |export|            replace:: ``export``
-.. |json|              replace:: ``json``
-.. |json-pretty|       replace:: ``json-pretty``
-.. |json-sse|          replace:: ``json-sse``
-.. |json-seq|          replace:: ``json-seq``
-.. |cat|               replace:: ``cat``
-.. |with-unit|         replace:: ``with-unit``

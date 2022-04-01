@@ -173,6 +173,27 @@ To enable:</p>
 </section>
 <section id="output-formatting">
 <h2>Output Formatting<a class="headerlink" href="#output-formatting" title="Permalink to this headline">¶</a></h2>
+<aside class="sidebar-admonition sidebar">
+<p class="sidebar-title">See also</p>
+<p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/journalctl.html#-o">Output formats supported by journalctl</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">short</span>
+<span class="go">short-full</span>
+<span class="go">short-iso</span>
+<span class="go">short-iso-precise</span>
+<span class="go">short-precise</span>
+<span class="go">short-monotonic</span>
+<span class="go">short-unix</span>
+<span class="go">verbose</span>
+<span class="go">export</span>
+<span class="go">json</span>
+<span class="go">json-pretty</span>
+<span class="go">json-sse</span>
+<span class="go">json-seq</span>
+<span class="go">cat</span>
+<span class="go">with-unit</span>
+</pre></div>
+</div>
+</aside>
 <p>Show timestamps with microsecond precision:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>journalctl -o short-precise
 </pre></div>
@@ -180,25 +201,6 @@ To enable:</p>
 <p>Format messages as JSON:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>journalctl -o json
 </pre></div>
-</div>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/journalctl.html#-o">Supported output formats</a></p>
-<p><code class="docutils literal notranslate"><span class="pre">short</span></code>
-<code class="docutils literal notranslate"><span class="pre">short-full</span></code>
-<code class="docutils literal notranslate"><span class="pre">short-iso</span></code>
-<code class="docutils literal notranslate"><span class="pre">short-iso-precise</span></code>
-<code class="docutils literal notranslate"><span class="pre">short-precise</span></code>
-<code class="docutils literal notranslate"><span class="pre">short-monotonic</span></code>
-<code class="docutils literal notranslate"><span class="pre">short-unix</span></code>
-<code class="docutils literal notranslate"><span class="pre">verbose</span></code>
-<code class="docutils literal notranslate"><span class="pre">export</span></code>
-<code class="docutils literal notranslate"><span class="pre">json</span></code>
-<code class="docutils literal notranslate"><span class="pre">json-pretty</span></code>
-<code class="docutils literal notranslate"><span class="pre">json-sse</span></code>
-<code class="docutils literal notranslate"><span class="pre">json-seq</span></code>
-<code class="docutils literal notranslate"><span class="pre">cat</span></code>
-<code class="docutils literal notranslate"><span class="pre">with-unit</span></code></p>
 </div>
 </section>
 <section id="options">
@@ -230,7 +232,7 @@ The default is to show full fields, allowing them to wrap or be truncated by the
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CS.
-      <span class="lastupdated">Last updated on Apr 1, 2022, 1:35:39 AM.
+      <span class="lastupdated">Last updated on Apr 1, 2022, 12:14:16 PM.
       </span></p>
   </div>
 

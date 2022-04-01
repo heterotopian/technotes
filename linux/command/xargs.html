@@ -124,10 +124,6 @@
              
   <section id="xargs">
 <h1>xargs<a class="headerlink" href="#xargs" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Always use <code class="docutils literal notranslate"><span class="pre">-r</span></code> for easier handling of empty input</p>
-</div>
 <p>Read input from <code class="docutils literal notranslate"><span class="pre">find</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>find -print0 <span class="p">|</span> xargs -r -0 file
 </pre></div>
@@ -146,6 +142,10 @@
 </div>
 <section id="options">
 <h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<aside class="sidebar-admonition sidebar">
+<p class="sidebar-title">Note</p>
+<p>Always use <code class="docutils literal notranslate"><span class="pre">-r</span></code> for easier handling of empty input</p>
+</aside>
 <dl class="option-list">
 <dt><kbd><span class="option">-0</span>, <span class="option">--null</span></kbd></dt>
 <dd><p>Input items are terminated by a null character instead of whitespace, quotes and backslash are not special</p>
@@ -178,7 +178,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CS.
-      <span class="lastupdated">Last updated on Apr 1, 2022, 1:35:39 AM.
+      <span class="lastupdated">Last updated on Apr 1, 2022, 12:14:16 PM.
       </span></p>
   </div>
 
