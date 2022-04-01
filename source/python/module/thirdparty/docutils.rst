@@ -4,7 +4,8 @@
 :py:mod:`docutils`
 ==================
 
-.. seealso::
+.. sidebar:: See also
+    :class: sidebar-admonition
 
     :ref:`sphinx` -
     Static website generator designed for documentation
