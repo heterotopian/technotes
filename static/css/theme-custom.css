@@ -35,3 +35,32 @@ div[class *= ' highlight-'] + div[class *= ' highlight-'] {
 .highlight .err {
     border: none;
 }
+
+/* Style sidebar like seealso */
+
+.rst-content .sidebar.sidebar-admonition {
+    line-height: 24px;
+    background: #e7f2fa;
+    padding: 12px;
+    margin-bottom: 24px;
+}
+
+.rst-content .sidebar.sidebar-admonition .sidebar-title {
+    font-family: inherit;
+    line-height: 16px;
+    color: #fff;
+    background: #6ab0de;
+    padding: 6px 12px;
+    margin: -12px -12px 12px;
+}
+
+.rst-content .sidebar.sidebar-admonition .sidebar-title:before {
+    font-family: FontAwesome;
+    content: "\F06A";
+    margin-right: 4px;
+}
+
+.rst-content .sidebar.sidebar-admonition p,
+.rst-content .sidebar.sidebar-admonition ul {
+    font-size: inherit;
+}
