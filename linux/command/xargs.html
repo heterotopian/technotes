@@ -162,6 +162,11 @@
 <dt><kbd><span class="option">-r</span>, <span class="option">--no-run-if-empty</span></kbd></dt>
 <dd><p>Only run command if there are non-blank input lines</p>
 </dd>
+<dt><kbd><span class="option">-I <var>replace-str</var></span></kbd></dt>
+<dd><p>Replace occurrences of replace-str in the initial-arguments with names read from standard input.
+Also, unquoted blanks do not terminate input items; instead the separator is the newline character.
+Implies -x and -L 1.</p>
+</dd>
 </dl>
 </section>
 </section>
@@ -178,7 +183,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CS.
-      <span class="lastupdated">Last updated on Apr 1, 2022, 12:14:16 PM.
+      <span class="lastupdated">Last updated on Apr 12, 2022, 7:52:35 PM.
       </span></p>
   </div>
 
