@@ -45,3 +45,8 @@ Options
 
 -r, --no-run-if-empty
   Only run command if there are non-blank input lines
+
+-I replace-str
+  Replace occurrences of replace-str in the initial-arguments with names read from standard input.
+  Also, unquoted blanks do not terminate input items; instead the separator is the newline character.
+  Implies -x and -L 1.
