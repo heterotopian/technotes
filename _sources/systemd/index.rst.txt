@@ -283,4 +283,14 @@ Commands
     :glob:
 
     command/*
+
+
+
+Controllers
+===========
+
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
     controller/*

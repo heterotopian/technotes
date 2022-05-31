@@ -16,6 +16,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -47,11 +48,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Systemd</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../index.html#documentation">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#examples">Examples</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#commands">Commands</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../command/systemd-cgls.html">systemd-cgls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../command/systemd-cgtop.html">systemd-cgtop</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../command/systemd-run.html">systemd-run</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../command/systemd-socket-proxyd.html">systemd-socket-proxyd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#commands">Commands</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#controllers">Controllers</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="busctl.html">busctl</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">journalctl</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">General</a></li>
@@ -132,10 +130,10 @@
            <div itemprop="articleBody">
              
   <section id="journalctl">
-<h1>journalctl<a class="headerlink" href="#journalctl" title="Permalink to this headline">¶</a></h1>
+<h1>journalctl<a class="headerlink" href="#journalctl" title="Permalink to this heading">¶</a></h1>
 <p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/journalctl.html">Systemd documentation: journalctl</a></p>
 <section id="general">
-<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<h2>General<a class="headerlink" href="#general" title="Permalink to this heading">¶</a></h2>
 <p>Perform tab completion on field names:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>journalctl _&lt;TAB&gt;
 <span class="go">_AUDIT_FIELD_APPARMOR=        _AUDIT_FIELD_REQUESTED_MASK=  _CAP_EFFECTIVE=               _MACHINE_ID=                  _SYSTEMD_INVOCATION_ID=       _TRANSPORT=</span>
@@ -157,7 +155,7 @@ To enable:</p>
 </div>
 </section>
 <section id="selecting-messages">
-<h2>Selecting Messages<a class="headerlink" href="#selecting-messages" title="Permalink to this headline">¶</a></h2>
+<h2>Selecting Messages<a class="headerlink" href="#selecting-messages" title="Permalink to this heading">¶</a></h2>
 <p>Since datetime:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>journalctl --since<span class="o">=</span><span class="s1">&#39;2010-01-01 08:00:00&#39;</span>
 </pre></div>
@@ -172,7 +170,7 @@ To enable:</p>
 </div>
 </section>
 <section id="output-formatting">
-<h2>Output Formatting<a class="headerlink" href="#output-formatting" title="Permalink to this headline">¶</a></h2>
+<h2>Output Formatting<a class="headerlink" href="#output-formatting" title="Permalink to this heading">¶</a></h2>
 <aside class="sidebar-admonition sidebar">
 <p class="sidebar-title">See also</p>
 <p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/journalctl.html#-o">Output formats supported by journalctl</a></p>
@@ -204,7 +202,7 @@ To enable:</p>
 </div>
 </section>
 <section id="options">
-<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this heading">¶</a></h2>
 <dl class="option-list">
 <dt><kbd><span class="option">-o</span>, <span class="option">--output</span></kbd></dt>
 <dd><p>Specify output format.</p>
@@ -232,7 +230,7 @@ The default is to show full fields, allowing them to wrap or be truncated by the
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CS.
-      <span class="lastupdated">Last updated on Apr 12, 2022, 7:52:35 PM.
+      <span class="lastupdated">Last updated on May 31, 2022, 4:19:14 AM.
       </span></p>
   </div>
 

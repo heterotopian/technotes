@@ -16,6 +16,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -119,16 +120,16 @@
            <div itemprop="articleBody">
              
   <section id="sysdig">
-<span id="id1"></span><h1>Sysdig<a class="headerlink" href="#sysdig" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>Sysdig<a class="headerlink" href="#sysdig" title="Permalink to this heading">¶</a></h1>
 <section id="general">
-<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<h2>General<a class="headerlink" href="#general" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://sysdig.com/blog/linux-troubleshooting-cheatsheet/">Cheatsheet</a></p></li>
 <li><p><a class="reference external" href="https://github.com/draios/sysdig/wiki/Sysdig-User-Guide#filtering">Filtering</a></p></li>
 </ul>
 </section>
 <section id="options">
-<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this heading">¶</a></h2>
 <dl class="option-list">
 <dt><kbd><span class="option">-c <var>chiselname</var></span></kbd></dt>
 <dd><p>Run the specified chisel</p>
@@ -145,33 +146,33 @@
 </dl>
 </section>
 <section id="chisels">
-<h2>Chisels<a class="headerlink" href="#chisels" title="Permalink to this headline">¶</a></h2>
+<h2>Chisels<a class="headerlink" href="#chisels" title="Permalink to this heading">¶</a></h2>
 <section id="ps">
-<h3>ps<a class="headerlink" href="#ps" title="Permalink to this headline">¶</a></h3>
+<h3>ps<a class="headerlink" href="#ps" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sysdig -c ps proc.apid<span class="o">=</span><span class="m">120954</span>
 </pre></div>
 </div>
 </section>
 <section id="lsof">
-<h3>lsof<a class="headerlink" href="#lsof" title="Permalink to this headline">¶</a></h3>
+<h3>lsof<a class="headerlink" href="#lsof" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sysdig -c lsof fd.directory<span class="o">=</span>/var/log
 <span class="gp">$ </span>sysdig -c lsof fd.type<span class="o">=</span>inotify
 </pre></div>
 </div>
 </section>
 <section id="netstat">
-<h3>netstat<a class="headerlink" href="#netstat" title="Permalink to this headline">¶</a></h3>
+<h3>netstat<a class="headerlink" href="#netstat" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sysdig -c netstat fd.port<span class="o">=</span><span class="m">80</span>
 </pre></div>
 </div>
 </section>
 <section id="echo-fds">
-<h3>echo_fds<a class="headerlink" href="#echo-fds" title="Permalink to this headline">¶</a></h3>
+<h3>echo_fds<a class="headerlink" href="#echo-fds" title="Permalink to this heading">¶</a></h3>
 <p><a class="reference external" href="https://sysdig.com/blog/decode-your-http-traffic-with-sysdig/">https://sysdig.com/blog/decode-your-http-traffic-with-sysdig/</a></p>
 </section>
 </section>
 <section id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading">¶</a></h2>
 <ul>
 <li><p><a class="reference external" href="https://github.com/draios/sysdig/issues/562">Multiple command line filters</a></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sysdig -c lsof <span class="s2">&quot;&#39;proc.name=python and fd.type=ipv4&#39;&quot;</span>
@@ -194,7 +195,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CS.
-      <span class="lastupdated">Last updated on Apr 12, 2022, 7:52:35 PM.
+      <span class="lastupdated">Last updated on May 31, 2022, 4:19:14 AM.
       </span></p>
   </div>
 

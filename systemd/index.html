@@ -16,6 +16,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -55,6 +56,9 @@
 <li class="toctree-l3"><a class="reference internal" href="command/systemd-cgtop.html">systemd-cgtop</a></li>
 <li class="toctree-l3"><a class="reference internal" href="command/systemd-run.html">systemd-run</a></li>
 <li class="toctree-l3"><a class="reference internal" href="command/systemd-socket-proxyd.html">systemd-socket-proxyd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#controllers">Controllers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="controller/busctl.html">busctl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="controller/journalctl.html">journalctl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="controller/localectl.html">localectl</a></li>
@@ -128,14 +132,14 @@
            <div itemprop="articleBody">
              
   <section id="systemd">
-<span id="id1"></span><h1>Systemd<a class="headerlink" href="#systemd" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>Systemd<a class="headerlink" href="#systemd" title="Permalink to this heading">¶</a></h1>
 <section id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.freedesktop.org/wiki/Software/systemd/">Project homepage</a></p></li>
 </ul>
 <section id="manpages">
-<h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.index.html">Manpages</a><a class="headerlink" href="#manpages" title="Permalink to this headline">¶</a></h3>
+<h3><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.index.html">Manpages</a><a class="headerlink" href="#manpages" title="Permalink to this heading">¶</a></h3>
 <ul>
 <li><p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.directives.html">Directives</a></p></li>
 <li><p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html">Unit configuration</a></p>
@@ -423,7 +427,7 @@ Specifically, these are <span class="target" id="index-38"></span><code class="x
 </section>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <p>Process ⟹ Service ⟹ CGroup:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pgrep -u cstevens -f gnome-terminal
 <span class="go">187072</span>
@@ -456,13 +460,20 @@ Specifically, these are <span class="target" id="index-38"></span><code class="x
 </div>
 </section>
 <section id="commands">
-<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="command/systemd-cgls.html">systemd-cgls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="command/systemd-cgtop.html">systemd-cgtop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="command/systemd-run.html">systemd-run</a></li>
 <li class="toctree-l1"><a class="reference internal" href="command/systemd-socket-proxyd.html">systemd-socket-proxyd</a></li>
+</ul>
+</div>
+</section>
+<section id="controllers">
+<h2>Controllers<a class="headerlink" href="#controllers" title="Permalink to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="controller/busctl.html">busctl</a></li>
 <li class="toctree-l1"><a class="reference internal" href="controller/journalctl.html">journalctl</a></li>
 <li class="toctree-l1"><a class="reference internal" href="controller/localectl.html">localectl</a></li>
@@ -487,7 +498,7 @@ Specifically, these are <span class="target" id="index-38"></span><code class="x
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CS.
-      <span class="lastupdated">Last updated on Apr 12, 2022, 7:52:35 PM.
+      <span class="lastupdated">Last updated on May 31, 2022, 4:19:14 AM.
       </span></p>
   </div>
 
