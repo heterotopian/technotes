@@ -288,3 +288,6 @@ from sphinx.highlighting import lexers
 from lexer import CustomLessCssLexer
 
 lexers['less'] = CustomLessCssLexer()
+
+# Show TODO items in generated site
+todo_include_todos = True
