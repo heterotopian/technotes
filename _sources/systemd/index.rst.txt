@@ -241,6 +241,10 @@ Documentation
 Examples
 ========
 
+.. todo::
+
+    Improve or remove this section
+
 Process |xrArr| Service |xrArr| CGroup::
 
     $ pgrep -u cstevens -f gnome-terminal
