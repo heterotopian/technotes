@@ -95,6 +95,10 @@ Python Enhancement Proposals
       - Coroutines with async and await syntax
       -
 
+    * - :pep:`518 <518>`
+      - Specifying Minimum Build System Requirements for Python Projects
+      -
+
     * - :pep:`567 <567>`
       - Context Variables
       -
