@@ -53,15 +53,15 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Conda</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#repositories">Repositories</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#extensions">Extensions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="command/config.html">conda config</a></li>
 <li class="toctree-l3"><a class="reference internal" href="command/search.html">conda search</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#repositories">Repositories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extensions">Extensions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../frontend.html">Frontend</a></li>
@@ -121,22 +121,24 @@
              
   <section id="conda">
 <span id="id1"></span><h1>Conda<a class="headerlink" href="#conda" title="Permalink to this heading">¶</a></h1>
+<section id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="command/config.html">conda config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command/search.html">conda search</a></li>
+</ul>
+</div>
+</section>
 <section id="documentation">
 <h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading">¶</a></h2>
-<aside class="sidebar-admonition sidebar">
-<p class="sidebar-title">Related Projects</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://conda.io/projects/conda-build/en/latest/">Conda-build</a></p></li>
-<li><p><a class="reference external" href="https://conda.io/en/latest/miniconda.html">Miniconda</a></p></li>
-</ul>
-</aside>
-<ul class="simple">
-<li><p><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html" title="(in conda v22.9.0.post91+f356172cc)"><span>Cheat sheet</span></a></p></li>
-<li><p><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/configuration.html" title="(in conda v22.9.0.post91+f356172cc)"><span>Conda configuration</span></a></p></li>
-<li><p><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/index.html" title="(in conda v22.9.0.post91+f356172cc)"><span>User guide</span></a></p>
+<li><p><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html" title="(in conda v22.11.1.post3+501f9cd6a)"><span>Cheat sheet</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/configuration.html" title="(in conda v22.11.1.post3+501f9cd6a)"><span>Conda configuration</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/index.html" title="(in conda v22.11.1.post3+501f9cd6a)"><span>User guide</span></a></p>
 <ul>
-<li><p><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/conda-performance.html" title="(in conda v22.9.0.post91+f356172cc)"><span>Conda performance</span></a></p></li>
-<li><p><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-channels.html" title="(in conda v22.9.0.post91+f356172cc)"><span>Managing channels</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/conda-performance.html" title="(in conda v22.11.1.post3+501f9cd6a)"><span>Conda performance</span></a></p></li>
+<li><p><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-channels.html" title="(in conda v22.11.1.post3+501f9cd6a)"><span>Managing channels</span></a></p></li>
 </ul>
 </li>
 </ul>
@@ -145,6 +147,9 @@
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/conda/conda">Project homepage</a></p></li>
+<li><p>Related projects:
+<a class="reference external" href="https://conda.io/projects/conda-build/en/latest/">Conda-build</a>,
+<a class="reference external" href="https://conda.io/en/latest/miniconda.html">Miniconda</a></p></li>
 <li><p><a class="reference external" href="https://www.anaconda.com/understanding-and-improving-condas-performance/">Understanding and Improving Conda’s performance</a></p></li>
 <li><p><a class="reference external" href="https://www.anaconda.com/why-we-removed-the-free-channel-in-conda-4-7/">Why We Removed the “Free” Channel in Conda 4.7</a></p></li>
 <li><p>“Build strings have no semantic content” -
@@ -193,15 +198,6 @@
 Command-line utility to plot Conda dependency graphs</p></li>
 </ul>
 </section>
-<section id="commands">
-<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this heading">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="command/config.html">conda config</a></li>
-<li class="toctree-l1"><a class="reference internal" href="command/search.html">conda search</a></li>
-</ul>
-</div>
-</section>
 </section>
 
 
@@ -216,7 +212,7 @@ Command-line utility to plot Conda dependency graphs</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, CS.
-      <span class="lastupdated">Last updated on Nov 18, 2022, 11:36:45 AM.
+      <span class="lastupdated">Last updated on Dec 9, 2022, 6:17:49 AM.
       </span></p>
   </div>
 

@@ -6,14 +6,19 @@ Conda
 
 .. highlight:: console
 
+Commands
+========
+
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
+    command/*
+
+
+
 Documentation
 =============
-
-.. sidebar:: Related Projects
-    :class: sidebar-admonition
-
-    * `Conda-build <https://conda.io/projects/conda-build/en/latest/>`_
-    * `Miniconda <https://conda.io/en/latest/miniconda.html>`_
 
 - :doc:`conda:user-guide/cheatsheet`
 - :doc:`conda:configuration`
@@ -28,6 +33,10 @@ Resources
 =========
 
 - `Project homepage <https://github.com/conda/conda>`_
+- Related projects:
+  `Conda-build <https://conda.io/projects/conda-build/en/latest/>`_,
+  `Miniconda <https://conda.io/en/latest/miniconda.html>`_
+
 - `Understanding and Improving Conda’s performance <https://www.anaconda.com/understanding-and-improving-condas-performance/>`_
 - `Why We Removed the “Free” Channel in Conda 4.7 <https://www.anaconda.com/why-we-removed-the-free-channel-in-conda-4-7/>`_
 - "Build strings have no semantic content" -
@@ -70,14 +79,3 @@ Extensions
 
 - `conda-depgraph <https://github.com/omegacen/conda-depgraph>`_ -
   Command-line utility to plot Conda dependency graphs
-
-
-
-Commands
-========
-
-.. toctree::
-    :maxdepth: 1
-    :glob:
-
-    command/*
