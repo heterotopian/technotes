@@ -1,4 +1,4 @@
 Sphinx
 sphinx-autobuild
-sphinx-rtd-theme
+sphinx-rtd-theme > 1
 PyYAML < 6
