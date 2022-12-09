@@ -8,6 +8,28 @@ Systemd
 
 .. highlight:: console
 
+Commands
+========
+
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
+    command/*
+
+
+
+Controllers
+===========
+
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
+    controller/*
+
+
+
 Documentation
 =============
 
@@ -276,25 +298,3 @@ Process |xrArr| Service |xrArr| CGroup::
 
     $ systemctl show user@641738498.service -p ControlGroup
     ControlGroup=/user.slice/user-641738498.slice/user@641738498.service
-
-
-
-Commands
-========
-
-.. toctree::
-    :maxdepth: 1
-    :glob:
-
-    command/*
-
-
-
-Controllers
-===========
-
-.. toctree::
-    :maxdepth: 1
-    :glob:
-
-    controller/*
