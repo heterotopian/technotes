@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>git ls-files &mdash; Technotes Documentation</title>
@@ -14,9 +14,6 @@
   <![endif]-->
   
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -31,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Technotes
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Technotes
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -110,7 +111,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Git</a></li>
       <li class="breadcrumb-item active">git ls-files</li>
       <li class="wy-breadcrumbs-aside">
@@ -128,19 +129,19 @@
 <li><p><a class="reference external" href="https://git-scm.com/docs/git-ls-files">Documentation</a></p></li>
 </ul>
 <p>Cached files:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git ls-files
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>ls-files
 </pre></div>
 </div>
 <p>Cached files under <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git ls-files foo/bar
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>ls-files<span class="w"> </span>foo/bar
 </pre></div>
 </div>
 <p>Untracked files:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git ls-files -o --exclude-standard
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>ls-files<span class="w"> </span>-o<span class="w"> </span>--exclude-standard
 </pre></div>
 </div>
 <p>Ignored files:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git ls-files -o -i --exclude-standard
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>ls-files<span class="w"> </span>-o<span class="w"> </span>-i<span class="w"> </span>--exclude-standard
 </pre></div>
 </div>
 </section>
@@ -156,8 +157,8 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, CS.
-      <span class="lastupdated">Last updated on Dec 9, 2022, 6:17:49 AM.
+    <p>&#169; Copyright 2023, CS.
+      <span class="lastupdated">Last updated on Apr 14, 2023, 12:13:57 AM.
       </span></p>
   </div>
 

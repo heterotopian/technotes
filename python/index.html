@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Python &mdash; Technotes Documentation</title>
@@ -14,9 +14,6 @@
   <![endif]-->
   
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Technotes
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Technotes
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -161,7 +162,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Python</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/python/index.rst.txt" rel="nofollow"> View page source</a>
@@ -219,11 +220,6 @@ Deep dives into specific topics</p>
 <section id="python-enhancement-proposals">
 <h2>Python Enhancement Proposals<a class="headerlink" href="#python-enhancement-proposals" title="Permalink to this heading">¶</a></h2>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>PEP</p></th>
 <th class="head"><p>Title</p></th>
@@ -289,11 +285,6 @@ Deep dives into specific topics</p>
 <section id="runtime">
 <h2>Runtime<a class="headerlink" href="#runtime" title="Permalink to this heading">¶</a></h2>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Environment Variable</p></th>
 <th class="head"><p>Option</p></th>
@@ -316,17 +307,17 @@ Deep dives into specific topics</p>
 <tr class="row-odd"><td><p><span class="target" id="index-15"></span><a class="reference external" href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONIOENCODING" title="(in Python v3.11)"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONIOENCODING</span></code></a></p></td>
 <td></td>
 <td><div class="compound">
-<p class="compound-first">StackOverflow: <a class="reference external" href="https://stackoverflow.com/questions/4545661/unicodedecodeerror-when-redirecting-to-file/4546129#4546129">UnicodeDecodeError when redirecting to file</a></p>
-<p class="compound-middle">When you redirect the output of your program, it is generally not possible to know what the input encoding of the receiving program is.
+<p>StackOverflow: <a class="reference external" href="https://stackoverflow.com/questions/4545661/unicodedecodeerror-when-redirecting-to-file/4546129#4546129">UnicodeDecodeError when redirecting to file</a></p>
+<p>When you redirect the output of your program, it is generally not possible to know what the input encoding of the receiving program is.
 The interpreter falls back to some default encoding for stdin, stdout, and stderr (None for Python 2, UTF-8 for Python 3).</p>
-<div class="compound-middle highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -c &quot;import sys; print sys.stdout.encoding&quot;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -c &quot;import sys; print sys.stdout.encoding&quot;
 UTF-8
 $ python -c &quot;import sys; print sys.stdout.encoding&quot; | cat
 None
 </pre></div>
 </div>
-<p class="compound-middle">Set <code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONIOENCODING</span></code> to override the default encoding for stdin, stdout, and stderr.</p>
-<div class="compound-last highlight-default notranslate"><div class="highlight"><pre><span></span>$ PYTHONIOENCODING=UTF-8 python -c &quot;import sys; print sys.stdout.encoding&quot; | cat
+<p>Set <code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONIOENCODING</span></code> to override the default encoding for stdin, stdout, and stderr.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ PYTHONIOENCODING=UTF-8 python -c &quot;import sys; print sys.stdout.encoding&quot; | cat
   UTF-8
 </pre></div>
 </div>
@@ -532,8 +523,8 @@ Tutorials on the scientific Python ecosystem</p></li>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, CS.
-      <span class="lastupdated">Last updated on Dec 9, 2022, 6:17:49 AM.
+    <p>&#169; Copyright 2023, CS.
+      <span class="lastupdated">Last updated on Apr 14, 2023, 12:13:57 AM.
       </span></p>
   </div>
 

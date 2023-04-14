@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>systemctl &mdash; Technotes Documentation</title>
@@ -14,9 +14,6 @@
   <![endif]-->
   
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -31,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Technotes
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Technotes
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -116,7 +117,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Systemd</a></li>
       <li class="breadcrumb-item active">systemctl</li>
       <li class="wy-breadcrumbs-aside">
@@ -134,23 +135,23 @@
 <section id="general">
 <h2>General<a class="headerlink" href="#general" title="Permalink to this heading">¶</a></h2>
 <p>List active units:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl list-units
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl<span class="w"> </span>list-units
 </pre></div>
 </div>
 <p>List loaded units:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl list-units -a
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl<span class="w"> </span>list-units<span class="w"> </span>-a
 </pre></div>
 </div>
 <p>List active service units:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl list-units -t service
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl<span class="w"> </span>list-units<span class="w"> </span>-t<span class="w"> </span>service
 </pre></div>
 </div>
 <p>List unit files:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl list-unit-files
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl<span class="w"> </span>list-unit-files
 </pre></div>
 </div>
 <p>Check if unit is running:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl is-active unit
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl<span class="w"> </span>is-active<span class="w"> </span>unit
 </pre></div>
 </div>
 </section>
@@ -158,7 +159,7 @@
 <h2>Environment<a class="headerlink" href="#environment" title="Permalink to this heading">¶</a></h2>
 <section id="system-service-manager">
 <h3>System Service Manager<a class="headerlink" href="#system-service-manager" title="Permalink to this heading">¶</a></h3>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl show-environment
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl<span class="w"> </span>show-environment
 <span class="go">LANG=en_US.UTF-8</span>
 <span class="go">PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin</span>
 </pre></div>
@@ -166,7 +167,7 @@
 </section>
 <section id="user-service-manager">
 <h3>User Service Manager<a class="headerlink" href="#user-service-manager" title="Permalink to this heading">¶</a></h3>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl --user show-environment
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>systemctl<span class="w"> </span>--user<span class="w"> </span>show-environment
 <span class="go">HOME=/home/cstevens</span>
 <span class="go">KRB5CCNAME=FILE:/tmp/krb5cc_641738498</span>
 <span class="go">LANG=en_US.UTF-8</span>
@@ -201,8 +202,8 @@
 </div>
 </li>
 <li><div class="compound">
-<p class="compound-first">When <code class="docutils literal notranslate"><span class="pre">systemd</span> <span class="pre">--user</span></code> starts, it runs a set of “environment generators” which are programs that output environment variables. They can be found in:</p>
-<ul class="compound-last simple">
+<p>When <code class="docutils literal notranslate"><span class="pre">systemd</span> <span class="pre">--user</span></code> starts, it runs a set of “environment generators” which are programs that output environment variables. They can be found in:</p>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">/etc/systemd/user-environment-generators/</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">/usr/local/lib/systemd/user-environment-generators/</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">/usr/lib/systemd/user-environment-generators/</span></code></p></li>
@@ -210,8 +211,8 @@
 </div>
 </li>
 <li><div class="compound">
-<p class="compound-first">Systemd by default comes with just one such “environment generator”, which reads simple KEY=value files from environment.d directories:</p>
-<ul class="compound-last simple">
+<p>Systemd by default comes with just one such “environment generator”, which reads simple KEY=value files from environment.d directories:</p>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">~/.config/environment.d/*.conf</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">/etc/environment.d/*.conf</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">/run/environment.d/*.conf</span></code></p></li>
@@ -221,11 +222,11 @@
 </div>
 </li>
 <li><div class="compound">
-<p class="compound-first">When your graphical session starts (whether using startx or a display manager), there is usually some script in the chain that calls <code class="docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">--user</span> <span class="pre">import-environment</span></code> and copies your <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> and everything else from your interactive environment into the systemd environment.</p>
-<p class="compound-middle">The same is also done by <code class="docutils literal notranslate"><span class="pre">dbus-update-activation-environment</span> <span class="pre">--systemd</span></code>, which copies environment variables into a running ‘dbus-daemon –session’, but with the extra option it’ll also update systemd.</p>
-<p class="compound-middle">The same is also done natively by gnome-session, for a selection of environment variables (I’m not sure whether $PATH is one of them).</p>
-<p class="compound-middle">The “import” tools might be called from:</p>
-<ul class="compound-last simple">
+<p>When your graphical session starts (whether using startx or a display manager), there is usually some script in the chain that calls <code class="docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">--user</span> <span class="pre">import-environment</span></code> and copies your <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> and everything else from your interactive environment into the systemd environment.</p>
+<p>The same is also done by <code class="docutils literal notranslate"><span class="pre">dbus-update-activation-environment</span> <span class="pre">--systemd</span></code>, which copies environment variables into a running ‘dbus-daemon –session’, but with the extra option it’ll also update systemd.</p>
+<p>The same is also done natively by gnome-session, for a selection of environment variables (I’m not sure whether $PATH is one of them).</p>
+<p>The “import” tools might be called from:</p>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">~/.xinitrc</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">~/.xsession</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">/etc/X11/xinit/xinitrc.d/50-systemd-user.sh</span></code></p></li>
@@ -248,8 +249,8 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, CS.
-      <span class="lastupdated">Last updated on Dec 9, 2022, 6:17:49 AM.
+    <p>&#169; Copyright 2023, CS.
+      <span class="lastupdated">Last updated on Apr 14, 2023, 12:13:57 AM.
       </span></p>
   </div>
 

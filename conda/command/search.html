@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>conda search &mdash; Technotes Documentation</title>
@@ -14,9 +14,6 @@
   <![endif]-->
   
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -31,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Technotes
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Technotes
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -112,7 +113,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Conda</a></li>
       <li class="breadcrumb-item active">conda search</li>
       <li class="wy-breadcrumbs-aside">
@@ -130,12 +131,12 @@
 <section id="pre-4-4-0">
 <h2>Pre-4.4.0<a class="headerlink" href="#pre-4-4-0" title="Permalink to this heading">¶</a></h2>
 <p>Search by name:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda search <span class="s1">&#39;marshmallow&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;marshmallow&#39;</span>
 </pre></div>
 </div>
 <p>Search by spec:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda search --spec <span class="s1">&#39;marshmallow=2.18.0&#39;</span>
-<span class="gp">$ </span>conda search --spec <span class="s1">&#39;marshmallow=2.18.0=py27_0&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span>--spec<span class="w"> </span><span class="s1">&#39;marshmallow=2.18.0&#39;</span>
+<span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span>--spec<span class="w"> </span><span class="s1">&#39;marshmallow=2.18.0=py27_0&#39;</span>
 </pre></div>
 </div>
 </section>
@@ -146,59 +147,59 @@
 <div><p>“Conda has a built-in query language for searching for and matching packages, what we often refer to as MatchSpec. The MatchSpec is what users input on the command line when they specify packages for create, install, update, and remove operations. With this release, MatchSpec (rather than a regex) becomes the default input for conda search.”</p>
 </div></blockquote>
 <p>Show detailed information about search results:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda search <span class="s1">&#39;marshmallow&#39;</span> --info
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;marshmallow&#39;</span><span class="w"> </span>--info
 </pre></div>
 </div>
 <p>Include additional channel in search results:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda search -c conda-forge <span class="s1">&#39;marshmallow&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span><span class="s1">&#39;marshmallow&#39;</span>
 </pre></div>
 </div>
 <section id="package-selection">
 <h3>Package Selection<a class="headerlink" href="#package-selection" title="Permalink to this heading">¶</a></h3>
 <p>Name:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda search <span class="s1">&#39;marshmallow&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;marshmallow&#39;</span>
 </pre></div>
 </div>
 <p>Name and version:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda search <span class="s1">&#39;marshmallow=2.18.0&#39;</span>
-<span class="gp">$ </span>conda search <span class="s1">&#39;marshmallow&gt;2.11&#39;</span>
-<span class="gp">$ </span>conda search <span class="s1">&#39;marshmallow&gt;2.11,&lt;2.15&#39;</span>
-<span class="gp">$ </span>conda search <span class="s1">&#39;marshmallow&gt;2.11,&lt;2.15|=2.18.0&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;marshmallow=2.18.0&#39;</span>
+<span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;marshmallow&gt;2.11&#39;</span>
+<span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;marshmallow&gt;2.11,&lt;2.15&#39;</span>
+<span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;marshmallow&gt;2.11,&lt;2.15|=2.18.0&#39;</span>
 </pre></div>
 </div>
 <p>Name and build:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda search <span class="s1">&#39;marshmallow[build=py27_0]&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;marshmallow[build=py27_0]&#39;</span>
 </pre></div>
 </div>
 <p>Name and platform:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda search <span class="s1">&#39;*/linux-64::marshmallow&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;*/linux-64::marshmallow&#39;</span>
 </pre></div>
 </div>
 <p>Name, channel, and platform:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda search <span class="s1">&#39;defaults/linux-64::marshmallow&#39;</span>
-<span class="gp">$ </span>conda search <span class="s1">&#39;conda-forge/linux-64::marshmallow&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;defaults/linux-64::marshmallow&#39;</span>
+<span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;conda-forge/linux-64::marshmallow&#39;</span>
 </pre></div>
 </div>
 <p>Name, channel, platform, and version:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda search <span class="s1">&#39;defaults/linux-64::marshmallow=2.18.0&#39;</span>
-<span class="gp">$ </span>conda search <span class="s1">&#39;defaults/linux-64::marshmallow&gt;2.11&#39;</span>
-<span class="gp">$ </span>conda search <span class="s1">&#39;defaults/linux-64::marshmallow&gt;2.11,&lt;2.15&#39;</span>
-<span class="gp">$ </span>conda search <span class="s1">&#39;defaults/linux-64::marshmallow&gt;2.11,&lt;2.15|=2.18.0&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;defaults/linux-64::marshmallow=2.18.0&#39;</span>
+<span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;defaults/linux-64::marshmallow&gt;2.11&#39;</span>
+<span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;defaults/linux-64::marshmallow&gt;2.11,&lt;2.15&#39;</span>
+<span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;defaults/linux-64::marshmallow&gt;2.11,&lt;2.15|=2.18.0&#39;</span>
 </pre></div>
 </div>
 <p>Name, channel, platform, version, and build:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda search <span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0]=2.18.0&#39;</span>
-<span class="gp">$ </span>conda search <span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0]&gt;2.11&#39;</span>
-<span class="gp">$ </span>conda search <span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0]&gt;2.11,&lt;2.15&#39;</span>
-<span class="gp">$ </span>conda search <span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0]&gt;2.11,&lt;2.15|=2.18.0&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0]=2.18.0&#39;</span>
+<span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0]&gt;2.11&#39;</span>
+<span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0]&gt;2.11,&lt;2.15&#39;</span>
+<span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;defaults/linux-64::marshmallow[build=py27_0]&gt;2.11,&lt;2.15|=2.18.0&#39;</span>
 </pre></div>
 </div>
 <p>MD5:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda search <span class="s1">&#39;*[md5=56a2e82b7205d97210d5162174e6bd5e]&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;*[md5=56a2e82b7205d97210d5162174e6bd5e]&#39;</span>
 </pre></div>
 </div>
 <p>Channel, platform, and md5:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda search <span class="s1">&#39;defaults/linux-64::*[md5=56a2e82b7205d97210d5162174e6bd5e]&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>search<span class="w"> </span><span class="s1">&#39;defaults/linux-64::*[md5=56a2e82b7205d97210d5162174e6bd5e]&#39;</span>
 </pre></div>
 </div>
 </section>
@@ -216,8 +217,8 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, CS.
-      <span class="lastupdated">Last updated on Dec 9, 2022, 6:17:49 AM.
+    <p>&#169; Copyright 2023, CS.
+      <span class="lastupdated">Last updated on Apr 14, 2023, 12:13:57 AM.
       </span></p>
   </div>
 

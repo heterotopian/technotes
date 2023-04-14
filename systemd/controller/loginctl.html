@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>loginctl &mdash; Technotes Documentation</title>
@@ -14,9 +14,6 @@
   <![endif]-->
   
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -31,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Technotes
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Technotes
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -116,7 +117,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Systemd</a></li>
       <li class="breadcrumb-item active">loginctl</li>
       <li class="wy-breadcrumbs-aside">
@@ -133,14 +134,14 @@
 <p><a class="reference external" href="https://www.freedesktop.org/software/systemd/man/loginctl.html">Systemd documentation: loginctl</a></p>
 <section id="sessions">
 <h2>Sessions<a class="headerlink" href="#sessions" title="Permalink to this heading">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl list-sessions
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl<span class="w"> </span>list-sessions
 <span class="go">   SESSION        UID USER             SEAT</span>
 <span class="go">        c1       1000 chris            seat0</span>
 
 <span class="go">1 sessions listed.</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl session-status c1
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl<span class="w"> </span>session-status<span class="w"> </span>c1
 <span class="go">c1 - chris (1000)</span>
 <span class="go">           Since: Sun 2019-11-17 18:34:11 EST; 3 months 17 days ago</span>
 <span class="go">          Leader: 1639 (mdm)</span>
@@ -164,7 +165,7 @@
 <span class="go">                  ├─ 2278 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl show-session c1
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl<span class="w"> </span>show-session<span class="w"> </span>c1
 <span class="go">Id=c1</span>
 <span class="go">Timestamp=Sun 2019-11-17 18:34:11 EST</span>
 <span class="go">TimestampMonotonic=66150378</span>
@@ -189,12 +190,12 @@
 </section>
 <section id="users">
 <h2>Users<a class="headerlink" href="#users" title="Permalink to this heading">¶</a></h2>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl list-users
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl<span class="w"> </span>list-users
 <span class="go">       UID USER</span>
 <span class="go">      1000 chris</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl user-status chris
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl<span class="w"> </span>user-status<span class="w"> </span>chris
 <span class="go">chris (1000)</span>
 <span class="go">           Since: Sun 2019-11-17 18:34:11 EST; 3 months 17 days ago</span>
 <span class="go">           State: active</span>
@@ -217,7 +218,7 @@
 <span class="go">                    ├─ 2385 /usr/lib/gvfs/gvfs-udisks2-volume-monitor</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl show-user chris
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>loginctl<span class="w"> </span>show-user<span class="w"> </span>chris
 <span class="go">UID=1000</span>
 <span class="go">GID=1000</span>
 <span class="go">Name=chris</span>
@@ -247,8 +248,8 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, CS.
-      <span class="lastupdated">Last updated on Dec 9, 2022, 6:17:49 AM.
+    <p>&#169; Copyright 2023, CS.
+      <span class="lastupdated">Last updated on Apr 14, 2023, 12:13:57 AM.
       </span></p>
   </div>
 

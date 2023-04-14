@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>git diff &mdash; Technotes Documentation</title>
@@ -14,9 +14,6 @@
   <![endif]-->
   
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -31,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Technotes
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Technotes
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -110,7 +111,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Git</a></li>
       <li class="breadcrumb-item active">git diff</li>
       <li class="wy-breadcrumbs-aside">
@@ -132,21 +133,21 @@
 </li>
 </ul>
 <p>Diff commit before <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git diff HEAD^ HEAD
-<span class="gp">$ </span>git diff HEAD^..HEAD
-<span class="gp">$ </span>git diff @^ @
-<span class="gp">$ </span>git diff @^..@
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>diff<span class="w"> </span>HEAD^<span class="w"> </span>HEAD
+<span class="gp">$ </span>git<span class="w"> </span>diff<span class="w"> </span>HEAD^..HEAD
+<span class="gp">$ </span>git<span class="w"> </span>diff<span class="w"> </span>@^<span class="w"> </span>@
+<span class="gp">$ </span>git<span class="w"> </span>diff<span class="w"> </span>@^..@
 </pre></div>
 </div>
 <p>Diff <code class="docutils literal notranslate"><span class="pre">file.txt</span></code> from commit before <code class="docutils literal notranslate"><span class="pre">HEAD</span></code> and <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git diff HEAD^ HEAD -- file.txt
-<span class="gp">$ </span>git diff HEAD^..HEAD -- file.txt
-<span class="gp">$ </span>git diff @^ @ -- file.txt
-<span class="gp">$ </span>git diff @^..@ -- file.txt
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>diff<span class="w"> </span>HEAD^<span class="w"> </span>HEAD<span class="w"> </span>--<span class="w"> </span>file.txt
+<span class="gp">$ </span>git<span class="w"> </span>diff<span class="w"> </span>HEAD^..HEAD<span class="w"> </span>--<span class="w"> </span>file.txt
+<span class="gp">$ </span>git<span class="w"> </span>diff<span class="w"> </span>@^<span class="w"> </span>@<span class="w"> </span>--<span class="w"> </span>file.txt
+<span class="gp">$ </span>git<span class="w"> </span>diff<span class="w"> </span>@^..@<span class="w"> </span>--<span class="w"> </span>file.txt
 </pre></div>
 </div>
 <p>Just changes (no context, no diff markers):</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git diff --unified<span class="o">=</span><span class="m">0</span> --color-words <span class="p">|</span> grep -P -v <span class="s2">&quot;^[\x03-\x1F]\[(1|36)m&quot;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>diff<span class="w"> </span>--unified<span class="o">=</span><span class="m">0</span><span class="w"> </span>--color-words<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-P<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;^[\x03-\x1F]\[(1|36)m&quot;</span>
 </pre></div>
 </div>
 </section>
@@ -162,8 +163,8 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, CS.
-      <span class="lastupdated">Last updated on Dec 9, 2022, 6:17:49 AM.
+    <p>&#169; Copyright 2023, CS.
+      <span class="lastupdated">Last updated on Apr 14, 2023, 12:13:57 AM.
       </span></p>
   </div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>journalctl &mdash; Technotes Documentation</title>
@@ -14,9 +14,6 @@
   <![endif]-->
   
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -31,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Technotes
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Technotes
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -118,7 +119,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Systemd</a></li>
       <li class="breadcrumb-item active">journalctl</li>
       <li class="wy-breadcrumbs-aside">
@@ -136,7 +137,7 @@
 <section id="general">
 <h2>General<a class="headerlink" href="#general" title="Permalink to this heading">¶</a></h2>
 <p>Perform tab completion on field names:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>journalctl _&lt;TAB&gt;
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>journalctl<span class="w"> </span>_&lt;TAB&gt;
 <span class="go">_AUDIT_FIELD_APPARMOR=        _AUDIT_FIELD_REQUESTED_MASK=  _CAP_EFFECTIVE=               _MACHINE_ID=                  _SYSTEMD_INVOCATION_ID=       _TRANSPORT=</span>
 <span class="go">_AUDIT_FIELD_DENIED_MASK=     _AUDIT_ID=                    _CMDLINE=                     _PID=                         _SYSTEMD_OWNER_UID=           _UID=</span>
 <span class="go">_AUDIT_FIELD_INFO=            _AUDIT_LOGINUID=              _COMM=                        _SELINUX_CONTEXT=             _SYSTEMD_SESSION=</span>
@@ -150,7 +151,7 @@
 <p class="admonition-title">Note</p>
 <p>Not automatically enabled for all users (superusers, service accounts).
 To enable:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span> /usr/share/bash-completion/completions/journalctl
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span><span class="w"> </span>/usr/share/bash-completion/completions/journalctl
 </pre></div>
 </div>
 </div>
@@ -158,15 +159,15 @@ To enable:</p>
 <section id="selecting-messages">
 <h2>Selecting Messages<a class="headerlink" href="#selecting-messages" title="Permalink to this heading">¶</a></h2>
 <p>Since datetime:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>journalctl --since<span class="o">=</span><span class="s1">&#39;2010-01-01 08:00:00&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>journalctl<span class="w"> </span>--since<span class="o">=</span><span class="s1">&#39;2010-01-01 08:00:00&#39;</span>
 </pre></div>
 </div>
 <p>Until datetime:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>journalctl --until<span class="o">=</span><span class="s1">&#39;2010-01-01 08:00:00&#39;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>journalctl<span class="w"> </span>--until<span class="o">=</span><span class="s1">&#39;2010-01-01 08:00:00&#39;</span>
 </pre></div>
 </div>
 <p>Filter on field value:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>journalctl <span class="nv">_UID</span><span class="o">=</span><span class="m">12345</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>journalctl<span class="w"> </span><span class="nv">_UID</span><span class="o">=</span><span class="m">12345</span>
 </pre></div>
 </div>
 </section>
@@ -194,11 +195,11 @@ To enable:</p>
 </div>
 </aside>
 <p>Show timestamps with microsecond precision:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>journalctl -o short-precise
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>journalctl<span class="w"> </span>-o<span class="w"> </span>short-precise
 </pre></div>
 </div>
 <p>Format messages as JSON:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>journalctl -o json
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>journalctl<span class="w"> </span>-o<span class="w"> </span>json
 </pre></div>
 </div>
 </section>
@@ -230,8 +231,8 @@ The default is to show full fields, allowing them to wrap or be truncated by the
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, CS.
-      <span class="lastupdated">Last updated on Dec 9, 2022, 6:17:49 AM.
+    <p>&#169; Copyright 2023, CS.
+      <span class="lastupdated">Last updated on Apr 14, 2023, 12:13:57 AM.
       </span></p>
   </div>
 
