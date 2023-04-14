@@ -1,8 +1,9 @@
-build
+build/
 *.nfs*
 *.swp
 *.smm
 *.swn
 pyenv
 dependencies.txt
-__pycache__
+__pycache__/
+*.pyc
