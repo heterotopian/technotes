@@ -72,6 +72,10 @@ Python Enhancement Proposals
       - Python Web Server Gateway Interface v1.0
       - `Optional Platform-Specific File Handling <https://www.python.org/dev/peps/pep-0333/#optional-platform-specific-file-handling>`_
 
+    * - :pep:`428 <428>`
+      - The pathlib module – object-oriented filesystem paths
+      -
+
     * - :pep:`440 <440>`
       - Version Identification and Dependency Specification
       - .. rst-class:: list-nobullet
