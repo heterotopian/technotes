@@ -246,6 +246,10 @@ Builtins
 
 - :bash:`Documentation <Bash-Builtins.html>`
 
+:bash:`command <Bash-Builtins.html#index-command>`
+    Run command ignoring any shell functions.
+    Only shell builtin commands or commands found by searching the ``PATH`` are executed
+
 :bash:`help <Bash-Builtins.html#index-help>`
     Online help for builtin commands.
 
