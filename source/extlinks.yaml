@@ -1,21 +1,21 @@
 pypi: !!python/tuple
   - "https://pypi.org/project/%s/"
-  - ""
+  - null
 docutils: !!python/tuple
   - "http://docutils.sourceforge.net/docs/%s"
-  - "docutils: "
+  - "docutils: %s"
 sphinx: !!python/tuple
   - "https://www.sphinx-doc.org/en/master/usage/%s"
-  - "sphinx: "
+  - "sphinx: %s"
 sphinx-themes: !!python/tuple
   - "https://sphinx-themes.org/sample-sites/%s/"
-  - ""
+  - null
 atom-package: !!python/tuple
   - "https://atom.io/packages/%s"
-  - ""
+  - null
 git-glossary: !!python/tuple
   - "https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-%s"
-  - ""
+  - null
 twitter: !!python/tuple
   - "https://twitter.com/%s"
   - null
@@ -24,10 +24,10 @@ hackernews: !!python/tuple
   - null
 systemd: !!python/tuple
   - "https://www.freedesktop.org/software/systemd/man/%s.html"
-  - "Systemd documentation: "
+  - "Systemd documentation: %s"
 conda: !!python/tuple
   - "https://conda.io/projects/conda/en/latest/%s.html"
-  - "Conda documentation: "
+  - "Conda documentation: %s"
 bash: !!python/tuple
   - "https://www.gnu.org/software/bash/manual/html_node/%s"
-  - ""
+  - null
