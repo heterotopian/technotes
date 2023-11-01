@@ -13,9 +13,9 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -128,7 +128,7 @@
            <div itemprop="articleBody">
              
   <section id="git-log">
-<h1>git log<a class="headerlink" href="#git-log" title="Permalink to this heading">¶</a></h1>
+<h1>git log<a class="headerlink" href="#git-log" title="Link to this heading">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference external" href="https://git-scm.com/docs/git-diff">Documentation</a></p>
 <ul>
@@ -137,7 +137,7 @@
 </li>
 </ul>
 <section id="selecting-commits">
-<h2>Selecting Commits<a class="headerlink" href="#selecting-commits" title="Permalink to this heading">¶</a></h2>
+<h2>Selecting Commits<a class="headerlink" href="#selecting-commits" title="Link to this heading">¶</a></h2>
 <p>Commits between tag <code class="docutils literal notranslate"><span class="pre">v1.0</span></code> and <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>log<span class="w"> </span>v1.0..HEAD
 </pre></div>
@@ -148,7 +148,7 @@
 </div>
 </section>
 <section id="formatting-output">
-<h2>Formatting Output<a class="headerlink" href="#formatting-output" title="Permalink to this heading">¶</a></h2>
+<h2>Formatting Output<a class="headerlink" href="#formatting-output" title="Link to this heading">¶</a></h2>
 <p>Parent hashes + commit hash:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>log<span class="w"> </span>--format<span class="o">=</span><span class="s2">&quot;%P %H&quot;</span>
 <span class="gp">$ </span>git<span class="w"> </span>log<span class="w"> </span>--format<span class="o">=</span><span class="s2">&quot;%P %H&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-r<span class="w"> </span>-L1<span class="w"> </span>git<span class="w"> </span>diff<span class="w">   </span><span class="c1"># Diff every commit against its parent(s)</span>
@@ -169,7 +169,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2023, CS.
-      <span class="lastupdated">Last updated on Apr 14, 2023, 6:53:59 AM.
+      <span class="lastupdated">Last updated on Nov 1, 2023, 5:39:53 PM.
       </span></p>
   </div>
 

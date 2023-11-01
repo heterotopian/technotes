@@ -13,9 +13,9 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/documentation_options.js?v=29a6c3e3"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -126,7 +126,7 @@
            <div itemprop="articleBody">
              
   <section id="watch">
-<h1>watch<a class="headerlink" href="#watch" title="Permalink to this heading">¶</a></h1>
+<h1>watch<a class="headerlink" href="#watch" title="Link to this heading">¶</a></h1>
 <p>Execute a program periodically and display its output.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -141,17 +141,23 @@
 </pre></div>
 </div>
 <section id="options">
-<h2>Options<a class="headerlink" href="#options" title="Permalink to this heading">¶</a></h2>
+<h2>Options<a class="headerlink" href="#options" title="Link to this heading">¶</a></h2>
 <dl class="option-list">
 <dt><kbd><span class="option">-d</span>, <span class="option">--differences</span></kbd></dt>
 <dd><p>Highlight the differences between successive updates.
-Option will read optional argument that changes highlight to be permanent, allowing to see what has  changed  at  least  once since first iteration.</p>
+Option will read optional argument that changes highlight to be permanent, allowing to see what has changed at least once since first iteration.</p>
 </dd>
 <dt><kbd><span class="option">-g</span>, <span class="option">--chgexit</span></kbd></dt>
 <dd><p>Exit when the output of command changes.</p>
 </dd>
+<dt><kbd><span class="option">-n</span>, <span class="option">--interval <var>seconds</var></span></kbd></dt>
+<dd><p>Specify update interval.
+The command will not allow quicker than 0.1 second interval, in which the smaller values are converted.
+Both <code class="docutils literal notranslate"><span class="pre">.</span></code> and <code class="docutils literal notranslate"><span class="pre">,</span></code> work for any locales.
+The <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">WATCH_INTERVAL</span></code> environment can be used to persistently set a non-default interval (following the same rules and formatting).</p>
+</dd>
 <dt><kbd><span class="option">-x</span>, <span class="option">--exec</span></kbd></dt>
-<dd><p>Pass command to exec(2) instead of sh -c which reduces the need to use extra quoting to get the desired effect.</p>
+<dd><p>Pass command to <code class="docutils literal notranslate"><span class="pre">exec</span></code> instead of <code class="docutils literal notranslate"><span class="pre">sh</span> <span class="pre">-c</span></code> which reduces the need to use extra quoting to get the desired effect.</p>
 </dd>
 </dl>
 </section>
@@ -169,7 +175,7 @@ Option will read optional argument that changes highlight to be permanent, allow
 
   <div role="contentinfo">
     <p>&#169; Copyright 2023, CS.
-      <span class="lastupdated">Last updated on Apr 14, 2023, 6:53:59 AM.
+      <span class="lastupdated">Last updated on Nov 1, 2023, 5:39:53 PM.
       </span></p>
   </div>
 
