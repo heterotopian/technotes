@@ -128,11 +128,15 @@ Runtime
       -
 
     * - :envvar:`PYTHONDONTWRITEBYTECODE`
-      - :kbd:`-B`
+      - :option:`-B`
+      -
+
+    * - :envvar:`PYTHONSAFEPATH`
+      - :option:`-P`
       -
 
     * - :envvar:`PYTHONWARNINGS`
-      - :kbd:`-W`
+      - :option:`-W`
       - Bugtracker: `-W option cannot use non-standard categories <https://bugs.python.org/issue22543>`_
 
     * - :envvar:`PYTHONIOENCODING`
